@@ -2,286 +2,625 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Montserrat:wght@400;800&family=Roboto&family=Sen&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Blippar Home Page</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Montserrat:wght@400;800&family=Roboto&family=Sen&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Blippar Home Page</title>
 </head>
 
+
 <body id="head">
-    <div class="text-center">
-        <div class="container-fluid">
+  <div class="text-center">
+    <!-- header starts -->
+    <div class="container-fluid">
 
-            <header class="header row">
+      <header class="header row">
 
-                <div class="logo-section col-sm-4 my-5">
-                    <p>
-                        <a href="#" class="logo">
-                            <img src="images/logo.png" alt="Blipper Logo" width="90px" height="24px">
-                        </a>
-                    </p>
-                    <p class="text-white logo-desc">
-                        BlippBuilder
-                    </p>
-                    <p class="text-welcome">
-                        Welcome back Steve
-                    </p>
-                </div>
-                <div class="profile-section col-sm-8 text-right my-5">
-                    <button type="button" class="btn btn-white-o learn text-uppercase text-bold">Learn</button>
-                    <div class="dropdown d-inline ml-2">
-                        <a class="btn dropdown-toggle btn-primary rounded-circle text-white avatar" href="#"
-                            role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="true">
-                            SS
-                        </a>
-
-                        <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownMenuLink">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </div>
-                </div>
-                <button type="button" class="btn btn-secondary bg-dark btn-new-proj px-5 text-uppercase">Create A New Project</button>
-            </header>
-
-            <div class="container-fluid">
-                <section class="justify-content-between row section-options mb-3">
-                    <div>
-                        <span class="subtitle">Your Projects</span>
-                        <div class="dropdown open d-inline">
-                            <button class="btn btn-secondary-o dropdown-toggle text-uppercase dropdown-sort ml-4 pl-4 py-2" type="button" id="triggerId"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="text-sort">Sort By</span>
-                                <img src="images/icon-caret-down.png" alt="">
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="triggerId">
-                                <button class="dropdown-item" href="#">Action</button>
-                                <button class="dropdown-item disabled" href="#">Disabled action</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="images/icon-hamburger-menu.png" alt="Icon Menu" width="32px" height="24px">
-                        <img src="images/icon-folder.png" class="d-inline-block ml-3" alt="Icon Folder" width="32px"
-                            height="28px">
-                    </div>
-                </section>
-            </div>
-            <div class="container-fluid section-grid">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="card text-left gutters">
-                            <div class="card-image-container p-2">
-                                <img src="images/img-1.png" class="card-img-top" alt="...">
-                                <div class="scan-code"><img src="images/scan.png" alt="" class="img-responsive"></div>
-                            </div>
-                            <div class="card-body">
-                                <div class="title d-flex justify-content-between">
-                                    <h3 class="card-title text-uppercase">Using the Gyro</h3>
-                                    <div>
-                                        <img src="images/icon-trend.png" alt="">
-                                        <img src="images/icon-context-menu.png" class="pl-2" alt="">
-                                    </div>
-
-                                </div>
-                                <p class="card-text">
-                                    Date Created: <span class="date">12th April 2022</span> <br>
-                                    Created by: <span class="created">Blippar</span>
-                                </p>
-                                <div class="title d-flex justify-content-between">
-                                    <p class="status"> <span class="status-legend published mr-2"></span><span
-                                            class="status-text">Published</span></p>
-                                    <div class="views align-self-center p-1 pr-3">
-                                        Views: <span>1</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card text-left gutters">
-                            <div class="card-image-container p-2">
-                                <img src="images/img-2.png" class="card-img-top" alt="...">
-                                <div class="scan-code"><img src="images/scan.png" alt="" class="img-responsive"></div>
-                            </div>
-                            <div class="card-body">
-                                <div class="title d-flex justify-content-between">
-                                    <h3 class="card-title text-uppercase">Demo 1</h3>
-                                    <div>
-                                        <img src="images/icon-trend.png" alt="">
-                                        <img src="images/icon-context-menu.png" class="pl-2" alt="">
-                                    </div>
-
-                                </div>
-                                <p class="card-text">
-                                    Date Created: <span class="date">12th April 2022</span> <br>
-                                    Created by: <span class="created">Blippar</span>
-                                </p>
-                                <div class="title d-flex justify-content-between">
-                                    <p class="status"> <span class="status-legend published mr-2"></span><span
-                                            class="status-text">Published</span></p>
-                                    <div class="views align-self-center p-1 pr-3">
-                                        Views: <span>1</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <div class="card text-left gutters">
-                            <div class="card-image-container p-2">
-                                <img src="images/img-3.png" class="card-img-top" alt="...">
-                                <div class="scan-code"><img src="images/scan.png" alt="" class="img-responsive"></div>
-                            </div>
-                            <div class="card-body">
-                                <div class="title d-flex justify-content-between">
-                                    <h3 class="card-title text-uppercase">Project Starter 3</h3>
-                                    <div>
-                                        <img src="images/icon-trend.png" alt="">
-                                        <img src="images/icon-context-menu.png" class="pl-2" alt="">
-                                    </div>
-
-                                </div>
-                                <p class="card-text">
-                                    Date Created: <span class="date">12th April 2022</span> <br>
-                                    Created by: <span class="created">Blippar</span>
-                                </p>
-                                <div class="title d-flex justify-content-between">
-                                    <p class="status"> <span class="status-legend not-published mr-2"></span><span
-                                            class="status-text">Not Published</span></p>
-                                    <div class="views align-self-center p-1 pr-3">
-                                        Views: <span>1</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="card text-left gutters">
-                            <div class="card-image-container p-2">
-                                <img src="images/img-1.png" class="card-img-top" alt="...">
-                                <div class="scan-code"><img src="images/scan.png" alt="" class="img-responsive"></div>
-                            </div>
-                            <div class="card-body">
-                                <div class="title d-flex justify-content-between">
-                                    <h3 class="card-title text-uppercase">Using the Gyro</h3>
-                                    <div>
-                                        <img src="images/icon-trend.png" alt="">
-                                        <img src="images/icon-context-menu.png" class="pl-2" alt="">
-                                    </div>
-
-                                </div>
-                                <p class="card-text">
-                                    Date Created: <span class="date">12th April 2022</span> <br>
-                                    Created by: <span class="created">Blippar</span>
-                                </p>
-                                <div class="title d-flex justify-content-between">
-                                    <p class="status"> <span class="status-legend published mr-2"></span><span
-                                            class="status-text">Published</span></p>
-                                    <div class="views align-self-center p-1 pr-3">
-                                        Views: <span>1</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card text-left gutters">
-                            <div class="card-image-container p-2">
-                                <img src="images/img-2.png" class="card-img-top" alt="...">
-                                <div class="scan-code"><img src="images/scan.png" alt="" class="img-responsive"></div>
-                            </div>
-                            <div class="card-body">
-                                <div class="title d-flex justify-content-between">
-                                    <h3 class="card-title text-uppercase">Demo 1</h3>
-                                    <div>
-                                        <img src="images/icon-trend.png" alt="">
-                                        <img src="images/icon-context-menu.png" class="pl-2" alt="">
-                                    </div>
-
-                                </div>
-                                <p class="card-text">
-                                    Date Created: <span class="date">12th April 2022</span> <br>
-                                    Created by: <span class="created">Blippar</span>
-                                </p>
-                                <div class="title d-flex justify-content-between">
-                                    <p class="status"> <span class="status-legend published mr-2"></span><span
-                                            class="status-text">Published</span></p>
-                                    <div class="views align-self-center p-1 pr-3">
-                                        Views: <span>1</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <div class="card text-left gutters">
-                            <div class="card-image-container p-2">
-                                <img src="images/img-3.png" class="card-img-top" alt="...">
-                                <div class="scan-code"><img src="images/scan.png" alt="" class="img-responsive"></div>
-                            </div>
-                            <div class="card-body">
-                                <div class="title d-flex justify-content-between">
-                                    <h3 class="card-title text-uppercase">Project Starter 3</h3>
-                                    <div>
-                                        <img src="images/icon-trend.png" alt="">
-                                        <img src="images/icon-context-menu.png" class="pl-2" alt="">
-                                    </div>
-
-                                </div>
-                                <p class="card-text">
-                                    Date Created: <span class="date">12th April 2022</span> <br>
-                                    Created by: <span class="created">Blippar</span>
-                                </p>
-                                <div class="title d-flex justify-content-between">
-                                    <p class="status"> <span class="status-legend not-published mr-2"></span><span
-                                            class="status-text">Not Published</span></p>
-                                    <div class="views align-self-center p-1 pr-3">
-                                        Views: <span>1</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+        <div class="logo-section col-sm-4 my-5">
+          <p>
+            <a href="#" class="logo">
+              <img src="images/logo.png" alt="Blipper Logo" width="90px" height="24px">
+            </a>
+          </p>
+          <p class="text-white logo-desc">
+            BlippBuilder
+          </p>
+          <p class="text-welcome">
+            Welcome back Steve
+          </p>
         </div>
+        <div class="profile-section col-sm-8 text-right my-5">
+          <button type="button" class="btn btn-white-o learn text-uppercase text-bold">Learn</button>
+          <div class="dropdown d-inline ml-2">
+            <a class="btn dropdown-toggle btn-primary rounded-circle text-white avatar" href="#" role="button"
+              id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="true">
+              SS
+            </a>
+
+            <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-secondary bg-dark btn-new-proj px-5 text-uppercase" data-toggle="modal"
+          data-target="#newProjectModal" onclick="showNext('slide-1')">Create A New Project</button>
+
+      </header>
+
+      <!-- header ends -->
+
+      <!-- section-options starts -->
+      <div class="container-fluid">
+        <section class="justify-content-between row section-options mb-3">
+          <div class="subnav">
+            <span class="subtitle">Your Projects</span>
+            <div class="dropdown open d-inline">
+              <button class="btn btn-secondary-o dropdown-toggle text-uppercase dropdown-sort ml-4 pl-4 py-2"
+                type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="text-sort">Sort By</span>
+                <img src="images/icon-caret-down.png" alt="">
+              </button>
+              <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                <button class="dropdown-item" href="#">Date Created</button>
+                <button class="dropdown-item" href="#">Last modified</button>
+                <button class="dropdown-item" href="#">Name A-Z</button>
+                <button class="dropdown-item" href="#">Name Z-A</button>
+              </div>
+            </div>
+          </div>
+          <div class="subnav">
+            <img src="images/icon-hamburger-menu.png" alt="Icon Menu" width="32px" height="24px" class="cup subnav-icon icon-tiles" onclick="showView('tile')">
+            <img src="images/icon-tabs.png" alt="Icon Menu" width="32px" height="27px" class="cup d-none subnav-icon icon-grid" onclick="showView('grid')">
+            <img src="images/icon-folder.png" data-toggle="modal" data-target="#newFolderModal"
+              class="d-inline-block ml-3 cup" alt="Icon Folder" width="32px" height="28px"
+              onclick="showNext('slide-f1')">
+          </div>
+        </section>
+      </div>
+<!-- section options end -->
+<!-- section grid starts -->
+      <div class="container-fluid section-grid active">
+
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card text-left gutters">
+              <div class="card-image-container p-2">
+                <img src="images/img-1.png" class="card-img-top" alt="...">
+                <div class="scan-code"><img src="images/scan.png" alt="" class="img-responsive"></div>
+              </div>
+              <div class="card-body">
+                <div class="title d-flex justify-content-between">
+                  <h3 class="card-title text-uppercase">Using the Gyro</h3>
+                  <div>
+                    <img src="images/icon-trend.png" alt="">
+                    <img src="images/icon-context-menu.png" class="pl-2 dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                      <button class="dropdown-item" href="#">Open project</button>
+                      <button class="dropdown-item" href="#">Preview project</button>
+                      <button class="dropdown-item" href="#">Duplicate project</button>
+                      <button class="dropdown-item" href="#">Delete project</button>
+                      <button class="dropdown-item" href="#">Version history</button>
+                    </div>
+                  </div>
+
+                </div>
+                <p class="card-text">
+                  Date Created: <span class="date">12th April 2022</span> <br>
+                  Created by: <span class="created">Blippar</span>
+                </p>
+                <div class="title d-flex justify-content-between">
+                  <p class="status"> <span class="status-legend published mr-2"></span><span
+                      class="status-text">Published</span></p>
+                  <div class="views align-self-center p-1 pr-3">
+                    Views: <span>1</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card text-left gutters">
+              <div class="card-image-container p-2">
+                <img src="images/img-2.png" class="card-img-top" alt="...">
+                <div class="scan-code"><img src="images/scan.png" alt="" class="img-responsive"></div>
+              </div>
+              <div class="card-body">
+                <div class="title d-flex justify-content-between">
+                  <h3 class="card-title text-uppercase">Demo 1</h3>
+                  <div>
+                    <img src="images/icon-trend.png" alt="">
+                    <img src="images/icon-context-menu.png" class="pl-2 dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                      <button class="dropdown-item" href="#">Open project</button>
+                      <button class="dropdown-item" href="#">Preview project</button>
+                      <button class="dropdown-item" href="#">Duplicate project</button>
+                      <button class="dropdown-item" href="#">Delete project</button>
+                      <button class="dropdown-item" href="#">Version history</button>
+                    </div>
+                  </div>
+
+                </div>
+                <p class="card-text">
+                  Date Created: <span class="date">12th April 2022</span> <br>
+                  Created by: <span class="created">Blippar</span>
+                </p>
+                <div class="title d-flex justify-content-between">
+                  <p class="status"> <span class="status-legend published mr-2"></span><span
+                      class="status-text">Published</span></p>
+                  <div class="views align-self-center p-1 pr-3">
+                    Views: <span>1</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card text-left gutters">
+              <div class="card-image-container p-2">
+                <img src="images/img-3.png" class="card-img-top" alt="...">
+                <div class="scan-code"><img src="images/scan.png" alt="" class="img-responsive"></div>
+              </div>
+              <div class="card-body">
+                <div class="title d-flex justify-content-between">
+                  <h3 class="card-title text-uppercase">Project Starter 3</h3>
+                  <div>
+                    <img src="images/icon-trend.png" alt="">
+                    <img src="images/icon-context-menu.png" class="pl-2 dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                      <button class="dropdown-item" href="#">Open project</button>
+                      <button class="dropdown-item" href="#">Preview project</button>
+                      <button class="dropdown-item" href="#">Duplicate project</button>
+                      <button class="dropdown-item" href="#">Delete project</button>
+                      <button class="dropdown-item" href="#">Version history</button>
+                    </div>
+                  </div>
+
+                </div>
+                <p class="card-text">
+                  Date Created: <span class="date">12th April 2022</span> <br>
+                  Created by: <span class="created">Blippar</span>
+                </p>
+                <div class="title d-flex justify-content-between">
+                  <p class="status"> <span class="status-legend not-published mr-2"></span><span class="status-text">Not
+                      Published</span></p>
+                  <div class="views align-self-center p-1 pr-3">
+                    Views: <span>1</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card text-left gutters">
+              <div class="card-image-container p-2">
+                <img src="images/img-f1.png" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <div class="title d-flex justify-content-between">
+                  <h3 class="card-title text-uppercase">Folder name</h3>
+                  <div>
+                    <img src="images/icon-context-menu.png" class="pl-2 dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                      <button class="dropdown-item" href="#">Rename folder</button>
+                      <button class="dropdown-item" href="#">Delete folder and contents</button>
+                    </div>
+                  </div>
+
+                </div>
+                <p class="card-text">
+                  Date Created: <span class="date">12th April 2022</span> <br>
+                  Created by: <span class="created">Name</span> <br>
+                  <p><span class="proj-count mt-3">3</span> Projects</p>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card text-left gutters">
+              <div class="card-image-container p-2">
+                <img src="images/img-f1.png" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <div class="title d-flex justify-content-between">
+                  <h3 class="card-title text-uppercase">Folder name</h3>
+                  <div>
+                    <img src="images/icon-context-menu.png" class="pl-2 dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                      <button class="dropdown-item" href="#">Rename folder</button>
+                      <button class="dropdown-item" href="#">Delete folder and contents</button>
+                    </div>
+                  </div>
+
+                </div>
+                <p class="card-text">
+                  Date Created: <span class="date">12th April 2022</span> <br>
+                  Created by: <span class="created">Name</span> <br>
+                  <p><span class="proj-count mt-3">3</span> Projects</p>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card text-left gutters">
+              <div class="card-image-container p-2">
+                <img src="images/img-f1.png" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <div class="title d-flex justify-content-between">
+                  <h3 class="card-title text-uppercase">Folder name</h3>
+                  <div>
+                    <img src="images/icon-context-menu.png" class="pl-2 dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                      <button class="dropdown-item" href="#">Rename folder</button>
+                      <button class="dropdown-item" href="#">Delete folder and contents</button>
+                    </div>
+                  </div>
+
+                </div>
+                <p class="card-text">
+                  Date Created: <span class="date">12th April 2022</span> <br>
+                  Created by: <span class="created">Name</span> <br>
+                  <p><span class="proj-count mt-3">3</span> Projects</p>
+                </p>
+              </div>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+<!-- section grid ends -->
+<!-- section tiles starts -->
+      <div class="container-fluid section-tiles d-none">
+        <div class="row shadow-sm p-2 justify-content-between mb-3">
+          <div class="d-flex flex-row">
+            <div class="image-container">
+              <img src="images/img-t1.png" class="card-img-top" alt="...">
+            </div>
+            <div class="title-container text-left d-block ml-3 mt-n2">
+              <p class="card-text">
+              <h3 class="card-title text-uppercase">Using the Gyro</h3>
+              Date Created: <span class="date">12th April 2022</span> <br>
+              Created by: <span class="created">Blippar</span>
+              </p>
+              <p class="status"> <span class="status-legend published mr-2"></span><span
+                  class="status-text">Published</span></p>
+            </div>
+          </div>
+          <div class="d-flex flex-row">
+            <div class="views-container d-flex flex-column justify-content-between mr-3">
+              <div class="d-block text-right mt-4">
+                <img src="images/icon-trend.png" alt="">
+                <img src="images/icon-context-menu.png" class="pl-2" alt="">
+              </div>
+              <div class="views align-self-center p-1 pr-3 mb-2">
+                Views: <span>1</span>
+              </div>
+            </div>
+            <div class="scan-code mt-3">
+              <img src="images/scan.png" alt="" class="img-responsive">
+            </div>
+          </div>
+        </div>
+        <div class="row shadow-sm p-2 justify-content-between mb-3">
+          <div class="d-flex flex-row">
+            <div class="image-container">
+              <img src="images/img-t2.png" class="card-img-top" alt="...">
+            </div>
+            <div class="title-container text-left d-block ml-3 mt-n2">
+              <p class="card-text">
+              <h3 class="card-title text-uppercase">Demo 1</h3>
+              Date Created: <span class="date">12th April 2022</span> <br>
+              Created by: <span class="created">Blippar</span>
+              </p>
+              <p class="status"> <span class="status-legend published mr-2"></span><span
+                  class="status-text">Published</span></p>
+            </div>
+          </div>
+          <div class="d-flex flex-row">
+            <div class="views-container d-flex flex-column justify-content-between mr-3">
+              <div class="d-block text-right mt-4">
+                <img src="images/icon-trend.png" alt="">
+                <img src="images/icon-context-menu.png" class="pl-2" alt="">
+              </div>
+              <div class="views align-self-center p-1 pr-3 mb-2">
+                Views: <span>1</span>
+              </div>
+            </div>
+            <div class="scan-code mt-3">
+              <img src="images/scan.png" alt="" class="img-responsive">
+            </div>
+          </div>
+        </div>
+        <div class="row shadow-sm p-2 justify-content-between mb-3">
+          <div class="d-flex flex-row">
+            <div class="image-container">
+              <img src="images/img-t3.png" class="card-img-top" alt="...">
+            </div>
+            <div class="title-container text-left d-block ml-3 mt-n2">
+              <p class="card-text">
+              <h3 class="card-title text-uppercase">Project Starter 3</h3>
+              Date Created: <span class="date">12th April 2022</span> <br>
+              Created by: <span class="created">Blippar</span>
+              </p>
+              <p class="status"> <span class="status-legend not-published mr-2"></span><span
+                  class="status-text">Not Published</span></p>
+            </div>
+          </div>
+          <div class="d-flex flex-row">
+            <div class="views-container d-flex flex-column justify-content-between mr-3">
+              <div class="d-block text-right mt-4">
+                <img src="images/icon-trend.png" alt="">
+                <img src="images/icon-context-menu.png" class="pl-2" alt="">
+              </div>
+              <div class="views align-self-center p-1 pr-3 mb-2">
+                Views: <span>1</span>
+              </div>
+            </div>
+            <div class="scan-code mt-3">
+              <img src="images/scan.png" alt="" class="img-responsive">
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <footer class="bg-dark">
-        <div class="container-fluid">
-            <div class="row d-flex justify-content-between">
-                <div class="col-md-9 pt-5 left">
-                    <ul class="mt-5">
-                        <li>All Rights Reserved 2022 &copy; Blippar Group Limited</li>
-                        <li><a href="#">Privacy</a></li>
-                        <li><a href="#">Terms</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 text-right pt-1 mt-5 pr-5 right">
-                    <a href="#head"><img src="images/icon-top.png" alt="Icon To Top" class="icon-to-top"></a>
-                </div>
-            </div>
+  </div>
+<!-- section tiles end -->
+
+  <!-- footer starts -->
+  <footer class="bg-dark">
+    <div class="container-fluid">
+      <div class="row d-flex justify-content-between">
+        <div class="col-md-9 pt-5 left">
+          <ul class="mt-5">
+            <li>All Rights Reserved 2022 &copy; Blippar Group Limited</li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
         </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
-        crossorigin="anonymous"></script>
+        <div class="col-md-3 text-right pt-1 mt-5 pr-5 right">
+          <a href="#head"><img src="images/icon-top.png" alt="Icon To Top" class="icon-to-top"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer ends -->
+
+  <!-- modals -->
+
+  <!-- new project modal begin -->
+
+  <div class="modal fade " id="newProjectModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+
+      <div class="modal-content slide-1 active">
+        <button type="button" class="new-project-modal-close close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"><img src="images/icon-close.png" alt=""></span>
+        </button>
+        <div class="modal-header text-center d-block flex-column">
+          <h5 class="modal-title d-inline-block">New Project</h5>
+          <p class="modal-subtitle d-block">
+            Let's get creating!
+          </p>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="project-name">Give your project a name</label>
+            <input type="text" class="form-control" name="" id="project-name" aria-describedby="project-name"
+              placeholder="Project Name">
+            <div class="d-block text-center btn-call-to-action">
+              <button class="btn btn-secondary" onclick='showNext("slide-2")'>Continue</button>
+            </div>
+          </div>
+        </div>
+        <ul class="carousel-dots mt-3 d-block text-center">
+          <li class="dot-1 active"></li>
+          <li class="dot-2 "></li>
+          <li class="dot-3"></li>
+        </ul>
+      </div>
+
+      <div class="modal-content slide-2 d-none">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"><img src="images/icon-close.png" alt=""></span>
+        </button>
+        <div class="modal-header text-center d-block flex-column">
+          <h5 class="modal-title d-inline-block">New Project</h5>
+          <p class="modal-subtitle d-block">
+            Select how you would like to use AR
+          </p>
+        </div>
+        <div class="modal-body mt-n4">
+          <div class="row p-3">
+            <div class="col-lg-4">
+              <div class="card text-left gutters">
+                <div class="card-image-container p-4">
+                  <img src="images/placeholder1.png" class="card-img-top" alt="...">
+
+                </div>
+                <div class="card-body d-block text-center">
+
+                  <p class="card-text mt-n5">
+                    Create AR using a printed 'marker'. Your AR experience will present overlaid on top of this.
+                    Marker
+                    examples include packaging, product labels, posters, magazines, manuals etc.
+                  </p>
+                  <div class="d-block text-center btn-call-to-action">
+                    <button class="btn btn-secondary" onclick='showNext("slide-3")'>Use a marker</button>
+                    <p class="text-warning mt-3">View an example</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card text-left gutters">
+                <div class="card-image-container p-4">
+                  <img src="images/placeholder2.png" class="card-img-top" alt="...">
+
+                </div>
+                <div class="card-body d-block text-center">
+                  <p class="card-text mt-n4">
+                    Create AR that appears on flat surfaces like floor tiles or textured surfaces. AR examples
+                    include,
+                    seeing virtual products, virtual assistants, architectural visualisations, 3D scenes etc.
+                  </p>
+                  <div class="d-block text-center btn-call-to-action">
+                    <button class="btn btn-secondary" onclick='showNext("slide-3")'>Use a surface</button>
+                    <p class="text-warning mt-3">View an example</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card text-left gutters">
+                <div class="card-image-container p-4">
+                  <img src="images/placeholder3.png" class="card-img-top" alt="...">
+
+                </div>
+                <div class="card-body d-block text-center">
+
+                  <p class="card-text mt-n4">
+                    Create AR that appears around the user. This option does not require a marker or a surface to
+                    present the AR. AR examples include, virtual stores, floating environments, floating menus etc.
+                  </p>
+                  <div class="d-block text-center btn-call-to-action">
+                    <button class="btn btn-secondary" onclick='showNext("slide-3")'>Around you</button>
+                    <p class="text-warning mt-3">View an example</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="carousel-dots mt-3 d-block text-center">
+            <li class="dot-1"></li>
+            <li class="dot-2 active"></li>
+            <li class="dot-3"></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="modal-content slide-3 d-none">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"><img src="images/icon-close.png" alt=""></span>
+        </button>
+        <div class="modal-header text-center d-block flex-column">
+          <h5 class="modal-title d-inline-block">New Project</h5>
+          <p class="modal-subtitle d-block">
+            Select and add your marker(s)
+          </p>
+        </div>
+        <div class="modal-body px-5 d-block text-center">
+          <div class="modal-body-content shadow-sm pt-5 pb-3">
+            <img src="images/upload-marker.png" alt="">
+            <p class="mt-3 mb-5">You can upload up to 10 markers. Use JPEGs, maximum file size 1mb per marker, 1024px
+              high or wide</p>
+            <div class="d-block text-center btn-call-to-action">
+              <button class="btn btn-secondary">Browse and upload</button>
+              <p class="text-warning mt-3">Autogenerate a marker</p>
+            </div>
+          </div>
+          <p class="text-warning mt-2 text-left">What makes a good marker? </p>
+          <!-- carousel dots -->
+          <ul class="carousel-dots mt-3 d-block text-center">
+            <li class="dot-1"></li>
+            <li class="dot-2"></li>
+            <li class="dot-3 active"></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- modal dialog end -->
+
+    </div>
+  </div>
+
+
+
+  <!-- new project modal end -->
+
+  <!-- new folder modal begins -->
+
+  <div class="modal fade new-folder" id="newFolderModal" tabindex="-1" role="dialog" aria-labelledby="newFolderModal"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+
+      <div class="modal-content slide-f1 active">
+        <div class="modal-header text-center d-block flex-column">
+          <h5 class="modal-title d-inline-block"></h5>
+          <p class="modal-subtitle d-block">
+          </p>
+        </div>
+        <div class="modal-body flex-column">
+          <h5 class="modal-title d-block text-uppercase text-white text-center">New Folder</h5>
+          <div class="form-group d-block text-center">
+            <label for="folder-name" class="text-white mb-4">Give your folder a name</label>
+            <input type="text" class="form-control" name="" id="folder-name" aria-describedby="folder-name"
+              placeholder="Folder Name">
+            <div class="d-block text-center btn-call-to-action mt-5">
+              <button class="btn btn-white" onclick="showNext('slide-f2')">confirm</button>
+              <button class="btn btn-white ml-3" data-dismiss="modal" aria-label="Close">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-content slide-f2 d-none">
+        <div class="modal-header text-center d-block flex-column">
+          <h5 class="modal-title d-inline-block"></h5>
+          <p class="modal-subtitle d-block">
+          </p>
+        </div>
+        <div class="modal-body flex-column">
+          <h5 class="modal-title d-block text-uppercase text-white text-center ">Organise your projects</h5>
+          <div class="form-group d-block text-center">
+            <p class="text-white">Simply drag and drop your projects into folders.</p>
+            <img src="images/new-folder-organise.png" alt="">
+            <div class="d-block text-center btn-call-to-action mt-5">
+              <button class="btn btn-white" data-dismiss="modal" aria-label="Close"
+                onclick="getFolderName('slide-f2')">Got it</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- modal dialog end -->
+
+    </div>
+  </div>
+
+  <!-- new folder modal ends -->
+
+  <!-- view project modal starts-->
+  
+  
+  
+  <!-- view project modal ends-->
+
+
+
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
+  <script src="js/scripts.js"></script>
 </body>
 
 </html>

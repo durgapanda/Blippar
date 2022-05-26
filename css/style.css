@@ -23,9 +23,15 @@ body {
     text-transform: uppercase;
 }
 
+.modal-title {
+    text-transform: uppercase;
+    font-weight: 800 !important;
+}
+
 .bg-dark {
     background-color: #2E3240 !important;
 }
+
 .btn-secondary-o {
     border-radius: 20px;
     background-color: transparent;
@@ -35,6 +41,20 @@ body {
     color: #2E3240;
 }
 
+.btn-secondary {
+    background-color: #2E3240;
+}
+.text-warning {
+    color: #FFAA00;
+}
+
+.shadow-sm {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
+}
+
+.cup {
+    cursor: pointer;
+}
 /* base styles */
 
 .header {
@@ -43,6 +63,7 @@ body {
     background-size: cover;
     padding: 0 2em;
     position: relative;
+    z-index: 99;
 }
 
 .logo-section {
@@ -60,7 +81,7 @@ body {
 }
 
 .logo-section p.logo-desc {
-    font-weight: 800 ;
+    font-weight: 800;
     text-transform: uppercase;
     font-size: 2.5em;
     position: relative;
@@ -101,17 +122,53 @@ body {
     margin-top: -80px;
     padding: 0 2em;
 }
+
 .subtitle {
     font-size: 26px;
 }
+
 .text-sort {
     display: inline-block;
     margin-right: 60px;
 }
+
 .dropdown-sort {
     position: relative;
     top: -5px;
     font-weight: 800;
+    position: relative;
+}
+
+.dropdown-menu {
+    padding: 1rem !important;
+    margin-top: 1rem !important;
+}
+
+.dropdown-menu {
+    border-radius: 20px;
+    width: 300px;
+    position: relative;
+    margin-left: -50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-menu .dropdown-item {
+    border-bottom: 1px dotted #EEE;
+    padding: 1rem 0 !important;
+
+}
+
+.dropdown-menu .dropdown-item:last-child {
+    border-bottom: none
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: transparent;
+}
+.subnav {
+    display: block;
+    position: relative;
+    z-index: 999;
 }
 .status-legend {
     width: 20px;
@@ -122,8 +179,11 @@ body {
     top: 5px;
 }
 
-.section-grid {
+.section-grid, .section-tiles {
     padding: 0 2em;
+}
+.section-tiles {
+    padding: 0 2.7em;
 }
 
 .card-image-container {
@@ -149,7 +209,7 @@ body {
     cursor: pointer;
 }
 
-.card h3.card-title {
+h3.card-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800 !important;
 }
@@ -171,6 +231,96 @@ body {
     top: -5px;
 }
 
+.modal-title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    letter-spacing: 0.02em;
+}
+
+.modal-header {
+    border-bottom: 0;
+}
+
+.modal-subtitle {
+    display: block;
+    font-size: 24px;
+}
+
+.modal-dialog {
+    position: relative;
+    justify-content: center;
+}
+
+.modal-content {
+    height: 800px;
+    position: relative;
+}
+
+.modal .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    opacity: 1;
+}
+
+.slide-1 .modal-body, .slide-f1 .modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-body input {
+    width: 650px;
+    background-color: #F9F9FA;
+    border: 1px solid #CCC;
+    border-radius: 18px;
+    padding: 2em;
+}
+.new-folder.modal .modal-content {
+    background-color: transparent !important; 
+}
+
+.slide-1 .modal-body .btn-call-to-action {
+    margin-top: 100px;
+}
+
+.btn-call-to-action .btn{
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+    font-size: 20px;
+    /* width: 220px; */
+    padding: 10px 30px;
+    border-radius: 32px;
+}
+
+.btn-call-to-action .btn-secondary {
+    background-color: #2E3240;
+}
+
+.btn-call-to-action .btn-white {
+    background-color: white;
+    color: #2E3240;
+}
+
+.modal-backdrop.show {
+    opacity: 0.8;
+}
+.carousel-dots li {
+    width: 12px;
+    height: 12px;
+    border-radius: 10px;
+    border: 1px solid #2E3240;
+    list-style: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.carousel-dots li.active {
+    background-color: #2E3240;
+    border: 1px solid transparent;
+
+}
 footer {
     height: 150px;
 }
@@ -208,25 +358,28 @@ footer .icon-to-top {
 
 /* Large devices (desktops, 992px and down) */
 @media (max-width: 1200px) {}
+
 /* Extra large devices (large desktops, 1200px and down) */
 @media (max-width: 992px) {
-    .card:nth-child(0), .card:nth-child(1) {
+
+    .card:nth-child(0),
+    .card:nth-child(1) {
         margin-bottom: 20px;
     }
+
     footer {
         height: auto
     }
-    footer .left, footer .right {
+
+    footer .left,
+    footer .right {
         padding: 0;
         margin: 0;
     }
 }
+
 /* Medium devices (tablets, 768px and down) */
-@media (max-width: 768px) {
-}
+@media (max-width: 768px) {}
+
 /* Small devices (landscape phones, 576px and down) */
-@media (max-width: 576px) {
-
-}
-
-
+@media (max-width: 576px) {}
