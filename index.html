@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Montserrat:wght@400;800&family=Roboto&family=Sen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Blippar Home Page</title>
+</head>
+
+<body id="head">
+    <div class="text-center">
+        <div class="container-fluid">
+
+            <header class="header row">
+
+                <div class="logo-section col-sm-4 my-5">
+                    <p>
+                        <a href="#" class="logo">
+                            <img src="images/logo.png" alt="Blipper Logo" width="90px" height="24px">
+                        </a>
+                    </p>
+                    <p class="text-white logo-desc">
+                        BlippBuilder
+                    </p>
+                    <p class="text-welcome">
+                        Welcome back Steve
+                    </p>
+                </div>
+                <div class="profile-section col-sm-8 text-right my-5">
+                    <button type="button" class="btn btn-white-o learn text-uppercase text-bold">Learn</button>
+                    <div class="dropdown d-inline ml-2">
+                        <a class="btn dropdown-toggle btn-primary rounded-circle text-white avatar" href="#"
+                            role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="true">
+                            SS
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-secondary bg-dark btn-new-proj px-5 text-uppercase">Create A New Project</button>
+            </header>
+
+            <div class="container-fluid">
+                <section class="justify-content-between row section-options mb-3">
+                    <div>
+                        <span class="subtitle">Your Projects</span>
+                        <div class="dropdown open d-inline">
+                            <button class="btn btn-secondary-o dropdown-toggle text-uppercase dropdown-sort ml-4 pl-4 py-2" type="button" id="triggerId"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="text-sort">Sort By</span>
+                                <img src="images/icon-caret-down.png" alt="">
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="triggerId">
+                                <button class="dropdown-item" href="#">Action</button>
+                                <button class="dropdown-item disabled" href="#">Disabled action</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="images/icon-hamburger-menu.png" alt="Icon Menu" width="32px" height="24px">
+                        <img src="images/icon-folder.png" class="d-inline-block ml-3" alt="Icon Folder" width="32px"
+                            height="28px">
+                    </div>
+                </section>
+            </div>
+            <div class="container-fluid section-grid">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card text-left gutters">
+                            <div class="card-image-container p-2">
+                                <img src="images/img-1.png" class="card-img-top" alt="...">
+                                <div class="scan-code"><img src="images/scan.png" alt="" class="img-responsive"></div>
+                            </div>
+                            <div class="card-body">
+                                <div class="title d-flex justify-content-between">
+                                    <h3 class="card-title text-uppercase">Using the Gyro</h3>
+                                    <div>
+                                        <img src="images/icon-trend.png" alt="">
+                                        <img src="images/icon-context-menu.png" class="pl-2" alt="">
+                                    </div>
+
+                                </div>
+                                <p class="card-text">
+                                    Date Created: <span class="date">12th April 2022</span> <br>
+                                    Created by: <span class="created">Blippar</span>
+                                </p>
+                                <div class="title d-flex justify-content-between">
+                                    <p class="status"> <span class="status-legend published mr-2"></span><span
+                                            class="status-text">Published</span></p>
+                                    <div class="views align-self-center p-1 pr-3">
+                                        Views: <span>1</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card text-left gutters">
+                            <div class="card-image-container p-2">
+                                <img src="images/img-2.png" class="card-img-top" alt="...">
+                                <div class="scan-code"><img src="images/scan.png" alt="" class="img-responsive"></div>
+                            </div>
+                            <div class="card-body">
+                                <div class="title d-flex justify-content-between">
+                                    <h3 class="card-title text-uppercase">Demo 1</h3>
+                                    <div>
+                                        <img src="images/icon-trend.png" alt="">
+                                        <img src="images/icon-context-menu.png" class="pl-2" alt="">
+                                    </div>
+
+                                </div>
+                                <p class="card-text">
+                                    Date Created: <span class="date">12th April 2022</span> <br>
+                                    Created by: <span class="created">Blippar</span>
+                                </p>
+                                <div class="title d-flex justify-content-between">
+                                    <p class="status"> <span class="status-legend published mr-2"></span><span
+                                            class="status-text">Published</span></p>
+                                    <div class="views align-self-center p-1 pr-3">
+                                        Views: <span>1</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="card text-left gutters">
+                            <div class="card-image-container p-2">
+                                <img src="images/img-3.png" class="card-img-top" alt="...">
+                                <div class="scan-code"><img src="images/scan.png" alt="" class="img-responsive"></div>
+                            </div>
+                            <div class="card-body">
+                                <div class="title d-flex justify-content-between">
+                                    <h3 class="card-title text-uppercase">Project Starter 3</h3>
+                                    <div>
+                                        <img src="images/icon-trend.png" alt="">
+                                        <img src="images/icon-context-menu.png" class="pl-2" alt="">
+                                    </div>
+
+                                </div>
+                                <p class="card-text">
+                                    Date Created: <span class="date">12th April 2022</span> <br>
+                                    Created by: <span class="created">Blippar</span>
+                                </p>
+                                <div class="title d-flex justify-content-between">
+                                    <p class="status"> <span class="status-legend not-published mr-2"></span><span
+                                            class="status-text">Not Published</span></p>
+                                    <div class="views align-self-center p-1 pr-3">
+                                        Views: <span>1</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card text-left gutters">
+                            <div class="card-image-container p-2">
+                                <img src="images/img-1.png" class="card-img-top" alt="...">
+                                <div class="scan-code"><img src="images/scan.png" alt="" class="img-responsive"></div>
+                            </div>
+                            <div class="card-body">
+                                <div class="title d-flex justify-content-between">
+                                    <h3 class="card-title text-uppercase">Using the Gyro</h3>
+                                    <div>
+                                        <img src="images/icon-trend.png" alt="">
+                                        <img src="images/icon-context-menu.png" class="pl-2" alt="">
+                                    </div>
+
+                                </div>
+                                <p class="card-text">
+                                    Date Created: <span class="date">12th April 2022</span> <br>
+                                    Created by: <span class="created">Blippar</span>
+                                </p>
+                                <div class="title d-flex justify-content-between">
+                                    <p class="status"> <span class="status-legend published mr-2"></span><span
+                                            class="status-text">Published</span></p>
+                                    <div class="views align-self-center p-1 pr-3">
+                                        Views: <span>1</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card text-left gutters">
+                            <div class="card-image-container p-2">
+                                <img src="images/img-2.png" class="card-img-top" alt="...">
+                                <div class="scan-code"><img src="images/scan.png" alt="" class="img-responsive"></div>
+                            </div>
+                            <div class="card-body">
+                                <div class="title d-flex justify-content-between">
+                                    <h3 class="card-title text-uppercase">Demo 1</h3>
+                                    <div>
+                                        <img src="images/icon-trend.png" alt="">
+                                        <img src="images/icon-context-menu.png" class="pl-2" alt="">
+                                    </div>
+
+                                </div>
+                                <p class="card-text">
+                                    Date Created: <span class="date">12th April 2022</span> <br>
+                                    Created by: <span class="created">Blippar</span>
+                                </p>
+                                <div class="title d-flex justify-content-between">
+                                    <p class="status"> <span class="status-legend published mr-2"></span><span
+                                            class="status-text">Published</span></p>
+                                    <div class="views align-self-center p-1 pr-3">
+                                        Views: <span>1</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="card text-left gutters">
+                            <div class="card-image-container p-2">
+                                <img src="images/img-3.png" class="card-img-top" alt="...">
+                                <div class="scan-code"><img src="images/scan.png" alt="" class="img-responsive"></div>
+                            </div>
+                            <div class="card-body">
+                                <div class="title d-flex justify-content-between">
+                                    <h3 class="card-title text-uppercase">Project Starter 3</h3>
+                                    <div>
+                                        <img src="images/icon-trend.png" alt="">
+                                        <img src="images/icon-context-menu.png" class="pl-2" alt="">
+                                    </div>
+
+                                </div>
+                                <p class="card-text">
+                                    Date Created: <span class="date">12th April 2022</span> <br>
+                                    Created by: <span class="created">Blippar</span>
+                                </p>
+                                <div class="title d-flex justify-content-between">
+                                    <p class="status"> <span class="status-legend not-published mr-2"></span><span
+                                            class="status-text">Not Published</span></p>
+                                    <div class="views align-self-center p-1 pr-3">
+                                        Views: <span>1</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-dark">
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-between">
+                <div class="col-md-9 pt-5 left">
+                    <ul class="mt-5">
+                        <li>All Rights Reserved 2022 &copy; Blippar Group Limited</li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 text-right pt-1 mt-5 pr-5 right">
+                    <a href="#head"><img src="images/icon-top.png" alt="Icon To Top" class="icon-to-top"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

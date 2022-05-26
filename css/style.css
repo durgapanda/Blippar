@@ -1,0 +1,232 @@
+body {
+    font-size: 16px;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* base styles */
+
+.btn-white {
+    background-color: #fff;
+    border-radius: 50%;
+    color: #FFF
+}
+
+.btn-white-o {
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    color: #FFF
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.bg-dark {
+    background-color: #2E3240 !important;
+}
+.btn-secondary-o {
+    border-radius: 20px;
+    background-color: transparent;
+    border: 1px solid #CCC;
+    text-align: left;
+    width: 200px;
+    color: #2E3240;
+}
+
+/* base styles */
+
+.header {
+    background: url(../images/header-bg.png) top center no-repeat;
+    height: 350px;
+    background-size: cover;
+    padding: 0 2em;
+    position: relative;
+}
+
+.logo-section {
+    text-align: left;
+}
+
+.logo-section p {
+    line-height: 1.0;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.logo-section a {
+    display: inline-block;
+}
+
+.logo-section p.logo-desc {
+    font-weight: 800 ;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    position: relative;
+    left: -4px;
+}
+
+.logo-section .text-welcome {
+    font-size: 1.25em;
+}
+
+.profile-section .btn.learn {
+    width: 100px;
+    display: inline-block;
+}
+
+.profile-section .avatar {
+    background-color: #59B1E0 !important;
+    display: inline-block;
+    border: 2px solid #FFF;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.btn-new-proj {
+    font-family: 'Josefin Sans', sans-serif;
+
+    position: absolute;
+    background-color: #2E3240;
+    border-radius: 30px;
+    right: 50px;
+    padding: 10px;
+    bottom: 117px;
+}
+
+.section-options {
+    margin-top: -80px;
+    padding: 0 2em;
+}
+.subtitle {
+    font-size: 26px;
+}
+.text-sort {
+    display: inline-block;
+    margin-right: 60px;
+}
+.dropdown-sort {
+    position: relative;
+    top: -5px;
+    font-weight: 800;
+}
+.status-legend {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+
+.section-grid {
+    padding: 0 2em;
+}
+
+.card-image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.card {
+    border-radius: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.col-lg-4 {
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.card-image-container .scan-code {
+    position: absolute;
+    bottom: -10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.card h3.card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800 !important;
+}
+
+.status-legend.published {
+    background-color: #9DE300;
+}
+
+.status-legend.not-published {
+    background-color: #707070;
+}
+
+.views {
+    background-color: #EEEEEE;
+    width: 150px;
+    text-align: right;
+    border-radius: 20px;
+    position: relative;
+    top: -5px;
+}
+
+footer {
+    height: 150px;
+}
+
+footer ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+    color: white;
+    font-size: 14px;
+}
+
+footer ul li a {
+    color: white;
+    font-size: 14px;
+}
+
+footer ul li a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+footer .icon-to-top {
+    cursor: pointer;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+/* Large devices (desktops, 992px and down) */
+@media (min-width: 992px) {
+    .section-grid .row {
+        margin-bottom: 20px;
+    }
+}
+
+/* Large devices (desktops, 992px and down) */
+@media (max-width: 1200px) {}
+/* Extra large devices (large desktops, 1200px and down) */
+@media (max-width: 992px) {
+    .card:nth-child(0), .card:nth-child(1) {
+        margin-bottom: 20px;
+    }
+    footer {
+        height: auto
+    }
+    footer .left, footer .right {
+        padding: 0;
+        margin: 0;
+    }
+}
+/* Medium devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+}
+/* Small devices (landscape phones, 576px and down) */
+@media (max-width: 576px) {
+
+}
+
+
