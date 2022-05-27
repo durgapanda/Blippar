@@ -19,7 +19,6 @@ function resetSlides() {
 function getFolderName() {
     let folderName = $("#folder-name").val();
     resetSlides()
-    console.log(folderName);
 }
 
 function showView(type) {
@@ -36,19 +35,38 @@ function showView(type) {
         $(".section-grid").removeClass("d-none").addClass("active")
     }
 }
+function showMenu(elm) {
+    resetMenu()
+    elm.nextElementSibling.classList.remove("d-none");;
+}
+
+function resetMenu() {
+    $(".menu").addClass("d-none")
+}
+
+
 
 $(function () {
 
     $('#newProjectModal').on('hidden.bs.modal', function (event) {
-        showNext("slide-1")
+        showNext("slide-np1")
     })
     $('#newFolderModal').on('hidden.bs.modal', function (event) {
         showNext("slide-f1")
     })
+    $('#viewProjectModal, #viewProjectWOModal').on('show.bs.modal', function (event) {
+        resetMenu()
+    })
+
+    $('#deleteMarkerModal').on('hidden.bs.modal', function (event) {
+        $(".backdrop").addClass("d-none");
+    })
+
+    $(".marker-delete").on("click", () => {
+        $(".backdrop").removeClass("d-none");
+        $('#deleteMarkerModal').modal('show');
+    })
 
 })
-
-
-
 
 
