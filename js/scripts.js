@@ -18,7 +18,7 @@ function resetSlides() {
 
 function getFolderName() {
     let folderName = $("#folder-name").val();
-    resetSlides()
+    resetSlides();
 }
 
 function showView(type) {

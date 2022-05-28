@@ -1,8 +1,10 @@
+@import url(fonts.css);
+
 body {
     font-size: 16px;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    color: #777777;
+    font-family: 'Avenir Book', sans-serif;
+    color: #2E3240;
 }
 
 /* base styles */
@@ -25,8 +27,8 @@ body {
 }
 
 .modal-title {
+    font-family: 'Brandon Grotesque Black', sans-serif;
     text-transform: uppercase;
-    font-weight: 800 !important;
     color: #2E3240;
 }
 
@@ -48,7 +50,7 @@ body {
 }
 
 .text-warning {
-    color: #FFAA00;
+    color: #FFAA00 !important;
 }
 
 .shadow-sm {
@@ -81,9 +83,15 @@ h5 {
     background-color: #000;
     opacity: 0.8;
 }
+
 .d-none {
     display: none !important;
 }
+
+::placeholder {
+    font-size: 18px;
+}
+
 /* base styles */
 
 .header {
@@ -92,11 +100,12 @@ h5 {
     background-size: cover;
     padding: 0 2em;
     position: relative;
-    z-index: 99;
 }
 
 .logo-section {
     text-align: left;
+    z-index: 99;
+    height: 200px;
 }
 
 .logo-section p {
@@ -110,26 +119,41 @@ h5 {
 }
 
 .logo-section p.logo-desc {
-    font-weight: 800;
+    font-family: 'Brandon Grotesque Black', sans-serif;
     text-transform: uppercase;
-    font-size: 2.5em;
+    font-size: 40px;
     position: relative;
     left: -4px;
 }
 
 .logo-section .text-welcome {
-    font-size: 1.25em;
+    font-family: 'Avenir Medium', san-serif;
+    font-size: 20px;
 }
 
 .profile-section .btn.learn {
     width: 100px;
     display: inline-block;
+    font-family: 'Brandon Grotesque Black', sans-serif;
+    font-size: 14px;
+}
+
+.profile-section .btn.learn:hover {
+    color: white;
 }
 
 .profile-section .avatar {
-    background-color: #59B1E0 !important;
+    font-family: 'Brandon Grotesque Black', sans-serif;
+    background: url(../images/icon-profile-bg.svg) center center no-repeat !important;
     display: inline-block;
-    border: 2px solid #FFF;
+    font-size: 14px;
+    height: 40px;
+    position: relative;
+}
+
+.profile-section .avatar .initials {
+    top: 2px;
+    position: relative;
 }
 
 .dropdown-toggle::after {
@@ -137,13 +161,14 @@ h5 {
 }
 
 .btn-new-proj {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Brandon Grotesque Black', sans-serif;
     position: absolute;
-    background-color: #2E3240;
+    background-color: #2E3240 !important;
     border-radius: 30px;
+    font-size: 22px;
     right: 50px;
     padding: 10px;
-    bottom: 117px;
+    bottom: 110px;
 }
 
 .section-options {
@@ -152,7 +177,10 @@ h5 {
 }
 
 .subtitle {
+    font-family: 'Avenir Heavy', san-serif;
     font-size: 26px;
+    position: relative;
+    top: -3px;
 }
 
 .text-sort {
@@ -161,54 +189,71 @@ h5 {
 }
 
 .dropdown-sort {
+    font-family: 'Brandon Grotesque Black', sans-serif;
     position: relative;
     top: -5px;
-    font-weight: 800;
     position: relative;
 }
 
-.dropdown-menu, .menu-top {
+
+.dropdown-menu,
+.menu-top {
     padding: 1rem !important;
     margin-top: 1rem !important;
 }
 
-.dropdown-menu, .menu-top {
+.dropdown-menu,
+.menu-top {
     border-radius: 20px;
-    width: 300px;
+    width: 320px;
     position: relative;
     margin-left: -50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
-.dropdown-menu .dropdown-item, .menu-top .menu-item {
+.dropdown-menu .dropdown-item,
+.menu-top .menu-item {
+    font-family: 'Avenir Light', san-serif;
+    font-size: 24px;
     border-bottom: 1px dotted #EEE;
     padding: 1rem 0 !important;
 
 }
+
 .menu-top .menu-item {
     list-style: none;
 }
 
-.dropdown-menu .dropdown-item:last-child, .menu-top .menu-item:last-child {
+.dropdown-menu .dropdown-item:last-child,
+.menu-top .menu-item:last-child {
     border-bottom: none
 }
 
-.dropdown-menu .dropdown-item:hover, .menu-top .menu-item:hover {
+.dropdown-menu .dropdown-item:hover,
+.menu-top .menu-item:hover {
     background-color: transparent;
 }
+
 .menu-top {
     position: absolute;
-    top: -140px;
+    top: -170px;
     left: 80px;
     z-index: -1;
 }
-.slide-np3 {
-    top: 60px;
+
+.modal-content.slide-np3 {
+    height: 750px;
+    top: 90px;
 }
+
+.modal-md {
+    max-width: 615px !important;
+}
+
 .subnav {
     display: block;
     position: relative;
-    z-index: 999;
+    /* z-index: 900; */
 }
 
 .status-legend {
@@ -225,13 +270,29 @@ h5 {
     padding: 0 2em;
 }
 
+.section-grid .card-text,
+.section-grid .status-text,
+.section-grid .views,
+.section-grid .proj-count-wrapper,
+.section-tiles .card-text,
+.section-tiles .status-text,
+.section-tiles .views,
+.section-tiles .proj-count-wrapper,
+.title-container {
+    font-family: 'Avenir Book', san-serif;
+    font-size: 20px;
+
+}
+
 .section-tiles {
     padding: 0 2.7em;
 }
+
 .section-tiles .card-image-container .btn-white {
     font-size: 16px;
-    
+
 }
+
 .card-image-container {
     position: relative;
     overflow: hidden;
@@ -241,6 +302,11 @@ h5 {
 .card {
     border-radius: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.card-text {
+    font-family: 'Avenir Light', sans-serif;
+    font-size: 18px;
 }
 
 .col-lg-4 {
@@ -255,6 +321,7 @@ h5 {
     right: 20px;
     cursor: pointer;
 }
+
 .card-image-container .menu {
     width: 100%;
     height: 100%;
@@ -264,9 +331,9 @@ h5 {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.75);
 }
+
 h3.card-title {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800 !important;
+    font-family: 'Brandon Grotesque Black', sans-serif;
     color: #2E3240;
 }
 
@@ -299,13 +366,13 @@ h3.card-title {
 }
 
 .modal-subtitle {
-    display: block;
     font-size: 24px;
+
 }
 
 .modal-text {
     display: block;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .modal-dialog {
@@ -342,8 +409,8 @@ h3.card-title {
 }
 
 .slide-np1 .modal-body,
-.slide-f1 .modal-body, 
-.slide-d1 .modal-body  {
+.slide-f1 .modal-body,
+.slide-d1 .modal-body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -362,13 +429,18 @@ h3.card-title {
     background-color: transparent !important;
 }
 
+.new-folder label,
+.new-folder p {
+    font-size: 24px;
+}
+
 .slide-np1 .modal-body .btn-call-to-action {
     margin-top: 100px;
 }
 
 .btn-call-to-action .btn {
+    font-family: 'Brandon Grotesque Black', sans-serif;
     text-transform: uppercase !important;
-    font-weight: 600 !important;
     font-size: 20px;
     /* width: 220px; */
     padding: 10px 30px;
@@ -384,8 +456,26 @@ h3.card-title {
     color: #2E3240;
 }
 
+.btn-call-to-action .text-warning,
+.btn-call-to-action p {
+    font-family: 'Avenir Roman', san-serif;
+    font-size: 20px;
+}
+
+.text-warning.modal-footer-text {
+    font-size: 20px;
+}
+
+.upload-marker-text {
+    font-size: 20px;
+}
+
 .modal-backdrop.show {
     opacity: 0.8;
+}
+
+.filename {
+    font-size: 18px;
 }
 
 .carousel-dots li {
@@ -411,8 +501,12 @@ h3.card-title {
     vertical-align: middle;
 }
 
-.confirm-tile {
-    border-bottom: 1px dashed #777;
+.confirm-tile:not(last-child) {
+    border-bottom: 1px dashed #ADACAC;
+}
+
+.confirm-tile:last-child {
+    border-bottom: 1px dashed transparent;
 }
 
 .preview-container {

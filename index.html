@@ -40,9 +40,9 @@
         <div class="profile-section col-sm-8 text-right my-5">
           <button type="button" class="btn btn-white-o learn text-uppercase text-bold">Learn</button>
           <div class="dropdown d-inline ml-2">
-            <a class="btn dropdown-toggle btn-primary rounded-circle text-white avatar" href="#" role="button"
+            <a class="btn dropdown-toggle text-white avatar" href="#" role="button"
               id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="true">
-              SS
+              <span class="initials d-inline-block">SS</span>
             </a>
 
             <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownMenuLink">
@@ -112,7 +112,7 @@
                   <h3 class="card-title text-uppercase">Using the Gyro</h3>
                   <div>
                     <img src="images/icon-trend.png" alt="">
-                    <img src="images/icon-context-menu.png" class="pl-2 dropdown-toggle cup" alt=""
+                    <img src="images/icon-context-menu.png" class="ml-3 dropdown-toggle cup" alt=""
                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                       <button class="dropdown-item" href="#">Open project</button>
@@ -248,7 +248,7 @@
                 <p class="card-text">
                   Date Created: <span class="date">12th April 2022</span> <br>
                   Created by: <span class="created">Name</span> <br>
-                <p><span class="proj-count mt-3">3</span> Projects</p>
+                <p class="proj-count-wrapper class="proj-count-wrapper""><span class="proj-count mt-3">3</span> Projects</p>
                 </p>
               </div>
             </div>
@@ -275,7 +275,7 @@
                 <p class="card-text">
                   Date Created: <span class="date">12th April 2022</span> <br>
                   Created by: <span class="created">Name</span> <br>
-                <p><span class="proj-count mt-3">3</span> Projects</p>
+                <p class="proj-count-wrapper"><span class="proj-count mt-3">3</span> Projects</p>
                 </p>
               </div>
             </div>
@@ -302,7 +302,7 @@
                 <p class="card-text">
                   Date Created: <span class="date">12th April 2022</span> <br>
                   Created by: <span class="created">Name</span> <br>
-                <p><span class="proj-count mt-3">3</span> Projects</p>
+                <p class="proj-count-wrapper"><span class="proj-count mt-3">3</span> Projects</p>
                 </p>
               </div>
             </div>
@@ -577,14 +577,14 @@
         <div class="modal-body px-5 d-block text-center">
           <div class="modal-body-content shadow-sm pt-5 pb-3">
             <img src="images/upload-marker.png" alt="">
-            <p class="mt-3 mb-5">You can upload up to 10 markers. Use JPEGs, maximum file size 1mb per marker, 1024px
+            <p class="mt-3 mb-5 upload-marker-text">You can upload up to 10 markers. Use JPEGs, maximum file size 1mb per marker, 1024px
               high or wide</p>
             <div class="d-block text-center btn-call-to-action">
               <button class="btn btn-secondary" onclick="showNext('slide-np4')">Browse and upload</button>
               <p class="text-warning mt-3">Autogenerate a marker</p>
             </div>
           </div>
-          <p class="text-warning mt-2 text-left">What makes a good marker? </p>
+          <p class="text-warning mt-2 text-left modal-footer-text">What makes a good marker? </p>
           <!-- carousel dots -->
           <ul class="carousel-dots mt-3 d-block text-center">
             <li class="dot-1"></li>
@@ -606,7 +606,7 @@
         <div class="modal-body px-5 d-block text-center mt-n4">
           <div class="modal-body-content shadow-sm p-3">
             <div class="preview-container">
-              <div class="d-flex justify-content-start align-items-center border-light pl-4 py-3 confirm-tile">
+              <div class="d-flex justify-content-start align-items-center pl-4 py-3 confirm-tile">
                 <div class="img-wrapper align-center">
                   <img src="images/preview-1.png" alt="">
                 </div>
@@ -614,7 +614,7 @@
                 <img src="images/icon-download.png" alt="" class="ml-3">
                 <span class="filename ml-4">Untitled1.jpg</span>
               </div>
-              <div class="d-flex justify-content-start align-items-center border-light pl-4 py-3 confirm-tile">
+              <div class="d-flex justify-content-start align-items-center pl-4 py-3 confirm-tile">
                 <div class="img-wrapper align-center">
                   <img src="images/preview-2.png" alt="">
                 </div>
@@ -622,7 +622,7 @@
                 <img src="images/icon-download.png" alt="" class="ml-3">
                 <span class="filename ml-4">Untitled2.jpg</span>
               </div>
-              <div class="d-flex justify-content-start align-items-center border-light pl-4 py-3 confirm-tile">
+              <div class="d-flex justify-content-start align-items-center pl-4 py-3 confirm-tile">
                 <div class="img-wrapper align-center">
                   <img src="images/preview-3.png" alt="">
                 </div>
@@ -630,7 +630,7 @@
                 <img src="images/icon-download.png" alt="" class="ml-3 d-inline-block cup">
                 <span class="filename ml-4">Untitled3.jpg</span>
               </div>
-              <div class="d-flex justify-content-start align-items-center border-light pl-4 py-3 confirm-tile">
+              <div class="d-flex justify-content-start align-items-center pl-4 py-3 confirm-tile">
                 <div class="img-wrapper align-center">
                   <img src="images/preview-3.png" alt="">
                 </div>
@@ -639,14 +639,14 @@
                 <span class="filename ml-4">Untitled3.jpg</span>
               </div>
             </div>
-            <div class="d-block text-center btn-call-to-action">
+            <div class="d-block text-center btn-call-to-action mt-2">
               <button class="btn btn-secondary" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true" onclick='resetSlides()'>Confirm</button>
               <p class="mt-3"><strong>3 of 10</strong> markers added. <span class="text-warning">Upload</span> or <span
                   class="text-warning">Autogenerate a marker</span></p>
             </div>
           </div>
-          <p class="text-warning mt-2 text-left">What makes a good marker? </p>
+          <p class="text-warning mt-2 text-left modal-footer-text">What makes a good marker? </p>
           <ul class="carousel-dots mt-3 d-block text-center pb-5">
             <li class="dot-1"></li>
             <li class="dot-2"></li>
