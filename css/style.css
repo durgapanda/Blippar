@@ -194,6 +194,10 @@ h5 {
     top: -5px;
     position: relative;
 }
+.dropdown-sort img {
+    position: relative;
+    top: -3px;
+}
 
 
 .dropdown-menu,
@@ -427,6 +431,8 @@ h3.card-title {
 .new-folder.modal .modal-content,
 .delete-marker-modal .modal-content {
     background-color: transparent !important;
+    border: none;
+    box-shadow: none !important;
 }
 
 .new-folder label,
@@ -581,7 +587,8 @@ footer .icon-to-top {
 }
 
 /* Medium devices (tablets, 768px and down) */
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+}
 
 /* Small devices (landscape phones, 576px and down) */
 @media (max-width: 576px) {}
