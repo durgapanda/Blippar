@@ -27,7 +27,7 @@
         <div class="logo-section col-sm-4 my-5">
           <p>
             <a href="#" class="logo">
-              <img src="images/logo.png" alt="Blipper Logo" width="90px" height="24px">
+              <img src="images/logo.svg" alt="Blipper Logo" width="90px" height="24px">
             </a>
           </p>
           <p class="text-white logo-desc">
@@ -40,8 +40,8 @@
         <div class="profile-section col-sm-8 text-right my-5">
           <button type="button" class="btn btn-white-o learn text-uppercase text-bold">Learn</button>
           <div class="dropdown d-inline ml-2">
-            <a class="btn dropdown-toggle text-white avatar" href="#" role="button"
-              id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="true">
+            <a class="btn dropdown-toggle text-white avatar" href="#" role="button" id="dropdownMenuLink"
+              data-toggle="dropdown" aria-expanded="true">
               <span class="initials d-inline-block">SS</span>
             </a>
 
@@ -54,9 +54,6 @@
         </div>
         <button type="button" class="btn btn-secondary bg-dark btn-new-proj px-5 text-uppercase" data-toggle="modal"
           data-target="#newProjectModal" onclick="showNext('slide-np1')">Create A New Project</button>
-        <!-- onclick="showNext('slide-1')" -->
-        <!--  -->
-
       </header>
 
       <!-- header ends -->
@@ -70,7 +67,7 @@
               <button class="btn btn-secondary-o dropdown-toggle text-uppercase dropdown-sort ml-4 pl-4 py-2"
                 type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="text-sort">Sort By</span>
-                <img src="images/icon-caret-down.png" alt="">
+                <img src="images/icon-caret-down.svg" alt="">
               </button>
               <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                 <button class="dropdown-item" href="#">Date Created</button>
@@ -81,11 +78,11 @@
             </div>
           </div>
           <div class="subnav">
-            <img src="images/icon-hamburger-menu.png" alt="Icon Menu" width="32px" height="24px"
+            <img src="images/icon-hamburger-menu.svg" alt="Icon Menu" width="32px" height="24px"
               class="cup subnav-icon icon-tiles" onclick="showView('tile')">
-            <img src="images/icon-tabs.png" alt="Icon Menu" width="32px" height="27px"
+            <img src="images/icon-tabs.svg" alt="Icon Menu" width="32px" height="27px"
               class="cup d-none subnav-icon icon-grid" onclick="showView('grid')">
-            <img src="images/icon-folder.png" data-toggle="modal" data-target="#newFolderModal"
+            <img src="images/icon-folder.svg" data-toggle="modal" data-target="#newFolderModal"
               class="d-inline-block ml-3 cup" alt="Icon Folder" width="32px" height="28px"
               onclick="showNext('slide-f1')">
           </div>
@@ -111,12 +108,13 @@
                 <div class="title d-flex justify-content-between">
                   <h3 class="card-title text-uppercase">Using the Gyro</h3>
                   <div>
-                    <img src="images/icon-trend.png" alt="">
-                    <img src="images/icon-context-menu.png" class="ml-3 dropdown-toggle cup" alt=""
+                    <img src="images/icon-trend.svg" alt="">
+                    <img src="images/icon-context-menu.svg" class="ml-3 dropdown-toggle cup" alt=""
                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                       <button class="dropdown-item" href="#">Open project</button>
-                      <button class="dropdown-item" href="#">Preview project</button>
+                      <button class="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
+                        project</button>
                       <button class="dropdown-item" href="#">Duplicate project</button>
                       <button class="dropdown-item" href="#">Delete project</button>
                       <button class="dropdown-item" href="#">Version history</button>
@@ -153,12 +151,13 @@
                 <div class="title d-flex justify-content-between">
                   <h3 class="card-title text-uppercase">Demo 1</h3>
                   <div>
-                    <img src="images/icon-trend.png" alt="">
-                    <img src="images/icon-context-menu.png" class="pl-2 dropdown-toggle cup" alt=""
+                    <img src="images/icon-trend.svg" alt="">
+                    <img src="images/icon-context-menu.svg" class="pl-2 dropdown-toggle cup" alt=""
                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                       <button class="dropdown-item" href="#">Open project</button>
-                      <button class="dropdown-item" href="#">Preview project</button>
+                      <button class="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
+                        project</button>
                       <button class="dropdown-item" href="#">Duplicate project</button>
                       <button class="dropdown-item" href="#">Delete project</button>
                       <button class="dropdown-item" href="#">Version history</button>
@@ -196,12 +195,13 @@
                 <div class="title d-flex justify-content-between">
                   <h3 class="card-title text-uppercase">Project Starter 3</h3>
                   <div>
-                    <img src="images/icon-trend.png" alt="">
-                    <img src="images/icon-context-menu.png" class="pl-2 dropdown-toggle cup" alt=""
+                    <img src="images/icon-trend.svg" alt="">
+                    <img src="images/icon-context-menu.svg" class="pl-2 dropdown-toggle cup" alt=""
                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                       <button class="dropdown-item" href="#">Open project</button>
-                      <button class="dropdown-item" href="#">Preview project</button>
+                      <button class="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
+                        project</button>
                       <button class="dropdown-item" href="#">Duplicate project</button>
                       <button class="dropdown-item" href="#">Delete project</button>
                       <button class="dropdown-item" href="#">Version history</button>
@@ -236,7 +236,7 @@
                 <div class="title d-flex justify-content-between">
                   <h3 class="card-title text-uppercase">Folder name</h3>
                   <div>
-                    <img src="images/icon-context-menu.png" class="pl-2 dropdown-toggle cup" alt=""
+                    <img src="images/icon-context-menu.svg" class="pl-2 dropdown-toggle cup" alt=""
                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                       <button class="dropdown-item" href="#">Rename folder</button>
@@ -248,7 +248,8 @@
                 <p class="card-text">
                   Date Created: <span class="date">12th April 2022</span> <br>
                   Created by: <span class="created">Name</span> <br>
-                <p class="proj-count-wrapper class="proj-count-wrapper""><span class="proj-count mt-3">3</span> Projects</p>
+                <p class="proj-count-wrapper class=" proj-count-wrapper""><span class="proj-count mt-3">3</span>
+                  Projects</p>
                 </p>
               </div>
             </div>
@@ -263,7 +264,7 @@
                 <div class="title d-flex justify-content-between">
                   <h3 class="card-title text-uppercase">Folder name</h3>
                   <div>
-                    <img src="images/icon-context-menu.png" class="pl-2 dropdown-toggle cup" alt=""
+                    <img src="images/icon-context-menu.svg" class="pl-2 dropdown-toggle cup" alt=""
                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                       <button class="dropdown-item" href="#">Rename folder</button>
@@ -290,7 +291,7 @@
                 <div class="title d-flex justify-content-between">
                   <h3 class="card-title text-uppercase">Folder name</h3>
                   <div>
-                    <img src="images/icon-context-menu.png" class="pl-2 dropdown-toggle cup" alt=""
+                    <img src="images/icon-context-menu.svg" class="pl-2 dropdown-toggle cup" alt=""
                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                       <button class="dropdown-item" href="#">Rename folder</button>
@@ -337,8 +338,8 @@
           <div class="d-flex flex-row">
             <div class="views-container d-flex flex-column justify-content-between mr-3">
               <div class="d-block text-right mt-4">
-                <img src="images/icon-trend.png" alt="">
-                <img src="images/icon-context-menu.png" class="pl-2" alt="">
+                <img src="images/icon-trend.svg" alt="">
+                <img src="images/icon-context-menu.svg" class="pl-2" alt="">
               </div>
               <div class="views align-self-center p-1 pr-3 mb-2">
                 Views: <span>1</span>
@@ -372,8 +373,8 @@
           <div class="d-flex flex-row">
             <div class="views-container d-flex flex-column justify-content-between mr-3">
               <div class="d-block text-right mt-4">
-                <img src="images/icon-trend.png" alt="">
-                <img src="images/icon-context-menu.png" class="pl-2" alt="">
+                <img src="images/icon-trend.svg" alt="">
+                <img src="images/icon-context-menu.svg" class="pl-2" alt="">
               </div>
               <div class="views align-self-center p-1 pr-3 mb-2">
                 Views: <span>1</span>
@@ -407,8 +408,8 @@
           <div class="d-flex flex-row">
             <div class="views-container d-flex flex-column justify-content-between mr-3">
               <div class="d-block text-right mt-4">
-                <img src="images/icon-trend.png" alt="">
-                <img src="images/icon-context-menu.png" class="pl-2" alt="">
+                <img src="images/icon-trend.svg" alt="">
+                <img src="images/icon-context-menu.svg" class="pl-2" alt="">
               </div>
               <div class="views align-self-center p-1 pr-3 mb-2">
                 Views: <span>1</span>
@@ -436,7 +437,7 @@
           </ul>
         </div>
         <div class="col-md-3 text-right pt-1 mt-5 pr-5 right">
-          <a href="#head"><img src="images/icon-top.png" alt="Icon To Top" class="icon-to-top"></a>
+          <a href="#head"><img src="images/icon-top.svg" alt="Icon To Top" class="icon-to-top"></a>
         </div>
       </div>
     </div>
@@ -453,7 +454,7 @@
 
       <div class="modal-content slide-np1 d-none">
         <button type="button" class="new-project-modal-close close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"><img src="images/icon-close.png" alt=""></span>
+          <span aria-hidden="true"><img src="images/icon-close.svg" alt=""></span>
         </button>
         <div class="modal-header text-center d-block flex-column">
           <h5 class="modal-title d-inline-block">New Project</h5>
@@ -480,7 +481,7 @@
 
       <div class="modal-content slide-np2 d-none">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"><img src="images/icon-close.png" alt=""></span>
+          <span aria-hidden="true"><img src="images/icon-close.svg" alt=""></span>
         </button>
         <div class="modal-header text-center d-block flex-column">
           <h5 class="modal-title d-inline-block">New Project</h5>
@@ -566,7 +567,7 @@
           <li class="menu-item"></li>
         </ul>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"><img src="images/icon-close.png" alt=""></span>
+          <span aria-hidden="true"><img src="images/icon-close.svg" alt=""></span>
         </button>
         <div class="modal-header text-center d-block flex-column">
           <h5 class="modal-title d-inline-block">New Project</h5>
@@ -577,7 +578,8 @@
         <div class="modal-body px-5 d-block text-center">
           <div class="modal-body-content shadow-sm pt-5 pb-3">
             <img src="images/upload-marker.png" alt="">
-            <p class="mt-3 mb-5 upload-marker-text">You can upload up to 10 markers. Use JPEGs, maximum file size 1mb per marker, 1024px
+            <p class="mt-3 mb-5 upload-marker-text">You can upload up to 10 markers. Use JPEGs, maximum file size 1mb
+              per marker, 1024px
               high or wide</p>
             <div class="d-block text-center btn-call-to-action">
               <button class="btn btn-secondary" onclick="showNext('slide-np4')">Browse and upload</button>
@@ -595,7 +597,7 @@
       </div>
       <div class="modal-content slide-np4 active">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"><img src="images/icon-close.png" alt=""></span>
+          <span aria-hidden="true"><img src="images/icon-close.svg" alt=""></span>
         </button>
         <div class="modal-header text-center d-block flex-column">
           <h5 class="modal-title d-inline-block">New Project</h5>
@@ -610,32 +612,32 @@
                 <div class="img-wrapper align-center">
                   <img src="images/preview-1.png" alt="">
                 </div>
-                <img src="images/icon-delete.png" alt="" class="ml-5 mr-2 d-inline-block cup marker-delete">
-                <img src="images/icon-download.png" alt="" class="ml-3">
+                <img src="images/icon-delete.svg" alt="" class="ml-5 mr-2 d-inline-block cup marker-delete">
+                <img src="images/icon-download.svg" alt="" class="ml-3">
                 <span class="filename ml-4">Untitled1.jpg</span>
               </div>
               <div class="d-flex justify-content-start align-items-center pl-4 py-3 confirm-tile">
                 <div class="img-wrapper align-center">
                   <img src="images/preview-2.png" alt="">
                 </div>
-                <img src="images/icon-delete.png" alt="" class="ml-5 mr-2 d-inline-block cup marker-delete">
-                <img src="images/icon-download.png" alt="" class="ml-3">
+                <img src="images/icon-delete.svg" alt="" class="ml-5 mr-2 d-inline-block cup marker-delete">
+                <img src="images/icon-download.svg" alt="" class="ml-3">
                 <span class="filename ml-4">Untitled2.jpg</span>
               </div>
               <div class="d-flex justify-content-start align-items-center pl-4 py-3 confirm-tile">
                 <div class="img-wrapper align-center">
                   <img src="images/preview-3.png" alt="">
                 </div>
-                <img src="images/icon-delete.png" alt="" class="ml-5 mr-2 d-inline-block cup marker-delete">
-                <img src="images/icon-download.png" alt="" class="ml-3 d-inline-block cup">
+                <img src="images/icon-delete.svg" alt="" class="ml-5 mr-2 d-inline-block cup marker-delete">
+                <img src="images/icon-download.svg" alt="" class="ml-3 d-inline-block cup">
                 <span class="filename ml-4">Untitled3.jpg</span>
               </div>
               <div class="d-flex justify-content-start align-items-center pl-4 py-3 confirm-tile">
                 <div class="img-wrapper align-center">
                   <img src="images/preview-3.png" alt="">
                 </div>
-                <img src="images/icon-delete.png" alt="" class="ml-5 mr-2 d-inline-block cup marker-delete">
-                <img src="images/icon-download.png" alt="" class="ml-3">
+                <img src="images/icon-delete.svg" alt="" class="ml-5 mr-2 d-inline-block cup marker-delete">
+                <img src="images/icon-download.svg" alt="" class="ml-3">
                 <span class="filename ml-4">Untitled3.jpg</span>
               </div>
             </div>
@@ -745,7 +747,7 @@
 
       <div class="modal-content slide-1 pb-3">
         <button type="button" class="new-project-modal-close close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"><img src="images/icon-close.png" alt=""></span>
+          <span aria-hidden="true"><img src="images/icon-close.svg" alt=""></span>
         </button>
         <div class="modal-body row">
           <div class="col text-center">
@@ -758,14 +760,14 @@
               <img src="images/scan-code-lg.png" alt="">
             </p>
             <p class="modal-text">
-              Then point your device camera at the marker shown opposite <img src="images/icon-arrow-right.png" alt="">
+              Then point your device camera at the marker shown opposite <img src="images/icon-arrow-right.svg" alt="">
             </p>
 
 
             <p class="modal-text mt-5">
               Your <span class="text-uppercase">Live</span> project <span class="text-uppercase">URL</span> is: <br>
               <a href="https://ar.blippar.com/305075154" class="text-warning">https://ar.blippar.com/305075154</a> <span
-                class="cup"><img src="images/icon-copy-link.png" alt=""></span>
+                class="cup"><img src="images/icon-copy-link.svg" alt=""></span>
             </p>
 
             <div class="d-block text-center btn-call-to-action mt-5">
@@ -792,7 +794,7 @@
 
       <div class="modal-content slide-1 pb-3">
         <button type="button" class="new-project-modal-close close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"><img src="images/icon-close.png" alt=""></span>
+          <span aria-hidden="true"><img src="images/icon-close.svg" alt=""></span>
         </button>
         <div class="modal-body row">
           <div class="col text-center">
@@ -805,14 +807,14 @@
               <img src="images/scan-code-lg.png" alt="">
             </p>
             <p class="modal-text">
-              Then point your device camera at the marker shown opposite <img src="images/icon-arrow-right.png" alt="">
+              Then point your device camera at the marker shown opposite <img src="images/icon-arrow-right.svg" alt="">
             </p>
 
 
             <p class="modal-text mt-5">
               Your <span class="text-uppercase">Live</span> project <span class="text-uppercase">URL</span> is: <br>
               <a href="https://ar.blippar.com/305075154" class="text-warning">https://ar.blippar.com/305075154</a> <span
-                class="cup"><img src="images/icon-copy-link.png" alt=""></span>
+                class="cup"><img src="images/icon-copy-link.svg" alt=""></span>
             </p>
 
             <div class="d-block text-center btn-call-to-action mt-5">
@@ -836,7 +838,7 @@
 
       <div class="modal-content slide-pp1 pb-3">
         <button type="button" class="new-project-modal-close close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"><img src="images/icon-close.png" alt=""></span>
+          <span aria-hidden="true"><img src="images/icon-close.svg" alt=""></span>
         </button>
         <div class="modal-body row">
           <div class="col text-center">
@@ -849,7 +851,7 @@
               <img src="images/scan-code-lg.png" alt="">
             </p>
             <p class="modal-text">
-              Then point your device camera at the marker shown opposite <img src="images/icon-arrow-right.png" alt="">
+              Then point your device camera at the marker shown opposite <img src="images/icon-arrow-right.svg" alt="">
             </p>
 
             <div class="d-flex justify-content-center">
@@ -862,7 +864,7 @@
             <p class="modal-text mt-5">
               Your <span class="text-uppercase">Preview</span> project URL is: <br>
               <a href="https://ar.blippar.com/305075154" class="text-warning">https://ar.blippar.com/305075154</a> <span
-                class="cup"><img src="images/icon-copy-link.png" alt=""></span>
+                class="cup"><img src="images/icon-copy-link.svg" alt=""></span>
             </p>
           </div>
           <div class="col">
@@ -885,12 +887,12 @@
 
       <div class="modal-content slide-pp1 pb-3">
         <button type="button" class="new-project-modal-close close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"><img src="images/icon-close.png" alt=""></span>
+          <span aria-hidden="true"><img src="images/icon-close.svg" alt=""></span>
         </button>
         <div class="modal-body row">
           <div class="col text-center">
 
-            <h5 class="modal-title mt-n3">Project Published<img src="images/icon-celebrate.png" alt="" class="mt-n2">
+            <h5 class="modal-title mt-n3">Project Published<img src="images/icon-celebrate.svg" alt="" class="mt-n2">
             </h5>
             <p class="modal-text">
               Your project is now live and ready to share. <br>
@@ -900,14 +902,14 @@
               <img src="images/scan-code-lg.png" alt="">
             </p>
             <p class="modal-text">
-              Then point your device camera at the marker shown opposite <img src="images/icon-arrow-right.png" alt="">
+              Then point your device camera at the marker shown opposite <img src="images/icon-arrow-right.svg" alt="">
             </p>
 
 
             <p class="modal-text mt-5">
               Your <span class="text-uppercase">Live</span> project <span class="text-uppercase">URL</span> is: <br>
               <a href="https://ar.blippar.com/305075154" class="text-warning">https://ar.blippar.com/305075154</a> <span
-                class="cup"><img src="images/icon-copy-link.png" alt=""></span>
+                class="cup"><img src="images/icon-copy-link.svg" alt=""></span>
             </p>
 
             <div class="d-block text-center btn-call-to-action mt-5">
