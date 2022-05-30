@@ -24,7 +24,7 @@
 
       <header class="header row">
 
-        <div class="logo-section col-sm-4 my-5">
+        <div class="logo-section col-sm-12 col-md-4 my-5">
           <p>
             <a href="#" class="logo">
               <img src="images/logo.svg" alt="Blipper Logo" width="90px" height="24px">
@@ -37,7 +37,7 @@
             Welcome back Steve
           </p>
         </div>
-        <div class="profile-section col-sm-8 text-right my-5">
+        <div class="profile-section col-sm-12 col-md-8 text-right my-5">
           <button type="button" class="btn btn-white-o learn text-uppercase text-bold">Learn</button>
           <div class="dropdown d-inline ml-2">
             <a class="btn dropdown-toggle text-white avatar" href="#" role="button" id="dropdownMenuLink"
@@ -61,7 +61,7 @@
       <!-- section-options starts -->
       <div class="container-fluid">
         <section class="justify-content-between row section-options mb-3">
-          <div class="subnav">
+          <div class="subnav col text-left">
             <span class="subtitle">Your Projects</span>
             <div class="dropdown open d-inline">
               <button class="btn btn-secondary-o dropdown-toggle text-uppercase dropdown-sort ml-4 pl-4 py-2"
@@ -77,7 +77,7 @@
               </div>
             </div>
           </div>
-          <div class="subnav">
+          <div class="subnav col text-right">
             <img src="images/icon-hamburger-menu.svg" alt="Icon Menu" width="32px" height="24px"
               class="cup subnav-icon icon-tiles" onclick="showView('tile')">
             <img src="images/icon-tabs.svg" alt="Icon Menu" width="32px" height="27px"
@@ -206,7 +206,6 @@
                       <button class="dropdown-item" href="#">Version history</button>
                     </div>
                   </div>
-
                 </div>
                 <p class="card-text">
                   Date Created: <span class="date">12th April 2022</span> <br>
@@ -315,7 +314,7 @@
       <!-- section tiles starts -->
       <div class="container-fluid section-tiles d-none">
         <div class="row shadow-sm p-2 justify-content-between mb-3">
-          <div class="d-flex flex-row">
+          <div class="left d-md-flex d-sm-block flex-lg-row flex-sm-column">
             <div class="card-image-container position-relative">
               <img src="images/img-t1.png" class="card-img-top project-image" alt="..." onclick="showMenu(this)">
               <div class="menu align-center flex-column btn-call-to-action d-none">
@@ -334,11 +333,20 @@
                   class="status-text">Published</span></p>
             </div>
           </div>
-          <div class="d-flex flex-row">
+          <div class="right d-md-flex d-sm-block flex-lg-row flex-sm-column">
             <div class="views-container d-flex flex-column justify-content-between mr-3">
               <div class="d-block text-right mt-4">
                 <img src="images/icon-trend.svg" alt="">
-                <img src="images/icon-context-menu.svg" class="pl-2" alt="">
+                <img src="images/icon-context-menu.svg" class="pl-2 dropdown-toggle cup" alt="" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                  <button class="dropdown-item" href="#">Open project</button>
+                  <button class="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
+                    project</button>
+                  <button class="dropdown-item" href="#">Duplicate project</button>
+                  <button class="dropdown-item" href="#">Delete project</button>
+                  <button class="dropdown-item" href="#">Version history</button>
+                </div>
               </div>
               <div class="views align-self-center p-1 pr-3 mb-2">
                 Views: <span>1</span>
@@ -350,7 +358,7 @@
           </div>
         </div>
         <div class="row shadow-sm p-2 justify-content-between mb-3">
-          <div class="d-flex flex-row">
+          <div class="left d-md-flex d-sm-block flex-lg-row flex-sm-column">
             <div class="card-image-container position-relative">
               <img src="images/img-t2.png" class="card-img-top project-image" alt="..." onclick="showMenu(this)">
               <div class="menu align-center flex-column btn-call-to-action d-none">
@@ -369,11 +377,20 @@
                   class="status-text">Published</span></p>
             </div>
           </div>
-          <div class="d-flex flex-row">
+          <div class="right d-md-flex d-sm-block flex-lg-row flex-sm-column">
             <div class="views-container d-flex flex-column justify-content-between mr-3">
               <div class="d-block text-right mt-4">
                 <img src="images/icon-trend.svg" alt="">
-                <img src="images/icon-context-menu.svg" class="pl-2" alt="">
+                <img src="images/icon-context-menu.svg" class="pl-2 dropdown-toggle cup" alt="" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                  <button class="dropdown-item" href="#">Open project</button>
+                  <button class="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
+                    project</button>
+                  <button class="dropdown-item" href="#">Duplicate project</button>
+                  <button class="dropdown-item" href="#">Delete project</button>
+                  <button class="dropdown-item" href="#">Version history</button>
+                </div>
               </div>
               <div class="views align-self-center p-1 pr-3 mb-2">
                 Views: <span>1</span>
@@ -385,7 +402,7 @@
           </div>
         </div>
         <div class="row shadow-sm p-2 justify-content-between mb-3">
-          <div class="d-flex flex-row">
+          <div class="left d-md-flex d-sm-block flex-lg-row flex-sm-column">
             <div class="card-image-container position-relative">
               <img src="images/img-t3.png" class="card-img-top project-image" alt="..." onclick="showMenu(this)">
               <div class="menu align-center flex-column btn-call-to-action d-none">
@@ -404,11 +421,20 @@
                   Published</span></p>
             </div>
           </div>
-          <div class="d-flex flex-row">
+          <div class="right d-md-flex d-sm-block flex-lg-row flex-sm-column">
             <div class="views-container d-flex flex-column justify-content-between mr-3">
               <div class="d-block text-right mt-4">
                 <img src="images/icon-trend.svg" alt="">
-                <img src="images/icon-context-menu.svg" class="pl-2" alt="">
+                <img src="images/icon-context-menu.svg" class="pl-2 dropdown-toggle cup" alt="" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                  <button class="dropdown-item" href="#">Open project</button>
+                  <button class="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
+                    project</button>
+                  <button class="dropdown-item" href="#">Duplicate project</button>
+                  <button class="dropdown-item" href="#">Delete project</button>
+                  <button class="dropdown-item" href="#">Version history</button>
+                </div>
               </div>
               <div class="views align-self-center p-1 pr-3 mb-2">
                 Views: <span>1</span>
@@ -428,14 +454,14 @@
   <footer class="bg-dark">
     <div class="container-fluid">
       <div class="row d-flex justify-content-between">
-        <div class="col-md-9 pt-5 left">
+        <div class="col-md-9 pt-md-5 pt-sm-2 left">
           <ul class="mt-5">
-            <li>All Rights Reserved 2022 &copy; Blippar Group Limited</li>
+            <li>All Rights Reserved 2022 © Blippar Group Limited</li>
             <li><a href="#">Privacy</a></li>
             <li><a href="#">Terms</a></li>
           </ul>
         </div>
-        <div class="col-md-3 text-right pt-1 mt-5 pr-5 right">
+        <div class="col-md-3 text-right pt-1 mt-sm-2 mt-md-5 pr-5 right">
           <a href="#head"><img src="images/icon-top.svg" alt="Icon To Top" class="icon-to-top"></a>
         </div>
       </div>
