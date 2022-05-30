@@ -579,7 +579,7 @@ footer .icon-to-top {
 /* Extra large devices (large desktops, 1200px and down) */
 @media (max-width: 992px) {
     body {
-        background-color: #000;
+        /* background-color: #000; */
     }
 
     .card:nth-child(0),
@@ -619,14 +619,14 @@ footer .icon-to-top {
 /* Medium devices (tablets, 768px and down) */
 @media (max-width: 768px) {
     body {
-        background-color: #ff0;
+        /* background-color: #ff0; */
     }
 }
 
 /* Small devices (landscape phones, 576px and down) */
 @media (max-width: 576px) {
     body {
-        background-color: #f00;
+        /* background-color: #f00; */
     }
 
 
