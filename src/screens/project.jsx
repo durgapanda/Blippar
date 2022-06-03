@@ -7,6 +7,13 @@ import folder from '../assets/images/icon-folder.svg';
 import f1Image from '../assets/images/img-f1.png';
 import scanImage from '../assets/images/scan.png';
 import trendImage from '../assets/images/icon-trend.svg'
+import image1 from '../assets/images/img-2.png'
+import image2 from '../assets/images/img-3.png'
+import image3 from '../assets/images/img-3.png'
+import image4 from '../assets/images/icon-top.svg'
+import dot1 from '../assets/images/icon-context-menu.svg'
+
+
 const Projects = () => {
 
     return (
@@ -101,7 +108,7 @@ const Projects = () => {
                                         <h3 className="card-title text-uppercase">Using the Gyro</h3>
                                         <div>
                                             <img src={trendImage} alt="" />
-                                            <img src="images/icon-context-menu.svg" className="ml-3 dropdown-toggle cup" alt=""
+                                            <img src={dot1} className="ml-3 dropdown-toggle cup" alt=""
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
                                             <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                                                 <button className="dropdown-item" href="#">Open project</button>
@@ -131,7 +138,7 @@ const Projects = () => {
                         <div className="col-lg-4 col-md-6">
                             <div className="card text-left gutters">
                                 <div className="card-image-container p-2">
-                                    <img src="images/img-2.png" className="card-img-top project-image" alt="..." onclick="showMenu(this)" />
+                                    <img src={image1} className="card-img-top project-image" alt="..." onclick="showMenu(this)" />
                                     <div className="menu align-center flex-column btn-call-to-action d-none">
                                         <button className="btn btn-white">Open Project</button>
                                         <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
@@ -144,7 +151,7 @@ const Projects = () => {
                                         <h3 className="card-title text-uppercase">Demo 1</h3>
                                         <div>
                                             <img src={trendImage} alt="" />
-                                            <img src="images/icon-context-menu.svg" className="pl-2 dropdown-toggle cup" alt=""
+                                            <img src={dot1} className="pl-2 dropdown-toggle cup" alt=""
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
                                             <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                                                 <button className="dropdown-item" href="#">Open project</button>
@@ -175,7 +182,7 @@ const Projects = () => {
                         <div className="col-lg-4 col-md-6">
                             <div className="card text-left gutters">
                                 <div className="card-image-container p-2">
-                                    <img src="images/img-3.png" className="card-img-top project-image" alt="..." onclick="showMenu(this)" />
+                                    <img src={image2} className="card-img-top project-image" alt="..." onclick="showMenu(this)" />
                                     <div className="menu align-center flex-column btn-call-to-action d-none">
                                         <button className="btn btn-white">Open Project</button>
                                         <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
@@ -188,7 +195,7 @@ const Projects = () => {
                                         <h3 className="card-title text-uppercase">Project Starter 3</h3>
                                         <div>  
                                             <img src={trendImage} alt="" />
-                                            <img src="images/icon-context-menu.svg" className="pl-2 dropdown-toggle cup" alt=""
+                                            <img src={dot1} className="pl-2 dropdown-toggle cup" alt=""
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false/" />
                                             <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                                                 <button className="dropdown-item" href="#">Open project</button>
@@ -228,35 +235,7 @@ const Projects = () => {
                                     <div className="title d-flex justify-content-between">
                                         <h3 className="card-title text-uppercase">Folder name</h3>
                                         <div>
-                                            <img src="images/icon-context-menu.svg" className="pl-2 dropdown-toggle cup" alt=""
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
-                                            <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
-                                                <button className="dropdown-item" href="#">Rename folder</button>
-                                                <button className="dropdown-item" href="#">Delete folder and contents</button>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <p className="card-text">
-                                        Date Created: <span className="date">12th April 2022</span> <br />
-                                        Created by: <span className="created">Name</span> <br />
-                                        <p className="proj-count-wrapper "><span className="proj-count mt-3">3</span>
-                                            Projects</p>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <div className="card text-left gutters">
-                                <div className="card-image-container p-2">
-                                    <img src="images/img-f1.png" className="card-img-top project-image" alt="..." />
-
-                                </div>
-                                <div className="card-body">
-                                    <div className="title d-flex justify-content-between">
-                                        <h3 className="card-title text-uppercase">Folder name</h3>
-                                        <div>
-                                            <img src="images/icon-context-menu.svg" className="pl-2 dropdown-toggle cup" alt=""
+                                            <img src={dot1} className="pl-2 dropdown-toggle cup" alt=""
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
                                             <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                                                 <button className="dropdown-item" href="#">Rename folder</button>
@@ -276,14 +255,41 @@ const Projects = () => {
                         <div className="col-lg-4 col-md-6">
                             <div className="card text-left gutters">
                                 <div className="card-image-container p-2">
-                                    <img src="images/img-f1.png" className="card-img-top project-image" alt="..." />
+                                    <img src={image3} className="card-img-top project-image" alt="..." />
 
                                 </div>
                                 <div className="card-body">
                                     <div className="title d-flex justify-content-between">
                                         <h3 className="card-title text-uppercase">Folder name</h3>
                                         <div>
-                                            <img src="images/icon-context-menu.svg" className="pl-2 dropdown-toggle cup" alt=""
+                                            <img src={dot1} className="pl-2 dropdown-toggle cup" alt=""
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                                            <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                                                <button className="dropdown-item" href="#">Rename folder</button>
+                                                <button className="dropdown-item" href="#">Delete folder and contents</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <p className="card-text">
+                                        Date Created: <span className="date">12th April 2022</span> <br />
+                                        Created by: <span className="created">Name</span> <br />
+                                        <p className="proj-count-wrapper"><span className="proj-count mt-3">3</span> Projects</p>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-4 col-md-6">
+                            <div className="card text-left gutters">
+                                <div className="card-image-container p-2">
+                                    <img src={image3} className="card-img-top project-image" alt="..." />
+
+                                </div>
+                                <div className="card-body">
+                                    <div className="title d-flex justify-content-between">
+                                        <h3 className="card-title text-uppercase">Folder name</h3>
+                                        <div>
+                                            <img src={dot1} className="pl-2 dropdown-toggle cup" alt=""
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
                                             <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                                                 <button className="dropdown-item" href="#">Rename folder</button>
@@ -331,7 +337,7 @@ const Projects = () => {
                             <div className="views-container d-flex flex-column justify-content-between mr-3">
                                 <div className="d-block text-right mt-4">
                                     <img src={trendImage} alt="" />
-                                    <img src="images/icon-context-menu.svg" className="pl-2" alt="" />
+                                    <img src={dot1} className="pl-2" alt="" />
                                 </div>
                                 <div className="views align-self-center p-1 pr-3 mb-2">
                                     Views: <span>1</span>
@@ -366,7 +372,7 @@ const Projects = () => {
                             <div className="views-container d-flex flex-column justify-content-between mr-3">
                                 <div className="d-block text-right mt-4">
                                     <img src={trendImage} alt="" />
-                                    <img src="images/icon-context-menu.svg" className="pl-2" alt="" />
+                                    <img src={dot1} className="pl-2" alt="" />
                                 </div>
                                 <div className="views align-self-center p-1 pr-3 mb-2">
                                     Views: <span>1</span>
@@ -401,7 +407,7 @@ const Projects = () => {
                             <div className="views-container d-flex flex-column justify-content-between mr-3">
                                 <div className="d-block text-right mt-4">
                                     <img src={trendImage} alt="" />
-                                    <img src="images/icon-context-menu.svg" className="pl-2" alt="" />
+                                    <img src={dot1} className="pl-2" alt="" />
                                 </div>
                                 <div className="views align-self-center p-1 pr-3 mb-2">
                                     Views: <span>1</span>
@@ -429,7 +435,7 @@ const Projects = () => {
                     </ul>
                 </div>
                 <div className="col-md-3 text-right pt-1 mt-5 pr-5 right">
-                    <a href="#head"><img src="images/icon-top.svg" alt="Icon To Top" className="icon-to-top" /></a>
+                    <a href="/head"><img src={image4} alt="Icon To Top" className="icon-to-top" /></a>
                 </div>
             </div>
         </div>
