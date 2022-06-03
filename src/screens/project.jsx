@@ -2,7 +2,7 @@ import "./project.css";
 //import "./font.css";
 import logo from '../assets/images/logo.svg';
 import ddArrowDown from '../assets/images/icon-caret-down.svg';
-import menu from  '../assets/images/icon-hamburger-menu.svg';
+import menu from '../assets/images/icon-hamburger-menu.svg';
 import folder from '../assets/images/icon-folder.svg';
 import f1Image from '../assets/images/img-f1.png';
 import scanImage from '../assets/images/scan.png';
@@ -12,9 +12,20 @@ import image2 from '../assets/images/img-3.png'
 import image3 from '../assets/images/img-3.png'
 import image4 from '../assets/images/icon-top.svg'
 import dot1 from '../assets/images/icon-context-menu.svg'
+import crossIcon from '../assets/images/icon-close.svg'
+import barcode from '../assets/images/scan-code-lg.png'
+import barcadeSideImage from '../assets/images/marker-lg.png'
+import { useState } from "react";
+
 
 
 const Projects = () => {
+
+    const [show, setShow] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+    const [showMenu, setShowMenu] = useState(false);
+
+
 
     return (
 
@@ -80,7 +91,7 @@ const Projects = () => {
                         <div className="subnav">
                             <img src={menu} alt="Icon Menu" width="32px" height="24px"
                                 className="cup subnav-icon icon-tiles" onclick="showView('tile')" />
-                            <img src={menu}  alt="Icon Menu" width="32px" height="27px"
+                            <img src={menu} alt="Icon Menu" width="32px" height="27px"
                                 className="cup d-none subnav-icon icon-grid" onclick="showView('grid')" />
                             <img src={folder} data-toggle="modal" data-target="#newFolderModal"
                                 className="d-inline-block ml-3 cup" alt="Icon Folder" width="32px" height="28px"
@@ -92,15 +103,23 @@ const Projects = () => {
           <!-- section grid starts --> */}
                 <div className="container-fluid section-grid active">
                     <div className="row">
+
+
                         <div className="col-lg-4 col-md-6">
                             <div className="card text-left gutters">
-                                <div className="card-image-container p-2 position-relative">
-                                    <img src={f1Image} className="card-img-top project-image" alt="..." onclick="showMenu(this)" />
-                                    <div className="menu align-center flex-column btn-call-to-action d-none">
+                                <div className="card-image-container p-2 position-relative" onClick={() => setShow(!show)}>
+                                    <img src={f1Image} className="card-img-top project-image" alt="..." />
+
+                                    <div className={show ? "menu align-center flex-column btn-call-to-action" : "menu align-center flex-column btn-call-to-action d-none"}>
+                                        <button onClick={() => setShow(false)} class="btn btn-white">Open Project</button>
+                                        <button onClick={() => setShow(false)} class="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectWOModal">View
+                                            Project</button>
+                                    </div>
+                                    {/* <div className="menu align-center flex-column btn-call-to-action d-none">
                                         <button className="btn btn-white">Open Project</button>
                                         <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectWOModal">View
                                             Project</button>
-                                    </div>
+                                    </div> */}
                                     <div className="scan-code"><img src={scanImage} alt="" className="img-responsive" /></div>
                                 </div>
                                 <div className="card-body">
@@ -135,13 +154,16 @@ const Projects = () => {
                                 </div>
                             </div>
                         </div>
+
+
+
                         <div className="col-lg-4 col-md-6">
                             <div className="card text-left gutters">
-                                <div className="card-image-container p-2">
-                                    <img src={image1} className="card-img-top project-image" alt="..." onclick="showMenu(this)" />
-                                    <div className="menu align-center flex-column btn-call-to-action d-none">
-                                        <button className="btn btn-white">Open Project</button>
-                                        <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
+                                <div className="card-image-container p-2" onClick={() => setShowModal(!showModal)}>
+                                    <img src={image1} className="card-img-top project-image" alt="..."  />
+                                    <div className={showModal?"menu align-center flex-column btn-call-to-action":"menu align-center flex-column btn-call-to-action d-none"}>
+                                        <button class="btn btn-white">Open Project</button>
+                                        <button class="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
                                             Project</button>
                                     </div>
                                     <div className="scan-code"><img src="images/scan.png" alt="" className="img-responsive" /></div>
@@ -193,7 +215,7 @@ const Projects = () => {
                                 <div className="card-body">
                                     <div className="title d-flex justify-content-between">
                                         <h3 className="card-title text-uppercase">Project Starter 3</h3>
-                                        <div>  
+                                        <div>
                                             <img src={trendImage} alt="" />
                                             <img src={dot1} className="pl-2 dropdown-toggle cup" alt=""
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false/" />
@@ -420,516 +442,547 @@ const Projects = () => {
                     </div>
                 </div>
             </div>
-     
-      {/* <!-- section tiles end -->*/}
 
-       {/*<!-- footer starts --> */}
-    <footer className="bg-dark">
-        <div className="container-fluid">
-            <div className="row d-flex justify-content-between">
-                <div className="col-md-9 pt-5 left">
-                    <ul className="mt-5">
-                        <li>All Rights Reserved 2022 &copy; Blippar Group Limited</li>
-                        <li><a href="#">Privacy</a></li>
-                        <li><a href="#">Terms</a></li>
-                    </ul>
+            {/* <!-- section tiles end -->*/}
+
+            {/*<!-- footer starts --> */}
+            <footer className="bg-dark">
+                <div className="container-fluid">
+                    <div className="row d-flex justify-content-between">
+                        <div className="col-md-9 pt-5 left">
+                            <ul className="mt-5">
+                                <li>All Rights Reserved 2022 &copy; Blippar Group Limited</li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Terms</a></li>
+                            </ul>
+                        </div>
+                        <div className="col-md-3 text-right pt-1 mt-5 pr-5 right">
+                            <a href="/head"><img src={image4} alt="Icon To Top" className="icon-to-top" /></a>
+                        </div>
+                    </div>
                 </div>
-                <div className="col-md-3 text-right pt-1 mt-5 pr-5 right">
-                    <a href="/head"><img src={image4} alt="Icon To Top" className="icon-to-top" /></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    {/* <!-- footer ends -->
+            </footer>
+            {/* <!-- footer ends -->
 
   <!-- modals -->
 
   <!-- new project modal begin --> */}
 
-    <div className="modal fade new-project-modal" id="newProjectModal" tabindex="-1" role="dialog" data-backdrop="static"
-        aria-labelledby="modelTitleId" aria-hidden="true">
-        <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div className="modal fade new-project-modal" id="newProjectModal" tabindex="-1" role="dialog" data-backdrop="static"
+                aria-labelledby="modelTitleId" aria-hidden="true">
+                <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
 
-            <div className="modal-content slide-np1 d-none">
-                <button type="button" className="new-project-modal-close close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><img src="images/icon-close.svg" alt="" /></span>
-                </button>
-                <div className="modal-header text-center d-block flex-column">
-                    <h5 className="modal-title d-inline-block">New Project</h5>
-                    <p className="modal-subtitle d-block">
-                        Let's get creating!
-                    </p>
-                </div>
-                <div className="modal-body">
-                    <div className="form-group">
-                        <label for="project-name">Give your project a name</label>
-                        <input type="text" className="form-control" name="" id="project-name" aria-describedby="project-name"
-                            placeholder="Project Name" />
-                        <div className="d-block text-center btn-call-to-action">
-                            <button className="btn btn-secondary" onclick='showNext("slide-np2")'>Continue</button>
-                        </div>
-                    </div>
-                </div>
-                <ul className="carousel-dots mt-3 d-block text-center">
-                    <li className="dot-1 active"></li>
-                    <li className="dot-2 "></li>
-                    <li className="dot-3"></li>
-                </ul>
-            </div>
+                    <div className="modal-content slide-np1 d-none">
+                        <button type="button" className="new-project-modal-close close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><img src={crossIcon} alt="" /></span>
+                        </button>
+                        {/* second modal */}
+                        <div class="modal-body row">
+                            <div class="col text-center">
 
-            <div className="modal-content slide-np2 d-none">
-                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><img src="images/icon-close.svg" alt="" /></span>
-                </button>
-                <div className="modal-header text-center d-block flex-column">
-                    <h5 className="modal-title d-inline-block">New Project</h5>
-                    <p className="modal-subtitle d-block">
-                        Select how you would like to use AR
-                    </p>
-                </div>
-                <div className="modal-body mt-n4">
-                    <div className="row p-3">
-                        <div className="col-lg-4 col-md-6">
-                            <div className="card text-left gutters">
-                                <div className="card-image-container p-4">
-                                    <img src="images/placeholder1.png" className="card-img-top project-image" alt="..." />
+                                <h5 class="modal-title">View Project</h5>
+                                <p class="modal-text">
+                                    Scan the QR code below using your smart device
+                                </p>
+                                <p>
+                                    <img src="images/scan-code-lg.png" alt="" />
+                                </p>
+                                <p class="modal-text">
+                                    Then point your device camera at the marker shown opposite <img src="images/icon-arrow-right.svg" alt="" />
+                                </p>
 
 
+                                <p class="modal-text mt-5">
+                                    Your <span class="text-uppercase">Live</span> project <span class="text-uppercase">URL</span> is: <br />
+                                    <a href="https://ar.blippar.com/305075154" class="text-warning">https://ar.blippar.com/305075154</a> <span class="cup"><img src="images/icon-copy-link.svg" alt="" /></span>
+                                </p>
+
+                                <div class="d-block text-center btn-call-to-action mt-5">
+                                    <button class="btn btn-secondary">Download QR and marker</button>
                                 </div>
-                                <div className="card-body d-block text-center">
+                            </div>
+                            <div class="col">
+                                <img src={barcadeSideImage} alt="" />
+                            </div>
+                        </div>
 
-                                    <p className="card-text mt-n5">
-                                        Create AR using a printed 'marker'. Your AR experience will present overlaid on top of this.
-                                        Marker examples include packaging, product labels, posters, magazines, manuals etc.
-                                    </p>
-                                    <div className="d-block text-center btn-call-to-action">
-                                        <button className="btn btn-secondary" onclick='showNext("slide-np3")'>Use a marker</button>
-                                        <p className="text-warning mt-3">View an example</p>
+
+                        <div className="modal-header text-center d-block flex-column">
+                            <h5 className="modal-title d-inline-block">New Project</h5>
+                            <p className="modal-subtitle d-block">
+                                Let's get creating!
+                            </p>
+                        </div>
+                        <div className="modal-body">
+                            <div className="form-group">
+                                <label for="project-name">Give your project a name</label>
+                                <input type="text" className="form-control" name="" id="project-name" aria-describedby="project-name"
+                                    placeholder="Project Name" />
+                                <div className="d-block text-center btn-call-to-action">
+                                    <button className="btn btn-secondary" onclick='showNext("slide-np2")'>Continue</button>
+                                </div>
+                            </div>
+                        </div>
+                        <ul className="carousel-dots mt-3 d-block text-center">
+                            <li className="dot-1 active"></li>
+                            <li className="dot-2 "></li>
+                            <li className="dot-3"></li>
+                        </ul>
+                    </div>
+
+                    <div className="modal-content slide-np2 d-none">
+                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><img src={crossIcon} alt="" /></span>
+                        </button>
+                        <div className="modal-header text-center d-block flex-column">
+                            <h5 className="modal-title d-inline-block">New Project</h5>
+                            <p className="modal-subtitle d-block">
+                                Select how you would like to use AR
+                            </p>
+                        </div>
+                        <div className="modal-body mt-n4">
+                            <div className="row p-3">
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="card text-left gutters">
+                                        <div className="card-image-container p-4">
+                                            <img src="images/placeholder1.png" className="card-img-top project-image" alt="..." />
+
+
+                                        </div>
+                                        <div className="card-body d-block text-center">
+
+                                            <p className="card-text mt-n5">
+                                                Create AR using a printed 'marker'. Your AR experience will present overlaid on top of this.
+                                                Marker examples include packaging, product labels, posters, magazines, manuals etc.
+                                            </p>
+                                            <div className="d-block text-center btn-call-to-action">
+                                                <button className="btn btn-secondary" onclick='showNext("slide-np3")'>Use a marker</button>
+                                                <p className="text-warning mt-3">View an example</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="card text-left gutters">
+                                        <div className="card-image-container p-4">
+                                            <img src="images/placeholder2.png" className="card-img-top project-image" alt="..." />
+
+
+                                        </div>
+                                        <div className="card-body d-block text-center">
+                                            <p className="card-text mt-n4">
+                                                Create AR that appears on flat surfaces like floor tiles or textured surfaces. AR examples
+                                                include,
+                                                seeing virtual products, virtual assistants, architectural visualisations, 3D scenes etc.
+                                            </p>
+                                            <div className="d-block text-center btn-call-to-action">
+                                                <button className="btn btn-secondary" onclick='showNext("slide-np3")'>Use a surface</button>
+                                                <p className="text-warning mt-3">View an example</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="card text-left gutters">
+                                        <div className="card-image-container p-4">
+                                            <img src="images/placeholder3.png" className="card-img-top project-image" alt="..." />
+
+
+                                        </div>
+                                        <div className="card-body d-block text-center">
+
+                                            <p className="card-text mt-n4">
+                                                Create AR that appears around the user. This option does not require a marker or a surface to
+                                                present the AR. AR examples include, virtual stores, floating environments, floating menus etc.
+                                            </p>
+                                            <div className="d-block text-center btn-call-to-action">
+                                                <button className="btn btn-secondary" onclick='showNext("slide-np3")'>Around you</button>
+                                                <p className="text-warning mt-3">View an example</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <ul className="carousel-dots mt-3 d-block text-center">
+                                <li className="dot-1"></li>
+                                <li className="dot-2 active"></li>
+                                <li className="dot-3"></li>
+                            </ul>
                         </div>
-                        <div className="col-lg-4 col-md-6">
-                            <div className="card text-left gutters">
-                                <div className="card-image-container p-4">
-                                    <img src="images/placeholder2.png" className="card-img-top project-image" alt="..." />
+                    </div>
 
-
+                    <div className="modal-content slide-np3 d-none position-relative">
+                        <ul className="menu-top bg-white">
+                            <li className="menu-item list-style-none">Pause License</li>
+                            <li className="menu-item">Download SDK bundle</li>
+                            <li className="menu-item"></li>
+                        </ul>
+                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><img src={crossIcon} alt="" /></span>
+                        </button>
+                        <div className="modal-header text-center d-block flex-column">
+                            <h5 className="modal-title d-inline-block">New Project</h5>
+                            <p className="modal-subtitle d-block">
+                                Select and add your marker(s)
+                            </p>
+                        </div>
+                        <div className="modal-body px-5 d-block text-center">
+                            <div className="modal-body-content shadow-sm pt-5 pb-3">
+                                <img src="images/upload-marker.png" alt="" />
+                                <p className="mt-3 mb-5 upload-marker-text">You can upload up to 10 markers. Use JPEGs, maximum file size 1mb
+                                    per marker, 1024px
+                                    high or wide</p>
+                                <div className="d-block text-center btn-call-to-action">
+                                    <button className="btn btn-secondary" onclick="showNext('slide-np4')">Browse and upload</button>
+                                    <p className="text-warning mt-3">Autogenerate a marker</p>
                                 </div>
-                                <div className="card-body d-block text-center">
-                                    <p className="card-text mt-n4">
-                                        Create AR that appears on flat surfaces like floor tiles or textured surfaces. AR examples
-                                        include,
-                                        seeing virtual products, virtual assistants, architectural visualisations, 3D scenes etc.
-                                    </p>
-                                    <div className="d-block text-center btn-call-to-action">
-                                        <button className="btn btn-secondary" onclick='showNext("slide-np3")'>Use a surface</button>
-                                        <p className="text-warning mt-3">View an example</p>
+                            </div>
+                            <p className="text-warning mt-2 text-left modal-footer-text">What makes a good marker? </p>
+                            {/* <!-- carousel dots --> */}
+                            <ul className="carousel-dots mt-3 d-block text-center">
+                                <li className="dot-1"></li>
+                                <li className="dot-2"></li>
+                                <li className="dot-3 active"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="modal-content slide-np4 active">
+                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><img src={crossIcon} alt="" /></span>
+                        </button>
+                        <div className="modal-header text-center d-block flex-column">
+                            <h5 className="modal-title d-inline-block">New Project</h5>
+                            <p className="modal-subtitle d-block">
+                                Select and add your marker(s)
+                            </p>
+                        </div>
+                        <div className="modal-body px-5 d-block text-center mt-n4">
+                            <div className="modal-body-content shadow-sm p-3">
+                                <div className="preview-container">
+                                    <div className="d-flex justify-content-start align-items-center pl-4 py-3 confirm-tile">
+                                        <div className="img-wrapper align-center">
+                                            <img src="images/preview-1.png" alt="" />
+                                        </div>
+                                        <img src="images/icon-delete.svg" alt="" className="ml-5 mr-2 d-inline-block cup marker-delete" />
+                                        <img src="images/icon-download.svg" alt="" className="ml-3" />
+                                        <span className="filename ml-4">Untitled1.jpg</span>
+                                    </div>
+                                    <div className="d-flex justify-content-start align-items-center pl-4 py-3 confirm-tile">
+                                        <div className="img-wrapper align-center">
+                                            <img src="images/preview-2.png" alt="" />
+                                        </div>
+                                        <img src="images/icon-delete.svg" alt="" className="ml-5 mr-2 d-inline-block cup marker-delete" />
+                                        <img src="images/icon-download.svg" alt="" className="ml-3" />
+                                        <span className="filename ml-4">Untitled2.jpg</span>
+                                    </div>
+                                    <div className="d-flex justify-content-start align-items-center pl-4 py-3 confirm-tile">
+                                        <div className="img-wrapper align-center">
+                                            <img src="images/preview-3.png" alt="" />
+                                        </div>
+                                        <img src="images/icon-delete.svg" alt="" className="ml-5 mr-2 d-inline-block cup marker-delete" />
+                                        <img src="images/icon-download.svg" alt="" className="ml-3 d-inline-block cup" />
+                                        <span className="filename ml-4">Untitled3.jpg</span>
+                                    </div>
+                                    <div className="d-flex justify-content-start align-items-center pl-4 py-3 confirm-tile">
+                                        <div className="img-wrapper align-center">
+                                            <img src="images/preview-3.png" alt="" />
+                                        </div>
+                                        <img src="images/icon-delete.svg" alt="" className="ml-5 mr-2 d-inline-block cup marker-delete" />
+                                        <img src="images/icon-download.svg" alt="" className="ml-3" />
+                                        <span className="filename ml-4">Untitled3.jpg</span>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <div className="card text-left gutters">
-                                <div className="card-image-container p-4">
-                                    <img src="images/placeholder3.png" className="card-img-top project-image" alt="..." />
-
-
-                                </div>
-                                <div className="card-body d-block text-center">
-
-                                    <p className="card-text mt-n4">
-                                        Create AR that appears around the user. This option does not require a marker or a surface to
-                                        present the AR. AR examples include, virtual stores, floating environments, floating menus etc.
-                                    </p>
-                                    <div className="d-block text-center btn-call-to-action">
-                                        <button className="btn btn-secondary" onclick='showNext("slide-np3")'>Around you</button>
-                                        <p className="text-warning mt-3">View an example</p>
-                                    </div>
+                                <div className="d-block text-center btn-call-to-action mt-2">
+                                    <button className="btn btn-secondary" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true" onclick='resetSlides()' />Confirm</button>
+                                    <p className="mt-3"><strong>3 of 10</strong> markers added. <span className="text-warning">Upload</span> or <span
+                                        className="text-warning">Autogenerate a marker</span></p>
                                 </div>
                             </div>
+                            <p className="text-warning mt-2 text-left modal-footer-text">What makes a good marker? </p>
+                            <ul className="carousel-dots mt-3 d-block text-center pb-5">
+                                <li className="dot-1"></li>
+                                <li className="dot-2"></li>
+                                <li className="dot-3 active"></li>
+                            </ul>
                         </div>
                     </div>
-                    <ul className="carousel-dots mt-3 d-block text-center">
-                        <li className="dot-1"></li>
-                        <li className="dot-2 active"></li>
-                        <li className="dot-3"></li>
-                    </ul>
+
+                    {/* <!-- modal dialog end --> */}
+
                 </div>
             </div>
 
-            <div className="modal-content slide-np3 d-none position-relative">
-                <ul className="menu-top bg-white">
-                    <li className="menu-item list-style-none">Pause License</li>
-                    <li className="menu-item">Download SDK bundle</li>
-                    <li className="menu-item"></li>
-                </ul>
-                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><img src="images/icon-close.svg" alt="" /></span>
-                </button>
-                <div className="modal-header text-center d-block flex-column">
-                    <h5 className="modal-title d-inline-block">New Project</h5>
-                    <p className="modal-subtitle d-block">
-                        Select and add your marker(s)
-                    </p>
-                </div>
-                <div className="modal-body px-5 d-block text-center">
-                    <div className="modal-body-content shadow-sm pt-5 pb-3">
-                        <img src="images/upload-marker.png" alt="" />
-                        <p className="mt-3 mb-5 upload-marker-text">You can upload up to 10 markers. Use JPEGs, maximum file size 1mb
-                            per marker, 1024px
-                            high or wide</p>
-                        <div className="d-block text-center btn-call-to-action">
-                            <button className="btn btn-secondary" onclick="showNext('slide-np4')">Browse and upload</button>
-                            <p className="text-warning mt-3">Autogenerate a marker</p>
-                        </div>
-                    </div>
-                    <p className="text-warning mt-2 text-left modal-footer-text">What makes a good marker? </p>
-                    {/* <!-- carousel dots --> */}
-                    <ul className="carousel-dots mt-3 d-block text-center">
-                        <li className="dot-1"></li>
-                        <li className="dot-2"></li>
-                        <li className="dot-3 active"></li>
-                    </ul>
-                </div>
-            </div>
-            <div className="modal-content slide-np4 active">
-                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><img src="images/icon-close.svg" alt="" /></span>
-                </button>
-                <div className="modal-header text-center d-block flex-column">
-                    <h5 className="modal-title d-inline-block">New Project</h5>
-                    <p className="modal-subtitle d-block">
-                        Select and add your marker(s)
-                    </p>
-                </div>
-                <div className="modal-body px-5 d-block text-center mt-n4">
-                    <div className="modal-body-content shadow-sm p-3">
-                        <div className="preview-container">
-                            <div className="d-flex justify-content-start align-items-center pl-4 py-3 confirm-tile">
-                                <div className="img-wrapper align-center">
-                                    <img src="images/preview-1.png" alt="" />
-                                </div>
-                                <img src="images/icon-delete.svg" alt="" className="ml-5 mr-2 d-inline-block cup marker-delete" />
-                                <img src="images/icon-download.svg" alt="" className="ml-3" />
-                                <span className="filename ml-4">Untitled1.jpg</span>
-                            </div>
-                            <div className="d-flex justify-content-start align-items-center pl-4 py-3 confirm-tile">
-                                <div className="img-wrapper align-center">
-                                    <img src="images/preview-2.png" alt="" />
-                                </div>
-                                <img src="images/icon-delete.svg" alt="" className="ml-5 mr-2 d-inline-block cup marker-delete" />
-                                <img src="images/icon-download.svg" alt="" className="ml-3" />
-                                <span className="filename ml-4">Untitled2.jpg</span>
-                            </div>
-                            <div className="d-flex justify-content-start align-items-center pl-4 py-3 confirm-tile">
-                                <div className="img-wrapper align-center">
-                                    <img src="images/preview-3.png" alt="" />
-                                </div>
-                                <img src="images/icon-delete.svg" alt="" className="ml-5 mr-2 d-inline-block cup marker-delete" />
-                                <img src="images/icon-download.svg" alt="" className="ml-3 d-inline-block cup" />
-                                <span className="filename ml-4">Untitled3.jpg</span>
-                            </div>
-                            <div className="d-flex justify-content-start align-items-center pl-4 py-3 confirm-tile">
-                                <div className="img-wrapper align-center">
-                                    <img src="images/preview-3.png" alt="" />
-                                </div>
-                                <img src="images/icon-delete.svg" alt="" className="ml-5 mr-2 d-inline-block cup marker-delete" />
-                                <img src="images/icon-download.svg" alt="" className="ml-3" />
-                                <span className="filename ml-4">Untitled3.jpg</span>
-                            </div>
-                        </div>
-                        <div className="d-block text-center btn-call-to-action mt-2">
-                            <button className="btn btn-secondary" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true" onclick='resetSlides()' />Confirm</button>
-                            <p className="mt-3"><strong>3 of 10</strong> markers added. <span className="text-warning">Upload</span> or <span
-                                className="text-warning">Autogenerate a marker</span></p>
-                        </div>
-                    </div>
-                    <p className="text-warning mt-2 text-left modal-footer-text">What makes a good marker? </p>
-                    <ul className="carousel-dots mt-3 d-block text-center pb-5">
-                        <li className="dot-1"></li>
-                        <li className="dot-2"></li>
-                        <li className="dot-3 active"></li>
-                    </ul>
-                </div>
-            </div>
-
-            {/* <!-- modal dialog end --> */}
-
-        </div>
-    </div>
 
 
-
-    {/* <!-- new project modal end -->
+            {/* <!-- new project modal end -->
 
   <!-- new folder modal begins --> */}
 
-    <div className="modal fade new-folder" id="newFolderModal" tabindex="-1" role="dialog" data-backdrop="static"
-        aria-labelledby="newFolderModal" aria-hidden="true">
-        <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div className="modal fade new-folder" id="newFolderModal" tabindex="-1" role="dialog" data-backdrop="static"
+                aria-labelledby="newFolderModal" aria-hidden="true">
+                <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
 
-            <div className="modal-content slide-f1 active">
-                <div className="modal-body flex-column">
-                    <h5 className="modal-title d-block text-uppercase text-white text-center">New Folder</h5>
-                    <div className="form-group d-block text-center">
-                        <label for="folder-name" className="text-white mb-4">Give your folder a name</label>
-                        <input type="text" className="form-control" name="" id="folder-name" aria-describedby="folder-name"
-                            placeholder="Folder Name"/>
-                        <div className="d-block text-center btn-call-to-action mt-5">
-                            <button className="btn btn-white" onclick="showNext('slide-f2')">confirm</button>
-                            <button className="btn btn-white ml-3" data-dismiss="modal" aria-label="Close">Cancel</button>
+                    <div className="modal-content slide-f1 active">
+                        <div className="modal-body flex-column">
+                            <h5 className="modal-title d-block text-uppercase text-white text-center">New Folder</h5>
+                            <div className="form-group d-block text-center">
+                                <label for="folder-name" className="text-white mb-4">Give your folder a name</label>
+                                <input type="text" className="form-control" name="" id="folder-name" aria-describedby="folder-name"
+                                    placeholder="Folder Name" />
+                                <div className="d-block text-center btn-call-to-action mt-5">
+                                    <button className="btn btn-white" onclick="showNext('slide-f2')">confirm</button>
+                                    <button className="btn btn-white ml-3" data-dismiss="modal" aria-label="Close">Cancel</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div className="modal-content slide-f2 d-none">
-                <div className="modal-header text-center d-block flex-column">
-                    <h5 className="modal-title d-inline-block"></h5>
-                    <p className="modal-subtitle d-block">
-                    </p>
-                </div>
-                <div className="modal-body flex-column">
-                    <h5 className="modal-title d-block text-uppercase text-white text-center ">Organise your projects</h5>
-                    <div className="form-group d-block text-center">
-                        <p className="text-white">Simply drag and drop your projects into folders.</p>
-                        <img src="images/new-folder-organise.png" alt="" />
-                        <div className="d-block text-center btn-call-to-action mt-5">
-                            <button className="btn btn-white" data-dismiss="modal" aria-label="Close"
-                                onclick="getFolderName('slide-f2')">Got it</button>
+                    <div className="modal-content slide-f2 d-none">
+                        <div className="modal-header text-center d-block flex-column">
+                            <h5 className="modal-title d-inline-block"></h5>
+                            <p className="modal-subtitle d-block">
+                            </p>
+                        </div>
+                        <div className="modal-body flex-column">
+                            <h5 className="modal-title d-block text-uppercase text-white text-center ">Organise your projects</h5>
+                            <div className="form-group d-block text-center">
+                                <p className="text-white">Simply drag and drop your projects into folders.</p>
+                                <img src="images/new-folder-organise.png" alt="" />
+                                <div className="d-block text-center btn-call-to-action mt-5">
+                                    <button className="btn btn-white" data-dismiss="modal" aria-label="Close"
+                                        onclick="getFolderName('slide-f2')">Got it</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    {/* <!-- modal dialog end --> */}
+
                 </div>
             </div>
 
-            {/* <!-- modal dialog end --> */}
-
-        </div>
-    </div>
-
-    {/* <!-- new folder modal ends --> */ }
+            {/* <!-- new folder modal ends --> */}
 
 
 
-    {/* <!-- delete marker modal starts --> */ }
+            {/* <!-- delete marker modal starts --> */}
 
-    <div className="modal fade delete-marker-modal" id="deleteMarkerModal" tabindex="-1" role="dialog" data-backdrop=""
-        aria-labelledby="deleteMarkerModal" aria-hidden="true" style={{zIindex: 999999}}>
-        <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div className="modal fade delete-marker-modal" id="deleteMarkerModal" tabindex="-1" role="dialog" data-backdrop=""
+                aria-labelledby="deleteMarkerModal" aria-hidden="true" style={{ zIindex: 999999 }}>
+                <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
 
-            <div className="modal-content slide-d1">
-                <div className="modal-body flex-column">
-                    <h5 className="modal-title d-block text-uppercase text-white text-center">Delete Marker</h5>
-                    <p className="modal-text text-white text-center">Confirm you wish to delete this marker?</p>
-                    <div className="d-block text-center btn-call-to-action mt-3">
-                        <button className="btn btn-white btn-confirm-marker-delete">confirm</button>
-                        <button className="btn btn-white ml-3" data-dismiss="modal" aria-label="Close">Cancel</button>
-                    </div>
-                </div>
-            </div>
-            {/* <!-- modal dialog end --> */}
-
-        </div>
-    </div>
-
-    {/* <!-- delete marker modal ends --> */ }
-
-
-
-    {/* <!-- view project modal starts--> */ }
-
-    <div className="modal fade " id="viewProjectModal" tabindex="-1" role="dialog" data-backdrop="static"
-        aria-labelledby="viewProjectModal" aria-hidden="true">
-        <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
-
-            <div className="modal-content slide-1 pb-3">
-                <button type="button" className="new-project-modal-close close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><img src="images/icon-close.svg" alt="" /></span>
-                </button>
-                <div className="modal-body row">
-                    <div className="col text-center">
-
-                        <h5 className="modal-title">View Project</h5>
-                        <p className="modal-text">
-                            Scan the QR code below using your smart device
-                        </p>
-                        <p>
-                            <img src="images/scan-code-lg.png" alt="" />
-                        </p>
-                        <p className="modal-text">
-                            Then point your device camera at the marker shown opposite <img src="images/icon-arrow-right.svg" alt="" />
-                        </p>
-
-
-                        <p className="modal-text mt-5">
-                            Your <span className="text-uppercase">Live</span> project <span className="text-uppercase">URL</span> is: <br/>
-                                <a href="https://ar.blippar.com/305075154" className="text-warning">https://ar.blippar.com/305075154</a> <span
-                                    className="cup"><img src="images/icon-copy-link.svg" alt="" /></span>
-                        </p>
-
-                        <div className="d-block text-center btn-call-to-action mt-5">
-                            <button className="btn btn-secondary">Download QR and marker</button>
+                    <div className="modal-content slide-d1">
+                        <div className="modal-body flex-column">
+                            <h5 className="modal-title d-block text-uppercase text-white text-center">Delete Marker</h5>
+                            <p className="modal-text text-white text-center">Confirm you wish to delete this marker?</p>
+                            <div className="d-block text-center btn-call-to-action mt-3">
+                                <button className="btn btn-white btn-confirm-marker-delete">confirm</button>
+                                <button className="btn btn-white ml-3" data-dismiss="modal" aria-label="Close">Cancel</button>
+                            </div>
                         </div>
                     </div>
-                    <div className="col">
-                        <img src="images/marker-lg.png" alt="" />
-                    </div>
+                    {/* <!-- modal dialog end --> */}
+
                 </div>
             </div>
-            {/* <!-- modal dialog end --> */}
 
-        </div>
-    </div>
+            {/* <!-- delete marker modal ends --> */}
 
-    {/* <!-- view project modal ends-->
+
+
+            {/* <!-- view project modal starts--> */}
+
+            <div className="modal fade " id="viewProjectModal" tabindex="-1" role="dialog" data-backdrop="static"
+                aria-labelledby="viewProjectModal" aria-hidden="true">
+                <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
+
+                    <div className="modal-content slide-1 pb-3">
+                        <button type="button" className="new-project-modal-close close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><img src={crossIcon} alt="" /></span>
+                        </button>
+                        <div className="modal-body row">
+                            <div className="col text-center">
+
+                                <h5 className="modal-title">View Project</h5>
+                                <p className="modal-text">
+                                    Scan the QR code below using your smart device
+                                </p>
+                                <p>
+                                    <img src={barcode} alt="" />
+                                </p>
+                                <p className="modal-text">
+                                    Then point your device camera at the marker shown opposite <img src="images/icon-arrow-right.svg" alt="" />
+                                </p>
+
+
+                                <p className="modal-text mt-5">
+                                    Your <span className="text-uppercase">Live</span> project <span className="text-uppercase">URL</span> is: <br />
+                                    <a href="https://ar.blippar.com/305075154" className="text-warning">https://ar.blippar.com/305075154</a> <span
+                                        className="cup"><img src="images/icon-copy-link.svg" alt="" /></span>
+                                </p>
+
+                                <div className="d-block text-center btn-call-to-action mt-5">
+                                    <button className="btn btn-secondary">Download QR and marker</button>
+                                </div>
+                            </div>
+                            <div className="col">
+                                <img src= {barcadeSideImage} alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    {/* <!-- modal dialog end --> */}
+
+                </div>
+            </div>
+
+            {/* <!-- view project modal ends-->
 
   <!-- view project modal starts--> */}
 
-    <div className="modal fade modal-viewproj-wo" id="viewProjectWOModal" tabindex="-1" role="dialog" data-backdrop="static"
-        aria-labelledby="viewProjectWOModal" aria-hidden="true">
-        <div className="modal-dialog modal-dialog-centered modal-md" role="document">
+            <div className="modal fade modal-viewproj-wo" id="viewProjectWOModal" tabindex="-1" role="dialog" data-backdrop="static"
+                aria-labelledby="viewProjectWOModal" aria-hidden="true">
+                <div className="modal-dialog modal-dialog-centered modal-md" role="document">
 
-            <div className="modal-content slide-1 pb-3">
-                <button type="button" className="new-project-modal-close close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><img src="images/icon-close.svg" alt="" /></span>
-                </button>
-                <div className="modal-body row">
-                    <div className="col text-center">
+                    <div className="modal-content slide-1 pb-3">
+                        <button type="button" className="new-project-modal-close close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><img src={crossIcon} alt="" /></span>
+                        </button>
+                        <div className="modal-body row">
+                            <div className="col text-center">
 
-                        <h5 className="modal-title">View Project</h5>
-                        <p className="modal-text">
-                            Scan the QR code below using your smart device
-                        </p>
-                        <p>
-                            <img src="images/scan-code-lg.png" alt="" />
-                        </p>
-                        <p className="modal-text">
-                            Then point your device camera at the marker shown opposite <img src="images/icon-arrow-right.svg" alt="" />
-                        </p>
+                                <h5 className="modal-title">View Project</h5>
+                                <p className="modal-text">
+                                    Scan the QR code below using your smart device
+                                </p>
+                                <p>
+                                    <img src={barcode} alt="" />
+                                </p>
+                                <p className="modal-text">
+                                    Then point your device camera at the marker shown opposite <img src="images/icon-arrow-right.svg" alt="" />
+                                </p>
 
 
-                        <p className="modal-text mt-5">
-                            Your <span className="text-uppercase">Live</span> project <span className="text-uppercase">URL</span> is: <br/>
-                                <a href="https://ar.blippar.com/305075154" className="text-warning">https://ar.blippar.com/305075154</a> <span
-                                    className="cup"><img src="images/icon-copy-link.svg" alt="" /></span>
-                        </p>
+                                <p className="modal-text mt-5">
+                                    Your <span className="text-uppercase">Live</span> project <span className="text-uppercase">URL</span> is: <br />
+                                    <a href="https://ar.blippar.com/305075154" className="text-warning">https://ar.blippar.com/305075154</a> <span
+                                        className="cup"><img src="images/icon-copy-link.svg" alt="" /></span>
+                                </p>
 
-                        <div className="d-block text-center btn-call-to-action mt-5">
-                            <button className="btn btn-secondary">Download QR and marker</button>
+                                <div className="d-block text-center btn-call-to-action mt-5">
+                                    <button className="btn btn-secondary">Download QR and marker</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    {/* <!-- modal dialog end --> */}
+
                 </div>
             </div>
-            {/* <!-- modal dialog end --> */}
 
-        </div>
-    </div>
-
-    {/* <!-- view project modal ends-->
+            {/* <!-- view project modal ends-->
 
   <!-- preview project modal starts --> */}
 
-    <div className="modal fade " id="previewProjectModal" tabindex="-1" role="dialog" data-backdrop="static"
-        aria-labelledby="previewProjectModal" aria-hidden="true">
-        <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div className="modal fade " id="previewProjectModal" tabindex="-1" role="dialog" data-backdrop="static"
+                aria-labelledby="previewProjectModal" aria-hidden="true">
+                <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
 
-            <div className="modal-content slide-pp1 pb-3">
-                <button type="button" className="new-project-modal-close close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><img src="images/icon-close.svg" alt="" /></span>
-                </button>
-                <div className="modal-body row">
-                    <div className="col text-center">
+                    <div className="modal-content slide-pp1 pb-3">
+                        <button type="button" className="new-project-modal-close close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><img src={crossIcon} alt="" /></span>
+                        </button>
+                        <div className="modal-body row">
+                            <div className="col text-center">
 
-                        <h5 className="modal-title">Preview Project</h5>
-                        <p className="modal-text">
-                            Scan the QR code below using your smart device
-                        </p>
-                        <p>
-                            <img src="images/scan-code-lg.png" alt="" />
-                        </p>
-                        <p className="modal-text">
-                            Then point your device camera at the marker shown opposite <img src="images/icon-arrow-right.svg" alt="" />
-                        </p>
+                                <h5 className="modal-title">Preview Project</h5>
+                                <p className="modal-text">
+                                    Scan the QR code below using your smart device
+                                </p>
+                                <p>
+                                    <img src={barcode} alt="" />
+                                </p>
+                                <p className="modal-text">
+                                    Then point your device camera at the marker shown opposite <img src="images/icon-arrow-right.svg" alt="" />
+                                </p>
 
-                        <div className="d-flex justify-content-center">
-                            <div className="expiry-time m-3 ">
-                                <p className="modal-text">Preview expires in: <br/>
-                                    <h5 className="mt-n2">14m 05s</h5>
+                                <div className="d-flex justify-content-center">
+                                    <div className="expiry-time m-3 ">
+                                        <p className="modal-text">Preview expires in: <br />
+                                            <h5 className="mt-n2">14m 05s</h5>
+                                        </p>
+                                    </div>
+                                </div>
+                                <p className="modal-text mt-5">
+                                    Your <span className="text-uppercase">Preview</span> project URL is: <br />
+                                    <a href="https://ar.blippar.com/305075154" className="text-warning">https://ar.blippar.com/305075154</a> <span
+                                        className="cup"><img src="images/icon-copy-link.svg" alt="" /></span>
                                 </p>
                             </div>
+                            <div className="col">
+                                <img src="images/preview-lg.png" alt="" />
+                            </div>
                         </div>
-                        <p className="modal-text mt-5">
-                            Your <span className="text-uppercase">Preview</span> project URL is: <br/>
-                                <a href="https://ar.blippar.com/305075154" className="text-warning">https://ar.blippar.com/305075154</a> <span
-                                    className="cup"><img src="images/icon-copy-link.svg" alt="" /></span>
-                        </p>
                     </div>
-                    <div className="col">
-                        <img src="images/preview-lg.png" alt="" />
-                    </div>
+                    {/* <!-- modal dialog end --> */}
+
                 </div>
             </div>
-            {/* <!-- modal dialog end --> */}
 
-        </div>
-    </div>
-
-    {/* <!-- preview project modal ends -->
+            {/* <!-- preview project modal ends -->
 
   <!-- publish project modal starts --> */}
 
-    <div className="modal fade " id="publishProjectModal" tabindex="-1" role="dialog" data-backdrop="static"
-        aria-labelledby="modelTitleId" aria-hidden="true">
-        <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div className="modal fade " id="publishProjectModal" tabindex="-1" role="dialog" data-backdrop="static"
+                aria-labelledby="modelTitleId" aria-hidden="true">
+                <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
 
-            <div className="modal-content slide-pp1 pb-3">
-                <button type="button" className="new-project-modal-close close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><img src="images/icon-close.svg" alt="" /></span>
-                </button>
-                <div className="modal-body row">
-                    <div className="col text-center">
+                    <div className="modal-content slide-pp1 pb-3">
+                        <button type="button" className="new-project-modal-close close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><img src={crossIcon} alt="" /></span>
+                        </button>
+                        <div className="modal-body row">
+                            <div className="col text-center">
 
-                        <h5 className="modal-title mt-n3">Project Published<img src="images/icon-celebrate.svg" alt="" className="mt-n2" />
-                        </h5>
-                        <p className="modal-text">
-                            Your project is now live and ready to share. <br/>
-                                Scan the QR code below using your smart device.
-                        </p>
-                        <p>
-                            <img src="images/scan-code-lg.png" alt="" />
-                        </p>
-                        <p className="modal-text">
-                            Then point your device camera at the marker shown opposite <img src="images/icon-arrow-right.svg" alt="" />
-                        </p>
+                                <h5 className="modal-title mt-n3">Project Published<img src="images/icon-celebrate.svg" alt="" className="mt-n2" />
+                                </h5>
+                                <p className="modal-text">
+                                    Your project is now live and ready to share. <br />
+                                    Scan the QR code below using your smart device.
+                                </p>
+                                <p>
+                                    <img src={barcode} alt="" />
+                                </p>
+                                <p className="modal-text">
+                                    Then point your device camera at the marker shown opposite <img src="images/icon-arrow-right.svg" alt="" />
+                                </p>
 
 
-                        <p className="modal-text mt-5">
-                            Your <span className="text-uppercase">Live</span> project <span className="text-uppercase">URL</span> is: <br/>
-                                <a href="https://ar.blippar.com/305075154" className="text-warning">https://ar.blippar.com/305075154</a> <span
-                                    className="cup"><img src="images/icon-copy-link.svg" alt="" /></span>
-                        </p>
+                                <p className="modal-text mt-5">
+                                    Your <span className="text-uppercase">Live</span> project <span className="text-uppercase">URL</span> is: <br />
+                                    <a href="https://ar.blippar.com/305075154" className="text-warning">https://ar.blippar.com/305075154</a> <span
+                                        className="cup"><img src="images/icon-copy-link.svg" alt="" /></span>
+                                </p>
 
-                        <div className="d-block text-center btn-call-to-action mt-5">
-                            <button className="btn btn-secondary">Download QR and marker</button>
+                                <div className="d-block text-center btn-call-to-action mt-5">
+                                    <button className="btn btn-secondary">Download QR and marker</button>
+                                </div>
+                            </div>
+                            <div className="col">
+                                <img src="images/preview-lg.png" alt="" />
+                            </div>
                         </div>
                     </div>
-                    <div className="col">
-                        <img src="images/preview-lg.png" alt="" />
-                    </div>
+                    {/* <!-- modal dialog end --> */}
+
                 </div>
             </div>
-            {/* <!-- modal dialog end --> */}
 
+            {/* <!-- publish project modal ends --> */}
+
+
+            <div className="backdrop d-none"></div>
         </div>
-    </div>
 
-    {/* <!-- publish project modal ends --> */ }
-
-
-    <div className="backdrop d-none"></div>
-        </div>
-    
     )
 }
 export default Projects;
