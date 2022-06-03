@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18.508" height="18.9" viewBox="0 0 18.508 18.9">
+  <g id="Group_604" data-name="Group 604" transform="translate(-7.254 -6.558)">
+    <g id="Group_10" data-name="Group 10" transform="translate(8.254 8.558)">
+      <g id="Group_9" data-name="Group 9" transform="translate(14.066 5.83) rotate(135)">
+        <path id="Path_2" data-name="Path 2" d="M0,7.763,7.686,0" transform="translate(0 0.482)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="2"/>
+        <path id="Union_2" data-name="Union 2" d="M6.354,0V4.971A1.244,1.244,0,0,1,5.11,6.214H0" transform="translate(1.98 6.354) rotate(-90)" fill="none" stroke="#707070" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <line id="Line_9" data-name="Line 9" x1="16.508" transform="translate(0 15.9)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,594 @@
+@import url(fonts.css);
+
+body {
+    font-size: 16px;
+    padding: 0;
+    font-family: 'Avenir Book', sans-serif;
+    color: #2E3240;
+}
+
+/* base styles */
+
+.btn-white {
+    background-color: #fff;
+    border-radius: 50%;
+    color: #FFF
+}
+
+.btn-white-o {
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    color: #FFF
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.modal-title {
+    font-family: 'Brandon Grotesque Black', sans-serif;
+    text-transform: uppercase;
+    color: #2E3240;
+}
+
+.bg-dark {
+    background-color: #2E3240 !important;
+}
+
+.btn-secondary-o {
+    border-radius: 20px;
+    background-color: transparent;
+    border: 1px solid #CCC;
+    text-align: left;
+    width: 200px;
+    color: #2E3240;
+}
+
+.btn-secondary {
+    background-color: #2E3240;
+}
+
+.text-warning {
+    color: #FFAA00 !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
+}
+
+.cup {
+    cursor: pointer;
+}
+
+h5 {
+    font-weight: 800;
+    font-size: 30px;
+    color: #2E3240;
+}
+
+.align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9998;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.8;
+}
+
+.d-none {
+    display: none !important;
+}
+
+::placeholder {
+    font-size: 18px;
+}
+
+/* base styles */
+
+.header {
+    background: url(../assets/images/header-bg.png) top center no-repeat;
+    height: 350px;
+    background-size: cover;
+    padding: 0 2em;
+    position: relative;
+}
+
+.logo-section {
+    text-align: left;
+    z-index: 99;
+    height: 200px;
+}
+
+.logo-section p {
+    line-height: 1.0;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.logo-section a {
+    display: inline-block;
+}
+
+.logo-section p.logo-desc {
+    font-family: 'Brandon Grotesque Black', sans-serif;
+    text-transform: uppercase;
+    font-size: 40px;
+    position: relative;
+    left: -4px;
+}
+
+.logo-section .text-welcome {
+    font-family: 'Avenir Medium', san-serif;
+    font-size: 20px;
+}
+
+.profile-section .btn.learn {
+    width: 100px;
+    display: inline-block;
+    font-family: 'Brandon Grotesque Black', sans-serif;
+    font-size: 14px;
+}
+
+.profile-section .btn.learn:hover {
+    color: white;
+}
+
+.profile-section .avatar {
+    font-family: 'Brandon Grotesque Black', sans-serif;
+    background: url(../assets/images/icon-profile-bg.svg) center center no-repeat !important;
+    display: inline-block;
+    font-size: 14px;
+    height: 40px;
+    position: relative;
+}
+
+.profile-section .avatar .initials {
+    top: 2px;
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.btn-new-proj {
+    font-family: 'Brandon Grotesque Black', sans-serif;
+    position: absolute;
+    background-color: #2E3240 !important;
+    border-radius: 36px;
+    font-size: 22px;
+    right: 50px;
+    padding: 16px;
+    bottom: 110px;
+}
+
+.section-options {
+    margin-top: -80px;
+    padding: 0 2em;
+}
+
+.subtitle {
+    font-family: 'Avenir Heavy', san-serif;
+    font-size: 26px;
+    position: relative;
+    top: -3px;
+}
+
+.text-sort {
+    display: inline-block;
+    margin-right: 60px;
+}
+
+.dropdown-sort {
+    font-family: 'Brandon Grotesque Black', sans-serif;
+    position: relative;
+    top: -5px;
+    position: relative;
+}
+.dropdown-sort img {
+    position: relative;
+    top: -3px;
+}
+
+
+.dropdown-menu,
+.menu-top {
+    padding: 1rem !important;
+    margin-top: 1rem !important;
+}
+
+.dropdown-menu,
+.menu-top {
+    border-radius: 20px;
+    width: 320px;
+    position: relative;
+    margin-left: -50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-menu .dropdown-item,
+.menu-top .menu-item {
+    font-family: 'Avenir Light', san-serif;
+    font-size: 24px;
+    /* border-bottom: 1px dotted #EEE; */
+    padding: 1rem 0 !important;
+
+}
+
+.menu-top .menu-item {
+    list-style: none;
+}
+
+.dropdown-menu .dropdown-item:last-child,
+.menu-top .menu-item:last-child {
+    border-bottom: none
+}
+
+.dropdown-menu .dropdown-item:hover,
+.menu-top .menu-item:hover {
+    background-color: transparent;
+}
+
+.menu-top {
+    position: absolute;
+    top: -170px;
+    left: 80px;
+    z-index: -1;
+}
+
+.modal-content.slide-np3 {
+    height: 750px;
+    top: 90px;
+}
+
+.modal-md {
+    max-width: 615px !important;
+}
+
+.subnav {
+    display: block;
+    position: relative;
+    /* z-index: 900; */
+}
+
+.status-legend {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+}
+
+.section-grid,
+.section-tiles {
+    padding: 0 2em;
+}
+
+.section-grid .card-text,
+.section-grid .status-text,
+.section-grid .views,
+.section-grid .proj-count-wrapper,
+.section-tiles .card-text,
+.section-tiles .status-text,
+.section-tiles .views,
+.section-tiles .proj-count-wrapper,
+.title-container {
+    font-family: 'Avenir Book', san-serif;
+    font-size: 20px;
+
+}
+
+.section-tiles {
+    padding: 0 2.7em;
+}
+
+.section-tiles .card-image-container .btn-white {
+    font-size: 16px;
+
+}
+
+.card-image-container {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card {
+    border-radius: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.card-text {
+    font-family: 'Avenir Light', sans-serif;
+    font-size: 18px;
+}
+
+.col-lg-4 {
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.card-image-container .scan-code {
+    position: absolute;
+    bottom: -10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.card-image-container .menu {
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+h3.card-title {
+    font-family: 'Brandon Grotesque Black', sans-serif;
+    color: #2E3240;
+}
+
+.status-legend.published {
+    background-color: #9DE300;
+}
+
+.status-legend.not-published {
+    background-color: #707070;
+}
+
+.views {
+    background-color: #EEEEEE;
+    width: 150px;
+    text-align: right;
+    border-radius: 20px;
+    position: relative;
+    top: -5px;
+}
+
+.modal-title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    letter-spacing: 0.02em;
+}
+
+.modal-header {
+    border-bottom: 0;
+}
+
+.modal-subtitle {
+    font-size: 24px;
+
+}
+
+.modal-text {
+    display: block;
+    font-size: 24px;
+}
+
+.modal-dialog {
+    position: relative;
+    justify-content: center;
+}
+
+.modal-content {
+    height: 800px;
+    position: relative;
+    border-radius: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
+}
+
+.modal .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    opacity: 1;
+    z-index: 99999;
+}
+
+
+#previewProjectModal .modal-subtitle {
+    font-size: 20px;
+}
+
+.expiry-time {
+    border: 1px solid #D8D8D8;
+    border-radius: 6px;
+    padding-top: 10px;
+    padding-bottom: 0;
+    width: 280px;
+}
+
+.slide-np1 .modal-body,
+.slide-f1 .modal-body,
+.slide-d1 .modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-body input {
+    width: 650px;
+    background-color: #F9F9FA;
+    border: 1px solid #CCC;
+    border-radius: 18px;
+    padding: 2em;
+}
+
+.new-folder.modal .modal-content,
+.delete-marker-modal .modal-content {
+    background-color: transparent !important;
+    border: none;
+    box-shadow: none !important;
+}
+
+.new-folder label,
+.new-folder p {
+    font-size: 24px;
+}
+
+.slide-np1 .modal-body .btn-call-to-action {
+    margin-top: 100px;
+}
+
+.btn-call-to-action .btn {
+    font-family: 'Brandon Grotesque Black', sans-serif;
+    text-transform: uppercase !important;
+    font-size: 20px;
+    /* width: 220px; */
+    padding: 10px 30px;
+    border-radius: 32px;
+}
+
+.btn-call-to-action .btn-secondary {
+    background-color: #2E3240;
+}
+
+.btn-call-to-action .btn-white {
+    background-color: white;
+    color: #2E3240;
+}
+
+.btn-call-to-action .text-warning,
+.btn-call-to-action p {
+    font-family: 'Avenir Roman', san-serif;
+    font-size: 20px;
+}
+
+.text-warning.modal-footer-text {
+    font-size: 20px;
+}
+
+.upload-marker-text {
+    font-size: 20px;
+}
+
+.modal-backdrop.show {
+    opacity: 0.8;
+}
+
+.filename {
+    font-size: 18px;
+}
+
+.carousel-dots li {
+    width: 12px;
+    height: 12px;
+    border-radius: 10px;
+    border: 1px solid #2E3240;
+    list-style: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.carousel-dots li.active {
+    background-color: #2E3240;
+    border: 1px solid transparent;
+
+}
+
+.img-wrapper {
+    background-color: #EEEEEE;
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
+}
+
+.confirm-tile:not(last-child) {
+    border-bottom: 1px dashed #ADACAC;
+}
+
+.confirm-tile:last-child {
+    border-bottom: 1px dashed transparent;
+}
+
+.preview-container {
+    height: 400px;
+    overflow-y: auto;
+
+}
+
+.delete-marker-modal .modal-dialog {
+    z-index: 9999999 !important;
+}
+
+.new-project-modal .modal-dialog {
+    z-index: 9999;
+}
+
+footer {
+    height: 150px;
+}
+
+footer ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+    color: white;
+    font-size: 14px;
+}
+
+footer ul li a {
+    color: white;
+    font-size: 14px;
+}
+
+footer ul li a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+footer .icon-to-top {
+    cursor: pointer;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+/* Large devices (desktops, 992px and down) */
+@media (min-width: 992px) {
+    .section-grid .row {
+        margin-bottom: 20px;
+    }
+}
+
+/* Large devices (desktops, 992px and down) */
+@media (max-width: 1200px) {}
+
+/* Extra large devices (large desktops, 1200px and down) */
+@media (max-width: 992px) {
+
+    .card:nth-child(0),
+    .card:nth-child(1) {
+        margin-bottom: 20px;
+    }
+
+    footer {
+        height: auto
+    }
+
+    footer .left,
+    footer .right {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+/* Medium devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+}
+
+/* Small devices (landscape phones, 576px and down) */
+@media (max-width: 576px) {}
