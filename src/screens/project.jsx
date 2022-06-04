@@ -15,6 +15,16 @@ import dot1 from '../assets/images/icon-context-menu.svg'
 import crossIcon from '../assets/images/icon-close.svg'
 import barcode from '../assets/images/scan-code-lg.png'
 import barcadeSideImage from '../assets/images/marker-lg.png'
+import imagePopup from '../assets/images/preview-1.png'
+import imagePopup2 from '../assets/images/preview-2.png'
+import imagePopup3 from '../assets/images/preview-3.png'
+import deleteIcon from '../assets/images/icon-delete.svg'
+import imageDownload from '../assets/images//icon-download.svg'
+import imageFold from '../assets/images/new-folder-organise.png'
+import imageActive1 from '../assets/images/img-t1.png'
+import imageActive2 from '../assets/images/img-t2.png'
+import imageActive3 from '../assets/images/img-t3.png'
+import imageFolder1 from '../assets/images/new-folder-organise.png'
 import { useState } from "react";
 
 
@@ -23,9 +33,14 @@ const Projects = () => {
 
     const [show, setShow] = useState(false);
     const [showModal, setShowModal] = useState(false);
+    const [showModalImage, setshowModalImage] = useState(false);
     const [showMenu, setShowMenu] = useState(false);
+    const [cancel, setCancel] = useState(false);
 
-
+    // const handleCancelEdit = () => {
+    //     setCancelEdit(false);
+    //     // setEdit(!edit);
+    // };
 
     return (
 
@@ -63,8 +78,8 @@ const Projects = () => {
                             </div>
                         </div>
                     </div>
-                    <button type="button" className="btn btn-secondary bg-dark btn-new-proj px-5 text-uppercase" data-toggle="modal"
-                        data-target="#newProjectModal" onclick="showNext('slide-np1')">Create A New Project</button>
+                    <button  type="button" className="btn btn-secondary bg-dark btn-new-proj px-5 text-uppercase" data-toggle="modal"
+                        data-target="#newProjectModal" onClick={()=>setCancel(!cancel)}>Create A New Project</button>
                 </header>
 
                 {/* <!-- header ends -->
@@ -160,13 +175,13 @@ const Projects = () => {
                         <div className="col-lg-4 col-md-6">
                             <div className="card text-left gutters">
                                 <div className="card-image-container p-2" onClick={() => setShowModal(!showModal)}>
-                                    <img src={image1} className="card-img-top project-image" alt="..."  />
-                                    <div className={showModal?"menu align-center flex-column btn-call-to-action":"menu align-center flex-column btn-call-to-action d-none"}>
+                                    <img src={image1} className="card-img-top project-image" alt="..." />
+                                    <div className={showModal ? "menu align-center flex-column btn-call-to-action" : "menu align-center flex-column btn-call-to-action d-none"}>
                                         <button class="btn btn-white">Open Project</button>
                                         <button class="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
                                             Project</button>
                                     </div>
-                                    <div className="scan-code"><img src="images/scan.png" alt="" className="img-responsive" /></div>
+                                    <div className="scan-code"><img src={scanImage} alt="" className="img-responsive" /></div>
                                 </div>
                                 <div className="card-body">
                                     <div className="title d-flex justify-content-between">
@@ -203,9 +218,9 @@ const Projects = () => {
 
                         <div className="col-lg-4 col-md-6">
                             <div className="card text-left gutters">
-                                <div className="card-image-container p-2">
-                                    <img src={image2} className="card-img-top project-image" alt="..." onclick="showMenu(this)" />
-                                    <div className="menu align-center flex-column btn-call-to-action d-none">
+                                <div className="card-image-container p-2" onClick={() => { setshowModalImage(!showModalImage) }}>
+                                    <img src={image2} className="card-img-top project-image" alt="..." />
+                                    <div className={showModalImage ? "menu align-center flex-column btn-call-to-action" : "menu align-center flex-column btn-call-to-action d-none"}>
                                         <button className="btn btn-white">Open Project</button>
                                         <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
                                             Project</button>
@@ -335,10 +350,13 @@ const Projects = () => {
                 {/* <!-- section grid ends -->
       <!-- section tiles starts --> */}
                 <div className="container-fluid section-tiles d-none">
+
+
+
                     <div className="row shadow-sm p-2 justify-content-between mb-3">
                         <div className="d-flex flex-row">
                             <div className="card-image-container position-relative">
-                                <img src="images/img-t1.png" className="card-img-top project-image" alt="..." onclick="showMenu(this)" />
+                                <img src={imageActive1} className="card-img-top project-image" alt="..." onclick="showMenu(this)" />
                                 <div className="menu align-center flex-column btn-call-to-action d-none">
                                     <button className="btn btn-white">Open Project</button>
                                     <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectWOModal">View
@@ -366,14 +384,18 @@ const Projects = () => {
                                 </div>
                             </div>
                             <div className="scan-code mt-3">
-                                <img src="images/scan.png" alt="" className="img-responsive" />
+                                <img src={scanImage} alt="" className="img-responsive" />
                             </div>
                         </div>
                     </div>
+
+
+
+
                     <div className="row shadow-sm p-2 justify-content-between mb-3">
                         <div className="d-flex flex-row">
                             <div className="card-image-container position-relative">
-                                <img src="images/img-t2.png" className="card-img-top project-image" alt="..." onclick="showMenu(this)" />
+                                <img src={imageActive2} className="card-img-top project-image" alt="..." onclick="showMenu(this)" />
                                 <div className="menu align-center flex-column btn-call-to-action d-none">
                                     <button className="btn btn-white">Open Project</button>
                                     <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
@@ -401,14 +423,14 @@ const Projects = () => {
                                 </div>
                             </div>
                             <div className="scan-code mt-3">
-                                <img src="images/scan.png" alt="" className="img-responsive" />
+                                <img src={scanImage} alt="" className="img-responsive" />
                             </div>
                         </div>
                     </div>
                     <div className="row shadow-sm p-2 justify-content-between mb-3">
                         <div className="d-flex flex-row">
                             <div className="card-image-container position-relative">
-                                <img src="images/img-t3.png" className="card-img-top project-image" alt="..." onclick="showMenu(this)" />
+                                <img src={imageActive3} className="card-img-top project-image" alt="..." onclick="showMenu(this)" />
                                 <div className="menu align-center flex-column btn-call-to-action d-none">
                                     <button className="btn btn-white">Open Project</button>
                                     <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
@@ -436,7 +458,7 @@ const Projects = () => {
                                 </div>
                             </div>
                             <div className="scan-code mt-3">
-                                <img src="images/scan.png" alt="" className="img-responsive" />
+                                <img src={scanImage} alt="" className="img-responsive" />
                             </div>
                         </div>
                     </div>
@@ -661,34 +683,34 @@ const Projects = () => {
                                 <div className="preview-container">
                                     <div className="d-flex justify-content-start align-items-center pl-4 py-3 confirm-tile">
                                         <div className="img-wrapper align-center">
-                                            <img src="images/preview-1.png" alt="" />
+                                            <img src={imagePopup} alt="" />
                                         </div>
-                                        <img src="images/icon-delete.svg" alt="" className="ml-5 mr-2 d-inline-block cup marker-delete" />
-                                        <img src="images/icon-download.svg" alt="" className="ml-3" />
+                                        <img src={deleteIcon} alt="" className="ml-5 mr-2 d-inline-block cup marker-delete" />
+                                        <img src={imageDownload} alt="" className="ml-3" />
                                         <span className="filename ml-4">Untitled1.jpg</span>
                                     </div>
                                     <div className="d-flex justify-content-start align-items-center pl-4 py-3 confirm-tile">
                                         <div className="img-wrapper align-center">
-                                            <img src="images/preview-2.png" alt="" />
+                                            <img src={imagePopup2} alt="" />
                                         </div>
-                                        <img src="images/icon-delete.svg" alt="" className="ml-5 mr-2 d-inline-block cup marker-delete" />
-                                        <img src="images/icon-download.svg" alt="" className="ml-3" />
+                                        <img src={deleteIcon} alt="" className="ml-5 mr-2 d-inline-block cup marker-delete" />
+                                        <img src={imageDownload} alt="" className="ml-3" />
                                         <span className="filename ml-4">Untitled2.jpg</span>
                                     </div>
                                     <div className="d-flex justify-content-start align-items-center pl-4 py-3 confirm-tile">
                                         <div className="img-wrapper align-center">
-                                            <img src="images/preview-3.png" alt="" />
+                                            <img src={imagePopup3} alt="" />
                                         </div>
-                                        <img src="images/icon-delete.svg" alt="" className="ml-5 mr-2 d-inline-block cup marker-delete" />
-                                        <img src="images/icon-download.svg" alt="" className="ml-3 d-inline-block cup" />
+                                        <img src={deleteIcon} alt="" className="ml-5 mr-2 d-inline-block cup marker-delete" />
+                                        <img src={imageDownload} alt="" className="ml-3 d-inline-block cup" />
                                         <span className="filename ml-4">Untitled3.jpg</span>
                                     </div>
                                     <div className="d-flex justify-content-start align-items-center pl-4 py-3 confirm-tile">
                                         <div className="img-wrapper align-center">
-                                            <img src="images/preview-3.png" alt="" />
+                                            <img src={imagePopup3} alt="" />
                                         </div>
-                                        <img src="images/icon-delete.svg" alt="" className="ml-5 mr-2 d-inline-block cup marker-delete" />
-                                        <img src="images/icon-download.svg" alt="" className="ml-3" />
+                                        <img src={deleteIcon} alt="" className="ml-5 mr-2 d-inline-block cup marker-delete" />
+                                        <img src={imageDownload} alt="" className="ml-3" />
                                         <span className="filename ml-4">Untitled3.jpg</span>
                                     </div>
                                 </div>
@@ -731,7 +753,8 @@ const Projects = () => {
                                 <input type="text" className="form-control" name="" id="folder-name" aria-describedby="folder-name"
                                     placeholder="Folder Name" />
                                 <div className="d-block text-center btn-call-to-action mt-5">
-                                    <button className="btn btn-white" onclick="showNext('slide-f2')">confirm</button>
+                                    <button>
+                                        <a className="btn btn-white1" href="/slide-f2">confirm</a></button>
                                     <button className="btn btn-white ml-3" data-dismiss="modal" aria-label="Close">Cancel</button>
                                 </div>
                             </div>
@@ -743,23 +766,25 @@ const Projects = () => {
                             <p className="modal-subtitle d-block">
                             </p>
                         </div>
-                        <div className="modal-body flex-column">
-                            <h5 className="modal-title d-block text-uppercase text-white text-center ">Organise your projects</h5>
-                            <div className="form-group d-block text-center">
-                                <p className="text-white">Simply drag and drop your projects into folders.</p>
-                                <img src="images/new-folder-organise.png" alt="" />
-                                <div className="d-block text-center btn-call-to-action mt-5">
-                                    <button className="btn btn-white" data-dismiss="modal" aria-label="Close"
-                                        onclick="getFolderName('slide-f2')">Got it</button>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
 
                     {/* <!-- modal dialog end --> */}
 
                 </div>
+                <div className="modal-body flex-column">
+                    <h5 className="modal-title d-block text-uppercase text-white text-center ">Organise your projects</h5>
+                    <div className="form-group d-block text-center">
+                        <p className="text-white">Simply drag and drop your projects into folders.</p>
+                        <img src={imageFold} alt="" />
+                        <div className="d-block text-center btn-call-to-action mt-5">
+                            <button className="btn btn-white" data-dismiss="modal" aria-label="Close"
+                                onclick="getFolderName('slide-f2')">Got it</button>
+                        </div>
+                    </div>
+                </div>
             </div>
+          
 
             {/* <!-- new folder modal ends --> */}
 
@@ -767,26 +792,27 @@ const Projects = () => {
 
             {/* <!-- delete marker modal starts --> */}
 
-            <div className="modal fade delete-marker-modal" id="deleteMarkerModal" tabindex="-1" role="dialog" data-backdrop=""
-                aria-labelledby="deleteMarkerModal" aria-hidden="true" style={{ zIindex: 999999 }}>
-                <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
+           
+            {/* <div className="modal fade delete-marker-modal show" id="deleteMarkerModal" tabindex="-1" data-backdrop="" aria-labelledby="deleteMarkerModal" style={{ zIndex: "999999", display: "block", paddingRight: "17px", ariaModal: "true", role: "dialog", backgroundColor: "-moz-initial" }}> */}
+            <div className={cancel?"modal fade delete-marker-modal":"modal fade delete-marker-modal show"} id="newFolderModal" tabindex="-1" role="dialog" data-backdrop="static"
+                aria-labelledby="newFolderModal" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
 
-                    <div className="modal-content slide-d1">
-                        <div className="modal-body flex-column">
-                            <h5 className="modal-title d-block text-uppercase text-white text-center">Delete Marker</h5>
-                            <p className="modal-text text-white text-center">Confirm you wish to delete this marker?</p>
-                            <div className="d-block text-center btn-call-to-action mt-3">
-                                <button className="btn btn-white btn-confirm-marker-delete">confirm</button>
-                                <button className="btn btn-white ml-3" data-dismiss="modal" aria-label="Close">Cancel</button>
+                    <div class="modal-content slide-d1" >
+                        <div class="modal-body flex-column">
+                            <h5 class="modal-title d-block text-uppercase text-white text-center">Delete Marker</h5>
+                            <p class="modal-text text-white text-center">Confirm you wish to delete this marker?</p>
+                            <div class="d-block text-center btn-call-to-action mt-3" >
+                                <button class="btn btn-white btn-confirm-marker-delete">confirm</button>
+                                <button onClick={()=>setCancel(!cancel)} className="btn btn-white ml-3" data-dismiss="modal" aria-label="Close">Cancel</button>
                             </div>
                         </div>
                     </div>
-                    {/* <!-- modal dialog end --> */}
+
 
                 </div>
             </div>
 
-            {/* <!-- delete marker modal ends --> */}
 
 
 
@@ -826,7 +852,7 @@ const Projects = () => {
                                 </div>
                             </div>
                             <div className="col">
-                                <img src= {barcadeSideImage} alt="" />
+                                <img src={barcadeSideImage} alt="" />
                             </div>
                         </div>
                     </div>

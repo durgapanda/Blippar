@@ -14,8 +14,23 @@ body {
     border-radius: 50%;
     color: #FFF
 }
+.btn-white1 {
+    background-color: #fff;
+    border-radius: 50%;
+    /* color: #FFF */
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+    border-radius: 73px;
+}
 
 .btn-white-o {
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    color: #FFF
+}
+.btn-white1-o {
     background-color: transparent;
     border: 2px solid #fff;
     border-radius: 50px;
@@ -430,7 +445,7 @@ h3.card-title {
 
 .new-folder.modal .modal-content,
 .delete-marker-modal .modal-content {
-    background-color: transparent !important;
+    background-color: rgba(15, 8, 8, 0.61) !important;
     border: none;
     box-shadow: none !important;
 }
