@@ -36,6 +36,10 @@ const Projects = () => {
     const [showModalImage, setshowModalImage] = useState(false);
     const [showMenu, setShowMenu] = useState(false);
     const [cancel, setCancel] = useState(false);
+    const [confirmProjetOrganise, setConfirmProjetOrganise] = useState(false);
+    const [showAddProject, setShowAddProject] = useState(false);
+    const [activeTiles, setActiveTiles] = useState(false);
+
 
     // const handleCancelEdit = () => {
     //     setCancelEdit(false);
@@ -105,18 +109,18 @@ const Projects = () => {
                         </div>
                         <div className="subnav">
                             <img src={menu} alt="Icon Menu" width="32px" height="24px"
-                                className="cup subnav-icon icon-tiles" onclick="showView('tile')" />
+                                className="cup subnav-icon icon-tiles" onClick={()=>setActiveTiles(!activeTiles)} />
                             <img src={menu} alt="Icon Menu" width="32px" height="27px"
                                 className="cup d-none subnav-icon icon-grid" onclick="showView('grid')" />
-                            <img src={folder} data-toggle="modal" data-target="#newFolderModal"
+                            <img src={folder} data-toggle="modal" onClick={()=>setShowAddProject(true)}
                                 className="d-inline-block ml-3 cup" alt="Icon Folder" width="32px" height="28px"
-                                onclick="showNext('slide-f1')" />
+                               />
                         </div>
                     </section>
                 </div>
                 {/* <!-- section options end -->
           <!-- section grid starts --> */}
-                <div className="container-fluid section-grid active">
+                <div className={activeTiles? "container-fluid section-grid d-none":"container-fluid section-grid active"}>
                     <div className="row">
 
 
@@ -349,7 +353,7 @@ const Projects = () => {
                 </div>
                 {/* <!-- section grid ends -->
       <!-- section tiles starts --> */}
-                <div className="container-fluid section-tiles d-none">
+                <div className={activeTiles?"container-fluid section-tiles active":"container-fluid section-tiles d-none"}>
 
 
 
@@ -490,7 +494,7 @@ const Projects = () => {
 
   <!-- new project modal begin --> */}
 
-            <div className="modal fade new-project-modal" id="newProjectModal" tabindex="-1" role="dialog" data-backdrop="static"
+            <div className="modal fade new-project-modal" id="newProjectModal" tabIndex="-1" role="dialog" data-backdrop="static"
                 aria-labelledby="modelTitleId" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
 
@@ -741,8 +745,8 @@ const Projects = () => {
 
   <!-- new folder modal begins --> */}
 
-            <div className="modal fade new-folder" id="newFolderModal" tabindex="-1" role="dialog" data-backdrop="static"
-                aria-labelledby="newFolderModal" aria-hidden="true">
+            <div className={showAddProject?"modal fade new-folder show":"modal fade new-folder"} id="newFolderModal" tabIndex="-1" role="dialog" data-backdrop="static"
+                style={showAddProject?{display:"block"}:{display:"none"}} aria-labelledby="newFolderModal" aria-hidden="false">
                 <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
 
                     <div className="modal-content slide-f1 active">
@@ -754,37 +758,49 @@ const Projects = () => {
                                     placeholder="Folder Name" />
                                 <div className="d-block text-center btn-call-to-action mt-5">
                                     <button>
-                                        <a className="btn btn-white1" href="/slide-f2">confirm</a></button>
+                                        <a className="btn btn-white1" onClick={()=>{setShowAddProject(false) ;setConfirmProjetOrganise(!confirmProjetOrganise)}}>confirm</a></button>
                                     <button className="btn btn-white ml-3" data-dismiss="modal" aria-label="Close">Cancel</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="modal-content slide-f2 d-none">
-                        <div className="modal-header text-center d-block flex-column">
-                            <h5 className="modal-title d-inline-block"></h5>
-                            <p className="modal-subtitle d-block">
-                            </p>
-                        </div>
-
-                    </div>
+                
 
                     {/* <!-- modal dialog end --> */}
 
                 </div>
-                <div className="modal-body flex-column">
+         
+            </div>
+          
+            
+                <div className={confirmProjetOrganise?"modal fade new-folder show":"modal fade delete-marker-modal "} 
+                id="projectOrganise" tabIndex="1" role="dialog" data-backdrop="static" style={confirmProjetOrganise?{display:"block"}:{display:"none"}}
+                aria-labelledby="newFolderModal" aria-hidden="false">
+                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                <div className="modal-content">
+                        <div className="modal-header text-center d-block flex-column">
+                            <h5 className="modal-title d-inline-block"></h5>
+                            <p className="modal-subtitle d-block">
+                            </p>
+                            <div className="modal-body flex-column">
                     <h5 className="modal-title d-block text-uppercase text-white text-center ">Organise your projects</h5>
                     <div className="form-group d-block text-center">
                         <p className="text-white">Simply drag and drop your projects into folders.</p>
                         <img src={imageFold} alt="" />
                         <div className="d-block text-center btn-call-to-action mt-5">
                             <button className="btn btn-white" data-dismiss="modal" aria-label="Close"
-                                onclick="getFolderName('slide-f2')">Got it</button>
+                                onClick={()=>setConfirmProjetOrganise(false)}>Got it</button>
                         </div>
                     </div>
                 </div>
+                        </div>
+
+                    </div>
+                
+
+
+                </div>
             </div>
-          
 
             {/* <!-- new folder modal ends --> */}
 
@@ -793,8 +809,8 @@ const Projects = () => {
             {/* <!-- delete marker modal starts --> */}
 
            
-            {/* <div className="modal fade delete-marker-modal show" id="deleteMarkerModal" tabindex="-1" data-backdrop="" aria-labelledby="deleteMarkerModal" style={{ zIndex: "999999", display: "block", paddingRight: "17px", ariaModal: "true", role: "dialog", backgroundColor: "-moz-initial" }}> */}
-            <div className={cancel?"modal fade delete-marker-modal":"modal fade delete-marker-modal show"} id="newFolderModal" tabindex="-1" role="dialog" data-backdrop="static"
+            {/* <div className="modal fade delete-marker-modal show" id="deleteMarkerModal" tabIndex="-1" data-backdrop="" aria-labelledby="deleteMarkerModal" style={{ zIndex: "999999", display: "block", paddingRight: "17px", ariaModal: "true", role: "dialog", backgroundColor: "-moz-initial" }}> */}
+            <div className={cancel?"modal fade delete-marker-modal":"modal fade delete-marker-modal show"} id="newFolderModal" tabIndex="-1" role="dialog" data-backdrop="static"
                 aria-labelledby="newFolderModal" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
 
@@ -818,7 +834,7 @@ const Projects = () => {
 
             {/* <!-- view project modal starts--> */}
 
-            <div className="modal fade " id="viewProjectModal" tabindex="-1" role="dialog" data-backdrop="static"
+            <div className="modal fade " id="viewProjectModal" tabIndex="-1" role="dialog" data-backdrop="static"
                 aria-labelledby="viewProjectModal" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
 
@@ -865,7 +881,7 @@ const Projects = () => {
 
   <!-- view project modal starts--> */}
 
-            <div className="modal fade modal-viewproj-wo" id="viewProjectWOModal" tabindex="-1" role="dialog" data-backdrop="static"
+            <div className="modal fade modal-viewproj-wo" id="viewProjectWOModal" tabIndex="-1" role="dialog" data-backdrop="static"
                 aria-labelledby="viewProjectWOModal" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered modal-md" role="document">
 
@@ -909,7 +925,7 @@ const Projects = () => {
 
   <!-- preview project modal starts --> */}
 
-            <div className="modal fade " id="previewProjectModal" tabindex="-1" role="dialog" data-backdrop="static"
+            <div className="modal fade " id="previewProjectModal" tabIndex="-1" role="dialog" data-backdrop="static"
                 aria-labelledby="previewProjectModal" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
 
@@ -958,7 +974,7 @@ const Projects = () => {
 
   <!-- publish project modal starts --> */}
 
-            <div className="modal fade " id="publishProjectModal" tabindex="-1" role="dialog" data-backdrop="static"
+            <div className="modal fade " id="publishProjectModal" tabIndex="-1" role="dialog" data-backdrop="static"
                 aria-labelledby="modelTitleId" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
 
