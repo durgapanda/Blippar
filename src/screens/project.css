@@ -607,3 +607,19 @@ footer .icon-to-top {
 
 /* Small devices (landscape phones, 576px and down) */
 @media (max-width: 576px) {}
+
+@media (max-width: 576px){
+    .btn-new-proj {
+        width: 95%;
+        margin: 2.5%;
+    }
+}
+
+@media (max-width: 768px){
+    .btn-new-proj {
+        font-size: 16px;
+        bottom: 129px;
+        right: 0px;
+        padding: 15px;
+    }
+}
