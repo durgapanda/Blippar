@@ -29,6 +29,7 @@ import menuHumber from '../assets/images/icon-tabs.svg'
 import sliderfirst from '../assets/images/placeholder1.png'
 import slidersecond from '../assets/images/placeholder2.png'
 import sliderThird from '../assets/images/placeholder3.png'
+import imagemodal5 from '../assets/images/upload-marker.png'
 import { useState } from "react";
 
 
@@ -392,7 +393,7 @@ const Projects = () => {
                             </div>
                             <div className="title-container text-left d-block ml-3 mt-n2">
                                 <p className="card-text">
-                                    <h3 className="card-title text-uppercase">Using the Gyro</h3>
+                                    <h3 className="card-title-second text-uppercase">Using the Gyro</h3>
                                     Date Created: <span className="date">12th April 2022</span> <br />
                                     Created by: <span className="created">Blippar</span>
                                 </p>
@@ -448,7 +449,7 @@ const Projects = () => {
                             </div>
                             <div className="title-container text-left d-block ml-3 mt-n2">
                                 <p className="card-text">
-                                    <h3 className="card-title text-uppercase">Demo 1</h3>
+                                    <h3 className="card-title-second text-uppercase">Demo 1</h3>
                                     Date Created: <span className="date">12th April 2022</span> <br />
                                     Created by: <span className="created">Blippar</span>
                                 </p>
@@ -504,7 +505,7 @@ const Projects = () => {
                             </div>
                             <div className="title-container text-left d-block ml-3 mt-n2">
                                 <p className="card-text">
-                                    <h3 className="card-title text-uppercase">Project Starter 3</h3>
+                                    <h3 className="card-title-second text-uppercase">Project Starter 3</h3>
                                     Date Created: <span className="date">12th April 2022</span> <br />
                                     Created by: <span className="created">Blippar</span>
                                 </p>
@@ -618,7 +619,7 @@ const Projects = () => {
                         </div>
                         <div className="modal-body">
                             <div className="form-group">
-                                <label for="project-name">Give your project a name</label>
+                                <label className="projectName" for="project-name">Give your project a name</label>
                                 <input type="text" className="form-control" name="" id="project-name" aria-describedby="project-name"
                                     placeholder="Project Name" />
                                 <div className="d-block text-center btn-call-to-action">
@@ -731,7 +732,7 @@ const Projects = () => {
                         </div>
                         <div className="modal-body px-5 d-block text-center">
                             <div className="modal-body-content shadow-sm pt-5 pb-3">
-                                <img src="images/upload-marker.png" alt="" />
+                                <img src={imagemodal5} alt="" />
                                 <p className="mt-3 mb-5 upload-marker-text">You can upload up to 10 markers. Use JPEGs, maximum file size 1mb
                                     per marker, 1024px
                                     high or wide</p>
@@ -749,7 +750,7 @@ const Projects = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className={slideName == 'slide-np4' ? "modal-content slide-np4 active" : "modal-content slide-np4 d-none"}>
+                    <div className={slideName == 'slide-np4'||slideName=='slide-d1' ? "modal-content slide-np4 active" : "modal-content slide-np4 d-none"}>
                         <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true"><img src={crossIcon} alt="" /></span>
                         </button>
@@ -830,14 +831,14 @@ const Projects = () => {
                     <div className="modal-content slide-f1 active">
                         <div className="modal-body flex-column">
                             <h5 className="modal-title d-block text-uppercase text-white text-center">New Folder</h5>
-                            <div className="form-group d-block text-center">
+                            <div className=" d-block text-center">
                                 <label for="folder-name" className="text-white mb-4">Give your folder a name</label>
                                 <input type="text" className="form-control" name="" id="folder-name" aria-describedby="folder-name"
                                     placeholder="Folder Name" />
                                 <div className="d-block text-center btn-call-to-action mt-5">
                                     <button>
                                         <a className="btn btn-white1" onClick={() => { setShowAddProject(false); setConfirmProjetOrganise(!confirmProjetOrganise) }}>confirm</a></button>
-                                    <button className="btn btn-white ml-3" onClick={() => { setShowAddProject(false) }} data-dismiss="modal" aria-label="Close">Cancel</button>
+                                    <button className="btn btn-white ml-3" onClick={() => { setShowAddProject(false) }} >Cancel</button>
                                 </div>
                             </div>
                         </div>
@@ -910,7 +911,7 @@ const Projects = () => {
 
              <div className= {slideName == 'slide-d1' ? "modal fade delete-marker-modal show":"modal fade delete-marker-modal d-none" } 
 
-                id="deleteMarkerModal" tabindex="-1" data-backdrop="" aria-labelledby="deleteMarkerModal" style={{ zIndex: "999999", display: "block", paddingRight: "17px", ariaModal: "true", role: "dialog" }}>
+                id="deleteMarkerModal" tabindex="1" data-backdrop="" aria-labelledby="deleteMarkerModal" style={{ zIndex: "999999", display: "block", paddingRight: "17px", ariaModal: "true", role: "dialog" }}>
                 <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
 
                     <div className="modal-content slide-d1" >
@@ -919,7 +920,7 @@ const Projects = () => {
                             <p className="modal-text text-white text-center">Confirm you wish to delete this marker?</p>
                             <div className="d-block text-center btn-call-to-action mt-3">
                                 <button className="btn btn-white btn-confirm-marker-delete">confirm</button>
-                                <button className="btn btn-white ml-3" onClick={() => { setSlideName(false) }} data-dismiss="modal" aria-label="Close">Cancel</button>
+                                <button className="btn btn-white ml-3" onClick={()=>showNext('slide-np4')}>Cancel</button>
                             </div>
                         </div>
                     </div>
