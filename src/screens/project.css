@@ -14,27 +14,53 @@ body {
     border-radius: 50%;
     color: #FFF
 }
+
 .btn-white1 {
     background-color: #fff;
     border-radius: 50%;
     /* color: #FFF */
 }
-[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled),
+button:not(:disabled) {
     cursor: pointer;
     border-radius: 79px;
-    border: none;
+    /* border: none; */
     /* width: 157px; */
 
 }
+
+/* .mt-5, .my-5 {
+    margin-top: 3rem!important;
+    margin-left: -56%;
+} */
 /* label {
     display: inline-block;
     margin-bottom: 0.5rem;
     margin-right: 72%;
 } */
+.footerNew {
+    margin-left: -18%;
+
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    padding-left: -59px;
+    margin-left: 0px;
+}
+
+.learnNew {
+    left: -183px;
+}
+
 .projectName {
     display: inline-block;
-    margin-bottom: 0.5rem;
-    margin-right: 72%;
+    margin-bottom: 1.5rem;
+    margin-right: 54%;
 }
 
 .btn-white-o {
@@ -43,6 +69,7 @@ body {
     border-radius: 50px;
     color: #FFF
 }
+
 .btn-white1-o {
     background-color: transparent;
     border: 2px solid #fff;
@@ -89,9 +116,17 @@ body {
     cursor: pointer;
     padding-left: 8px;
 }
-.pl-2, .px-2 {
-    padding-left: 23px!important;
+
+.cupNew {
+    cursor: pointer;
+    padding-left: 0px;
 }
+
+.pl-2,
+.px-2 {
+    padding-left: 23px !important;
+}
+
 h5 {
     font-weight: 800;
     font-size: 30px;
@@ -225,6 +260,7 @@ h5 {
     top: -5px;
     position: relative;
 }
+
 .dropdown-sort img {
     position: relative;
     top: -3px;
@@ -372,6 +408,7 @@ h3.card-title {
     font-family: 'Brandon Grotesque Black', sans-serif;
     color: #2E3240;
 }
+
 h3.card-title-second {
     font-family: 'Brandon Grotesque Black', sans-serif;
     color: #2E3240;
@@ -420,10 +457,12 @@ h3.card-title-second {
     position: relative;
     justify-content: center;
 }
-.modal{
-    
+
+.modal {
+
     background-color: rgba(0, 0, 0, 0.8) !important;
 }
+
 .modal-content {
     height: 800px;
     position: relative;
@@ -479,6 +518,12 @@ h3.card-title-second {
 .new-folder label,
 .new-folder p {
     font-size: 24px;
+}
+
+.pl-3,
+.px-3 {
+    padding-left: 24px !important;
+    margin-top: 3px;
 }
 
 .slide-np1 .modal-body .btn-call-to-action {
@@ -561,9 +606,46 @@ h3.card-title-second {
     overflow-y: auto;
 
 }
-
+.form-control {
+    display: block;
+    width: 78%;
+    height: calc(1em + 0.75rem + 5px);
+    padding: 1.375rem 3.75rem;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 0.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 1.25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    margin-top: -16px;
+    margin-left: 80px;
+    padding-bottom: 43px;
+    padding-left: 35px;
+}
 .delete-marker-modal .modal-dialog {
     z-index: 9999999 !important;
+}
+.form-control-N{
+    display: block;
+    width: 78%;
+    height: calc(1em + 0.75rem + 5px);
+    padding: 1.375rem 3.75rem;
+    
+    font-weight: 400;
+    line-height: 0.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 1.25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    margin-top: -16px;
+    margin-left: 80px;
+    padding-bottom: 43px;
+    padding-left: 35px;
 }
 
 .new-project-modal .modal-dialog {
@@ -628,20 +710,19 @@ footer .icon-to-top {
 }
 
 /* Medium devices (tablets, 768px and down) */
-@media (max-width: 768px) {
-}
+@media (max-width: 768px) {}
 
 /* Small devices (landscape phones, 576px and down) */
 @media (max-width: 576px) {}
 
-@media (max-width: 576px){
+@media (max-width: 576px) {
     .btn-new-proj {
         width: 95%;
         margin: 2.5%;
     }
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .btn-new-proj {
         font-size: 16px;
         bottom: 129px;
@@ -650,18 +731,115 @@ footer .icon-to-top {
     }
 
     .modal-body input {
-       
+
         width: 335px;
     }
+
 }
-@media only screen and (min-width:321px) and (max-width:768px){
+
+@media only screen and (min-width:321px) and (max-width:768px) {
     .modal-body input {
         width: 470px;
     }
 }
-@media (min-width: 768px) and (max-width: 1024px){
+
+@media (min-width: 768px) and (max-width: 1024px) {
     .modal-body input {
-        width: 468px;
-       
+        width: 651px;
+
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .profile-section {
+        height: auto;
+        margin: 0 !important;
+        text-align: left !important;
+        margin-top: 50px !important;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .dropdown-sort {
+        font-family: 'Brandon Grotesque Black', sans-serif;
+        position: relative;
+        top: 61px;
+        position: relative;
+        margin-bottom: 55px;
+        left: -149px;
+    }
+
+    .cup {
+        cursor: pointer;
+        padding-left: 15px !important;
+    }
+
+    .pl-3,
+    .px-3 {
+        padding-left: 126px !important;
+        margin-top: -48px;
+        padding-right: -23px;
+        margin-left: -81px;
+        margin-right: -22px;
+    }
+
+    .form-group {
+        margin-bottom: 38rem;
+    }
+
+    .modal-content {
+        /* height: 800px; */
+        position: relative;
+        border-radius: 0;
+        box-shadow: 0 0 10px rgb(0 0 0 / 15%) !important;
+        width: 220% !important;
+        margin-left: -31%;
+        margin-right: -159px;
+    }
+
+    .modal-content.slide-np3 {
+        height: 750px;
+        top: -58px;
+        /* overflow-y: scroll; */
+
+    }
+
+    .shadow-sm {
+        box-shadow: 0 0 10px rgb(0 0 0 / 15%) !important;
+        overflow-y: scroll !important;
+    }
+
+    .modal-content {
+        /* height: 800px; */
+        position: relative;
+        border-radius: 0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
+        width: 200% !important;
+    }
+
+    .projectName {
+        display: inline-block;
+        margin-bottom: 1.5rem;
+    margin-right: 54%;
+    }
+
+    .form-control {
+        display: block;
+        width: 78%;
+        height: calc(1em + 0.75rem + 5px);
+        padding: 1.375rem 3.75rem;
+        font-size: 3rem;
+        font-weight: 400;
+        line-height: 0.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 1.25rem;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        margin-top: -16px;
+        margin-left: 80px;
+        padding-bottom: 43px;
+        padding-left: 35px;
     }
 }

@@ -84,15 +84,15 @@ const Projects = () => {
                         </p>
                     </div>
                     <div className="profile-section col-sm-8 text-right my-5">
-                        <button type="button" className="btn btn-white-o learn text-uppercase text-bold">Learn</button>
+                        <button type="button" className=" profile-section btn btn-white-o learn text-uppercase text-bold">Learn</button>
                         <div className="dropdown d-inline ml-2">
                             <a className="btn dropdown-toggle text-white avatar" href="#" role="button" id="dropdownMenuLink"
                                 data-toggle="dropdown" aria-expanded="true">
 
-                                <span className="initials d-inline-block">SS</span>
+                                <span className=" profile-section initials d-inline-block">SS</span>
                             </a>
 
-                            <div className="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownMenuLink">
+                            <div className="dropdown-menu dropdown-menu-lg-right learnNew" aria-labelledby="dropdownMenuLink">
                                 <a className="dropdown-item" href="#">Action</a>
                                 <a className="dropdown-item" href="#">Another action</a>
                                 <a className="dropdown-item" href="#">Something else here</a>
@@ -127,16 +127,16 @@ const Projects = () => {
                         <div className="subnav">
                             {
                                 activeTiles ? <img src={menuHumber} alt="Icon Menu" width="32px" height="27px"
-                                    className={activeTiles ? "cup subnav-icon icon-grid " : "cup subnav-icon icon-grid"} onClick={() => setActiveTiles(!activeTiles)} /> :
+                                    className={activeTiles ? "cupNew subnav-icon icon-grid " : "cup subnav-icon icon-grid"} onClick={() => setActiveTiles(!activeTiles)} /> :
 
                                     <img src={menu} alt="Icon Menu" width="32px" height="24px"
-                                        className="cup subnav-icon icon-tiles" onClick={() => setActiveTiles(!activeTiles)}
+                                        className="cupNew subnav-icon icon-tiles" onClick={() => setActiveTiles(!activeTiles)}
 
                                     />}
 
 
                             <img src={folder} data-toggle="modal" onClick={() => setShowAddProject(true)}
-                                className="d-inline-block ml-3 cup" alt="Icon Folder" width="32px" height="28px"
+                                className="d-inline-block ml-3 cupNew" alt="Icon Folder" width="32px" height="28px"
                             />
                         </div>
                     </section>
@@ -169,7 +169,7 @@ const Projects = () => {
                                         <h3 className="card-title text-uppercase">Using the Gyro</h3>
                                         <div>
                                             <img src={trendImage} alt="" />
-                                            <img src={dot1} className="ml-3 dropdown-toggle cup" alt=""
+                                            <img src={dot1} className="pl-2 dropdown-toggle cup" alt=""
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
                                             <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                                                 <button className="dropdown-item" href="#">Open project</button>
@@ -252,14 +252,14 @@ const Projects = () => {
                                         <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
                                             Project</button>
                                     </div>
-                                    <div className="scan-code"><img src="images/scan.png" alt="" className="img-responsive" /></div>
+                                    <div className="scan-code"><img src={scanImage} alt="" className="img-responsive" /></div>
                                 </div>
                                 <div className="card-body">
                                     <div className="title d-flex justify-content-between">
                                         <h3 className="card-title text-uppercase">Project Starter 3</h3>
                                         <div>
                                             <img src={trendImage} alt="" />
-                                            <img src={dot1} className="pl-2 dropdown-toggle cup" alt=""
+                                            <img src={dot1} className="pl-3 dropdown-toggle cup1" alt=""
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false/" />
                                             <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                                                 <button className="dropdown-item" href="#">Open project</button>
@@ -553,8 +553,8 @@ const Projects = () => {
             <footer className="bg-dark">
                 <div className="container-fluid">
                     <div className="row d-flex justify-content-between">
-                        <div className="col-md-9 pt-5 left">
-                            <ul className="mt-5">
+                        <div className="col-md-9 pt-5 left footerNew">
+                            <ul className="mt-5 ">
                                 <li>All Rights Reserved 2022 &copy; Blippar Group Limited</li>
                                 <li><a href="#">Privacy</a></li>
                                 <li><a href="#">Terms</a></li>
@@ -620,7 +620,7 @@ const Projects = () => {
                         <div className="modal-body">
                             <div className="form-group">
                                 <label className="projectName" for="project-name">Give your project a name</label>
-                                <input type="text" className="form-control" name="" id="project-name" aria-describedby="project-name"
+                                <input type="text" className="form-control-N" name="" id="project-name" aria-describedby="project-name"
                                     placeholder="Project Name" />
                                 <div className="d-block text-center btn-call-to-action">
                                     <button className="btn btn-secondary" onClick={() => showNext("slide-np2")}>Continue</button>
@@ -829,7 +829,7 @@ const Projects = () => {
                 <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
 
                     <div className="modal-content slide-f1 active">
-                        <div className="modal-body flex-column">
+                        <div className="modal-body-New flex-column">
                             <h5 className="modal-title d-block text-uppercase text-white text-center">New Folder</h5>
                             <div className=" d-block text-center">
                                 <label for="folder-name" className="text-white mb-4">Give your folder a name</label>
