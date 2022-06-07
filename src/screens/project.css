@@ -608,7 +608,7 @@ h3.card-title-second {
 }
 .form-control {
     display: block;
-    width: 78%;
+    width: 55%;
     height: calc(1em + 0.75rem + 5px);
     padding: 1.375rem 3.75rem;
     font-size: 3rem;
@@ -620,10 +620,10 @@ h3.card-title-second {
     border: 1px solid #ced4da;
     border-radius: 1.25rem;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    margin-top: -16px;
-    margin-left: 80px;
+    margin-top: 19px;
+    margin-left: 255px;
     padding-bottom: 43px;
-    padding-left: 35px;
+    padding-left: 50px;
 }
 .delete-marker-modal .modal-dialog {
     z-index: 9999999 !important;

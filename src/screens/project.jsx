@@ -828,7 +828,7 @@ const Projects = () => {
                 style={showAddProject ? { display: "block" } : { display: "none" }} aria-labelledby="newFolderModal" aria-hidden="false">
                 <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
 
-                    <div className="modal-content slide-f1 active">
+                    <div className="modal-content slide-f1 active" style={{marginTop: "230px"}}>
                         <div className="modal-body-New flex-column">
                             <h5 className="modal-title d-block text-uppercase text-white text-center">New Folder</h5>
                             <div className=" d-block text-center">
