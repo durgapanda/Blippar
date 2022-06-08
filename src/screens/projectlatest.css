@@ -126,7 +126,9 @@ h5 {
     margin-bottom: 5px;
     color: white;
 }
-
+.footerNew{
+    text-align: left;
+}
 .logo-section a {
     display: inline-block;
 }
@@ -524,6 +526,9 @@ img {
 .filename {
     font-size: 18px;
 }
+.modalNeww{
+    display: flex;
+}
 
 .carousel-dots li {
     width: 12px;
@@ -751,12 +756,34 @@ footer .icon-to-top {
         margin-top: 5px !important;
     }
     .subtitle-New {
-        margin-left: -92px;
+        margin-left: -39px;
     }
     .dotImageNew{
         margin-left: 34px;
     }
-
+    footer ul li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 20px;
+        color: white;
+        font-size: 14px;
+    }
+    
+    footer ul li a {
+        color: white;
+        font-size: 14px;
+    }
+    
+    footer ul li a:hover {
+        color: white;
+        text-decoration: underline;
+    }
+    .newfolder-st{
+        margin-left: 217px !important;
+    }
+    .roundNew{
+        top: 10px;
+    }
     
 }
 

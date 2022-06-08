@@ -108,22 +108,25 @@ const Projects = () => {
           <!-- section-options starts --> */}
                 <div className="container-fluid">
                     <section className="justify-content-between row section-options mb-3">
-                        <div className="subnav">
-                            <span className="subtitle subtitle-New">Your Projects</span>
-                            <div className="dropdown open d-inline">
-                                <button className="btn btn-secondary-o dropdown-toggle text-uppercase dropdown-sort ml-4 pl-4 py-2"
-                                    type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span className="text-sort">Sort By</span>
-                                    <img src={ddArrowDown} alt="Dropdown Arrow down" width="" />
-                                </button>
-                                <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
-                                    <button className="dropdown-item" href="#">Date Created</button>
-                                    <button className="dropdown-item" href="#">Last modified</button>
-                                    <button className="dropdown-item" href="#">Name A-Z</button>
-                                    <button className="dropdown-item" href="#">Name Z-A</button>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="subnav col text-left">
+            <span class="subtitle">Your Projects</span>
+            <div class="dropdown open d-inline">
+              <button class="btn btn-secondary-o dropdown-toggle text-uppercase dropdown-sort ml-4 pl-4 py-2" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="text-sort">Sort By</span>
+                <img src={ddArrowDown} alt="Dropdown Arrow down" width=""/>
+              </button>
+              <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                <button class="dropdown-item" href="#">Date Created</button>
+                <button class="dropdown-item" href="#">Last modified</button>
+                <button class="dropdown-item" href="#">Name A-Z</button>
+                <button class="dropdown-item" href="#">Name Z-A</button>
+              </div>
+            </div>
+          </div>
+
+                       
+                       
+                        
                         <div className="subnav newfolder"  >
                             {
                                 activeTiles ? <img src={menuHumber} alt="Icon Menu" width="32px" height="27px"
@@ -136,7 +139,7 @@ const Projects = () => {
 
 
                             <img src={folder} data-toggle="modal" onClick={() => setShowAddProject(true)}
-                                className="d-inline-block ml-3 cup " alt="Icon Folder" style={{}} width="32px" height="28px"
+                                className="d-inline-block ml-3 cup newfolder-st " alt="Icon Folder"
                             />
                         </div>
                     </section>
@@ -659,7 +662,7 @@ const Projects = () => {
                 <div className="container-fluid">
                     <div className="row d-flex justify-content-between">
                         <div className="col-md-9 pt-md-5 pt-sm-2 left">
-                            <ul style={{ marginRight: "55%" }} className="mt-5">
+                            <ul className="mt-5 footerNew">
                                 <li>All Rights Reserved 2022 © Blippar Group Limited</li>
                                 <li><a href="#">Privacy</a></li>
                                 <li><a href="#">Terms</a></li>
