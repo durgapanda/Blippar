@@ -28,6 +28,8 @@ import imageFolder1 from '../assets/images/new-folder-organise.png'
 import menuHumber from '../assets/images/icon-tabs.svg'
 import sliderfirst from '../assets/images/placeholder1.png'
 import slidersecond from '../assets/images/placeholder2.png'
+import dolarimage from '../assets/images/icon-copy-link.svg'
+import arrorMark from '../assets/images/icon-arrow-right.svg'
 import sliderThird from '../assets/images/placeholder3.png'
 import imagemodal5 from '../assets/images/upload-marker.png'
 import { useState } from "react";
@@ -108,25 +110,23 @@ const Projects = () => {
           <!-- section-options starts --> */}
                 <div className="container-fluid">
                     <section className="justify-content-between row section-options mb-3">
-                    <div class="subnav col text-left">
-            <span class="subtitle">Your Projects</span>
-            <div class="dropdown open d-inline">
-              <button class="btn btn-secondary-o dropdown-toggle text-uppercase dropdown-sort ml-4 pl-4 py-2" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="text-sort">Sort By</span>
-                <img src={ddArrowDown} alt="Dropdown Arrow down" width=""/>
-              </button>
-              <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
-                <button class="dropdown-item" href="#">Date Created</button>
-                <button class="dropdown-item" href="#">Last modified</button>
-                <button class="dropdown-item" href="#">Name A-Z</button>
-                <button class="dropdown-item" href="#">Name Z-A</button>
-              </div>
-            </div>
-          </div>
+                        <div class="subnav col text-left">
+                            <span class="subtitle">Your Projects</span>
+                            <div class="dropdown open d-inline">
+                                <button class="btn btn-secondary-o dropdown-toggle text-uppercase dropdown-sort ml-4 pl-4 py-2" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="text-sort">Sort By</span>
+                                    <img src={ddArrowDown} alt="Dropdown Arrow down" width="" />
+                                </button>
+                                <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                                    <button class="dropdown-item" href="#">Date Created</button>
+                                    <button class="dropdown-item" href="#">Last modified</button>
+                                    <button class="dropdown-item" href="#">Name A-Z</button>
+                                    <button class="dropdown-item" href="#">Name Z-A</button>
+                                </div>
+                            </div>
+                        </div>
 
-                       
-                       
-                        
+
                         <div className="subnav newfolder"  >
                             {
                                 activeTiles ? <img src={menuHumber} alt="Icon Menu" width="32px" height="27px"
@@ -714,7 +714,7 @@ const Projects = () => {
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
-                                <label style={{ marginRight: "70%" }} for="project-name">Give your project a name</label>
+                                <label className="projectNameNew" for="project-name">Give your project a name</label>
                                 <input type="text" class="form-control" name="" id="project-name" aria-describedby="project-name" placeholder="Project Name" />
                                 <div class="d-block text-center btn-call-to-action">
                                     <button class="btn btn-secondary" onClick={() => showNext("slide-np2")}>Continue</button>
@@ -966,34 +966,34 @@ const Projects = () => {
 
                 </div>
                 <div className={confirmProjetOrganise ? "modal fade new-folder show" : "modal fade delete-marker-modal "}>
-                        <div class="modal-header text-center d-block flex-column">
-                            <h5 class="modal-title d-inline-block"></h5>
-                            <p class="modal-subtitle d-block">
-                            </p>
-                        </div>
-                        <div class="modal-body flex-column">
-                            <h5 class="modal-title d-block text-uppercase text-white text-center ">Organise your projects</h5>
-                            <div class="form-group d-block text-center">
-                                <p class="text-white">Simply drag and drop your projects into folders.</p>
-                                <img src="images/new-folder-organise.png" alt=""/>
-                                    <div class="d-block text-center btn-call-to-action mt-5">
-                                        <button class="btn btn-white" data-dismiss="modal" aria-label="Close" onClick={()=>"getFolderName('slide-f2')"}>Got it</button>
-                                    </div>
+                    <div class="modal-header text-center d-block flex-column">
+                        <h5 class="modal-title d-inline-block"></h5>
+                        <p class="modal-subtitle d-block">
+                        </p>
+                    </div>
+                    <div class="modal-body flex-column">
+                        <h5 class="modal-title d-block text-uppercase text-white text-center ">Organise your projects</h5>
+                        <div class="form-group d-block text-center">
+                            <p class="text-white">Simply drag and drop your projects into folders.</p>
+                            <img src="images/new-folder-organise.png" alt="" />
+                            <div class="d-block text-center btn-call-to-action mt-5">
+                                <button class="btn btn-white" data-dismiss="modal" aria-label="Close" onClick={() => "getFolderName('slide-f2')"}>Got it</button>
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
-       
-            
 
-  
-  
 
-             <div className={showAddProject ? "modal fade new-folder show" : "modal fade new-folder"} id="newFolderModal" tabIndex="-1" role="dialog" data-backdrop="static"
+
+
+
+
+            <div className={showAddProject ? "modal fade new-folder show" : "modal fade new-folder"} id="newFolderModal" tabIndex="-1" role="dialog" data-backdrop="static"
                 style={showAddProject ? { display: "block" } : { display: "none" }} aria-labelledby="newFolderModal" aria-hidden="false">
                 <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
 
-                <div class="modal-content slide-f1 ">
+                    <div class="modal-content slide-f1 ">
                         <div class="modal-body flex-column">
                             <h5 class="modal-title d-block text-uppercase text-white text-center">New Folder</h5>
                             <div class="form-group d-block text-center">
@@ -1039,10 +1039,10 @@ const Projects = () => {
 
 
 
-            
 
 
-            
+
+
 
 
             {/* <div className="modal fade delete-marker-modal show" id="deleteMarkerModal" tabIndex="-1" data-backdrop="" aria-labelledby="deleteMarkerModal" style={{ zIndex: "999999", display: "block", paddingRight: "17px", ariaModal: "true", role: "dialog", backgroundColor: "-moz-initial" }}> */}
@@ -1110,14 +1110,14 @@ const Projects = () => {
                                     <img src={barcode} alt="" />
                                 </p>
                                 <p className="modal-text">
-                                    Then point your device camera at the marker shown opposite <img src="images/icon-arrow-right.svg" alt="" />
+                                    Then point your device camera at the marker shown opposite <img src={arrorMark} alt="" />
                                 </p>
 
 
                                 <p className="modal-text mt-5">
                                     Your <span className="text-uppercase">Live</span> project <span className="text-uppercase">URL</span> is: <br />
                                     <a href="https://ar.blippar.com/305075154" className="text-warning">https://ar.blippar.com/305075154</a> <span
-                                        className="cup"><img src="images/icon-copy-link.svg" alt="" /></span>
+                                        className="cup"><img src={dolarimage} alt="" /></span>
                                 </p>
 
                                 <div className="d-block text-center btn-call-to-action mt-5">
@@ -1157,14 +1157,14 @@ const Projects = () => {
                                     <img src={barcode} alt="" />
                                 </p>
                                 <p className="modal-text">
-                                    Then point your device camera at the marker shown opposite <img src="images/icon-arrow-right.svg" alt="" />
+                                    Then point your device camera at the marker shown opposite <img src={arrorMark} alt="" />
                                 </p>
 
 
                                 <p className="modal-text mt-5">
                                     Your <span className="text-uppercase">Live</span> project <span className="text-uppercase">URL</span> is: <br />
                                     <a href="https://ar.blippar.com/305075154" className="text-warning">https://ar.blippar.com/305075154</a> <span
-                                        className="cup"><img src="images/icon-copy-link.svg" alt="" /></span>
+                                        className="cup"><img src={dolarimage} alt="" /></span>
                                 </p>
 
                                 <div className="d-block text-center btn-call-to-action mt-5">
@@ -1201,7 +1201,7 @@ const Projects = () => {
                                     <img src={barcode} alt="" />
                                 </p>
                                 <p className="modal-text">
-                                    Then point your device camera at the marker shown opposite <img src="images/icon-arrow-right.svg" alt="" />
+                                    Then point your device camera at the marker shown opposite <img src={arrorMark} alt="" />
                                 </p>
 
                                 <div className="d-flex justify-content-center">
@@ -1214,7 +1214,7 @@ const Projects = () => {
                                 <p className="modal-text mt-5">
                                     Your <span className="text-uppercase">Preview</span> project URL is: <br />
                                     <a href="https://ar.blippar.com/305075154" className="text-warning">https://ar.blippar.com/305075154</a> <span
-                                        className="cup"><img src="images/icon-copy-link.svg" alt="" /></span>
+                                        className="cup"><img src={dolarimage} alt="" /></span>
                                 </p>
                             </div>
                             <div className="col">
@@ -1252,14 +1252,14 @@ const Projects = () => {
                                     <img src={barcode} alt="" />
                                 </p>
                                 <p className="modal-text">
-                                    Then point your device camera at the marker shown opposite <img src="images/icon-arrow-right.svg" alt="" />
+                                    Then point your device camera at the marker shown opposite <img src={arrorMark} alt="" />
                                 </p>
 
 
                                 <p className="modal-text mt-5">
                                     Your <span className="text-uppercase">Live</span> project <span className="text-uppercase">URL</span> is: <br />
                                     <a href="https://ar.blippar.com/305075154" className="text-warning">https://ar.blippar.com/305075154</a> <span
-                                        className="cup"><img src="images/icon-copy-link.svg" alt="" /></span>
+                                        className="cup"><img src={dolarimage} alt="" /></span>
                                 </p>
 
                                 <div className="d-block text-center btn-call-to-action mt-5">

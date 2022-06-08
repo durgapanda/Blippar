@@ -120,7 +120,9 @@ h5 {
     z-index: 99;
     height: 200px;
 }
-
+.projectNameNew{
+    margin-right: 70%; 
+}
 .logo-section p {
     line-height: 1.0;
     margin-bottom: 5px;
@@ -440,7 +442,7 @@ h3.card-title {
     width: 280px;
 }
 .modal{
-    background-color: rgba(0, 0, 0, 0.805) !important;
+    background-color: rgba(0, 0, 0, 0.516) !important;
 }
 
 .slide-np1 .modal-body,
@@ -783,6 +785,9 @@ footer .icon-to-top {
     }
     .roundNew{
         top: 10px;
+    }
+    .projectNameNew{
+        margin-right: 39%; 
     }
     
 }
