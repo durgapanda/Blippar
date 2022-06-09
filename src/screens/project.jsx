@@ -1139,7 +1139,7 @@ const Projects = () => {
                                 </div>
                             </div>
                             <div className="col">
-                                <img src={barcadeSideImage} alt="" />
+                                <img style={{marginRight: "74px"}} src={barcadeSideImage} alt="" />
                             </div>
                         </div>
                     </div>
