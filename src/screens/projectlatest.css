@@ -463,6 +463,7 @@ h3.card-title {
 img {
     vertical-align: middle;
     border-style: none;
+    cursor: pointer;
 }
 
 .modal-body input {

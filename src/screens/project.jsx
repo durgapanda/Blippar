@@ -669,7 +669,7 @@ const Projects = () => {
                             </ul>
                         </div>
                         <div className="col-md-3 text-right pt-1 mt-sm-2 mt-md-5 pr-5 right">
-                            <a href="#head"><img src={image4} alt="Icon To Top" class="icon-to-top" /></a>
+                            <a href="/head"><img src={image4} alt="Icon To Top" class="icon-to-top" /></a>
                         </div>
                     </div>
                 </div>
