@@ -91,7 +91,7 @@ const Projects = () => {
                             <a className="btn dropdown-toggle text-white avatar" href="#" role="button" id="dropdownMenuLink"
                                 data-toggle="dropdown" aria-expanded="true">
 
-                                <span className=" initials d-inline-block">SS</span>
+                                <span style={{}} className=" initials d-inline-block">SS</span>
                             </a>
 
                             <div className="dropdown-menu dropdown-menu-lg-right learnNew" aria-labelledby="dropdownMenuLink">
@@ -132,7 +132,7 @@ const Projects = () => {
                                 activeTiles ? <img src={menuHumber} alt="Icon Menu" width="32px" height="27px"
                                     className={activeTiles ? "cupNew subnav-icon icon-grid " : "cup subnav-icon icon-grid"} onClick={() => setActiveTiles(!activeTiles)} /> :
 
-                                    <img src={menu} alt="Icon Menu" width="32px" height="24px"
+                                    <img style={{ marginRight: "4px" }} src={menu} alt="Icon Menu" width="32px" height="24px"
                                         className="cupNew subnav-icon icon-tiles" onClick={() => setActiveTiles(!activeTiles)}
 
                                     />}
@@ -441,7 +441,7 @@ const Projects = () => {
                                 <img src={imageActive2} className="card-img-top project-image" alt="..." />
                                 <div className={modalShowSecond ? "menu align-center flex-column btn-call-to-action" : "menu align-center flex-column btn-call-to-action d-none"}>
                                     <button className="btn btn-white">Open Project</button>
-                                    <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectWOModal">View
+                                    <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
                                         Project</button>
                                 </div>
                             </div>
@@ -488,13 +488,71 @@ const Projects = () => {
                     </div>
 
 
-                    <div className="row shadow-sm p-2 justify-content-between mb-3">
+                    {/* <div className="row shadow-sm p-2 justify-content-between mb-3">
+                        <div className="left d-md-flex d-sm-block flex-lg-row flex-sm-column">
+                            <div className="card-image-container position-relative" onClick={() => setmodalShowSecond(!modalShowSecond)}>
+                                <img src={imageActive2} className="card-img-top project-image" alt="..." />
+                                <div className={modalShowSecond ? "menu align-center flex-column btn-call-to-action" : "menu align-center flex-column btn-call-to-action d-none"}>
+                                    <button className="btn btn-white">Open Project</button>
+                                    <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
+                                        Project</button>
+                                </div>
+                            </div>
+                            <div className="title-container text-left d-block ml-3 mt-n2">
+                                <p className="card-text">
+                                    <h3 className="card-title text-uppercase">Demo 1</h3>
+                                    Date Created: <span className="date">12th April 2022</span> <br />
+                                    Created by: <span className="created">Blippar</span>
+                                </p>
+                                <p className="status"> <span className="status-legend published mr-2"></span><span
+                                    className="status-text">Published</span></p>
+                            </div>
+                        </div>
+                        <div className="d-flex flex-row">
+                            <div className="views-container d-flex flex-column justify-content-between mr-3">
+                                <div className="d-block text-right mt-4 ml-5">
+
+                                    <div className="title d-flex justify-content-between">
+                                        <div>
+
+                                            <img src={trendImage} alt="" />
+                                            <img src={dot1} className="ml-3 dropdown-toggle cup" alt=""
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                                            <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                                                <button className="dropdown-item" href="#">Open project</button>
+                                                <button className="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
+                                                    project</button>
+                                                <button className="dropdown-item" href="#">Duplicate project</button>
+                                                <button className="dropdown-item" href="#">Delete project</button>
+                                                <button className="dropdown-item" href="#">Version history</button>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+                                <div className="views align-self-center p-1 pr-3 mb-2">
+                                    Views: <span>1</span>
+                                </div>
+                            </div>
+                            <div className="scan-code mt-3">
+                                <img src={scanImage} alt="" className="img-responsive" />
+                            </div>
+                        </div>
+                    </div> */}
+
+
+
+
+
+                 <div className="row shadow-sm p-2 justify-content-between mb-3">
                         <div className="left d-md-flex d-sm-block flex-lg-row flex-sm-column">
                             <div className="card-image-container position-relative" onClick={() => setModalThird(!modalThird)}>
                                 <img src={imageActive3} className="card-img-top project-image" alt="..." />
                                 <div className={modalThird ? "menu align-center flex-column btn-call-to-action" : "menu align-center flex-column btn-call-to-action d-none"}>
                                     <button className="btn btn-white">Open Project</button>
-                                    <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectWOModal">View
+                                    <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
                                         Project</button>
                                 </div>
                             </div>
@@ -538,64 +596,11 @@ const Projects = () => {
                                 <img src={scanImage} alt="" className="img-responsive" />
                             </div>
                         </div>
-                    </div>
+                    </div> 
 
 
 
 
-                    {/* <div className="row shadow-sm p-2 justify-content-between mb-3">
-                        <div className="left d-md-flex d-sm-block flex-lg-row flex-sm-column">
-                            <div className="card-image-container position-relative" onClick={() => setmodalShowSecond(!modalShowSecond)}>
-                                <img src={imageActive2} className="card-img-top project-image" alt="..." />
-                                <div className={modalShowSecond ? "menu align-center flex-column btn-call-to-action" : "menu align-center flex-column btn-call-to-action d-none"}>
-                                    <button className="btn btn-white">Open Project</button>
-                                    <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
-                                        Project</button>
-                                </div>
-                            </div>
-                            <div className="title-container text-left d-block ml-3 mt-n2">
-                                <p className="card-text">
-                                    <h3 className="card-title text-uppercase">Demo 1</h3>
-                                    Date Created: <span className="date">12th April 2022</span> <br />
-                                    Created by: <span className="created">Blippar</span>
-                                </p>
-                                <p className="status"> <span className="status-legend published mr-2"></span><span
-                                    className="status-text">Published</span></p>
-                            </div>
-                        </div>
-                        <div className="d-flex flex-row">
-                            <div className="views-container d-flex flex-column justify-content-between mr-3">
-                                <div className="d-block text-right mt-4 ml-5">
-
-                                    <div className="title d-flex justify-content-between">
-                                        <div>
-                                            
-                                            <img src={trendImage} alt="" />
-                                            <img src={dot1} className="ml-3 dropdown-toggle cup" alt=""
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
-                                            <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
-                                                <button className="dropdown-item" href="#">Open project</button>
-                                                <button className="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
-                                                    project</button>
-                                                <button className="dropdown-item" href="#">Duplicate project</button>
-                                                <button className="dropdown-item" href="#">Delete project</button>
-                                                <button className="dropdown-item" href="#">Version history</button>
-                                            </div>
-                                        </div>
-
-
-
-                                    </div>
-                                </div>
-                                <div className="views align-self-center p-1 pr-3 mb-2">
-                                    Views: <span>1</span>
-                                </div>
-                            </div>
-                            <div className="scan-code mt-3">
-                                <img src={scanImage} alt="" className="img-responsive" />
-                            </div>
-                        </div>
-                    </div> */}
 
 
 
@@ -1091,6 +1096,9 @@ const Projects = () => {
 
             {/* <!-- view project modal starts--> */}
 
+
+
+            
             <div className="modal fade " id="viewProjectModal" tabIndex="-1" role="dialog" data-backdrop="static"
                 aria-labelledby="viewProjectModal" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
@@ -1129,10 +1137,41 @@ const Projects = () => {
                             </div>
                         </div>
                     </div>
-                    {/* <!-- modal dialog end --> */}
 
                 </div>
             </div>
+            <div class="modal-body row">
+          <div class="col text-center">
+
+            <h5 class="modal-title">View Project</h5>
+            <p class="modal-text">
+              Scan the QR code below using your smart device
+            </p>
+            <p>
+              <img src="images/scan-code-lg.png" alt=""/>
+            </p>
+            <p class="modal-text">
+              Then point your device camera at the marker shown opposite <img src="images/icon-arrow-right.svg" alt=""/>
+            </p>
+
+
+            <p class="modal-text mt-5">
+              Your <span class="text-uppercase">Live</span> project <span class="text-uppercase">URL</span> is:
+              <a href="https://ar.blippar.com/305075154" class="text-warning">https://ar.blippar.com/305075154</a> <span class="cup">
+                  <img src="images/icon-copy-link.svg" alt=""/></span>
+            </p>
+
+            <div class="d-block text-center btn-call-to-action mt-5">
+              <button class="btn btn-secondary">Download QR and marker</button>
+            </div>
+          </div>
+          <div class="col">
+            <img src="images/marker-lg.png" alt=""/>
+          </div>
+        </div>
+
+
+
 
             {/* <!-- view project modal ends-->
 
@@ -1173,8 +1212,6 @@ const Projects = () => {
                             </div>
                         </div>
                     </div>
-                    {/* <!-- modal dialog end --> */}
-
                 </div>
             </div>
 

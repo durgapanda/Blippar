@@ -43,6 +43,7 @@ body {
     text-align: left;
     width: 200px;
     color: #2E3240;
+    margin-left: 28.5px !important;
 }
 
 .btn-secondary {
@@ -151,11 +152,13 @@ h5 {
     margin-left: 74px;
 }
 .profile-section .btn.learn {
-    width: 104px;
+    width: 100px;
     display: inline-block;
     font-family: 'Brandon Grotesque Black', sans-serif;
     font-size: 14px;
     /* margin-top: -41%; */
+    margin-right: 5px;
+    margin-bottom: -2px;
 }
 
 .profile-section .btn.learn:hover {
@@ -167,7 +170,7 @@ h5 {
     background: url(../assets/images/icon-profile-bg.svg) center center no-repeat !important;
     display: inline-block;
     font-size: 14px;
-    height: 40px;
+    height: 41px;
     position: relative;
 }
 
@@ -225,6 +228,7 @@ h5 {
 .dropdown-sort img {
     position: relative;
     top: -3px;
+    padding-left: 3px !important;
 }
 
 
@@ -458,12 +462,13 @@ h3.card-title {
     margin-bottom: -5.5%;
 }
 .newfolder{
-    padding-right: 14px;
+    padding-right: 15px;
 }
 img {
     vertical-align: middle;
     border-style: none;
     cursor: pointer;
+    margin-right: 0px;
 }
 
 .modal-body input {
@@ -790,7 +795,11 @@ footer .icon-to-top {
     .projectNameNew{
         margin-right: 39%; 
     }
-    
+    .modal-text {
+        display: block;
+        font-size: 18px;
+        padding-left: 17px;
+    }
 }
 
 @media only screen and (max-width: 576px) {
