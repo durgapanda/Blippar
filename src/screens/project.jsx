@@ -64,6 +64,12 @@ const Projects = () => {
         setSlideName(name)
 
     }
+    const handleClick = (event) => {
+        setSlideName("slide-np1")
+      };
+
+
+
     return (
 
         <div className="text-center">
@@ -91,7 +97,7 @@ const Projects = () => {
                             <a className="btn dropdown-toggle text-white avatar" href="#" role="button" id="dropdownMenuLink"
                                 data-toggle="dropdown" aria-expanded="true">
 
-                                <span style={{}} className=" initials d-inline-block">SS</span>
+                                <span className=" initials d-inline-block">SS</span>
                             </a>
 
                             <div className="dropdown-menu dropdown-menu-lg-right learnNew" aria-labelledby="dropdownMenuLink">
@@ -102,7 +108,7 @@ const Projects = () => {
                         </div>
                     </div>
                     <button type="button" className="btn btn-secondary bg-dark btn-new-proj px-5 text-uppercase" data-toggle="modal"
-                        data-target="#newProjectModal" onClick={() => setCancel(!cancel)}>Create A New Project</button>
+                        data-target="#newProjectModal" onClick={handleClick}>Create A New Project</button>
                 </header>
 
                 {/* <!-- header ends -->
