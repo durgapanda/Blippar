@@ -38,7 +38,15 @@
           </p>
         </div>
         <div class="profile-section col-sm-12 col-md-8 text-right my-5">
-          <button type="button" class="btn btn-white-o learn text-uppercase text-bold">Learn</button>
+          <button type="button" class="btn btn-white-o learn text-bold dropdown-toggle"  data-toggle="dropdown" aria-expanded="true">Learn 
+            <img src="images/icon-caret-down.svg" alt="Dropdown Arrow down" width="">
+          </button>
+          
+          <div class="dropdown-menu dropdown-menu-lg-right mt-n1" aria-labelledby="learnDropdownMenuLink">
+            <a class="dropdown-item" href="#">Getting Started</a>
+            <a class="dropdown-item" href="#">Documentation</a>
+            <a class="dropdown-item" href="#">Request Support</a>
+          </div>
           <div class="dropdown d-inline ml-2">
             <a class="btn dropdown-toggle text-white avatar" href="#" role="button" id="dropdownMenuLink"
               data-toggle="dropdown" aria-expanded="true">
@@ -62,7 +70,7 @@
       <div class="container-fluid">
         <section class="justify-content-between row section-options mb-3">
           <div class="subnav col text-left">
-            <span class="subtitle">Your Projects</span>
+            <span class="subtitle">Your projects</span>
             <div class="dropdown open d-inline">
               <button class="btn btn-secondary-o dropdown-toggle text-uppercase dropdown-sort ml-4 pl-4 py-2"
                 type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -92,23 +100,26 @@
       <!-- section grid starts -->
       <div class="container-fluid section-grid active">
         <div class="row">
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
             <div class="card text-left gutters">
               <div class="card-image-container p-2 position-relative">
-                <img src="images/img-1.png" class="card-img-top project-image" alt="..." onclick="showMenu(this)">
+                <img src="images/img-1.png" class="card-img-top project-image" alt="..." onmouseenter="showMenu(this)">
                 <div class="menu align-center flex-column btn-call-to-action d-none">
                   <button class="btn btn-white">Open Project</button>
                   <button class="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectWOModal">View
                     Project</button>
                 </div>
-                <div class="scan-code"><img src="images/scan.png" alt="" class="img-responsive"></div>
+                <div class="scan-code">
+                  <img src="images/scan.png" alt="" class="img-responsive">
+                  <p>Scan To See</p>
+                </div>
               </div>
               <div class="card-body">
                 <div class="title d-flex justify-content-between">
                   <h3 class="card-title text-uppercase">Using the Gyro</h3>
                   <div>
                     <img src="images/icon-trend.svg" alt="">
-                    <img src="images/icon-context-menu.svg" class="ml-3 dropdown-toggle cup" alt=""
+                    <img src="images/icon-context-menu.svg" class="context-menu dropdown-toggle cup" alt=""
                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                       <button class="dropdown-item" href="#">Open project</button>
@@ -135,23 +146,26 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
             <div class="card text-left gutters">
               <div class="card-image-container p-2">
-                <img src="images/img-2.png" class="card-img-top project-image" alt="..." onclick="showMenu(this)">
+                <img src="images/img-2.png" class="card-img-top project-image" alt="..." onmouseenter="showMenu(this)">
                 <div class="menu align-center flex-column btn-call-to-action d-none">
                   <button class="btn btn-white">Open Project</button>
                   <button class="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
                     Project</button>
                 </div>
-                <div class="scan-code"><img src="images/scan.png" alt="" class="img-responsive"></div>
+                <div class="scan-code">
+                  <img src="images/scan.png" alt="" class="img-responsive">
+                  <p>Scan To See</p>
+                </div>
               </div>
               <div class="card-body">
                 <div class="title d-flex justify-content-between">
                   <h3 class="card-title text-uppercase">Demo 1</h3>
                   <div>
                     <img src="images/icon-trend.svg" alt="">
-                    <img src="images/icon-context-menu.svg" class="pl-2 dropdown-toggle cup" alt=""
+                    <img src="images/icon-context-menu.svg" class="context-menu dropdown-toggle cup" alt=""
                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                       <button class="dropdown-item" href="#">Open project</button>
@@ -179,23 +193,71 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
             <div class="card text-left gutters">
               <div class="card-image-container p-2">
-                <img src="images/img-3.png" class="card-img-top project-image" alt="..." onclick="showMenu(this)">
+                <img src="images/img-3.png" class="card-img-top project-image" alt="..." onmouseenter="showMenu(this)">
                 <div class="menu align-center flex-column btn-call-to-action d-none">
                   <button class="btn btn-white">Open Project</button>
                   <button class="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
                     Project</button>
                 </div>
-                <div class="scan-code"><img src="images/scan.png" alt="" class="img-responsive"></div>
+                <div class="scan-code">
+                  <img src="images/scan.png" alt="" class="img-responsive">
+                  <p>Scan To See</p>
+                </div>
               </div>
               <div class="card-body">
                 <div class="title d-flex justify-content-between">
                   <h3 class="card-title text-uppercase">Project Starter 3</h3>
                   <div>
                     <img src="images/icon-trend.svg" alt="">
-                    <img src="images/icon-context-menu.svg" class="pl-2 dropdown-toggle cup" alt=""
+                    <img src="images/icon-context-menu.svg" class="context-menu dropdown-toggle cup" alt=""
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                      <button class="dropdown-item" href="#">Open project</button>
+                      <button class="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
+                        project</button>
+                      <button class="dropdown-item" href="#">Duplicate project</button>
+                      <button class="dropdown-item" href="#">Delete project</button>
+                      <button class="dropdown-item" href="#">Version history</button>
+                    </div>
+                  </div>
+                </div>
+                <p class="card-text">
+                  Date Created: <span class="date">12th April 2022</span> <br>
+                  Created by: <span class="created">Blippar</span>
+                </p>
+                <div class="title d-flex justify-content-between">
+                  <p class="status"> <span class="status-legend not-published mr-2"></span><span class="status-text">Not
+                      Published</span></p>
+                  <div class="views align-self-center p-1 pr-3">
+                    Views: <span>1</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+            <div class="card text-left gutters">
+              <div class="card-image-container p-2">
+                <img src="images/img-3.png" class="card-img-top project-image" alt="..." onmouseenter="showMenu(this)">
+                <div class="menu align-center flex-column btn-call-to-action d-none">
+                  <button class="btn btn-white">Open Project</button>
+                  <button class="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
+                    Project</button>
+                </div>
+                <div class="scan-code">
+                  <img src="images/scan.png" alt="" class="img-responsive">
+                  <p>Scan To See</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="title d-flex justify-content-between">
+                  <h3 class="card-title text-uppercase">Project Starter 3</h3>
+                  <div>
+                    <img src="images/icon-trend.svg" alt="">
+                    <img src="images/icon-context-menu.svg" class="context-menu dropdown-toggle cup" alt=""
                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                       <button class="dropdown-item" href="#">Open project</button>
@@ -224,7 +286,7 @@
 
         </div>
         <div class="row">
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
             <div class="card text-left gutters">
               <div class="card-image-container p-2">
                 <img src="images/img-f1.png" class="card-img-top project-image" alt="...">
@@ -234,7 +296,7 @@
                 <div class="title d-flex justify-content-between">
                   <h3 class="card-title text-uppercase">Folder name</h3>
                   <div>
-                    <img src="images/icon-context-menu.svg" class="pl-2 dropdown-toggle cup" alt=""
+                    <img src="images/icon-context-menu.svg" class="context-menu dropdown-toggle cup" alt=""
                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                       <button class="dropdown-item" href="#">Rename folder</button>
@@ -246,13 +308,13 @@
                 <p class="card-text">
                   Date Created: <span class="date">12th April 2022</span> <br>
                   Created by: <span class="created">Name</span> <br>
-                <p class="proj-count-wrapper class=" proj-count-wrapper""><span class="proj-count mt-3">3</span>
+                <p class="proj-count-wrapper proj-count-wrapper"><span class="proj-count mt-3">3</span>
                   Projects</p>
                 </p>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
             <div class="card text-left gutters">
               <div class="card-image-container p-2">
                 <img src="images/img-f1.png" class="card-img-top project-image" alt="...">
@@ -262,7 +324,7 @@
                 <div class="title d-flex justify-content-between">
                   <h3 class="card-title text-uppercase">Folder name</h3>
                   <div>
-                    <img src="images/icon-context-menu.svg" class="pl-2 dropdown-toggle cup" alt=""
+                    <img src="images/icon-context-menu.svg" class="context-menu dropdown-toggle cup" alt=""
                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                       <button class="dropdown-item" href="#">Rename folder</button>
@@ -279,7 +341,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
             <div class="card text-left gutters">
               <div class="card-image-container p-2">
                 <img src="images/img-f1.png" class="card-img-top project-image" alt="...">
@@ -289,7 +351,34 @@
                 <div class="title d-flex justify-content-between">
                   <h3 class="card-title text-uppercase">Folder name</h3>
                   <div>
-                    <img src="images/icon-context-menu.svg" class="pl-2 dropdown-toggle cup" alt=""
+                    <img src="images/icon-context-menu.svg" class="context-menu dropdown-toggle cup" alt=""
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                      <button class="dropdown-item" href="#">Rename folder</button>
+                      <button class="dropdown-item" href="#">Delete folder and contents</button>
+                    </div>
+                  </div>
+
+                </div>
+                <p class="card-text">
+                  Date Created: <span class="date">12th April 2022</span> <br>
+                  Created by: <span class="created">Name</span> <br>
+                <p class="proj-count-wrapper"><span class="proj-count mt-3">3</span> Projects</p>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+            <div class="card text-left gutters">
+              <div class="card-image-container p-2">
+                <img src="images/img-f1.png" class="card-img-top project-image" alt="...">
+
+              </div>
+              <div class="card-body">
+                <div class="title d-flex justify-content-between">
+                  <h3 class="card-title text-uppercase">Folder name</h3>
+                  <div>
+                    <img src="images/icon-context-menu.svg" class="context-menu dropdown-toggle cup" alt=""
                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                       <button class="dropdown-item" href="#">Rename folder</button>
@@ -316,7 +405,7 @@
         <div class="row shadow-sm p-2 justify-content-between mb-3">
           <div class="left d-md-flex d-sm-block flex-lg-row flex-sm-column">
             <div class="card-image-container position-relative">
-              <img src="images/img-t1.png" class="card-img-top project-image" alt="..." onclick="showMenu(this)">
+              <img src="images/img-t1.png" class="card-img-top project-image" alt="..." onmouseenter="showMenu(this)">
               <div class="menu align-center flex-column btn-call-to-action d-none">
                 <button class="btn btn-white">Open Project</button>
                 <button class="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectWOModal">View
@@ -337,8 +426,8 @@
             <div class="views-container d-flex flex-column justify-content-between mr-3">
               <div class="d-block text-right mt-4">
                 <img src="images/icon-trend.svg" alt="">
-                <img src="images/icon-context-menu.svg" class="pl-2 dropdown-toggle cup" alt="" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
+                <img src="images/icon-context-menu.svg" class="context-menu dropdown-toggle cup" alt=""
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                   <button class="dropdown-item" href="#">Open project</button>
                   <button class="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
@@ -352,15 +441,16 @@
                 Views: <span>1</span>
               </div>
             </div>
-            <div class="scan-code mt-3">
+            <div class="scan-code">
               <img src="images/scan.png" alt="" class="img-responsive">
+              <p class="text-uppercase mt-1">Scan To See</p>
             </div>
           </div>
         </div>
         <div class="row shadow-sm p-2 justify-content-between mb-3">
           <div class="left d-md-flex d-sm-block flex-lg-row flex-sm-column">
             <div class="card-image-container position-relative">
-              <img src="images/img-t2.png" class="card-img-top project-image" alt="..." onclick="showMenu(this)">
+              <img src="images/img-t2.png" class="card-img-top project-image" alt="..." onmouseenter="showMenu(this)">
               <div class="menu align-center flex-column btn-call-to-action d-none">
                 <button class="btn btn-white">Open Project</button>
                 <button class="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
@@ -381,8 +471,8 @@
             <div class="views-container d-flex flex-column justify-content-between mr-3">
               <div class="d-block text-right mt-4">
                 <img src="images/icon-trend.svg" alt="">
-                <img src="images/icon-context-menu.svg" class="pl-2 dropdown-toggle cup" alt="" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
+                <img src="images/icon-context-menu.svg" class="context-menu dropdown-toggle cup" alt=""
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                   <button class="dropdown-item" href="#">Open project</button>
                   <button class="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
@@ -396,15 +486,16 @@
                 Views: <span>1</span>
               </div>
             </div>
-            <div class="scan-code mt-3">
+            <div class="scan-code">
               <img src="images/scan.png" alt="" class="img-responsive">
+              <p class="text-uppercase mt-1">Scan To See</p>
             </div>
           </div>
         </div>
         <div class="row shadow-sm p-2 justify-content-between mb-3">
           <div class="left d-md-flex d-sm-block flex-lg-row flex-sm-column">
             <div class="card-image-container position-relative">
-              <img src="images/img-t3.png" class="card-img-top project-image" alt="..." onclick="showMenu(this)">
+              <img src="images/img-t3.png" class="card-img-top project-image" alt="..." onmouseenter="showMenu(this)">
               <div class="menu align-center flex-column btn-call-to-action d-none">
                 <button class="btn btn-white">Open Project</button>
                 <button class="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
@@ -425,8 +516,8 @@
             <div class="views-container d-flex flex-column justify-content-between mr-3">
               <div class="d-block text-right mt-4">
                 <img src="images/icon-trend.svg" alt="">
-                <img src="images/icon-context-menu.svg" class="pl-2 dropdown-toggle cup" alt="" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
+                <img src="images/icon-context-menu.svg" class="context-menu dropdown-toggle cup" alt=""
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                   <button class="dropdown-item" href="#">Open project</button>
                   <button class="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
@@ -440,8 +531,9 @@
                 Views: <span>1</span>
               </div>
             </div>
-            <div class="scan-code mt-3">
+            <div class="scan-code">
               <img src="images/scan.png" alt="" class="img-responsive">
+              <p class="text-uppercase mt-1">Scan To See</p>
             </div>
           </div>
         </div>
@@ -497,7 +589,7 @@
             </div>
           </div>
         </div>
-        <ul class="carousel-dots mt-3 d-block text-center">
+        <ul class="carousel-dots d-block text-center">
           <li class="dot-1 active"></li>
           <li class="dot-2 "></li>
           <li class="dot-3"></li>
@@ -517,15 +609,18 @@
         <div class="modal-body mt-n4">
           <div class="row p-3">
             <div class="col-lg-4 col-md-6">
-              <div class="card text-left gutters">
+              <div class="card text-left gutters position-relative">
                 <div class="card-image-container p-4">
-                  <img src="images/placeholder1.png" class="card-img-top project-image" alt="...">
-
-
+                  <!-- <img src="images/placeholder1.png" class="card-img-top project-image" alt="..."> -->
+                  <video width="295px" height="164px" controls poster="images/placeholder1.png">
+                    <source src="videos/Tracked.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
-                <div class="card-body d-block text-center">
+                <div class="card-body pt-0 d-block text-center">
 
-                  <p class="card-text mt-n5">
+                  <p class="card-text">
                     Create AR using a printed 'marker'. Your AR experience will present overlaid on top of this.
                     Marker examples include packaging, product labels, posters, magazines, manuals etc.
                   </p>
@@ -537,14 +632,18 @@
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
-              <div class="card text-left gutters">
+              <div class="card text-left gutters position-relative">
                 <div class="card-image-container p-4">
-                  <img src="images/placeholder2.png" class="card-img-top project-image" alt="...">
-
+                  <!-- <img src="images/placeholder2.png" class="card-img-top project-image" alt="..."> -->
+                  <video width="295px" height="164px" controls poster="images/placeholder2.png">
+                    <source src="videos/Slam.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                  </video>
 
                 </div>
-                <div class="card-body d-block text-center">
-                  <p class="card-text mt-n4">
+                <div class="card-body pt-0 d-block text-center">
+                  <p class="card-text">
                     Create AR that appears on flat surfaces like floor tiles or textured surfaces. AR examples
                     include,
                     seeing virtual products, virtual assistants, architectural visualisations, 3D scenes etc.
@@ -557,15 +656,20 @@
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
-              <div class="card text-left gutters">
+              <div class="card text-left gutters position-relative">
                 <div class="card-image-container p-4">
-                  <img src="images/placeholder3.png" class="card-img-top project-image" alt="...">
+                  <!-- <img src="images/placeholder3.png" class="card-img-top project-image" alt="..."> -->
+                  <video width="295px" height="164px" controls poster="images/placeholder3.png">
+                    <source src="videos/Gyro.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                  </video>
 
 
                 </div>
-                <div class="card-body d-block text-center">
+                <div class="card-body pt-0 d-block text-center">
 
-                  <p class="card-text mt-n4">
+                  <p class="card-text">
                     Create AR that appears around the user. This option does not require a marker or a surface to
                     present the AR. AR examples include, virtual stores, floating environments, floating menus etc.
                   </p>
@@ -577,7 +681,7 @@
               </div>
             </div>
           </div>
-          <ul class="carousel-dots mt-3 d-block text-center">
+          <ul class="carousel-dots d-block text-center">
             <li class="dot-1"></li>
             <li class="dot-2 active"></li>
             <li class="dot-3"></li>
@@ -586,11 +690,6 @@
       </div>
 
       <div class="modal-content slide-np3 d-none position-relative">
-        <ul class="menu-top bg-white">
-          <li class="menu-item list-style-none">Pause License</li>
-          <li class="menu-item">Download SDK bundle</li>
-          <li class="menu-item"></li>
-        </ul>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true"><img src="images/icon-close.svg" alt=""></span>
         </button>
@@ -603,7 +702,7 @@
         <div class="modal-body px-5 d-block text-center">
           <div class="modal-body-content shadow-sm pt-5 pb-3">
             <img src="images/upload-marker.png" alt="">
-            <p class="mt-3 mb-5 upload-marker-text">You can upload up to 10 markers. Use JPEGs, maximum file size 1mb
+            <p class="mt-3 upload-marker-text mb-0">You can upload up to 10 markers. Use JPEGs, maximum file size 1mb
               per marker, 1024px
               high or wide</p>
             <div class="d-block text-center btn-call-to-action">
@@ -613,7 +712,7 @@
           </div>
           <p class="text-warning mt-2 text-left modal-footer-text">What makes a good marker? </p>
           <!-- carousel dots -->
-          <ul class="carousel-dots mt-3 d-block text-center">
+          <ul class="carousel-dots d-block text-center">
             <li class="dot-1"></li>
             <li class="dot-2"></li>
             <li class="dot-3 active"></li>
@@ -631,7 +730,7 @@
           </p>
         </div>
         <div class="modal-body px-5 d-block text-center mt-n4">
-          <div class="modal-body-content shadow-sm p-3">
+          <div class="modal-body-content shadow-sm px-3 py-1">
             <div class="preview-container">
               <div class="d-flex justify-content-start align-items-center pl-4 py-3 confirm-tile">
                 <div class="img-wrapper align-center">
@@ -674,7 +773,7 @@
             </div>
           </div>
           <p class="text-warning mt-2 text-left modal-footer-text">What makes a good marker? </p>
-          <ul class="carousel-dots mt-3 d-block text-center pb-5">
+          <ul class="carousel-dots d-block text-center">
             <li class="dot-1"></li>
             <li class="dot-2"></li>
             <li class="dot-3 active"></li>
@@ -766,7 +865,7 @@
 
   <!-- view project modal starts-->
 
-  <div class="modal fade " id="viewProjectModal" tabindex="-1" role="dialog" data-backdrop="static"
+  <div class="modal fade modal-viewproj" id="viewProjectModal" tabindex="-1" role="dialog" data-backdrop="static"
     aria-labelledby="viewProjectModal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
 
@@ -789,13 +888,13 @@
             </p>
 
 
-            <p class="modal-text mt-5">
+            <p class="modal-text mt-5 pt-3">
               Your <span class="text-uppercase">Live</span> project <span class="text-uppercase">URL</span> is: <br>
               <a href="https://ar.blippar.com/305075154" class="text-warning">https://ar.blippar.com/305075154</a> <span
                 class="cup"><img src="images/icon-copy-link.svg" alt=""></span>
             </p>
 
-            <div class="d-block text-center btn-call-to-action mt-5">
+            <div class="d-block text-center btn-call-to-action mt-5 pt-3">
               <button class="btn btn-secondary">Download QR and marker</button>
             </div>
           </div>
@@ -832,18 +931,18 @@
               <img src="images/scan-code-lg.png" alt="">
             </p>
             <p class="modal-text">
-              Then point your device camera at the marker shown opposite <img src="images/icon-arrow-right.svg" alt="">
+              Then follow the on screen instructions <img src="images/icon-arrow-right.svg" alt="">
             </p>
 
 
-            <p class="modal-text mt-5">
+            <p class="modal-text mt-5 pt-3">
               Your <span class="text-uppercase">Live</span> project <span class="text-uppercase">URL</span> is: <br>
               <a href="https://ar.blippar.com/305075154" class="text-warning">https://ar.blippar.com/305075154</a> <span
                 class="cup"><img src="images/icon-copy-link.svg" alt=""></span>
             </p>
 
-            <div class="d-block text-center btn-call-to-action mt-5">
-              <button class="btn btn-secondary">Download QR and marker</button>
+            <div class="d-block text-center btn-call-to-action mt-5 pt-3">
+              <button class="btn btn-secondary">Download QR Code</button>
             </div>
           </div>
         </div>
