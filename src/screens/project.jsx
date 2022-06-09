@@ -1146,35 +1146,7 @@ const Projects = () => {
 
                 </div>
             </div>
-            <div class="modal-body row">
-          <div class="col text-center">
-
-            <h5 class="modal-title">View Project</h5>
-            <p class="modal-text">
-              Scan the QR code below using your smart device
-            </p>
-            <p>
-              <img src="images/scan-code-lg.png" alt=""/>
-            </p>
-            <p class="modal-text">
-              Then point your device camera at the marker shown opposite <img src="images/icon-arrow-right.svg" alt=""/>
-            </p>
-
-
-            <p class="modal-text mt-5">
-              Your <span class="text-uppercase">Live</span> project <span class="text-uppercase">URL</span> is:
-              <a href="https://ar.blippar.com/305075154" class="text-warning">https://ar.blippar.com/305075154</a> <span class="cup">
-                  <img src="images/icon-copy-link.svg" alt=""/></span>
-            </p>
-
-            <div class="d-block text-center btn-call-to-action mt-5">
-              <button class="btn btn-secondary">Download QR and marker</button>
-            </div>
-          </div>
-          <div class="col">
-            <img src="images/marker-lg.png" alt=""/>
-          </div>
-        </div>
+            
 
 
 
