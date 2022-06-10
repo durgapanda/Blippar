@@ -721,7 +721,14 @@ footer .icon-to-top {
   }
 }
 
-/* Large devices (desktops, 992px and down) */
+@media (max-width: 1350px) {
+  .context-menu {
+    margin-left: 10px;
+    padding-left: 0;
+  }
+}
+
+/* Large devices (desktops, 1200px and down) */
 @media (max-width: 1200px) {
   .modal-xl {
     max-width: 1140px;
@@ -729,6 +736,10 @@ footer .icon-to-top {
 
   .modal-content.slide-pp1 {
     height: auto;
+  }
+
+  .slide-np2 .card {
+    height: 540px;
   }
 }
 
@@ -784,6 +795,7 @@ footer .icon-to-top {
     align-self: auto;
     right: -10px;
   }
+
   .carousel-dots {
     position: relative;
     left: 0;
@@ -830,6 +842,18 @@ footer .icon-to-top {
   }
 
 
+
+}
+
+@media (max-width: 676px) {
+  .subnav {
+    position: relative;
+    top: -30px;
+  }
+
+  .subnav .dropdown button {
+    margin-left: 0 !important;
+  }
 }
 
 /* Small devices (landscape phones, 576px and down) */
@@ -892,8 +916,13 @@ footer .icon-to-top {
     width: 95%;
     margin: 2.5%;
   }
+
   .dropdown-menu.show {
     left: 50px !important;
+  }
+
+  .subnav {
+    top: 0px;
   }
 
 
