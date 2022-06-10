@@ -400,6 +400,7 @@ h5 {
   font-size: 11px;
   color: #777;
   margin-top: 5px;
+  letter-spacing: 2.4px;
 }
 
 .card-image-container {
@@ -435,7 +436,7 @@ h5 {
 .card-image-container .scan-code {
   position: absolute;
   right: 20px;
-  bottom: -10px;
+  bottom: -7px;
   cursor: pointer;
   background-color: #fff;
   text-align: center;
@@ -451,6 +452,7 @@ h5 {
   font-size: 11px;
   color: #777;
   margin-top: 5px;
+  letter-spacing: 2.3px;
 }
 
 .card-image-container .menu {
@@ -802,6 +804,11 @@ footer .icon-to-top {
     margin-left: 0;
     bottom: 10px;
   }
+  .title-container .status {
+    position: relative;
+    bottom: 10px;
+    margin-bottom: 0;
+}
 
 }
 
