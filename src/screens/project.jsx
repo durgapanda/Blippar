@@ -32,6 +32,7 @@ import dolarimage from '../assets/images/icon-copy-link.svg'
 import arrorMark from '../assets/images/icon-arrow-right.svg'
 import sliderThird from '../assets/images/placeholder3.png'
 import imagemodal5 from '../assets/images/upload-marker.png'
+import placeholderNewOne from '../assets/images/placeholder1.png'
 import { useState } from "react";
 
 
@@ -49,6 +50,7 @@ const Projects = () => {
     const [activeTiles, setActiveTiles] = useState(false);
     const [modalShow, setModalShow] = useState(false);
     const [modalShowSecond, setmodalShowSecond] = useState(false);
+    const [showModalImageAdd, setshowModalImageAdd] = useState(false);
     const [modalThird, setModalThird] = useState(false);
     const [cancelButton, setCancelButton] = useState(true)
     const [cancelButtonOrganize, setCancelButtonOrganize] = useState(false)
@@ -66,7 +68,7 @@ const Projects = () => {
     }
     const handleClick = (event) => {
         setSlideName("slide-np1")
-      };
+    };
 
 
 
@@ -91,8 +93,15 @@ const Projects = () => {
                             Welcome back Steve
                         </p>
                     </div>
-                    <div className="profile-section col-sm-12 col-sm-8 text-right my-5">
-                        <button type="button" className=" btn btn-white-o learn text-uppercase text-bold">Learn</button>
+                    <div className="profile-section col-sm-12 col-sm-8 text-right my-5 show">
+                        <button type="button" className=" btn btn-white-o learn text-bold dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Learn
+                            <img src={ddArrowDown} alt="Dropdown Arrow down" width="" />
+                        </button>
+                        <div className="dropdown-menu dropdown-menu-lg-right mt-n1  learntopnew" aria-labelledby="learnDropdownMenuLink">
+                            <a className="dropdown-item" href="#">Getting Started</a>
+                            <a className="dropdown-item" href="#">Documentation</a>
+                            <a className="dropdown-item" href="#">Request Support</a>
+                        </div>
                         <div className="dropdown d-inline ml-2">
                             <a className="btn dropdown-toggle text-white avatar" href="#" role="button" id="dropdownMenuLink"
                                 data-toggle="dropdown" aria-expanded="true">
@@ -117,7 +126,7 @@ const Projects = () => {
                 <div className="container-fluid">
                     <section className="justify-content-between row section-options mb-3">
                         <div class="subnav col text-left">
-                            <span class="subtitle">Your Projects</span>
+                            <span class="subtitle">Your projects</span>
                             <div class="dropdown open d-inline">
                                 <button class="btn btn-secondary-o dropdown-toggle text-uppercase dropdown-sort ml-4 pl-4 py-2" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <span class="text-sort">Sort By</span>
@@ -154,11 +163,9 @@ const Projects = () => {
           <!-- section grid starts --> */}
                 <div className={activeTiles ? "container-fluid section-grid d-none" : "container-fluid section-grid active"}>
                     <div className="row">
-
-
-                        <div className="col-lg-4 col-md-6">
+                        <div className="col-lg-4 col-xl-3 col-md-6 col-sm-6">
                             <div className="card text-left gutters">
-                                <div className="card-image-container p-2 position-relative" onClick={() => setShow(!show)}>
+                                <div className="card-image-container p-2 position-relative" onMouseEnter={() => setShow(!show)} onMouseLeave={() => setShow(false)}>
                                     <img src={f1Image} className="card-img-top project-image" alt="..." />
 
                                     <div className={show ? "menu align-center flex-column btn-call-to-action" : "menu align-center flex-column btn-call-to-action d-none"}>
@@ -171,7 +178,9 @@ const Projects = () => {
                                         <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectWOModal">View
                                             Project</button>
                                     </div> */}
-                                    <div className="scan-code"><img src={scanImage} alt="" className="img-responsive" /></div>
+                                    <div className="scan-code">
+                                        <img src={scanImage} alt="" className="img-responsive" />
+                                    </div>
                                 </div>
                                 <div className="card-body">
                                     <div className="title d-flex justify-content-between">
@@ -208,16 +217,18 @@ const Projects = () => {
 
 
 
-                        <div className="col-lg-4 col-md-6">
+                        <div className="col-lg-4 col-xl-3 col-md-6 col-sm-6">
                             <div className="card text-left gutters">
-                                <div className="card-image-container p-2" onClick={() => setShowModal(!showModal)}>
+                                <div className="card-image-container p-2" onMouseEnter={() => setShowModal(!showModal)} onMouseLeave={() => setShowModal(false)}>
                                     <img src={image1} className="card-img-top project-image" alt="..." />
                                     <div className={showModal ? "menu align-center flex-column btn-call-to-action" : "menu align-center flex-column btn-call-to-action d-none"}>
                                         <button class="btn btn-white">Open Project</button>
                                         <button class="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
                                             Project</button>
                                     </div>
-                                    <div className="scan-code"><img src={scanImage} alt="" className="img-responsive" /></div>
+                                    <div className="scan-code">
+                                        <img src={scanImage} alt="" className="img-responsive" />
+                                    </div>
                                 </div>
                                 <div className="card-body">
                                     <div className="title d-flex justify-content-between">
@@ -252,16 +263,64 @@ const Projects = () => {
                             </div>
                         </div>
 
-                        <div className="col-lg-4 col-md-6">
+                        <div className="col-lg-4 col-xl-3 col-md-6 col-sm-6">
                             <div className="card text-left gutters">
-                                <div className="card-image-container p-2" onClick={() => { setshowModalImage(!showModalImage) }}>
+                                <div className="card-image-container p-2" onMouseEnter={() => { setshowModalImage(!showModalImage) }} onMouseLeave={() => setshowModalImage(false)}>
                                     <img src={image2} className="card-img-top project-image" alt="..." />
                                     <div className={showModalImage ? "menu align-center flex-column btn-call-to-action" : "menu align-center flex-column btn-call-to-action d-none"}>
                                         <button className="btn btn-white">Open Project</button>
                                         <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
                                             Project</button>
                                     </div>
-                                    <div className="scan-code"><img src={scanImage} alt="" className="img-responsive" /></div>
+                                    <div className="scan-code">
+                                        <img src={scanImage} alt="" className="img-responsive" />
+                                    </div>
+                                </div>
+                                <div className="card-body">
+                                    <div className="title d-flex justify-content-between">
+                                        <h3 className="card-title text-uppercase">Project Starter 3</h3>
+                                        <div>
+                                            <img src={trendImage} alt="" />
+                                            <img src={dot1} className="pl-3 dropdown-toggle cup1" alt=""
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false/" />
+                                            <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                                                <button className="dropdown-item" href="#">Open project</button>
+                                                <button className="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
+                                                    project</button>
+                                                <button className="dropdown-item" href="#">Duplicate project</button>
+                                                <button className="dropdown-item" href="#">Delete project</button>
+                                                <button className="dropdown-item" href="#">Version history</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <p className="card-text">
+                                        Date Created: <span className="date">12th April 2022</span> <br />
+                                        Created by: <span className="created">Blippar</span>
+                                    </p>
+                                    <div className="title d-flex justify-content-between">
+                                        <p className="status"> <span className="status-legend not-published mr-2"></span><span className="status-text">Not
+                                            Published</span></p>
+                                        <div className="views align-self-center p-1 pr-3">
+                                            Views: <span>1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+                            <div className="card text-left gutters">
+                                <div className="card-image-container p-2" onMouseEnter={() => { setshowModalImageAdd(!showModalImageAdd) }} onMouseLeave={() => setshowModalImageAdd(false)}>
+                                    <img src={image2} className="card-img-top project-image" alt="..." />
+                                    <div className={showModalImageAdd ? "menu align-center flex-column btn-call-to-action" : "menu align-center flex-column btn-call-to-action d-none"}>
+                                        <button className="btn btn-white">Open Project</button>
+                                        <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
+                                            Project</button>
+                                    </div>
+                                    <div className="scan-code">
+                                        <img src={scanImage} alt="" className="img-responsive" />
+                                    </div>
                                 </div>
                                 <div className="card-body">
                                     <div className="title d-flex justify-content-between">
@@ -297,8 +356,13 @@ const Projects = () => {
                         </div>
 
                     </div>
+
+
+                    {/* first section 3 image ends */}
+
+
                     <div className="row">
-                        <div className="col-lg-4 col-md-6">
+                        <div className="col-lg-4 col-xl-3 col-md-6 col-sm-6">
                             <div className="card text-left gutters">
                                 <div className="card-image-container p-2">
                                     <img src={f1Image} className="card-img-top project-image" alt="..." />
@@ -325,7 +389,7 @@ const Projects = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-4 col-md-6">
+                        <div className="col-lg-4 col-xl-3 col-md-6 col-sm-6">
                             <div className="card text-left gutters">
                                 <div className="card-image-container p-2">
                                     <img src={image3} className="card-img-top project-image" alt="..." />
@@ -352,7 +416,34 @@ const Projects = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-4 col-md-6">
+                        <div className="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+                            <div className="card text-left gutters">
+                                <div className="card-image-container p-2">
+                                    <img src={image3} className="card-img-top project-image" alt="..." />
+
+                                </div>
+                                <div className="card-body">
+                                    <div className="title d-flex justify-content-between">
+                                        <h3 className="card-title text-uppercase">Folder name</h3>
+                                        <div>
+                                            <img src={dot1} className="pl-2 dropdown-toggle cup" alt=""
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                                            <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                                                <button className="dropdown-item" href="#">Rename folder</button>
+                                                <button className="dropdown-item" href="#">Delete folder and contents</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <p className="card-text">
+                                        Date Created: <span className="date">12th April 2022</span> <br />
+                                        Created by: <span className="created">Name</span> <br />
+                                        <p className="proj-count-wrapper"><span className="proj-count mt-3">3</span> Projects</p>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-4 col-xl-3 col-md-6 col-sm-6">
                             <div className="card text-left gutters">
                                 <div className="card-image-container p-2">
                                     <img src={image3} className="card-img-top project-image" alt="..." />
@@ -389,7 +480,7 @@ const Projects = () => {
                 <div className={activeTiles ? "container-fluid section-tiles active" : "container-fluid section-tiles d-none"}>
                     <div className="row shadow-sm p-2 justify-content-between mb-3">
                         <div className="left d-md-flex d-sm-block flex-lg-row flex-sm-column">
-                            <div className="card-image-container position-relative" onClick={() => setModalShow(!modalShow)}>
+                            <div className="card-image-container position-relative" onMouseEnter={() => setModalShow(!modalShow)} onMouseLeave={() => setModalShow(false)}>
                                 <img src={imageActive1} className="card-img-top project-image" alt="..." />
                                 <div className={modalShow ? "menu align-center flex-column btn-call-to-action" : "menu align-center flex-column btn-call-to-action d-none"}>
                                     <button className="btn btn-white">Open Project</button>
@@ -443,7 +534,7 @@ const Projects = () => {
 
                     <div className="row shadow-sm p-2 justify-content-between mb-3">
                         <div className="left d-md-flex d-sm-block flex-lg-row flex-sm-column">
-                            <div className="card-image-container position-relative" onClick={() => setmodalShowSecond(!modalShowSecond)}>
+                            <div className="card-image-container position-relative" onMouseEnter={() => setmodalShowSecond(!modalShowSecond)} onMouseLeave={() => setModalShow(false)}>
                                 <img src={imageActive2} className="card-img-top project-image" alt="..." />
                                 <div className={modalShowSecond ? "menu align-center flex-column btn-call-to-action" : "menu align-center flex-column btn-call-to-action d-none"}>
                                     <button className="btn btn-white">Open Project</button>
@@ -552,9 +643,9 @@ const Projects = () => {
 
 
 
-                 <div className="row shadow-sm p-2 justify-content-between mb-3">
+                    <div className="row shadow-sm p-2 justify-content-between mb-3">
                         <div className="left d-md-flex d-sm-block flex-lg-row flex-sm-column">
-                            <div className="card-image-container position-relative" onClick={() => setModalThird(!modalThird)}>
+                            <div className="card-image-container position-relative" onMouseEnter={() => setModalThird(!modalThird)} onMouseLeave={() => setModalThird(false)}>
                                 <img src={imageActive3} className="card-img-top project-image" alt="..." />
                                 <div className={modalThird ? "menu align-center flex-column btn-call-to-action" : "menu align-center flex-column btn-call-to-action d-none"}>
                                     <button className="btn btn-white">Open Project</button>
@@ -602,7 +693,7 @@ const Projects = () => {
                                 <img src={scanImage} alt="" className="img-responsive" />
                             </div>
                         </div>
-                    </div> 
+                    </div>
 
 
 
@@ -788,29 +879,13 @@ const Projects = () => {
                                 <div className="col-lg-4 col-md-6">
                                     <div className="card text-left gutters">
                                         <div className="card-image-container p-4">
-                                            <img src={sliderfirst} className="card-img-top project-image" alt="..." />
+                                            {/* <img src={slidersecond} className="card-img-top project-image" alt="..." /> */}
 
-
-                                        </div>
-                                        <div className="card-body d-block text-center">
-
-                                            <p className="card-text mt-n5">
-                                                Create AR using a printed 'marker'. Your AR experience will present overlaid on top of this.
-                                                Marker examples include packaging, product labels, posters, magazines, manuals etc.
-                                            </p>
-                                            <div className="d-block text-center btn-call-to-action">
-                                                <button className="btn btn-secondary" onClick={() => showNext("slide-np3")}>Use a marker</button>
-                                                <p className="text-warning mt-3">View an example</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="card text-left gutters">
-                                        <div className="card-image-container p-4">
-                                            <img src={slidersecond} className="card-img-top project-image" alt="..." />
-
-
+                                            <video width="295px" height="164px" controls poster={placeholderNewOne}>
+                                                <source src="https://durgapanda.github.io/Blippar/videos/Tracked.mp4" type="video/mp4" />
+                                                <source src="movie.ogg" type="video/ogg" />
+                                                Your browser does not support the video tag.
+                                            </video>
                                         </div>
                                         <div className="card-body d-block text-center">
                                             <p className="card-text mt-n4">
@@ -828,9 +903,37 @@ const Projects = () => {
                                 <div className="col-lg-4 col-md-6">
                                     <div className="card text-left gutters">
                                         <div className="card-image-container p-4">
-                                            <img src={sliderThird} className="card-img-top project-image" alt="..." />
+                                            {/* <img src={slidersecond} className="card-img-top project-image" alt="..." /> */}
 
+                                            <video width="295px" height="164px" controls poster={slidersecond}>
+                                            <source src="https://durgapanda.github.io/Blippar/videos/Slam.mp4" type="video/mp4" />
+                                                <source src="movie.ogg" type="video/ogg" />
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                        <div className="card-body d-block text-center">
+                                            <p className="card-text mt-n4">
+                                                Create AR that appears on flat surfaces like floor tiles or textured surfaces. AR examples
+                                                include,
+                                                seeing virtual products, virtual assistants, architectural visualisations, 3D scenes etc.
+                                            </p>
+                                            <div className="d-block text-center btn-call-to-action">
+                                                <button className="btn btn-secondary" onClick={() => showNext("slide-np3")}>Use a surface</button>
+                                                <p className="text-warning mt-3">View an example</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="card text-left gutters">
+                                        <div className="card-image-container p-4">
+                                            {/* <img src={sliderThird} className="card-img-top project-image" alt="..." /> */}
 
+                                            <video width="295px" height="164px" controls poster={sliderThird}>
+                                            <source src="https://durgapanda.github.io/Blippar/videos/Gyro.mp4" type="video/mp4" />
+                                                <source src="movie.ogg" type="video/ogg" />
+                                                Your browser does not support the video tag.
+                                            </video>
                                         </div>
                                         <div className="card-body d-block text-center">
 
@@ -853,6 +956,10 @@ const Projects = () => {
                             </ul>
                         </div>
                     </div>
+
+
+
+
 
                     <div className={slideName == 'slide-np3' ? "modal-content slide-np3 active position-relative" : "modal-content slide-np3 d-none position-relative"}>
                         <ul className="menu-top bg-white">
@@ -1104,7 +1211,7 @@ const Projects = () => {
 
 
 
-            
+
             <div className="modal fade " id="viewProjectModal" tabIndex="-1" role="dialog" data-backdrop="static"
                 aria-labelledby="viewProjectModal" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
@@ -1139,14 +1246,14 @@ const Projects = () => {
                                 </div>
                             </div>
                             <div className="col">
-                                <img style={{marginRight: "74px"}} src={barcadeSideImage} alt="" />
+                                <img style={{ marginRight: "74px" }} src={barcadeSideImage} alt="" />
                             </div>
                         </div>
                     </div>
 
                 </div>
             </div>
-            
+
 
 
 
