@@ -823,7 +823,7 @@ const Projects = () => {
                                 </div>
                             </div>
                         </div>
-                        <ul class="carousel-dots mt-3 d-block text-center">
+                        <ul class="carousel-dots d-block text-center">
                             <li class="dot-1 active"></li>
                             <li class="dot-2 "></li>
                             <li class="dot-3"></li>
@@ -949,7 +949,7 @@ const Projects = () => {
                                     </div>
                                 </div>
                             </div>
-                            <ul className="carousel-dots mt-3 d-block text-center">
+                            <ul className="carousel-dots d-block text-center">
                                 <li className="dot-1"></li>
                                 <li className="dot-2 active"></li>
                                 <li className="dot-3"></li>
@@ -989,7 +989,7 @@ const Projects = () => {
                             </div>
                             <p className="text-warning mt-2 text-left modal-footer-text">What makes a good marker? </p>
                             {/* <!-- carousel dots --> */}
-                            <ul className="carousel-dots mt-3 d-block text-center">
+                            <ul className="carousel-dots d-block text-center">
                                 <li className="dot-1"></li>
                                 <li className="dot-2"></li>
                                 <li className="dot-3 active"></li>
@@ -1051,7 +1051,7 @@ const Projects = () => {
                                 </div>
                             </div>
                             <p className="text-warning mt-2 text-left modal-footer-text">What makes a good marker? </p>
-                            <ul className="carousel-dots mt-3 d-block text-center pb-5">
+                            <ul className="carousel-dots d-block text-center pb-5">
                                 <li className="dot-1"></li>
                                 <li className="dot-2"></li>
                                 <li className="dot-3 active"></li>
