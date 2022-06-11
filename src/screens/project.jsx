@@ -180,6 +180,7 @@ const Projects = () => {
                                     </div> */}
                                     <div className="scan-code">
                                         <img src={scanImage} alt="" className="img-responsive" />
+                                        {/* <p>Scan To See</p> */}
                                     </div>
                                 </div>
                                 <div className="card-body">
@@ -1051,7 +1052,8 @@ const Projects = () => {
                                 </div>
                             </div>
                             <p className="text-warning mt-2 text-left modal-footer-text">What makes a good marker? </p>
-                            <ul className="carousel-dots d-block text-center pb-5">
+                             {/* <!-- carousel dots --> */}
+                             <ul className="carousel-dots d-block text-center">
                                 <li className="dot-1"></li>
                                 <li className="dot-2"></li>
                                 <li className="dot-3 active"></li>

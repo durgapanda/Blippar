@@ -54,12 +54,14 @@ strong {
     color: #2E3240;
     margin-left: 28.5px !important;
 }
+
 .new-project-modal .btn {
     width: 260px;
     height: 70px;
     border-radius: 35px;
     font-size: 22px;
 }
+
 .new-project-modal .slide-np3 .btn,
 .new-project-modal .slide-np4 .btn,
 .modal-viewproj-wo .btn,
@@ -67,6 +69,7 @@ strong {
     width: 340px;
     height: 70px;
 }
+
 .new-project-modal .card-text {
     line-height: 28px;
 }
@@ -75,20 +78,26 @@ strong {
     font-size: 16px;
     margin-bottom: 37px;
 }
+
 .btn-secondary {
     background-color: #2E3240;
 }
+
 .new-project-modal .btn:hover,
 .modal-viewproj-wo .btn:hover,
 .modal-viewproj .btn:hover {
     background-color: #FFAA00;
     border-color: transparent !important;
 }
-.pl-2, .px-2 {
-    padding-left: 1.2rem!important;
+
+.pl-2,
+.px-2 {
+    padding-left: 1.2rem !important;
 }
-.pl-3, .px-3 {
-    padding-left: 1.2rem!important;
+
+.pl-3,
+.px-3 {
+    padding-left: 1.2rem !important;
 }
 
 .text-warning {
@@ -97,6 +106,7 @@ strong {
 
 .shadow-sm {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
+
 }
 
 .cup {
@@ -108,7 +118,8 @@ h5 {
     font-size: 30px;
     color: #2E3240;
 }
-.learntopnew{
+
+.learntopnew {
     position: absolute;
     will-change: transform;
     top: 0px;
@@ -132,6 +143,7 @@ h5 {
     background-color: #2E3240;
     opacity: 0.75;
 }
+
 .modal-backdrop {
     background-color: #2E3240;
     opacity: 0.75 !important;
@@ -152,7 +164,7 @@ h5 {
 /* base styles */
 
 .header {
-    background:  url(../assets/images/header-bg.png) top center no-repeat;
+    background: url(../assets/images/header-bg.png) top center no-repeat;
     height: 320px;
     background-size: cover;
     padding: 0 2em;
@@ -164,6 +176,7 @@ h5 {
     z-index: 99;
     height: 200px;
 }
+
 .logo-section p {
     line-height: 1.0;
     margin-bottom: 5px;
@@ -173,7 +186,11 @@ h5 {
 .dropdown-menu.show {
     display: block;
 }
-.dropdown-menu[x-placement^=bottom], .dropdown-menu[x-placement^=left], .dropdown-menu[x-placement^=right], .dropdown-menu[x-placement^=top] {
+
+.dropdown-menu[x-placement^=bottom],
+.dropdown-menu[x-placement^=left],
+.dropdown-menu[x-placement^=right],
+.dropdown-menu[x-placement^=top] {
     right: auto;
     bottom: auto;
 }
@@ -183,17 +200,21 @@ h5 {
     z-index: 99;
     height: 200px;
 }
-.projectNameNew{
-    margin-right: 70%; 
+
+.projectNameNew {
+    margin-right: 72.2%;
 }
+
 .logo-section p {
     line-height: 1.0;
     margin-bottom: 5px;
     color: white;
 }
-.footerNew{
+
+.footerNew {
     text-align: left;
 }
+
 .logo-section a {
     display: inline-block;
 }
@@ -210,9 +231,11 @@ h5 {
     font-family: 'Avenir Medium', san-serif;
     font-size: 20px;
 }
-.dotImageNew{
+
+.dotImageNew {
     margin-left: 74px;
 }
+
 /* .profile-section {
     position: relative;
     top: -29px;
@@ -229,19 +252,25 @@ h5 {
     padding-left: 30px;
     position: relative;
 }
+
 .btn.learn img {
     right: 20px;
     position: absolute;
     top: 13px;
     width: 13px;
 }
+
 /* .profile-section .btn.learn:hover {
     color: white;
 } */
-.dropdown-menu[x-placement^=bottom], .dropdown-menu[x-placement^=left], .dropdown-menu[x-placement^=right], .dropdown-menu[x-placement^=top] {
+.dropdown-menu[x-placement^=bottom],
+.dropdown-menu[x-placement^=left],
+.dropdown-menu[x-placement^=right],
+.dropdown-menu[x-placement^=top] {
     right: auto;
     bottom: auto;
 }
+
 .profile-section .avatar {
     font-family: 'Brandon Grotesque Black', sans-serif;
     background: url(../assets/images/icon-profile-bg.svg) center center no-repeat !important;
@@ -282,6 +311,7 @@ h5 {
     position: relative;
     top: -3px;
 }
+
 .subtitle-New {
     font-family: 'Avenir Heavy', san-serif;
     font-size: 26px;
@@ -305,7 +335,7 @@ h5 {
 .dropdown-sort img {
     position: relative;
     top: -3px;
-    right: -15px;
+    right: -19px;
 }
 
 
@@ -325,7 +355,8 @@ h5 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
-.dropdown-menu .dropdown-item, .menu-top .menu-item {
+.dropdown-menu .dropdown-item,
+.menu-top .menu-item {
     font-family: 'Avenir Light', san-serif;
     font-size: 20px;
     border-bottom: 1px dotted #D8D8D8;
@@ -345,6 +376,7 @@ h5 {
 .menu-top .menu-item:hover {
     color: #FFAA00;
 }
+
 .dropdown-menu .dropdown-item:hover,
 .menu-top .menu-item:hover {
     background-color: transparent;
@@ -400,6 +432,7 @@ h5 {
     font-size: 18px;
 
 }
+
 .title-container {
     width: 300px;
     position: relative;
@@ -408,6 +441,7 @@ h5 {
 .section-tiles {
     padding: 0 2.7em;
 }
+
 .title-container .status {
     position: absolute;
     bottom: 10px;
@@ -418,6 +452,7 @@ h5 {
     font-size: 16px;
 
 }
+
 .section-tiles .right .scan-code {
     cursor: pointer;
     background-color: #fff;
@@ -428,9 +463,11 @@ h5 {
     border-radius: 5px;
     margin-top: 10px;
 }
+
 .section-tiles .right .scan-code img {
     width: 80%;
 }
+
 .section-tiles .right .scan-code p {
     text-transform: uppercase;
     font-family: 'Avenir Medium', sans-serif;
@@ -478,10 +515,11 @@ h5 {
     background-color: #fff;
     text-align: center;
     width: 130px;
-    height: 147px;
-    padding-top: 12px;
+    height: 148px;
+    padding-top: -5px !important;
     border-radius: 5px;
 }
+
 .card-image-container .scan-code p {
     text-transform: uppercase;
     font-family: 'Avenir Medium', sans-serif;
@@ -578,7 +616,8 @@ h3.card-title {
     padding-bottom: 0;
     width: 280px;
 }
-.modal{
+
+.modal {
     background-color: rgba(0, 0, 0, 0.516) !important;
 }
 
@@ -589,9 +628,11 @@ h3.card-title {
     justify-content: center;
     align-items: center;
 }
-.newfolder{
+
+.newfolder {
     padding-right: 15px;
 }
+
 img {
     vertical-align: middle;
     border-style: none;
@@ -623,9 +664,11 @@ img {
 .slide-np1 .modal-body .btn-call-to-action {
     margin-top: 100px;
 }
+
 .slide-np2 .card {
     height: 520px;
 }
+
 .btn-call-to-action .btn {
     font-family: 'Brandon Grotesque Black', sans-serif;
     text-transform: uppercase !important;
@@ -653,9 +696,11 @@ img {
 .slide-np3 .btn-call-to-action {
     margin-top: 80px;
 }
+
 .slide-np4 .modal-body {
     color: #777;
 }
+
 .text-warning.modal-footer-text {
     font-size: 18px;
 }
@@ -671,9 +716,11 @@ img {
 .filename {
     font-size: 18px;
 }
-.modalNeww{
+
+.modalNeww {
     display: flex;
 }
+
 .carousel-dots {
     position: absolute;
     bottom: 40px;
@@ -682,6 +729,7 @@ img {
     left: 50%;
     margin-left: -37.5px;
 }
+
 .carousel-dots li {
     width: 12px;
     height: 12px;
@@ -689,7 +737,7 @@ img {
     border: 1px solid #2E3240;
     list-style: none;
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 14px;
 }
 
 .carousel-dots li.active {
@@ -726,6 +774,7 @@ img {
 .new-project-modal .modal-dialog {
     z-index: 9999;
 }
+
 .context-menu {
     margin-left: 10px;
     padding: 10px;
@@ -766,6 +815,7 @@ footer .icon-to-top {
         margin-bottom: 20px;
     }
 }
+
 @media (max-width: 1350px) {
     .context-menu {
         margin-left: 10px;
@@ -785,7 +835,7 @@ footer .icon-to-top {
 }
 
 /* Extra large devices (large desktops, 1200px and down) */
-@media  only screen and (max-width: 992px) {
+@media only screen and (max-width: 992px) {
     body {
         /* background-color: #000; */
     }
@@ -808,12 +858,13 @@ footer .icon-to-top {
     .modal-content {
         height: auto !important;
     }
-    
+
     .modal-dialog {
         display: flex;
         align-items: flex-start;
         margin-top: 0;
     }
+
     .modal-content.slide-np3 {
         top: 150px;
     }
@@ -835,21 +886,25 @@ footer .icon-to-top {
         align-self: auto;
         right: -10px;
     }
+
     .carousel-dots {
         position: relative;
         left: 0;
         margin-left: 0;
         bottom: 10px;
     }
+
     .title-container .status {
         position: relative;
         bottom: 10px;
         margin-bottom: 0;
     }
 }
-.profile-section{
-    margin-top: -20% !important;  
+
+.profile-section {
+    margin-top: -20% !important;
 }
+
 /* Medium devices (tablets, 768px and down) */
 @media screen and (max-width: 768px) {
     body {
@@ -876,7 +931,7 @@ footer .icon-to-top {
         height: auto;
         margin: 0 !important;
         text-align: left !important;
-        margin-top: 70px !important;
+        margin-top: 40px !important;
     }
 
     .btn-new-proj {
@@ -888,6 +943,17 @@ footer .icon-to-top {
 
 }
 
+/* @media (max-width: 768px) {
+    .profile-section {
+        height: auto;
+        margin: 0 !important;
+        text-align: left !important;
+        margin-top: 70px !important;
+    }
+} */
+
+
+
 @media (max-width: 676px) {
     .subnav {
         position: relative;
@@ -898,6 +964,7 @@ footer .icon-to-top {
         margin-left: 0 !important;
     }
 }
+
 /* Small devices (landscape phones, 576px and down) */
 @media only screen and (max-width: 576px) {
     .section-tiles .right {
@@ -915,44 +982,57 @@ footer .icon-to-top {
     .title-container .status {
         position: relative;
     }
+
     .context-menu {
         margin-left: 10px;
         padding-left: 0;
     }
+
     .section-options {
         margin-top: -120px;
     }
+
     .icon-grid {
         display: none;
     }
+
     .icon-tiles {
         display: none;
     }
+
     .section-grid {
         display: none;
     }
+
     .section-tiles {
         display: block !important;
     }
+
     .modal-body input {
         width: 320px;
     }
+
     .subnav {
         padding-left: 0 !important;
     }
+
     .subnav {
         top: 0px;
     }
+
     .subnav .dropdown-sort {
         margin-left: 0 !important;
         margin-top: 5px !important;
     }
+
     .subtitle-New {
         margin-left: -39px;
     }
-    .dotImageNew{
+
+    .dotImageNew {
         margin-left: 34px;
     }
+
     footer ul li {
         list-style: none;
         display: inline-block;
@@ -960,25 +1040,29 @@ footer .icon-to-top {
         color: white;
         font-size: 14px;
     }
-    
+
     footer ul li a {
         color: white;
         font-size: 14px;
     }
-    
+
     footer ul li a:hover {
         color: white;
         text-decoration: underline;
     }
-    .newfolder-st{
+
+    .newfolder-st {
         margin-left: 217px !important;
     }
-    .roundNew{
+
+    .roundNew {
         top: 10px;
     }
-    .projectNameNew{
-        margin-right: 39%; 
+
+    .projectNameNew {
+        margin-right: 39%;
     }
+
     .modal-text {
         display: block;
         font-size: 18px;
@@ -1001,6 +1085,7 @@ footer .icon-to-top {
         font-size: 14px;
         margin-top: -41%;
     }
+
     .subtitle-New {
         font-family: 'Avenir Heavy', san-serif;
         font-size: 26px;
@@ -1010,8 +1095,8 @@ footer .icon-to-top {
     }
 }
 
-@media only screen and (min-width:1920px){
+/* @media only screen and (min-width:1920px){
     .profile-section{
         margin-top: -15.8% !important;  
     } 
-}
+} */
