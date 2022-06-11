@@ -32,6 +32,7 @@ import dolarimage from '../assets/images/icon-copy-link.svg'
 import arrorMark from '../assets/images/icon-arrow-right.svg'
 import sliderThird from '../assets/images/placeholder3.png'
 import imagemodal5 from '../assets/images/upload-marker.png'
+import previewImage from '../assets/images/preview-lg.png'
 import placeholderNewOne from '../assets/images/placeholder1.png'
 import { useState } from "react";
 
@@ -180,7 +181,7 @@ const Projects = () => {
                                     </div> */}
                                     <div className="scan-code">
                                         <img src={scanImage} alt="" className="img-responsive" />
-                                        {/* <p>Scan To See</p> */}
+                                        <p>Scan To See</p>
                                     </div>
                                 </div>
                                 <div className="card-body">
@@ -229,6 +230,7 @@ const Projects = () => {
                                     </div>
                                     <div className="scan-code">
                                         <img src={scanImage} alt="" className="img-responsive" />
+                                        <p>Scan To See</p>
                                     </div>
                                 </div>
                                 <div className="card-body">
@@ -275,6 +277,7 @@ const Projects = () => {
                                     </div>
                                     <div className="scan-code">
                                         <img src={scanImage} alt="" className="img-responsive" />
+                                        <p>Scan To See</p>
                                     </div>
                                 </div>
                                 <div className="card-body">
@@ -321,6 +324,7 @@ const Projects = () => {
                                     </div>
                                     <div className="scan-code">
                                         <img src={scanImage} alt="" className="img-responsive" />
+                                        <p>Scan To See</p>
                                     </div>
                                 </div>
                                 <div className="card-body">
@@ -491,7 +495,7 @@ const Projects = () => {
                             </div>
                             <div className="title-container text-left d-block ml-3 mt-n2">
                                 <p className="card-text">
-                                    <h3 style={{ marginTop: "17px" }} className="card-title text-uppercase">Using the Gyro</h3>
+                                    <h3  className="card-title text-uppercase">Using the Gyro</h3>
                                     Date Created: <span className="date">12th April 2022</span> <br />
                                     Created by: <span className="created">Blippar</span>
                                 </p>
@@ -505,8 +509,11 @@ const Projects = () => {
                                     <div className="title d-flex justify-content-between">
                                         <div className="dotImageNew">
                                             <img src={trendImage} alt="" />
-                                            <img src={dot1} className="ml-3 dropdown-toggle cup" alt=""
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
+
+                                        
+                                            {/* <img src={dot1} className="ml-3 dropdown-toggle cup" alt=""
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" /> */}
                                             <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                                                 <button className="dropdown-item" href="#">Open project</button>
                                                 <button className="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
@@ -525,8 +532,9 @@ const Projects = () => {
                                     Views: <span>1</span>
                                 </div>
                             </div>
-                            <div className="scan-code mt-3">
+                            <div className="scan-code">
                                 <img src={scanImage} alt="" className="img-responsive" />
+                                <p class="text-uppercase mt-1">Scan To See</p>
                             </div>
                         </div>
                     </div>
@@ -545,7 +553,7 @@ const Projects = () => {
                             </div>
                             <div className="title-container text-left d-block ml-3 mt-n2">
                                 <p className="card-text">
-                                    <h3 style={{ marginTop: "17px" }} className="card-title text-uppercase">Demo 1</h3>
+                                    <h3 className="card-title text-uppercase">Demo 1</h3>
                                     Date Created: <span className="date">12th April 2022</span> <br />
                                     Created by: <span className="created">Blippar</span>
                                 </p>
@@ -579,8 +587,9 @@ const Projects = () => {
                                     Views: <span>1</span>
                                 </div>
                             </div>
-                            <div className="scan-code mt-3">
+                            <div className="scan-code">
                                 <img src={scanImage} alt="" className="img-responsive" />
+                                <p class="text-uppercase mt-1">Scan To See</p>
                             </div>
                         </div>
                     </div>
@@ -656,7 +665,7 @@ const Projects = () => {
                             </div>
                             <div className="title-container text-left d-block ml-3 mt-n2">
                                 <p className="card-text">
-                                    <h3 style={{ marginTop: "17px" }} className="card-title text-uppercase">Project Starter 3</h3>
+                                    <h3 className="card-title text-uppercase">Project Starter 3</h3>
                                     Date Created: <span className="date">12th April 2022</span> <br />
                                     Created by: <span className="created">Blippar</span>
                                 </p>
@@ -690,8 +699,9 @@ const Projects = () => {
                                     Views: <span>1</span>
                                 </div>
                             </div>
-                            <div className="scan-code mt-3">
+                            <div className="scan-code">
                                 <img src={scanImage} alt="" className="img-responsive" />
+                                <p class="text-uppercase mt-1">Scan To See</p>
                             </div>
                         </div>
                     </div>
@@ -882,7 +892,7 @@ const Projects = () => {
                                         <div className="card-image-container p-4">
                                             {/* <img src={slidersecond} className="card-img-top project-image" alt="..." /> */}
 
-                                            <video width="295px" height="164px" controls poster={placeholderNewOne}>
+                                            <video className="vedeosection" width="295px" height="164px" controls poster={placeholderNewOne}>
                                                 <source src="https://durgapanda.github.io/Blippar/videos/Tracked.mp4" type="video/mp4" />
                                                 <source src="movie.ogg" type="video/ogg" />
                                                 Your browser does not support the video tag.
@@ -906,8 +916,8 @@ const Projects = () => {
                                         <div className="card-image-container p-4">
                                             {/* <img src={slidersecond} className="card-img-top project-image" alt="..." /> */}
 
-                                            <video width="295px" height="164px" controls poster={slidersecond}>
-                                            <source src="https://durgapanda.github.io/Blippar/videos/Slam.mp4" type="video/mp4" />
+                                            <video className="vedeosection" width="295px" height="164px" controls poster={slidersecond}>
+                                                <source src="https://durgapanda.github.io/Blippar/videos/Slam.mp4" type="video/mp4" />
                                                 <source src="movie.ogg" type="video/ogg" />
                                                 Your browser does not support the video tag.
                                             </video>
@@ -930,8 +940,8 @@ const Projects = () => {
                                         <div className="card-image-container p-4">
                                             {/* <img src={sliderThird} className="card-img-top project-image" alt="..." /> */}
 
-                                            <video width="295px" height="164px" controls poster={sliderThird}>
-                                            <source src="https://durgapanda.github.io/Blippar/videos/Gyro.mp4" type="video/mp4" />
+                                            <video className="vedeosection" width="295px" height="164px" controls poster={sliderThird}>
+                                                <source src="https://durgapanda.github.io/Blippar/videos/Gyro.mp4" type="video/mp4" />
                                                 <source src="movie.ogg" type="video/ogg" />
                                                 Your browser does not support the video tag.
                                             </video>
@@ -1008,7 +1018,7 @@ const Projects = () => {
                             </p>
                         </div>
                         <div className="modal-body px-5 d-block text-center mt-n4">
-                            <div className="modal-body-content shadow-sm p-3">
+                            <div className="modal-body-content shadow-sm px-3 py-1">
                                 <div className="preview-container">
                                     <div className="d-flex justify-content-start align-items-center pl-4 py-3 confirm-tile">
                                         <div className="img-wrapper align-center">
@@ -1052,8 +1062,8 @@ const Projects = () => {
                                 </div>
                             </div>
                             <p className="text-warning mt-2 text-left modal-footer-text">What makes a good marker? </p>
-                             {/* <!-- carousel dots --> */}
-                             <ul className="carousel-dots d-block text-center">
+                            {/* <!-- carousel dots --> */}
+                            <ul className="carousel-dots d-block text-center">
                                 <li className="dot-1"></li>
                                 <li className="dot-2"></li>
                                 <li className="dot-3 active"></li>
@@ -1237,13 +1247,13 @@ const Projects = () => {
                                 </p>
 
 
-                                <p className="modal-text mt-5">
+                                <p className="modal-text mt-5 pt-3">
                                     Your <span className="text-uppercase">Live</span> project <span className="text-uppercase">URL</span> is: <br />
                                     <a href="https://ar.blippar.com/305075154" className="text-warning">https://ar.blippar.com/305075154</a> <span
                                         className="cup"><img src={dolarimage} alt="" /></span>
                                 </p>
 
-                                <div className="d-block text-center btn-call-to-action mt-5">
+                                <div className="d-block text-center btn-call-to-action mt-5 pt-3">
                                     <button className="btn btn-secondary">Download QR and marker</button>
                                 </div>
                             </div>
@@ -1283,19 +1293,21 @@ const Projects = () => {
                                     <img src={barcode} alt="" />
                                 </p>
                                 <p className="modal-text">
-                                    Then point your device camera at the marker shown opposite <img src={arrorMark} alt="" />
+                                Then follow the on screen instructions  <img src={arrorMark} alt="" />
                                 </p>
 
 
-                                <p className="modal-text mt-5">
+                                <p className="modal-text mt-5 pt-3">
                                     Your <span className="text-uppercase">Live</span> project <span className="text-uppercase">URL</span> is: <br />
                                     <a href="https://ar.blippar.com/305075154" className="text-warning">https://ar.blippar.com/305075154</a> <span
                                         className="cup"><img src={dolarimage} alt="" /></span>
                                 </p>
-
-                                <div className="d-block text-center btn-call-to-action mt-5">
-                                    <button className="btn btn-secondary">Download QR and marker</button>
+                                <div className="d-block text-center btn-call-to-action mt-5 pt-3">
+                                    <button className="btn btn-secondary">Download QR Code</button>
                                 </div>
+                                {/* <div className="d-block text-center btn-call-to-action mt-5 pt-3">
+                                    <button className="btn btn-secondary">Download QR Code</button>
+                                </div> */}
                             </div>
                         </div>
                     </div>
@@ -1342,7 +1354,7 @@ const Projects = () => {
                                 </p>
                             </div>
                             <div className="col">
-                                <img src="images/preview-lg.png" alt="" />
+                                <img src={previewImage} alt="" />
                             </div>
                         </div>
                     </div>
@@ -1380,18 +1392,19 @@ const Projects = () => {
                                 </p>
 
 
-                                <p className="modal-text mt-5">
+                                <p className="modal-text mt-5 pt-3">
                                     Your <span className="text-uppercase">Live</span> project <span className="text-uppercase">URL</span> is: <br />
                                     <a href="https://ar.blippar.com/305075154" className="text-warning">https://ar.blippar.com/305075154</a> <span
                                         className="cup"><img src={dolarimage} alt="" /></span>
                                 </p>
 
-                                <div className="d-block text-center btn-call-to-action mt-5">
+                                <div className="d-block text-center btn-call-to-action mt-5 pt-3">
                                     <button className="btn btn-secondary">Download QR and marker</button>
                                 </div>
+                              
                             </div>
                             <div className="col">
-                                <img src="images/preview-lg.png" alt="" />
+                                <img src={previewImage} alt="" />
                             </div>
                         </div>
                     </div>
