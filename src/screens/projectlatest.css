@@ -106,6 +106,9 @@ strong {
 .pb-1, .py-1 {
     padding-bottom: 0.25rem!important;
 }
+.ml-2, .mx-2 {
+    margin-left: 0.8rem!important;
+}
 .cup {
     cursor: pointer;
 }
@@ -194,7 +197,7 @@ h5 {
 .logo-section {
     text-align: left;
     z-index: 99;
-    height: 200px;
+    height: 204px;;
 }
 .projectNameNew{
     margin-right: 72.2%;
@@ -864,7 +867,7 @@ footer .icon-to-top {
     }
 }
 .profile-section{
-    margin-top: -20% !important;  
+    margin-top: -18% !important;  
 }
 /* Medium devices (tablets, 768px and down) */
 @media screen and (max-width: 768px) {
@@ -1080,8 +1083,8 @@ footer .icon-to-top {
     }
 }
 
-/* @media only screen and (min-width:1920px){
+@media only screen and (min-width:1920px){
     .profile-section{
         margin-top: -15.8% !important;  
     } 
-} */
+}
