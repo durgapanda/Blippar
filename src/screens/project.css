@@ -678,6 +678,17 @@ footer .icon-to-top {
     cursor: pointer;
 }
 
+
+
+/* Media Query start */
+
+
+
+
+
+
+
+
 /* Extra small devices (portrait phones, less than 576px) */
 /* No media query for `xs` since this is the default in Bootstrap */
 /* Large devices (desktops, 992px and down) */
@@ -709,12 +720,9 @@ footer .icon-to-top {
     }
 }
 
-/* Medium devices (tablets, 768px and down) */
-@media  only screen and  (max-width: 768px) {}
+
 
 /* Small devices (landscape phones, 576px and down) */
-@media  only screen and  (max-width: 576px) {}
-
 @media  only screen and  (max-width: 576px) {
     .btn-new-proj {
         width: 95%;

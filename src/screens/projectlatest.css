@@ -7,13 +7,13 @@ body {
     color: #2E3240;
 }
 
-/* base styles */ 
+/* base styles */
 .h3,
 h3 {
     font-size: 1.5rem;
 }
 
-strong {
+.strong {
     /* font-family: 'Avenir Black', san-serif !important; */
     color: #212529;
     font-size: 18px;
@@ -60,12 +60,14 @@ strong {
     color: #2E3240;
     margin-left: 28.5px !important;
 }
+
 .new-project-modal .btn {
     width: 260px;
     height: 70px;
     border-radius: 35px;
     font-size: 22px;
 }
+
 .new-project-modal .slide-np3 .btn,
 .new-project-modal .slide-np4 .btn,
 .modal-viewproj-wo .btn,
@@ -73,6 +75,7 @@ strong {
     width: 340px;
     height: 70px;
 }
+
 .new-project-modal .card-text {
     line-height: 28px;
 }
@@ -81,20 +84,26 @@ strong {
     font-size: 16px;
     margin-bottom: 37px;
 }
+
 .btn-secondary {
     background-color: #2E3240;
 }
+
 .new-project-modal .btn:hover,
 .modal-viewproj-wo .btn:hover,
 .modal-viewproj .btn:hover {
     background-color: #FFAA00;
     border-color: transparent !important;
 }
-.pl-2, .px-2 {
-    padding-left: 1.2rem!important;
+
+.pl-2,
+.px-2 {
+    padding-left: 1.2rem !important;
 }
-.pl-3, .px-3 {
-    padding-left: 1.2rem!important;
+
+.pl-3,
+.px-3 {
+    padding-left: 1.2rem !important;
 }
 
 .text-warning {
@@ -105,32 +114,42 @@ strong {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
 
 }
+
 /* .modal-open .modal {
     overflow-x: hidden;
     overflow-y: hidden;
 } */
-.pb-1, .py-1 {
-    padding-bottom: 0.25rem!important;
+.pb-1,
+.py-1 {
+    padding-bottom: 0.25rem !important;
 }
-.ml-2, .mx-2 {
-    margin-left: 0.8rem!important;
+
+.ml-2,
+.mx-2 {
+    margin-left: 0.8rem !important;
 }
+
 .cup {
     cursor: pointer;
 }
-.mt-n2, .my-n2 {
-    margin-top: 0.5rem!important;
+
+.mt-n2,
+.my-n2 {
+    margin-top: 0.5rem !important;
 }
+
 p {
     margin-top: 0;
     margin-bottom: 1rem;
 }
+
 h5 {
     font-weight: 800;
     font-size: 30px;
     color: #2E3240;
 }
-.learntopnew{
+
+.learntopnew {
     position: absolute;
     will-change: transform;
     top: 0px;
@@ -154,6 +173,7 @@ h5 {
     background-color: #2E3240;
     opacity: 0.75;
 }
+
 .modal-backdrop {
     background-color: #2e3240;
     opacity: 0.3 !important;
@@ -174,7 +194,7 @@ h5 {
 /* base styles */
 
 .header {
-    background:  url(../assets/images/header-bg.png) top center no-repeat;
+    background: url(../assets/images/header-bg.png) top center no-repeat;
     height: 320px;
     background-size: cover;
     padding: 0 2em;
@@ -186,6 +206,7 @@ h5 {
     z-index: 99;
     height: 200px;
 }
+
 .logo-section p {
     line-height: 1.0;
     margin-bottom: 5px;
@@ -195,7 +216,11 @@ h5 {
 .dropdown-menu.show {
     display: block;
 }
-.dropdown-menu[x-placement^=bottom], .dropdown-menu[x-placement^=left], .dropdown-menu[x-placement^=right], .dropdown-menu[x-placement^=top] {
+
+.dropdown-menu[x-placement^=bottom],
+.dropdown-menu[x-placement^=left],
+.dropdown-menu[x-placement^=right],
+.dropdown-menu[x-placement^=top] {
     right: auto;
     bottom: auto;
 }
@@ -203,19 +228,24 @@ h5 {
 .logo-section {
     text-align: left;
     z-index: 99;
-    height: 204px;;
+    height: 204px;
+    ;
 }
-.projectNameNew{
+
+.projectNameNew {
     margin-right: 72.2%;
 }
+
 .logo-section p {
     line-height: 1.0;
     margin-bottom: 5px;
     color: white;
 }
-.footerNew{
+
+.footerNew {
     text-align: left;
 }
+
 .logo-section a {
     display: inline-block;
 }
@@ -232,9 +262,11 @@ h5 {
     font-family: 'Avenir Medium', san-serif;
     font-size: 20px;
 }
-.dotImageNew{
+
+.dotImageNew {
     margin-left: 74px;
 }
+
 /* .profile-section {
     position: relative;
     top: -29px;
@@ -251,19 +283,25 @@ h5 {
     padding-left: 30px;
     position: relative;
 }
+
 .btn.learn img {
     right: 20px;
     position: absolute;
     top: 13px;
     width: 13px;
 }
+
 /* .profile-section .btn.learn:hover {
     color: white;
 } */
-.dropdown-menu[x-placement^=bottom], .dropdown-menu[x-placement^=left], .dropdown-menu[x-placement^=right], .dropdown-menu[x-placement^=top] {
+.dropdown-menu[x-placement^=bottom],
+.dropdown-menu[x-placement^=left],
+.dropdown-menu[x-placement^=right],
+.dropdown-menu[x-placement^=top] {
     right: auto;
     bottom: auto;
 }
+
 .profile-section .avatar {
     font-family: 'Brandon Grotesque Black', sans-serif;
     background: url(../assets/images/icon-profile-bg.svg) center center no-repeat !important;
@@ -304,6 +342,7 @@ h5 {
     position: relative;
     top: -3px;
 }
+
 .subtitle-New {
     font-family: 'Avenir Heavy', san-serif;
     font-size: 26px;
@@ -347,7 +386,8 @@ h5 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
-.dropdown-menu .dropdown-item, .menu-top .menu-item {
+.dropdown-menu .dropdown-item,
+.menu-top .menu-item {
     font-family: 'Avenir Light', san-serif;
     font-size: 20px;
     border-bottom: 1px dotted #D8D8D8;
@@ -367,6 +407,7 @@ h5 {
 .menu-top .menu-item:hover {
     color: #FFAA00;
 }
+
 .dropdown-menu .dropdown-item:hover,
 .menu-top .menu-item:hover {
     background-color: transparent;
@@ -422,6 +463,7 @@ h5 {
     font-size: 18px;
 
 }
+
 .title-container {
     width: 300px;
     position: relative;
@@ -430,6 +472,7 @@ h5 {
 .section-tiles {
     padding: 0 2.7em;
 }
+
 .title-container .status {
     position: absolute;
     bottom: 10px;
@@ -440,6 +483,7 @@ h5 {
     font-size: 16px;
 
 }
+
 .section-tiles .right .scan-code {
     cursor: pointer;
     background-color: #fff;
@@ -450,9 +494,11 @@ h5 {
     border-radius: 5px;
     margin-top: 10px;
 }
+
 .section-tiles .right .scan-code img {
     width: 80%;
 }
+
 .section-tiles .right .scan-code p {
     text-transform: uppercase;
     font-family: 'Avenir Medium', sans-serif;
@@ -504,9 +550,11 @@ h5 {
     padding-top: 12px;
     border-radius: 5px;
 }
+
 .text-right {
-    text-align: right!important;
+    text-align: right !important;
 }
+
 .card-image-container .scan-code p {
     text-transform: uppercase;
     font-family: 'Avenir Medium', sans-serif;
@@ -603,7 +651,8 @@ h3.card-title {
     padding-bottom: 0;
     width: 280px;
 }
-.modal{
+
+.modal {
     background-color: rgba(0, 0, 0, 0.516) !important;
 }
 
@@ -614,9 +663,11 @@ h3.card-title {
     justify-content: center;
     align-items: center;
 }
-.newfolder{
+
+.newfolder {
     padding-right: 15px;
 }
+
 img {
     vertical-align: middle;
     border-style: none;
@@ -648,9 +699,11 @@ img {
 .slide-np1 .modal-body .btn-call-to-action {
     margin-top: 100px;
 }
+
 .slide-np2 .card {
     height: 520px;
 }
+
 .btn-call-to-action .btn {
     font-family: 'Brandon Grotesque Black', sans-serif;
     text-transform: uppercase !important;
@@ -678,9 +731,11 @@ img {
 .slide-np3 .btn-call-to-action {
     margin-top: 80px;
 }
+
 .slide-np4 .modal-body {
     color: #777;
 }
+
 .text-warning.modal-footer-text {
     font-size: 18px;
 }
@@ -696,9 +751,11 @@ img {
 .filename {
     font-size: 18px;
 }
-.modalNeww{
+
+.modalNeww {
     display: flex;
 }
+
 .carousel-dots {
     position: absolute;
     bottom: 40px;
@@ -707,6 +764,7 @@ img {
     left: 50%;
     margin-left: -37.5px;
 }
+
 .carousel-dots li {
     width: 12px;
     height: 12px;
@@ -751,6 +809,7 @@ img {
 .new-project-modal .modal-dialog {
     z-index: 9999;
 }
+
 .context-menu {
     margin-left: 10px;
     padding: 10px;
@@ -782,99 +841,189 @@ footer ul li a:hover {
 footer .icon-to-top {
     cursor: pointer;
 }
-.profile-section{
-    margin-top: -18% !important;  
+
+.profile-section {
+    margin-top: -18% !important;
 }
 
 
-/* Extra small devices (portrait phones, less than 576px) */
-/* No media query for `xs` since this is the default in Bootstrap */
-/* Large devices (desktops, 992px and down) */
-@media only screen and (min-width: 992px) {
-    .section-grid .row {
-        margin-bottom: 20px;
+/* Media Query Start */
+
+/* Small devices (landscape phones, 576px and down) */
+@media only screen and (max-width: 576px) {
+    .section-tiles .right {
+        display: flex;
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
     }
-}
-@media (max-width: 1350px) {
+
+    .profile-section {
+        height: auto;
+        margin: 0 !important;
+        text-align: left !important;
+        margin-top: 39px !important;
+    }
+
+    .section-tiles .row {
+        justify-content: center !important;
+    }
+
+    .title-container .status {
+        position: relative;
+    }
+
     .context-menu {
         margin-left: 10px;
         padding-left: 0;
     }
-    
-}
 
-/* Large devices (desktops, 992px and down) */
-@media only screen and (max-width: 1200px) {
-    .modal-xl {
-        max-width: 1140px;
+    .section-options {
+        margin-top: -120px;
     }
 
-    .modal-content.slide-pp1 {
-        height: auto;
-    }
-}
-
-/* Extra large devices (large desktops, 1200px and down) */
-@media  only screen and (max-width: 992px) {
-    body {
-        /* background-color: #000; */
+    .icon-grid {
+        display: none;
     }
 
-    .card:nth-child(0),
-    .card:nth-child(1) {
-        margin-bottom: 20px;
+    .icon-tiles {
+        display: none;
     }
 
-    footer {
-        height: auto
+    .section-grid {
+        display: none;
     }
 
-    footer .left,
-    footer .right {
-        padding: 0;
-        margin: 0;
+    .section-tiles {
+        display: block !important;
     }
 
-    .modal-content {
-        height: auto !important;
-    }
-    
-    .modal-dialog {
-        display: flex;
-        align-items: flex-start;
-        margin-top: 0;
-    }
-    .modal-content.slide-np3 {
-        top: 150px;
+    .modal-body input {
+        width: 320px;
     }
 
-    .new-folder .modal-header,
-    .delete-marker-modal .modal-header {
-        display: none !important;
+    .subnav {
+        padding-left: 0 !important;
     }
 
-    .dropdown-menu {
-        left: auto;
+    .subnav {
+        top: 0px;
     }
 
-    .views-container .views {
-        text-align: center;
-        width: auto;
-        padding: 5px 10px !important;
-        margin-top: 30px !important;
-        align-self: auto;
-        right: -10px;
+    .subnav .dropdown-sort {
+        margin-left: 0 !important;
+        margin-top: 5px !important;
     }
-    .carousel-dots {
+
+    .subtitle-New {
+        margin-left: -39px;
+    }
+
+    .dotImageNew {
+        margin-left: 34px;
+    }
+
+    .footer ul li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 20px;
+        color: white;
+        font-size: 14px;
+    }
+
+    .footer ul li a {
+        color: white;
+        font-size: 14px;
+    }
+
+    .footer ul li a:hover {
+        color: white;
+        text-decoration: underline;
+    }
+
+    .newfolder-st {
+        margin-left: 217px !important;
+    }
+
+    .roundNew {
+        top: 10px;
+    }
+
+    .projectNameNew {
+        margin-right: 43%;
+    }
+
+    .modal-text {
+        display: block;
+        font-size: 18px;
+        padding-left: 17px;
+    }
+
+    .card-img,
+    .card-img-bottom,
+    .card-img-top {
+        width: 92%;
+        height: 100%;
+    }
+
+    .title-container {
+        width: 261px;
         position: relative;
+    }
+
+    .context-menu {
+        margin-left: 10px;
+        padding-left: 0;
+    }
+
+    .vedeosection {
+        width: 240px;
+        height: 134px;
+    }
+
+    .new-project-modal .btn {
+        width: 260px;
+        height: 70px;
+        border-radius: 31px;
+        font-size: 20px;
+    }
+
+    .new-project-modal .slide-np3 .btn,
+    .new-project-modal .slide-np4 .btn,
+    .modal-viewproj-wo .btn,
+    .modal-viewproj .btn {
+        width: 222px;
+        height: 70px;
+
+    }
+
+    .modal {
+        position: fixed;
+        top: -146px;
         left: 0;
-        margin-left: 0;
-        bottom: 10px;
+        z-index: 1050;
+        display: none;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        outline: 0;
     }
-    .title-container .status {
+
+    .btn-new-proj {
+        width: 95%;
+        margin: 2.5%;
+    }
+}
+
+@media (max-width: 676px) {
+    .subnav {
         position: relative;
-        bottom: 10px;
-        margin-bottom: 0;
+        top: -30px;
+    }
+
+    .subnav .dropdown button {
+        margin-left: 0 !important;
     }
 }
 
@@ -899,9 +1048,6 @@ footer .icon-to-top {
         margin-top: 10px !important;
         margin-bottom: 0 !important;
     }
-
-   
-
     .btn-new-proj {
         font-size: 16px;
         bottom: 129px;
@@ -910,162 +1056,81 @@ footer .icon-to-top {
     }
 
 }
-/* @media (max-width: 768px){
-    .profile-section {
-        height: auto;
-        margin: 0 !important;
-        text-align: left !important;
-        margin-top: 70px !important;
-    }
-} */
 
+/* Extra small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+/* Large devices (desktops, 992px and down) */
 
-
-@media (max-width: 676px) {
-    .subnav {
-        position: relative;
-        top: -30px;
+/* Extra large devices (large desktops, 1200px and down) */
+@media only screen and (max-width: 992px) {
+    body {
+        /* background-color: #000; */
     }
 
-    .subnav .dropdown button {
-        margin-left: 0 !important;
+    .card:nth-child(0),
+    .card:nth-child(1) {
+        margin-bottom: 20px;
     }
-}
-/* Small devices (landscape phones, 576px and down) */
-@media only screen and (max-width: 576px) {
-    .section-tiles .right {
+
+    footer {
+        height: auto
+    }
+
+    footer .left,
+    footer .right {
+        padding: 0;
+        margin: 0;
+    }
+
+    .modal-content {
+        height: auto !important;
+    }
+
+    .modal-dialog {
         display: flex;
-        flex-direction: row !important;
-        align-items: center;
-        justify-content: space-around;
-        width: 100%;
+        align-items: flex-start;
+        margin-top: 0;
     }
-    .profile-section {
-        height: auto;
-        margin: 0 !important;
-        text-align: left !important;
-        margin-top: 39px !important;
+
+    .modal-content.slide-np3 {
+        top: 150px;
     }
-    .section-tiles .row {
-        justify-content: center !important;
+
+    .new-folder .modal-header,
+    .delete-marker-modal .modal-header {
+        display: none !important;
+    }
+
+    .dropdown-menu {
+        left: auto;
+    }
+
+    .views-container .views {
+        text-align: center;
+        width: auto;
+        padding: 5px 10px !important;
+        margin-top: 30px !important;
+        align-self: auto;
+        right: -10px;
+    }
+
+    .carousel-dots {
+        position: relative;
+        left: 0;
+        margin-left: 0;
+        bottom: 10px;
     }
 
     .title-container .status {
         position: relative;
-    }
-    .context-menu {
-        margin-left: 10px;
-        padding-left: 0;
-    }
-    .section-options {
-        margin-top: -120px;
-    }
-    .icon-grid {
-        display: none;
-    }
-    .icon-tiles {
-        display: none;
-    }
-    .section-grid {
-        display: none;
-    }
-    .section-tiles {
-        display: block !important;
-    }
-    .modal-body input {
-        width: 320px;
-    }
-    .subnav {
-        padding-left: 0 !important;
-    }
-    .subnav {
-        top: 0px;
-    }
-    .subnav .dropdown-sort {
-        margin-left: 0 !important;
-        margin-top: 5px !important;
-    }
-    .subtitle-New {
-        margin-left: -39px;
-    }
-    .dotImageNew{
-        margin-left: 34px;
-    }
-    footer ul li {
-        list-style: none;
-        display: inline-block;
-        margin-right: 20px;
-        color: white;
-        font-size: 14px;
-    }
-    
-    footer ul li a {
-        color: white;
-        font-size: 14px;
-    }
-    
-    footer ul li a:hover {
-        color: white;
-        text-decoration: underline;
-    }
-    .newfolder-st{
-        margin-left: 217px !important;
-    }
-    .roundNew{
-        top: 10px;
-    }
-    .projectNameNew{
-        margin-right: 43%; 
-    }
-    .modal-text {
-        display: block;
-        font-size: 18px;
-        padding-left: 17px;
-    }
-    .card-img, .card-img-bottom, .card-img-top {
-        width: 92%;
-        height: 100%;
-    }
-    .title-container {
-        width: 261px;
-        position: relative;
-    }
-    .context-menu {
-        margin-left: 10px;
-        padding-left: 0;
-    }
-    .vedeosection{
-        width: 240px;
-        height: 134px;
-    }
-    .new-project-modal .btn {
-        width: 260px;
-        height: 70px;
-        border-radius: 31px;
-        font-size: 20px;
-    }
-    .new-project-modal .slide-np3 .btn, .new-project-modal .slide-np4 .btn, .modal-viewproj-wo .btn, .modal-viewproj .btn {
-        width: 222px;
-        height: 70px;
-       
-    }
-    modal {
-        position: fixed;
-        top: -146px;
-        left: 0;
-        z-index: 1050;
-        display: none;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        outline: 0;
+        bottom: 10px;
+        margin-bottom: 0;
     }
 }
 
-@media only screen and (max-width: 576px) {
-    .btn-new-proj {
-        width: 95%;
-        margin: 2.5%;
+@media only screen and (min-width: 992px) {
+    .section-grid .row {
+        margin-bottom: 20px;
     }
 }
 
@@ -1077,6 +1142,7 @@ footer .icon-to-top {
         font-size: 14px;
         margin-top: -41%;
     }
+
     .subtitle-New {
         font-family: 'Avenir Heavy', san-serif;
         font-size: 26px;
@@ -1084,7 +1150,8 @@ footer .icon-to-top {
         top: -3px;
         margin-left: -92px;
     }
-     .profile-section {
+
+    .profile-section {
         height: auto;
         margin: 0 !important;
         text-align: left !important;
@@ -1092,8 +1159,27 @@ footer .icon-to-top {
     }
 }
 
-@media only screen and (min-width:1920px){
-    .profile-section{
-        margin-top: -15.8% !important;  
-    } 
+/* Large devices (desktops, 992px and down) */
+@media only screen and (max-width: 1200px) {
+    .modal-xl {
+        max-width: 1140px;
+    }
+
+    .modal-content.slide-pp1 {
+        height: auto;
+    }
+}
+
+@media (max-width: 1350px) {
+    .context-menu {
+        margin-left: 10px;
+        padding-left: 0;
+    }
+
+}
+
+@media only screen and (min-width:1920px) {
+    .profile-section {
+        margin-top: -15.8% !important;
+    }
 }
