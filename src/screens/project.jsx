@@ -174,11 +174,7 @@ const Projects = () => {
                                         <button onClick={() => setShow(false)} class="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectWOModal">View
                                             Project</button>
                                     </div>
-                                    {/* <div className="menu align-center flex-column btn-call-to-action d-none">
-                                        <button className="btn btn-white">Open Project</button>
-                                        <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectWOModal">View
-                                            Project</button>
-                                    </div> */}
+
                                     <div className="scan-code">
                                         <img src={scanImage} alt="" className="img-responsive" />
                                         <p>Scan To See</p>
@@ -189,8 +185,9 @@ const Projects = () => {
                                         <h3 className="card-title text-uppercase">Using the Gyro</h3>
                                         <div>
                                             <img src={trendImage} alt="" />
-                                            <img src={dot1} className="pl-2 dropdown-toggle cup" alt=""
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
+                                            {/* <img src={dot1} className="pl-2 dropdown-toggle cup" alt=""
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" /> */}
                                             <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                                                 <button className="dropdown-item" href="#">Open project</button>
                                                 <button className="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
@@ -238,8 +235,7 @@ const Projects = () => {
                                         <h3 className="card-title text-uppercase">Demo 1</h3>
                                         <div>
                                             <img src={trendImage} alt="" />
-                                            <img src={dot1} className="pl-2 dropdown-toggle cup" alt=""
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
                                             <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                                                 <button className="dropdown-item" href="#">Open project</button>
                                                 <button className="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
@@ -285,8 +281,7 @@ const Projects = () => {
                                         <h3 className="card-title text-uppercase">Project Starter 3</h3>
                                         <div>
                                             <img src={trendImage} alt="" />
-                                            <img src={dot1} className="pl-3 dropdown-toggle cup1" alt=""
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false/" />
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
                                             <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                                                 <button className="dropdown-item" href="#">Open project</button>
                                                 <button className="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
@@ -332,8 +327,7 @@ const Projects = () => {
                                         <h3 className="card-title text-uppercase">Project Starter 3</h3>
                                         <div>
                                             <img src={trendImage} alt="" />
-                                            <img src={dot1} className="pl-3 dropdown-toggle cup1" alt=""
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false/" />
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
                                             <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                                                 <button className="dropdown-item" href="#">Open project</button>
                                                 <button className="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
@@ -495,7 +489,7 @@ const Projects = () => {
                             </div>
                             <div className="title-container text-left d-block ml-3 mt-n2">
                                 <p className="card-text">
-                                    <h3  className="card-title text-uppercase">Using the Gyro</h3>
+                                    <h3 className="card-title text-uppercase">Using the Gyro</h3>
                                     Date Created: <span className="date">12th April 2022</span> <br />
                                     Created by: <span className="created">Blippar</span>
                                 </p>
@@ -509,9 +503,9 @@ const Projects = () => {
                                     <div className="title d-flex justify-content-between">
                                         <div className="dotImageNew">
                                             <img src={trendImage} alt="" />
-                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
 
-                                        
+
                                             {/* <img src={dot1} className="ml-3 dropdown-toggle cup" alt=""
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" /> */}
                                             <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
@@ -567,8 +561,7 @@ const Projects = () => {
                                     <div className="title d-flex justify-content-between">
                                         <div className="dotImageNew">
                                             <img src={trendImage} alt="" />
-                                            <img src={dot1} className="ml-3 dropdown-toggle cup" alt=""
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
                                             <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                                                 <button className="dropdown-item" href="#">Open project</button>
                                                 <button className="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
@@ -593,64 +586,6 @@ const Projects = () => {
                             </div>
                         </div>
                     </div>
-
-
-                    {/* <div className="row shadow-sm p-2 justify-content-between mb-3">
-                        <div className="left d-md-flex d-sm-block flex-lg-row flex-sm-column">
-                            <div className="card-image-container position-relative" onClick={() => setmodalShowSecond(!modalShowSecond)}>
-                                <img src={imageActive2} className="card-img-top project-image" alt="..." />
-                                <div className={modalShowSecond ? "menu align-center flex-column btn-call-to-action" : "menu align-center flex-column btn-call-to-action d-none"}>
-                                    <button className="btn btn-white">Open Project</button>
-                                    <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
-                                        Project</button>
-                                </div>
-                            </div>
-                            <div className="title-container text-left d-block ml-3 mt-n2">
-                                <p className="card-text">
-                                    <h3 className="card-title text-uppercase">Demo 1</h3>
-                                    Date Created: <span className="date">12th April 2022</span> <br />
-                                    Created by: <span className="created">Blippar</span>
-                                </p>
-                                <p className="status"> <span className="status-legend published mr-2"></span><span
-                                    className="status-text">Published</span></p>
-                            </div>
-                        </div>
-                        <div className="d-flex flex-row">
-                            <div className="views-container d-flex flex-column justify-content-between mr-3">
-                                <div className="d-block text-right mt-4 ml-5">
-
-                                    <div className="title d-flex justify-content-between">
-                                        <div>
-
-                                            <img src={trendImage} alt="" />
-                                            <img src={dot1} className="ml-3 dropdown-toggle cup" alt=""
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
-                                            <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
-                                                <button className="dropdown-item" href="#">Open project</button>
-                                                <button className="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
-                                                    project</button>
-                                                <button className="dropdown-item" href="#">Duplicate project</button>
-                                                <button className="dropdown-item" href="#">Delete project</button>
-                                                <button className="dropdown-item" href="#">Version history</button>
-                                            </div>
-                                        </div>
-
-
-
-                                    </div>
-                                </div>
-                                <div className="views align-self-center p-1 pr-3 mb-2">
-                                    Views: <span>1</span>
-                                </div>
-                            </div>
-                            <div className="scan-code mt-3">
-                                <img src={scanImage} alt="" className="img-responsive" />
-                            </div>
-                        </div>
-                    </div> */}
-
-
-
 
 
                     <div className="row shadow-sm p-2 justify-content-between mb-3">
@@ -674,13 +609,13 @@ const Projects = () => {
                             </div>
                         </div>
                         <div className="right d-md-flex d-sm-block flex-lg-row flex-sm-column">
+                            
                             <div className="views-container d-flex flex-column justify-content-between mr-3">
                                 <div className="d-block text-right mt-4">
                                     <div className="title d-flex justify-content-between">
                                         <div className="dotImageNew">
                                             <img src={trendImage} alt="" />
-                                            <img src={dot1} className="ml-3 dropdown-toggle cup" alt=""
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                                           <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
                                             <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                                                 <button className="dropdown-item" href="#">Open project</button>
                                                 <button className="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
@@ -699,71 +634,13 @@ const Projects = () => {
                                     Views: <span>1</span>
                                 </div>
                             </div>
+
                             <div className="scan-code">
                                 <img src={scanImage} alt="" className="img-responsive" />
                                 <p class="text-uppercase mt-1">Scan To See</p>
                             </div>
                         </div>
                     </div>
-
-
-
-
-
-
-
-
-
-                    {/* <div className="row shadow-sm p-2 justify-content-between mb-3">
-                        <div className="left d-md-flex d-sm-block flex-lg-row flex-sm-column">
-                            <div className="card-image-container position-relative" onClick={() => setModalThird(!modalThird)}>
-                                <img src={imageActive3} className="card-img-top project-image" alt="..." />
-                                <div className={modalThird ? "menu align-center flex-column btn-call-to-action" : "menu align-center flex-column btn-call-to-action d-none"}>
-                                    <button className="btn btn-white">Open Project</button>
-                                    <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
-                                        Project</button>
-                                </div>
-                            </div>
-                            <div className="title-container text-left d-block ml-3 mt-n2">
-                                <p className="card-text">
-                                    <h3 className="card-title text-uppercase">Project Starter 3</h3>
-                                    Date Created: <span className="date">12th April 2022</span> <br />
-                                    Created by: <span className="created">Blippar</span>
-                                </p>
-                                <p className="status"> <span className="status-legend not-published mr-2"></span><span className="status-text">Not
-                                    Published</span></p>
-                            </div>
-                        </div>
-                        <div className="d-flex flex-row">
-                            <div className="views-container d-flex flex-column justify-content-between mr-3">
-                                <div className="d-block text-right mt-4 ml-5">
-                                    <div className="title d-flex justify-content-between">
-                                        <div>
-                                            <img src={trendImage} alt="" />
-                                            <img src={dot1} className="ml-3 dropdown-toggle cup" alt=""
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
-                                            <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
-                                                <button className="dropdown-item" href="#">Open project</button>
-                                                <button className="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
-                                                    project</button>
-                                                <button className="dropdown-item" href="#">Duplicate project</button>
-                                                <button className="dropdown-item" href="#">Delete project</button>
-                                                <button className="dropdown-item" href="#">Version history</button>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                                <div className="views align-self-center p-1 pr-3 mb-2">
-                                    Views: <span>1</span>
-                                </div>
-                            </div>
-                            <div className="scan-code mt-3">
-                                <img src={scanImage} alt="" className="img-responsive" />
-                            </div>
-                        </div>
-                    </div> */}
                 </div>
             </div>
 
@@ -788,22 +665,7 @@ const Projects = () => {
                 </div>
             </footer>
 
-            {/* <footer className="bg-dark">
-                <div className="container-fluid">
-                    <div className="row d-flex justify-content-between">
-                        <div className="col-md-9 pt-md-5 pt-sm-2 left">
-                            <ul className="mt-5 ">
-                                <li>All Rights Reserved 2022 &copy; Blippar Group Limited</li>
-                                <li><a href="#">Privacy</a></li>
-                                <li><a href="#">Terms</a></li>
-                            </ul>
-                        </div>
-                        <div className="col-md-3 text-right pt-1 mt-5 pr-5 right">
-                            <a href="/head"><img src={image4} alt="Icon To Top" className="icon-to-top" /></a>
-                        </div>
-                    </div>
-                </div>
-            </footer> */}
+
             {/* <!-- footer ends -->
 
   <!-- modals -->
@@ -843,33 +705,6 @@ const Projects = () => {
 
 
 
-                    {/* <div className={slideName == 'slide-np1' ? "modal-content slide-np1 active" : "modal-content slide-np1 d-none"}>
-                        <button type="button" className="new-project-modal-close close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true"><img src={crossIcon} alt="" /></span>
-                        </button>
-
-                        <div className="modal-header text-center d-block flex-column">
-                            <h5 className="modal-title d-inline-block">New Project</h5>
-                            <p className="modal-subtitle d-block">
-                                Let's get creating!
-                            </p>
-                        </div>
-                        <div className="modal-body">
-                            <div className="form-group">
-                                <label className="projectName" for="project-name">Give your project a name</label>
-                                <input type="text" className="form-control-N" name="" id="project-name" aria-describedby="project-name"
-                                    placeholder="Project Name" />
-                                <div className="d-block text-center btn-call-to-action">
-                                    <button className="btn btn-secondary" onClick={() => showNext("slide-np2")}>Continue</button>
-                                </div>
-                            </div>
-                        </div>
-                        <ul className="carousel-dots mt-3 d-block text-center">
-                            <li className="dot-1 active"></li>
-                            <li className="dot-2 "></li>
-                            <li className="dot-3"></li>
-                        </ul>
-                    </div> */}
 
 
 
@@ -1168,34 +1003,6 @@ const Projects = () => {
             </div>
 
 
-
-
-
-
-
-
-
-            {/* <div className="modal fade delete-marker-modal show" id="deleteMarkerModal" tabIndex="-1" data-backdrop="" aria-labelledby="deleteMarkerModal" style={{ zIndex: "999999", display: "block", paddingRight: "17px", ariaModal: "true", role: "dialog", backgroundColor: "-moz-initial" }}> */}
-            {/* <div className={cancel ? "modal fade delete-marker-modal" : "modal fade delete-marker-modal show"} id="newFolderModal" tabIndex="-1" role="dialog" data-backdrop="static"
-                aria-labelledby="newFolderModal" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-
-                    <div class="modal-content slide-d1" >
-                        <div class="modal-body flex-column">
-                            <h5 class="modal-title d-block text-uppercase text-white text-center">Delete Marker</h5>
-                            <p class="modal-text text-white text-center">Confirm you wish to delete this marker?</p>
-                            <div class="d-block text-center btn-call-to-action mt-3" >
-                                <button class="btn btn-white btn-confirm-marker-delete">confirm</button>
-                                <button onClick={() => setCancel(!cancel)} className="btn btn-white ml-3" data-dismiss="modal" aria-label="Close">Cancel</button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div> */}
-
-
             <div className={slideName == 'slide-d1' ? "modal fade delete-marker-modal show" : "modal fade delete-marker-modal d-none"}
 
                 id="deleteMarkerModal" tabindex="1" data-backdrop="" aria-labelledby="deleteMarkerModal" style={{ zIndex: "999999", display: "block", paddingRight: "17px", ariaModal: "true", role: "dialog" }}>
@@ -1293,7 +1100,7 @@ const Projects = () => {
                                     <img src={barcode} alt="" />
                                 </p>
                                 <p className="modal-text">
-                                Then follow the on screen instructions  <img src={arrorMark} alt="" />
+                                    Then follow the on screen instructions  <img src={arrorMark} alt="" />
                                 </p>
 
 
@@ -1401,7 +1208,7 @@ const Projects = () => {
                                 <div className="d-block text-center btn-call-to-action mt-5 pt-3">
                                     <button className="btn btn-secondary">Download QR and marker</button>
                                 </div>
-                              
+
                             </div>
                             <div className="col">
                                 <img src={previewImage} alt="" />

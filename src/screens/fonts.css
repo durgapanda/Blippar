@@ -76,6 +76,58 @@
 
 
 
+               {/* <div className="row shadow-sm p-2 justify-content-between mb-3">
+                        <div className="left d-md-flex d-sm-block flex-lg-row flex-sm-column">
+                            <div className="card-image-container position-relative" onClick={() => setmodalShowSecond(!modalShowSecond)}>
+                                <img src={imageActive2} className="card-img-top project-image" alt="..." />
+                                <div className={modalShowSecond ? "menu align-center flex-column btn-call-to-action" : "menu align-center flex-column btn-call-to-action d-none"}>
+                                    <button className="btn btn-white">Open Project</button>
+                                    <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
+                                        Project</button>
+                                </div>
+                            </div>
+                            <div className="title-container text-left d-block ml-3 mt-n2">
+                                <p className="card-text">
+                                    <h3 className="card-title text-uppercase">Demo 1</h3>
+                                    Date Created: <span className="date">12th April 2022</span> <br />
+                                    Created by: <span className="created">Blippar</span>
+                                </p>
+                                <p className="status"> <span className="status-legend published mr-2"></span><span
+                                    className="status-text">Published</span></p>
+                            </div>
+                        </div>
+                        <div className="d-flex flex-row">
+                            <div className="views-container d-flex flex-column justify-content-between mr-3">
+                                <div className="d-block text-right mt-4 ml-5">
 
+                                    <div className="title d-flex justify-content-between">
+                                        <div>
+
+                                            <img src={trendImage} alt="" />
+                                            <img src={dot1} className="ml-3 dropdown-toggle cup" alt=""
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                                            <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                                                <button className="dropdown-item" href="#">Open project</button>
+                                                <button className="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
+                                                    project</button>
+                                                <button className="dropdown-item" href="#">Duplicate project</button>
+                                                <button className="dropdown-item" href="#">Delete project</button>
+                                                <button className="dropdown-item" href="#">Version history</button>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+                                <div className="views align-self-center p-1 pr-3 mb-2">
+                                    Views: <span>1</span>
+                                </div>
+                            </div>
+                            <div className="scan-code mt-3">
+                                <img src={scanImage} alt="" className="img-responsive" />
+                            </div>
+                        </div>
+                    </div> */}
 
 

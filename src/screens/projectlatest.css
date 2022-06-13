@@ -472,7 +472,6 @@ h5 {
 .section-tiles {
     padding: 0 2.7em;
 }
-
 .title-container .status {
     position: absolute;
     bottom: 10px;
@@ -811,7 +810,7 @@ img {
 }
 
 .context-menu {
-    margin-left: 10px;
+    margin-left: 15px;
     padding: 10px;
     padding-right: 0;
 }
@@ -1000,7 +999,7 @@ footer .icon-to-top {
 
     .modal {
         position: fixed;
-        top: -146px;
+        top: 5px;
         left: 0;
         z-index: 1050;
         display: none;
@@ -1072,7 +1071,7 @@ footer .icon-to-top {
         margin-bottom: 20px;
     }
 
-    footer {
+    .footer {
         height: auto
     }
 
