@@ -1,5 +1,6 @@
-import "./projectlatest.css";
+// import "./projectlatest.css";
 //import "./font.css";
+import "./project.css"
 import logo from '../assets/images/logo.svg';
 import ddArrowDown from '../assets/images/icon-caret-down.svg';
 import menu from '../assets/images/icon-hamburger-menu.svg';
