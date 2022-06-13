@@ -14,9 +14,15 @@ h3 {
 }
 
 strong {
-    font-family: 'Avenir Black', san-serif;
+    /* font-family: 'Avenir Black', san-serif !important; */
+    color: #212529;
+    font-size: 18px;
 }
 
+/* b, strong {
+    font-weight: bolder;
+    color: #212529;
+} */
 .btn-white {
     background-color: #fff;
     border-radius: 50%;
@@ -776,6 +782,10 @@ footer ul li a:hover {
 footer .icon-to-top {
     cursor: pointer;
 }
+.profile-section{
+    margin-top: -18% !important;  
+}
+
 
 /* Extra small devices (portrait phones, less than 576px) */
 /* No media query for `xs` since this is the default in Bootstrap */
@@ -790,6 +800,7 @@ footer .icon-to-top {
         margin-left: 10px;
         padding-left: 0;
     }
+    
 }
 
 /* Large devices (desktops, 992px and down) */
@@ -866,9 +877,7 @@ footer .icon-to-top {
         margin-bottom: 0;
     }
 }
-.profile-section{
-    margin-top: -18% !important;  
-}
+
 /* Medium devices (tablets, 768px and down) */
 @media screen and (max-width: 768px) {
     body {
