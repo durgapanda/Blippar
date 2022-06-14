@@ -537,7 +537,7 @@ const Projects = () => {
 
                     <div className="row shadow-sm p-2 justify-content-between mb-3">
                         <div className="left d-md-flex d-sm-block flex-lg-row flex-sm-column">
-                            <div className="card-image-container position-relative" onMouseEnter={() => setmodalShowSecond(!modalShowSecond)} onMouseLeave={() => setModalShow(false)}>
+                            <div className="card-image-container position-relative" onMouseEnter={() => setmodalShowSecond(!modalShowSecond)} onMouseLeave={() => setmodalShowSecond(false)}>
                                 <img src={imageActive2} className="card-img-top project-image" alt="..." />
                                 <div className={modalShowSecond ? "menu align-center flex-column btn-call-to-action" : "menu align-center flex-column btn-call-to-action d-none"}>
                                     <button className="btn btn-white">Open Project</button>
