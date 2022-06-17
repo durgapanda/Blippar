@@ -106,17 +106,20 @@
           <img src="images/icon-tabs.svg" alt="Icon Menu" width="32px" height="27px"
             class="cup d-none subnav-icon icon-grid" onclick="showView('grid')">
           <img src="images/icon-folder.svg" data-toggle="modal" data-target="#newFolderModal"
-            class="d-inline-block ml-3 cup" alt="Icon Folder" width="32px" height="28px" onclick="showNext('slide-f1')">
+            class="d-inline-block ml-3 cup icon-folder" alt="Icon Folder" width="32px" height="28px"
+            onclick="showNext('slide-f1')">
+          <img src="images/icon-folder-disabled.svg" data-toggle="modal"
+            class="d-inline-block ml-3 cna icon-folder-disabled d-none" alt="Icon Folder" width="32px" height="28px">
         </div>
       </section>
     </div>
     <!-- section options end -->
 
     <!-- breadcrumbs starts -->
-    <div class="container-fluid breadcrumbs">
+    <div class="container-fluid breadcrumbs d-none">
       <div class="row">
         <p>
-          <a href="#" class="text-warning">All Projects</a> <span class="divider"> | </span>
+          <a href="#" class="text-warning" onclick="showAllProjects()">All Projects</a> <span class="divider"> | </span>
           <a href="#" class="text-secondary">Folder Name</a>
         </p>
       </div>
@@ -125,7 +128,7 @@
 
     <!-- section grid starts -->
     <div class="container-fluid section-grid active">
-      <div class="row">
+      <div class="row section-projects">
         <div class="col">
           <div class="card text-left gutters">
             <div class="card-image-container p-2 position-relative">
@@ -501,9 +504,10 @@
       <div class="row section-folders">
         <div class="col">
           <div class="card text-left gutters">
-            <div class="card-image-container p-2">
-              <img src="images/img-f1.png" class="card-img-top project-image" alt="...">
-
+            <div class="card-image-container" onclick="showFolderDetails()">
+              <img src="images/folder-tn2.png" alt="" class="img-fluid">
+              <img src="images/folder-tn1.png" alt="" class="img-fluid">
+              <img src="images/folder-tn3.png" alt="" class="img-fluid">
             </div>
             <div class="card-body">
               <div class="title d-flex justify-content-between">
@@ -529,8 +533,10 @@
         </div>
         <div class="col">
           <div class="card text-left gutters">
-            <div class="card-image-container p-2">
-              <img src="images/img-f1.png" class="card-img-top project-image" alt="...">
+            <div class="card-image-container" onclick="showFolderDetails()">
+              <img src="images/folder-tn2.png" alt="" class="img-fluid">
+              <img src="images/folder-tn1.png" alt="" class="img-fluid">
+              <img src="images/folder-tn3.png" alt="" class="img-fluid">
             </div>
             <div class="card-body">
               <div class="title d-flex justify-content-between">
@@ -555,8 +561,10 @@
         </div>
         <div class="col">
           <div class="card text-left gutters">
-            <div class="card-image-container p-2">
-              <img src="images/img-f1.png" class="card-img-top project-image" alt="...">
+            <div class="card-image-container" onclick="showFolderDetails()">
+              <img src="images/folder-tn2.png" alt="" class="img-fluid">
+              <img src="images/folder-tn1.png" alt="" class="img-fluid">
+              <img src="images/folder-tn3.png" alt="" class="img-fluid">
             </div>
             <div class="card-body">
               <div class="title d-flex justify-content-between">
@@ -581,8 +589,10 @@
         </div>
         <div class="col">
           <div class="card text-left gutters">
-            <div class="card-image-container p-2">
-              <img src="images/img-f1.png" class="card-img-top project-image" alt="...">
+            <div class="card-image-container" onclick="showFolderDetails()">
+              <img src="images/folder-tn2.png" alt="" class="img-fluid">
+              <img src="images/folder-tn1.png" alt="" class="img-fluid">
+              <img src="images/folder-tn3.png" alt="" class="img-fluid">
             </div>
             <div class="card-body">
               <div class="title d-flex justify-content-between">
@@ -607,8 +617,10 @@
         </div>
         <div class="col">
           <div class="card text-left gutters">
-            <div class="card-image-container p-2">
-              <img src="images/img-f1.png" class="card-img-top project-image" alt="...">
+            <div class="card-image-container" onclick="showFolderDetails()">
+              <img src="images/folder-tn2.png" alt="" class="img-fluid">
+              <img src="images/folder-tn1.png" alt="" class="img-fluid">
+              <img src="images/folder-tn3.png" alt="" class="img-fluid">
             </div>
             <div class="card-body">
               <div class="title d-flex justify-content-between">
@@ -633,8 +645,10 @@
         </div>
         <div class="col">
           <div class="card text-left gutters">
-            <div class="card-image-container p-2">
-              <img src="images/img-f1.png" class="card-img-top project-image" alt="...">
+            <div class="card-image-container" onclick="showFolderDetails()">
+              <img src="images/folder-tn2.png" alt="" class="img-fluid">
+              <img src="images/folder-tn1.png" alt="" class="img-fluid">
+              <img src="images/folder-tn3.png" alt="" class="img-fluid">
             </div>
             <div class="card-body">
               <div class="title d-flex justify-content-between">
@@ -659,9 +673,10 @@
         </div>
         <div class="col">
           <div class="card text-left gutters">
-            <div class="card-image-container p-2">
-              <img src="images/img-f1.png" class="card-img-top project-image" alt="...">
-
+            <div class="card-image-container" onclick="showFolderDetails()">
+              <img src="images/folder-tn2.png" alt="" class="img-fluid">
+              <img src="images/folder-tn1.png" alt="" class="img-fluid">
+              <img src="images/folder-tn3.png" alt="" class="img-fluid">
             </div>
             <div class="card-body">
               <div class="title d-flex justify-content-between">
@@ -686,9 +701,10 @@
         </div>
         <div class="col">
           <div class="card text-left gutters">
-            <div class="card-image-container p-2">
-              <img src="images/img-f1.png" class="card-img-top project-image" alt="...">
-
+            <div class="card-image-container" onclick="showFolderDetails()">
+              <img src="images/folder-tn2.png" alt="" class="img-fluid">
+              <img src="images/folder-tn1.png" alt="" class="img-fluid">
+              <img src="images/folder-tn3.png" alt="" class="img-fluid">
             </div>
             <div class="card-body">
               <div class="title d-flex justify-content-between">

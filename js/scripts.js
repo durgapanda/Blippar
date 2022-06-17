@@ -56,6 +56,35 @@ function hideMessage() {
     $(".d-message").addClass('d-none');
 }
 
+function showAllProjects() {
+    $(".section-projects").removeClass("d-none");
+    enableFolderIcon()
+    hideBreadcrumbs();
+}
+
+function hideProjects() {
+    $(".section-projects").addClass("d-none");
+    showBreadcrumbs();
+}
+function enableFolderIcon() {
+    $(".icon-folder-disabled").addClass("d-none")
+    $(".icon-folder").removeClass("d-none")
+}
+function disableFolderIcon() {
+    $(".icon-folder-disabled").removeClass("d-none")
+    $(".icon-folder").addClass("d-none")
+}
+function showBreadcrumbs() {
+    $(".breadcrumbs").removeClass("d-none")
+}
+function hideBreadcrumbs() {
+    $(".breadcrumbs").addClass("d-none")
+}
+
+function showFolderDetails() {
+    hideProjects();
+    disableFolderIcon();
+}
 
 $(function () {
 
