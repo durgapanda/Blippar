@@ -34,6 +34,11 @@ import sliderThird from '../assets/images/placeholder3.png'
 import imagemodal5 from '../assets/images/upload-marker.png'
 import previewImage from '../assets/images/preview-lg.png'
 import placeholderNewOne from '../assets/images/placeholder1.png'
+import secondFolderImage1 from '../assets/images/folder-tn2.png'
+import secondFolderImage2 from '../assets/images/folder-tn1.png'
+import secondFolderImage3 from '../assets/images/folder-tn3.png'
+
+
 import { useState } from "react";
 
 
@@ -52,6 +57,10 @@ const Projects = () => {
     const [modalShow, setModalShow] = useState(false);
     const [modalShowSecond, setmodalShowSecond] = useState(false);
     const [showModalImageAdd, setshowModalImageAdd] = useState(false);
+    const [showModalImageAddNew, setshowModalImageAddNew] = useState(false);
+    const [showModalNew, setshowModalNew] = useState(false);
+    const [showModalNew1, setshowModalNew1] = useState(false);
+    const [showModalImageAddSeven, setshowModalImageAddSeven] = useState(false)
     const [modalThird, setModalThird] = useState(false);
     const [cancelButton, setCancelButton] = useState(true)
     const [cancelButtonOrganize, setCancelButtonOrganize] = useState(false)
@@ -76,10 +85,55 @@ const Projects = () => {
     return (
 
         <div className="text-center">
-            {/* <!-- header starts --> */}
             <div className="container-fluid">
+                {/* <!-- header starts --> */}
+
 
                 <header className="header row">
+
+                    <div className="logo-section col-sm-12 col-md-4 my-4">
+                        <p>
+                            <a href="#" className="logo">
+                                <img src={logo} alt="Blipper Logo" width="90px" height="24px" />
+                            </a>
+                        </p>
+                        <p className="text-white logo-desc">
+                            BlippBuilder
+                        </p>
+                        <p className="text-welcome">
+                            Welcome back Steve
+                        </p>
+                    </div>
+                    <div className="profile-section col-sm-12 col-md-8 text-right my-5">
+                        <button type="button" className="btn btn-white-o learn text-bold dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Learn
+                            <img src={ddArrowDown} alt="Dropdown Arrow down" width="" />
+                        </button>
+
+                        <div className="dropdown-menu dropdown-menu-lg-right mt-n1" aria-labelledby="learnDropdownMenuLink">
+                            <a className="dropdown-item" href="#">Getting Started</a>
+                            <a className="dropdown-item" href="#">Documentation</a>
+                            <a className="dropdown-item" href="#">Request Support</a>
+                        </div>
+                        <div className="dropdown d-inline ml-2">
+                            <a className="btn dropdown-toggle text-white avatar" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="true">
+                                <span className="initials d-inline-block">SS</span>
+                            </a>
+
+                            <div className="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownMenuLink">
+                                <a className="dropdown-item" href="#">Action</a>
+                                <a className="dropdown-item" href="#">Another action</a>
+                                <a className="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" className="btn btn-secondary d-lg-block bg-dark btn-new-proj px-5 text-uppercase" data-toggle="modal" data-target="#newProjectModal" onclick="showNext('slide-np1')">Create A New
+                        Project</button>
+                </header>
+
+
+
+
+                {/* <header className="header row">
 
                     <div className="logo-section col-sm-4 my-5">
                         <p>
@@ -117,27 +171,31 @@ const Projects = () => {
                             </div>
                         </div>
                     </div>
-                    <button type="button" className="btn btn-secondary bg-dark btn-new-proj px-5 text-uppercase" data-toggle="modal"
-                        data-target="#newProjectModal" onClick={handleClick}>Create A New Project</button>
-                </header>
+                    <button type="button" className="btn btn-secondary d-lg-block bg-dark btn-new-proj px-5 text-uppercase" data-toggle="modal" data-target="#newProjectModal" onclick="showNext('slide-np1')">Create A New
+                        Project</button>
+                </header> */}
 
                 {/* <!-- header ends -->
     
           <!-- section-options starts --> */}
                 <div className="container-fluid">
+                    {/* <div className="row bg-secondary d-flex d-lg-none d-sm-flex justify-content-between p-3 d-message">
+                        <p classNmae="mb-0 col-11 text-left">To create or edit projects, please view on desktop.</p>
+                        <div className="col-1 text-right" onclick="hideMessage()"><img src="images/close.png" alt="" /></div>
+                    </div> */}
                     <section className="justify-content-between row section-options mb-3">
-                        <div class="subnav col text-left">
-                            <span class="subtitle">Your projects</span>
-                            <div class="dropdown open d-inline">
-                                <button class="btn btn-secondary-o dropdown-toggle text-uppercase dropdown-sort ml-4 pl-4 py-2" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="text-sort">Sort By</span>
+                        <div className="subnav col text-left">
+                            <span className="subtitle">Your projects</span>
+                            <div className="dropdown open d-inline">
+                                <button className="btn btn-secondary-o dropdown-toggle text-uppercase dropdown-sort ml-4 pl-4 py-2" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span className="text-sort">Sort By</span>
                                     <img src={ddArrowDown} alt="Dropdown Arrow down" width="" />
                                 </button>
-                                <div class="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
-                                    <button class="dropdown-item" href="#">Date Created</button>
-                                    <button class="dropdown-item" href="#">Last modified</button>
-                                    <button class="dropdown-item" href="#">Name A-Z</button>
-                                    <button class="dropdown-item" href="#">Name Z-A</button>
+                                <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                                    <button className="dropdown-item" href="#">Date Created</button>
+                                    <button className="dropdown-item" href="#">Last modified</button>
+                                    <button className="dropdown-item" href="#">Name A-Z</button>
+                                    <button className="dropdown-item" href="#">Name Z-A</button>
                                 </div>
                             </div>
                         </div>
@@ -159,19 +217,53 @@ const Projects = () => {
                             />
                         </div>
                     </section>
+                    {/* <section className="justify-content-between row section-options mb-3">
+                        <div className="subnav col text-left">
+                              <span className="subtitle">Your projects</span>
+                            <div className="dropdown open d-inline">
+                                <button className="btn btn-secondary-o dropdown-toggle text-uppercase dropdown-sort ml-4 pl-4 py-2" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span className="text-sort">Sort By</span>
+                                    <img src={ddArrowDown} alt="Dropdown Arrow down" width="" />
+                                </button>
+                                <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                                    <button className="dropdown-item" href="#">Date Created</button>
+                                    <button className="dropdown-item" href="#">Last modified</button>
+                                    <button className="dropdown-item" href="#">Name A-Z</button>
+                                    <button className="dropdown-item" href="#">Name Z-A</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div className="subnav newfolder"  >
+                            {
+                                activeTiles ? <img src={menuHumber} alt="Icon Menu" width="32px" height="27px"
+                                    className={activeTiles ? "cupNew subnav-icon icon-grid " : "cup subnav-icon icon-grid"} onClick={() => setActiveTiles(!activeTiles)} /> :
+
+                                    <img style={{ marginRight: "4px" }} src={menu} alt="Icon Menu" width="32px" height="24px"
+                                        className="cupNew subnav-icon icon-tiles" onClick={() => setActiveTiles(!activeTiles)}
+
+                                    />}
+
+
+                            <img src={folder} data-toggle="modal" onClick={() => setShowAddProject(true)}
+                                className="d-inline-block ml-3 cup newfolder-st " alt="Icon Folder"
+                            />
+                        </div>
+                    </section> */}
                 </div>
                 {/* <!-- section options end -->
           <!-- section grid starts --> */}
                 <div className={activeTiles ? "container-fluid section-grid d-none" : "container-fluid section-grid active"}>
-                    <div className="row">
-                        <div className="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+                    <div className="row section-projects">
+                        <div className="col" style={{ marginBottom: "25px" }}>
                             <div className="card text-left gutters">
                                 <div className="card-image-container p-2 position-relative" onMouseEnter={() => setShow(!show)} onMouseLeave={() => setShow(false)}>
                                     <img src={f1Image} className="card-img-top project-image" alt="..." />
 
                                     <div className={show ? "menu align-center flex-column btn-call-to-action" : "menu align-center flex-column btn-call-to-action d-none"}>
-                                        <button onClick={() => setShow(false)} class="btn btn-white">Open Project</button>
-                                        <button onClick={() => setShow(false)} class="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectWOModal">View
+                                        <button onClick={() => setShow(false)} className="btn btn-white">Open Project</button>
+                                        <button onClick={() => setShow(false)} className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectWOModal">View
                                             Project</button>
                                     </div>
 
@@ -179,15 +271,18 @@ const Projects = () => {
                                         <img src={scanImage} alt="" className="img-responsive" />
                                         <p>Scan To See</p>
                                     </div>
+                                    
                                 </div>
+                                <div className="view-ar d-none btn-call-to-action">
+                                        <button className="btn btn-secondary">View in AR</button>
+                                    </div>
                                 <div className="card-body">
                                     <div className="title d-flex justify-content-between">
                                         <h3 className="card-title text-uppercase">Using the Gyro</h3>
                                         <div>
                                             <img src={trendImage} alt="" />
-                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
-                                            {/* <img src={dot1} className="pl-2 dropdown-toggle cup" alt=""
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" /> */}
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+
                                             <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                                                 <button className="dropdown-item" href="#">Open project</button>
                                                 <button className="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
@@ -215,14 +310,13 @@ const Projects = () => {
                         </div>
 
 
-
-                        <div className="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+                        <div className="col">
                             <div className="card text-left gutters">
                                 <div className="card-image-container p-2" onMouseEnter={() => setShowModal(!showModal)} onMouseLeave={() => setShowModal(false)}>
                                     <img src={image1} className="card-img-top project-image" alt="..." />
                                     <div className={showModal ? "menu align-center flex-column btn-call-to-action" : "menu align-center flex-column btn-call-to-action d-none"}>
-                                        <button class="btn btn-white">Open Project</button>
-                                        <button class="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
+                                        <button className="btn btn-white">Open Project</button>
+                                        <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
                                             Project</button>
                                     </div>
                                     <div className="scan-code">
@@ -235,7 +329,7 @@ const Projects = () => {
                                         <h3 className="card-title text-uppercase">Demo 1</h3>
                                         <div>
                                             <img src={trendImage} alt="" />
-                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
                                             <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                                                 <button className="dropdown-item" href="#">Open project</button>
                                                 <button className="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
@@ -262,7 +356,7 @@ const Projects = () => {
                             </div>
                         </div>
 
-                        <div className="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+                        <div className="col">
                             <div className="card text-left gutters">
                                 <div className="card-image-container p-2" onMouseEnter={() => { setshowModalImage(!showModalImage) }} onMouseLeave={() => setshowModalImage(false)}>
                                     <img src={image2} className="card-img-top project-image" alt="..." />
@@ -281,7 +375,7 @@ const Projects = () => {
                                         <h3 className="card-title text-uppercase">Project Starter 3</h3>
                                         <div>
                                             <img src={trendImage} alt="" />
-                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
                                             <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                                                 <button className="dropdown-item" href="#">Open project</button>
                                                 <button className="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
@@ -308,7 +402,206 @@ const Projects = () => {
                             </div>
                         </div>
 
-                        <div className="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+
+
+
+
+
+
+                        <div className="col " style={{ marginBottom: "25px" }}>
+                            <div className="card text-left gutters">
+                                <div className="card-image-container p-2" onMouseEnter={() => { setshowModalImageAddNew(!showModalImageAddNew) }} onMouseLeave={() => setshowModalImageAddNew(false)}>
+                                    <img src={image2} className="card-img-top project-image" alt="..." />
+                                    <div className={showModalImageAddNew ? "menu align-center flex-column btn-call-to-action" : "menu align-center flex-column btn-call-to-action d-none"}>
+                                        <button className="btn btn-white">Open Project</button>
+                                        <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
+                                            Project</button>
+                                    </div>
+                                    <div className="scan-code">
+                                        <img src={scanImage} alt="" className="img-responsive" />
+                                        <p>Scan To See</p>
+                                    </div>
+                                </div>
+
+                                <div className="card-body">
+                                    <div className="title d-flex justify-content-between">
+                                        <h3 className="card-title text-uppercase">Project Starter 3</h3>
+                                        <div>
+                                            <img src={trendImage} alt="" />
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                                            <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                                                <button className="dropdown-item" href="#">Open project</button>
+                                                <button className="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
+                                                    project</button>
+                                                <button className="dropdown-item" href="#">Duplicate project</button>
+                                                <button className="dropdown-item" href="#">Delete project</button>
+                                                <button className="dropdown-item" href="#">Version history</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <p className="card-text">
+                                        Date Created: <span className="date">12th April 2022</span> <br />
+                                        Created by: <span className="created">Blippar</span>
+                                    </p>
+                                    <div className="title d-flex justify-content-between">
+                                        <p className="status"> <span className="status-legend not-published mr-2"></span><span className="status-text">Not
+                                            Published</span></p>
+                                        <div className="views align-self-center p-1 pr-3">
+                                            Views: <span>1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div className="col">
+                            <div className="card text-left gutters">
+                                <div className="card-image-container p-2" onMouseEnter={() => { setshowModalNew(!showModalNew) }} onMouseLeave={() => setshowModalNew(false)}>
+                                    <img src={image2} className="card-img-top project-image" alt="..." />
+                                    <div className={showModalNew ? "menu align-center flex-column btn-call-to-action" : "menu align-center flex-column btn-call-to-action d-none"}>
+                                        <button className="btn btn-white">Open Project</button>
+                                        <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
+                                            Project</button>
+                                    </div>
+                                    <div className="scan-code">
+                                        <img src={scanImage} alt="" className="img-responsive" />
+                                        <p>Scan To See</p>
+                                    </div>
+                                </div>
+
+                                <div className="card-body">
+                                    <div className="title d-flex justify-content-between">
+                                        <h3 className="card-title text-uppercase">Project Starter 3</h3>
+                                        <div>
+                                            <img src={trendImage} alt="" />
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                                            <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                                                <button className="dropdown-item" href="#">Open project</button>
+                                                <button className="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
+                                                    project</button>
+                                                <button className="dropdown-item" href="#">Duplicate project</button>
+                                                <button className="dropdown-item" href="#">Delete project</button>
+                                                <button className="dropdown-item" href="#">Version history</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <p className="card-text">
+                                        Date Created: <span className="date">12th April 2022</span> <br />
+                                        Created by: <span className="created">Blippar</span>
+                                    </p>
+                                    <div className="title d-flex justify-content-between">
+                                        <p className="status"> <span className="status-legend not-published mr-2"></span><span className="status-text">Not
+                                            Published</span></p>
+                                        <div className="views align-self-center p-1 pr-3">
+                                            Views: <span>1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div className="col">
+                            <div className="card text-left gutters">
+                                <div className="card-image-container p-2" onMouseEnter={() => { setshowModalNew1(!showModalNew1) }} onMouseLeave={() => setshowModalNew1(false)}>
+                                    <img src={image2} className="card-img-top project-image" alt="..." />
+                                    <div className={showModalNew1 ? "menu align-center flex-column btn-call-to-action" : "menu align-center flex-column btn-call-to-action d-none"}>
+                                        <button className="btn btn-white">Open Project</button>
+                                        <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
+                                            Project</button>
+                                    </div>
+                                    <div className="scan-code">
+                                        <img src={scanImage} alt="" className="img-responsive" />
+                                        <p>Scan To See</p>
+                                    </div>
+                                </div>
+
+                                <div className="card-body">
+                                    <div className="title d-flex justify-content-between">
+                                        <h3 className="card-title text-uppercase">Project Starter 3</h3>
+                                        <div>
+                                            <img src={trendImage} alt="" />
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                                            <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                                                <button className="dropdown-item" href="#">Open project</button>
+                                                <button className="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
+                                                    project</button>
+                                                <button className="dropdown-item" href="#">Duplicate project</button>
+                                                <button className="dropdown-item" href="#">Delete project</button>
+                                                <button className="dropdown-item" href="#">Version history</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <p className="card-text">
+                                        Date Created: <span className="date">12th April 2022</span> <br />
+                                        Created by: <span className="created">Blippar</span>
+                                    </p>
+                                    <div className="title d-flex justify-content-between">
+                                        <p className="status"> <span className="status-legend not-published mr-2"></span><span className="status-text">Not
+                                            Published</span></p>
+                                        <div className="views align-self-center p-1 pr-3">
+                                            Views: <span>1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div className="col">
+                            <div className="card text-left gutters">
+                                <div className="card-image-container p-2" onMouseEnter={() => { setshowModalImageAddSeven(!showModalImageAddSeven) }} onMouseLeave={() => setshowModalImageAddSeven(false)}>
+                                    <img src={image2} className="card-img-top project-image" alt="..." />
+                                    <div className={showModalImageAddSeven ? "menu align-center flex-column btn-call-to-action" : "menu align-center flex-column btn-call-to-action d-none"}>
+                                        <button className="btn btn-white">Open Project</button>
+                                        <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
+                                            Project</button>
+                                    </div>
+                                    <div className="scan-code">
+                                        <img src={scanImage} alt="" className="img-responsive" />
+                                        <p>Scan To See</p>
+                                    </div>
+                                </div>
+
+                                <div className="card-body">
+                                    <div className="title d-flex justify-content-between">
+                                        <h3 className="card-title text-uppercase">Project Starter 3</h3>
+                                        <div>
+                                            <img src={trendImage} alt="" />
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                                            <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                                                <button className="dropdown-item" href="#">Open project</button>
+                                                <button className="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
+                                                    project</button>
+                                                <button className="dropdown-item" href="#">Duplicate project</button>
+                                                <button className="dropdown-item" href="#">Delete project</button>
+                                                <button className="dropdown-item" href="#">Version history</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <p className="card-text">
+                                        Date Created: <span className="date">12th April 2022</span> <br />
+                                        Created by: <span className="created">Blippar</span>
+                                    </p>
+                                    <div className="title d-flex justify-content-between">
+                                        <p className="status"> <span className="status-legend not-published mr-2"></span><span className="status-text">Not
+                                            Published</span></p>
+                                        <div className="views align-self-center p-1 pr-3">
+                                            Views: <span>1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div className="col">
                             <div className="card text-left gutters">
                                 <div className="card-image-container p-2" onMouseEnter={() => { setshowModalImageAdd(!showModalImageAdd) }} onMouseLeave={() => setshowModalImageAdd(false)}>
                                     <img src={image2} className="card-img-top project-image" alt="..." />
@@ -322,12 +615,13 @@ const Projects = () => {
                                         <p>Scan To See</p>
                                     </div>
                                 </div>
+
                                 <div className="card-body">
                                     <div className="title d-flex justify-content-between">
                                         <h3 className="card-title text-uppercase">Project Starter 3</h3>
                                         <div>
                                             <img src={trendImage} alt="" />
-                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
                                             <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                                                 <button className="dropdown-item" href="#">Open project</button>
                                                 <button className="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
@@ -353,26 +647,25 @@ const Projects = () => {
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
 
                     {/* first section 3 image ends */}
 
 
-                    <div className="row">
-                        <div className="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+                    <div className="row section-folders">
+                        <div className="col" style={{ marginBottom: "25px" }}>
                             <div className="card text-left gutters">
-                                <div className="card-image-container p-2">
-                                    <img src={f1Image} className="card-img-top project-image" alt="..." />
-
+                                <div className="card-image-container" onClick="showFolderDetails()">
+                                    <img src={secondFolderImage1} alt="" className="img-fluid" />
+                                    <img src={secondFolderImage2} alt="" className="img-fluid" />
+                                    <img src={secondFolderImage3} alt="" className="img-fluid" />
                                 </div>
                                 <div className="card-body">
                                     <div className="title d-flex justify-content-between">
                                         <h3 className="card-title text-uppercase">Folder name</h3>
                                         <div>
-                                            <img src={dot1} className="pl-2 dropdown-toggle cup" alt=""
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
                                             <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                                                 <button className="dropdown-item" href="#">Rename folder</button>
                                                 <button className="dropdown-item" href="#">Delete folder and contents</button>
@@ -381,25 +674,28 @@ const Projects = () => {
 
                                     </div>
                                     <p className="card-text">
-                                        Date Created: <span className="date">12th April 2022</span> <br />
-                                        Created by: <span className="created">Name</span> <br />
-                                        <p className="proj-count-wrapper"><span className="proj-count mt-3">3</span> Projects</p>
-                                    </p>
+                                        Date Created: <span className="date">12th April 2022</span>
+                                        Created by: <span className="created">Name</span>
+                                    </p><p className="proj-count-wrapper proj-count-wrapper"><span className="proj-count mt-3">3</span>
+                                        Projects</p>
+                                    <p></p>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-4 col-xl-3 col-md-6 col-sm-6">
-                            <div className="card text-left gutters">
-                                <div className="card-image-container p-2">
-                                    <img src={image3} className="card-img-top project-image" alt="..." />
 
+
+                        <div className="col">
+                            <div className="card text-left gutters">
+                                <div className="card-image-container" onClick="showFolderDetails()">
+                                    <img src={secondFolderImage1} alt="" className="img-fluid" />
+                                    <img src={secondFolderImage2} alt="" className="img-fluid" />
+                                    <img src={secondFolderImage3} alt="" className="img-fluid" />
                                 </div>
                                 <div className="card-body">
                                     <div className="title d-flex justify-content-between">
                                         <h3 className="card-title text-uppercase">Folder name</h3>
                                         <div>
-                                            <img src={dot1} className="pl-2 dropdown-toggle cup" alt=""
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
                                             <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                                                 <button className="dropdown-item" href="#">Rename folder</button>
                                                 <button className="dropdown-item" href="#">Delete folder and contents</button>
@@ -408,25 +704,29 @@ const Projects = () => {
 
                                     </div>
                                     <p className="card-text">
-                                        Date Created: <span className="date">12th April 2022</span> <br />
-                                        Created by: <span className="created">Name</span> <br />
-                                        <p className="proj-count-wrapper"><span className="proj-count mt-3">3</span> Projects</p>
-                                    </p>
+                                        Date Created: <span className="date">12th April 2022</span>
+                                        Created by: <span className="created">Name</span>
+                                    </p><p className="proj-count-wrapper proj-count-wrapper"><span className="proj-count mt-3">3</span>
+                                        Projects</p>
+                                    <p></p>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-4 col-xl-3 col-md-6 col-sm-6">
-                            <div className="card text-left gutters">
-                                <div className="card-image-container p-2">
-                                    <img src={image3} className="card-img-top project-image" alt="..." />
 
+
+
+                        <div className="col">
+                            <div className="card text-left gutters">
+                                <div className="card-image-container" onClick="showFolderDetails()">
+                                    <img src={secondFolderImage1} alt="" className="img-fluid" />
+                                    <img src={secondFolderImage2} alt="" className="img-fluid" />
+                                    <img src={secondFolderImage3} alt="" className="img-fluid" />
                                 </div>
                                 <div className="card-body">
                                     <div className="title d-flex justify-content-between">
                                         <h3 className="card-title text-uppercase">Folder name</h3>
                                         <div>
-                                            <img src={dot1} className="pl-2 dropdown-toggle cup" alt=""
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
                                             <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                                                 <button className="dropdown-item" href="#">Rename folder</button>
                                                 <button className="dropdown-item" href="#">Delete folder and contents</button>
@@ -435,25 +735,27 @@ const Projects = () => {
 
                                     </div>
                                     <p className="card-text">
-                                        Date Created: <span className="date">12th April 2022</span> <br />
-                                        Created by: <span className="created">Name</span> <br />
-                                        <p className="proj-count-wrapper"><span className="proj-count mt-3">3</span> Projects</p>
-                                    </p>
+                                        Date Created: <span className="date">12th April 2022</span>
+                                        Created by: <span className="created">Name</span>
+                                    </p><p className="proj-count-wrapper proj-count-wrapper"><span className="proj-count mt-3">3</span>
+                                        Projects</p>
+                                    <p></p>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-4 col-xl-3 col-md-6 col-sm-6">
-                            <div className="card text-left gutters">
-                                <div className="card-image-container p-2">
-                                    <img src={image3} className="card-img-top project-image" alt="..." />
 
+                        <div className="col" style={{ marginBottom: "25px" }}>
+                            <div className="card text-left gutters">
+                                <div className="card-image-container" onClick="showFolderDetails()">
+                                    <img src={secondFolderImage1} alt="" className="img-fluid" />
+                                    <img src={secondFolderImage2} alt="" className="img-fluid" />
+                                    <img src={secondFolderImage3} alt="" className="img-fluid" />
                                 </div>
                                 <div className="card-body">
                                     <div className="title d-flex justify-content-between">
                                         <h3 className="card-title text-uppercase">Folder name</h3>
                                         <div>
-                                            <img src={dot1} className="pl-2 dropdown-toggle cup" alt=""
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
                                             <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                                                 <button className="dropdown-item" href="#">Rename folder</button>
                                                 <button className="dropdown-item" href="#">Delete folder and contents</button>
@@ -462,14 +764,213 @@ const Projects = () => {
 
                                     </div>
                                     <p className="card-text">
-                                        Date Created: <span className="date">12th April 2022</span> <br />
-                                        Created by: <span className="created">Name</span> <br />
-                                        <p className="proj-count-wrapper"><span className="proj-count mt-3">3</span> Projects</p>
-                                    </p>
+                                        Date Created: <span className="date">12th April 2022</span>
+                                        Created by: <span className="created">Name</span>
+                                    </p><p className="proj-count-wrapper proj-count-wrapper"><span className="proj-count mt-3">3</span>
+                                        Projects</p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col">
+                            <div className="card text-left gutters">
+                                <div className="card-image-container" onClick="showFolderDetails()">
+                                    <img src={secondFolderImage1} alt="" className="img-fluid" />
+                                    <img src={secondFolderImage2} alt="" className="img-fluid" />
+                                    <img src={secondFolderImage3} alt="" className="img-fluid" />
+                                </div>
+                                <div className="card-body">
+                                    <div className="title d-flex justify-content-between">
+                                        <h3 className="card-title text-uppercase">Folder name</h3>
+                                        <div>
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                                            <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                                                <button className="dropdown-item" href="#">Rename folder</button>
+                                                <button className="dropdown-item" href="#">Delete folder and contents</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <p className="card-text">
+                                        Date Created: <span className="date">12th April 2022</span>
+                                        Created by: <span className="created">Name</span>
+                                    </p><p className="proj-count-wrapper proj-count-wrapper"><span className="proj-count mt-3">3</span>
+                                        Projects</p>
+                                    <p></p>
                                 </div>
                             </div>
                         </div>
 
+
+                        <div className="col">
+                            <div className="card text-left gutters">
+                                <div className="card-image-container" onClick="showFolderDetails()">
+                                    <img src={secondFolderImage1} alt="" className="img-fluid" />
+                                    <img src={secondFolderImage2} alt="" className="img-fluid" />
+                                    <img src={secondFolderImage3} alt="" className="img-fluid" />
+                                </div>
+                                <div className="card-body">
+                                    <div className="title d-flex justify-content-between">
+                                        <h3 className="card-title text-uppercase">Folder name</h3>
+                                        <div>
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                                            <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                                                <button className="dropdown-item" href="#">Rename folder</button>
+                                                <button className="dropdown-item" href="#">Delete folder and contents</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <p className="card-text">
+                                        Date Created: <span className="date">12th April 2022</span>
+                                        Created by: <span className="created">Name</span>
+                                    </p><p className="proj-count-wrapper proj-count-wrapper"><span className="proj-count mt-3">3</span>
+                                        Projects</p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col" style={{ marginBottom: "25px" }}>
+                            <div className="card text-left gutters">
+                                <div className="card-image-container" onClick="showFolderDetails()">
+                                    <img src={secondFolderImage1} alt="" className="img-fluid" />
+                                    <img src={secondFolderImage2} alt="" className="img-fluid" />
+                                    <img src={secondFolderImage3} alt="" className="img-fluid" />
+                                </div>
+                                <div className="card-body">
+                                    <div className="title d-flex justify-content-between">
+                                        <h3 className="card-title text-uppercase">Folder name</h3>
+                                        <div>
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                                            <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                                                <button className="dropdown-item" href="#">Rename folder</button>
+                                                <button className="dropdown-item" href="#">Delete folder and contents</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <p className="card-text">
+                                        Date Created: <span className="date">12th April 2022</span>
+                                        Created by: <span className="created">Name</span>
+                                    </p><p className="proj-count-wrapper proj-count-wrapper"><span className="proj-count mt-3">3</span>
+                                        Projects</p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col">
+                            <div className="card text-left gutters">
+                                <div className="card-image-container" onClick="showFolderDetails()">
+                                    <img src={secondFolderImage1} alt="" className="img-fluid" />
+                                    <img src={secondFolderImage2} alt="" className="img-fluid" />
+                                    <img src={secondFolderImage3} alt="" className="img-fluid" />
+                                </div>
+                                <div className="card-body">
+                                    <div className="title d-flex justify-content-between">
+                                        <h3 className="card-title text-uppercase">Folder name</h3>
+                                        <div>
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                                            <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                                                <button className="dropdown-item" href="#">Rename folder</button>
+                                                <button className="dropdown-item" href="#">Delete folder and contents</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <p className="card-text">
+                                        Date Created: <span className="date">12th April 2022</span>
+                                        Created by: <span className="created">Name</span>
+                                    </p><p className="proj-count-wrapper proj-count-wrapper"><span className="proj-count mt-3">3</span>
+                                        Projects</p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col">
+                            <div className="card text-left gutters">
+                                <div className="card-image-container" onClick="showFolderDetails()">
+                                    <img src={secondFolderImage1} alt="" className="img-fluid" />
+                                    <img src={secondFolderImage2} alt="" className="img-fluid" />
+                                    <img src={secondFolderImage3} alt="" className="img-fluid" />
+                                </div>
+                                <div className="card-body">
+                                    <div className="title d-flex justify-content-between">
+                                        <h3 className="card-title text-uppercase">Folder name</h3>
+                                        <div>
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                                            <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                                                <button className="dropdown-item" href="#">Rename folder</button>
+                                                <button className="dropdown-item" href="#">Delete folder and contents</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <p className="card-text">
+                                        Date Created: <span className="date">12th April 2022</span>
+                                        Created by: <span className="created">Name</span>
+                                    </p><p className="proj-count-wrapper proj-count-wrapper"><span className="proj-count mt-3">3</span>
+                                        Projects</p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col">
+                            <div className="card text-left gutters">
+                                <div className="card-image-container" onClick="showFolderDetails()">
+                                    <img src={secondFolderImage1} alt="" className="img-fluid" />
+                                    <img src={secondFolderImage2} alt="" className="img-fluid" />
+                                    <img src={secondFolderImage3} alt="" className="img-fluid" />
+                                </div>
+                                <div className="card-body">
+                                    <div className="title d-flex justify-content-between">
+                                        <h3 className="card-title text-uppercase">Folder name</h3>
+                                        <div>
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                                            <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                                                <button className="dropdown-item" href="#">Rename folder</button>
+                                                <button className="dropdown-item" href="#">Delete folder and contents</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <p className="card-text">
+                                        Date Created: <span className="date">12th April 2022</span>
+                                        Created by: <span className="created">Name</span>
+                                    </p><p className="proj-count-wrapper proj-count-wrapper"><span className="proj-count mt-3">3</span>
+                                        Projects</p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col">
+                            <div className="card text-left gutters">
+                                <div className="card-image-container" onClick="showFolderDetails()">
+                                    <img src={secondFolderImage1} alt="" className="img-fluid" />
+                                    <img src={secondFolderImage2} alt="" className="img-fluid" />
+                                    <img src={secondFolderImage3} alt="" className="img-fluid" />
+                                </div>
+                                <div className="card-body">
+                                    <div className="title d-flex justify-content-between">
+                                        <h3 className="card-title text-uppercase">Folder name</h3>
+                                        <div>
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                                            <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                                                <button className="dropdown-item" href="#">Rename folder</button>
+                                                <button className="dropdown-item" href="#">Delete folder and contents</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <p className="card-text">
+                                        Date Created: <span className="date">12th April 2022</span>
+                                        Created by: <span className="created">Name</span>
+                                    </p><p className="proj-count-wrapper proj-count-wrapper"><span className="proj-count mt-3">3</span>
+                                        Projects</p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
                 </div>
@@ -528,7 +1029,7 @@ const Projects = () => {
                             </div>
                             <div className="scan-code">
                                 <img src={scanImage} alt="" className="img-responsive" />
-                                <p class="text-uppercase mt-1">Scan To See</p>
+                                <p className="text-uppercase mt-1">Scan To See</p>
                             </div>
                         </div>
                     </div>
@@ -561,7 +1062,7 @@ const Projects = () => {
                                     <div className="title d-flex justify-content-between">
                                         <div className="dotImageNew">
                                             <img src={trendImage} alt="" />
-                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
                                             <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                                                 <button className="dropdown-item" href="#">Open project</button>
                                                 <button className="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
@@ -582,7 +1083,7 @@ const Projects = () => {
                             </div>
                             <div className="scan-code">
                                 <img src={scanImage} alt="" className="img-responsive" />
-                                <p class="text-uppercase mt-1">Scan To See</p>
+                                <p className="text-uppercase mt-1">Scan To See</p>
                             </div>
                         </div>
                     </div>
@@ -609,13 +1110,13 @@ const Projects = () => {
                             </div>
                         </div>
                         <div className="right d-md-flex d-sm-block flex-lg-row flex-sm-column">
-                            
+
                             <div className="views-container d-flex flex-column justify-content-between mr-3">
                                 <div className="d-block text-right mt-4">
                                     <div className="title d-flex justify-content-between">
                                         <div className="dotImageNew">
                                             <img src={trendImage} alt="" />
-                                           <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
                                             <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
                                                 <button className="dropdown-item" href="#">Open project</button>
                                                 <button className="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
@@ -637,7 +1138,7 @@ const Projects = () => {
 
                             <div className="scan-code">
                                 <img src={scanImage} alt="" className="img-responsive" />
-                                <p class="text-uppercase mt-1">Scan To See</p>
+                                <p className="text-uppercase mt-1">Scan To See</p>
                             </div>
                         </div>
                     </div>
@@ -651,6 +1152,22 @@ const Projects = () => {
             <footer className="bg-dark">
                 <div className="container-fluid">
                     <div className="row d-flex justify-content-between">
+                        <div className="col-sm-9 pt-md-5 pt-sm-2 left">
+                            <ul className="mt-5">
+                                <li>All Rights Reserved 2022 © Blippar Group Limited</li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Terms</a></li>
+                            </ul>
+                        </div>
+                        <div className="col-sm-3 text-right pt-1 mt-sm-2 mt-md-5 pr-5 right">
+                            <a href="/head"><img src={image4} alt="Icon To Top" className="icon-to-top" /></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            {/* <footer className="bg-dark">
+                <div className="container-fluid">
+                    <div className="row d-flex justify-content-between">
                         <div className="col-md-9 pt-md-5 pt-sm-2 left">
                             <ul className="mt-5 footerNew">
                                 <li>All Rights Reserved 2022 © Blippar Group Limited</li>
@@ -659,11 +1176,11 @@ const Projects = () => {
                             </ul>
                         </div>
                         <div className="col-md-3 text-right pt-1 mt-sm-2 mt-md-5 pr-5 right">
-                            <a href="/head"><img src={image4} alt="Icon To Top" class="icon-to-top" /></a>
+                            <a href="/head"><img src={image4} alt="Icon To Top" className="icon-to-top" /></a>
                         </div>
                     </div>
                 </div>
-            </footer>
+            </footer> */}
 
 
             {/* <!-- footer ends -->
@@ -678,32 +1195,30 @@ const Projects = () => {
 
 
                     <div className={slideName == 'slide-np1' ? "modal-content slide-np1 active" : "modal-content slide-np1 d-none"}>
-                        <button type="button" class="new-project-modal-close close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" className="new-project-modal-close close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true"><img src={crossIcon} alt="" /></span>
                         </button>
-                        <div class="modal-header text-center d-block flex-column">
+                        <div className="modal-header text-center d-block flex-column">
                             <h5 className="modal-title d-inline-block">New Project</h5>
-                            <p class="modal-subtitle d-block">
+                            <p className="modal-subtitle d-block">
                                 Let's get creating!
                             </p>
                         </div>
-                        <div class="modal-body">
-                            <div class="form-group">
+                        <div className="modal-body">
+                            <div className="form-group">
                                 <label className="projectNameNew" for="project-name">Give your project a name</label>
-                                <input type="text" class="form-control" name="" id="project-name" aria-describedby="project-name" placeholder="Project Name" />
-                                <div class="d-block text-center btn-call-to-action">
-                                    <button class="btn btn-secondary" onClick={() => showNext("slide-np2")}>Continue</button>
+                                <input type="text" className="form-control" name="" id="project-name" aria-describedby="project-name" placeholder="Project Name" />
+                                <div className="d-block text-center btn-call-to-action">
+                                    <button className="btn btn-secondary" onClick={() => showNext("slide-np2")}>Continue</button>
                                 </div>
                             </div>
                         </div>
-                        <ul class="carousel-dots d-block text-center">
-                            <li class="dot-1 active"></li>
-                            <li class="dot-2 "></li>
-                            <li class="dot-3"></li>
+                        <ul className="carousel-dots d-block text-center">
+                            <li className="dot-1 active"></li>
+                            <li className="dot-2 "></li>
+                            <li className="dot-3"></li>
                         </ul>
                     </div>
-
-
 
 
 
@@ -723,11 +1238,13 @@ const Projects = () => {
                         <div className="modal-body mt-n4">
                             <div className="row p-3">
                                 <div className="col-lg-4 col-md-6">
-                                    <div className="card text-left gutters">
+                                    <div className="card text-left gutters position-relative">
                                         <div className="card-image-container p-4">
-                                            {/* <img src={slidersecond} className="card-img-top project-image" alt="..." /> */}
 
-                                            <video className="vedeosection" width="295px" height="164px" controls poster={placeholderNewOne}>
+
+                                            <video className="vedeosection" width="295px" height="164px" autoPlay={true} controls loop
+                                            //poster={placeholderNewOne}
+                                            >
                                                 <source src="https://durgapanda.github.io/Blippar/videos/Tracked.mp4" type="video/mp4" />
                                                 <source src="movie.ogg" type="video/ogg" />
                                                 Your browser does not support the video tag.
@@ -747,11 +1264,14 @@ const Projects = () => {
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-6">
-                                    <div className="card text-left gutters">
+                                    <div className="card text-left gutters position-relative">
                                         <div className="card-image-container p-4">
-                                            {/* <img src={slidersecond} className="card-img-top project-image" alt="..." /> */}
 
-                                            <video className="vedeosection" width="295px" height="164px" controls poster={slidersecond}>
+
+                                            <video className="vedeosection" width="295px" height="164px" controls loop
+                                                autoPlay={true}
+                                            //poster={slidersecond}
+                                            >
                                                 <source src="https://durgapanda.github.io/Blippar/videos/Slam.mp4" type="video/mp4" />
                                                 <source src="movie.ogg" type="video/ogg" />
                                                 Your browser does not support the video tag.
@@ -771,12 +1291,14 @@ const Projects = () => {
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-6">
-                                    <div className="card text-left gutters">
+                                    <div className="card text-left gutters position-relative">
                                         <div className="card-image-container p-4">
-                                            {/* <img src={sliderThird} className="card-img-top project-image" alt="..." /> */}
 
-                                            <video className="vedeosection" width="295px" height="164px" controls poster={sliderThird}>
-                                                <source src="https://durgapanda.github.io/Blippar/videos/Gyro.mp4" type="video/mp4" />
+
+                                            <video className="vedeosection" width="295px" height="164px" autoPlay={true} loop controls
+                                            //poster={sliderThird}
+                                            >
+                                                <source src="https://durgapanda.github.io/Blippar/videos/Gyro.mp4" type="video/mp4" autoPlay />
                                                 <source src="movie.ogg" type="video/ogg" />
                                                 Your browser does not support the video tag.
                                             </video>
@@ -913,17 +1435,17 @@ const Projects = () => {
 
 
             <div className={showAddProject ? "modal fade new-folder show" : "modal fade new-folder"} id="newFolderModal" tabindex="-1" data-backdrop="static" aria-labelledby="newFolderModal" style={showAddProject ? { display: "block" } : { display: "none" }}>
-                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
 
-                    <div class="modal-content slide-f1 ">
-                        <div class="modal-body flex-column">
-                            <h5 class="modal-title d-block text-uppercase text-white text-center">New Folder</h5>
-                            <div class="form-group d-block text-center">
-                                <label for="folder-name" class="text-white mb-4">Give your folder a name</label>
-                                <input type="text" class="form-control" name="" id="folder-name" aria-describedby="folder-name" placeholder="Folder Name" />
-                                <div class="d-block text-center btn-call-to-action mt-5">
-                                    <button class="btn btn-white" onClick={() => { setShowAddProject(false); setConfirmProjetOrganise(!confirmProjetOrganise) }}>confirm</button>
-                                    <button class="btn btn-white ml-3" onClick={() => { setShowAddProject(false) }}>Cancel</button>
+                    <div className="modal-content slide-f1 ">
+                        <div className="modal-body flex-column">
+                            <h5 className="modal-title d-block text-uppercase text-white text-center">New Folder</h5>
+                            <div className="form-group d-block text-center">
+                                <label for="folder-name" className="text-white mb-4">Give your folder a name</label>
+                                <input type="text" className="form-control" name="" id="folder-name" aria-describedby="folder-name" placeholder="Folder Name" />
+                                <div className="d-block text-center btn-call-to-action mt-5">
+                                    <button className="btn btn-white" onClick={() => { setShowAddProject(false); setConfirmProjetOrganise(!confirmProjetOrganise) }}>confirm</button>
+                                    <button className="btn btn-white ml-3" onClick={() => { setShowAddProject(false) }}>Cancel</button>
                                 </div>
                             </div>
                         </div>
@@ -931,18 +1453,18 @@ const Projects = () => {
 
                 </div>
                 <div className={confirmProjetOrganise ? "modal fade new-folder show" : "modal fade delete-marker-modal "}>
-                    <div class="modal-header text-center d-block flex-column">
-                        <h5 class="modal-title d-inline-block"></h5>
-                        <p class="modal-subtitle d-block">
+                    <div className="modal-header text-center d-block flex-column">
+                        <h5 className="modal-title d-inline-block"></h5>
+                        <p className="modal-subtitle d-block">
                         </p>
                     </div>
-                    <div class="modal-body flex-column">
-                        <h5 class="modal-title d-block text-uppercase text-white text-center ">Organise your projects</h5>
-                        <div class="form-group d-block text-center">
-                            <p class="text-white">Simply drag and drop your projects into folders.</p>
+                    <div className="modal-body flex-column">
+                        <h5 className="modal-title d-block text-uppercase text-white text-center ">Organise your projects</h5>
+                        <div className="form-group d-block text-center">
+                            <p className="text-white">Simply drag and drop your projects into folders.</p>
                             <img src="images/new-folder-organise.png" alt="" />
-                            <div class="d-block text-center btn-call-to-action mt-5">
-                                <button class="btn btn-white" data-dismiss="modal" aria-label="Close" onClick={() => "getFolderName('slide-f2')"}>Got it</button>
+                            <div className="d-block text-center btn-call-to-action mt-5">
+                                <button className="btn btn-white" data-dismiss="modal" aria-label="Close" onClick={() => "getFolderName('slide-f2')"}>Got it</button>
                             </div>
                         </div>
                     </div>
@@ -958,15 +1480,15 @@ const Projects = () => {
                 style={showAddProject ? { display: "block" } : { display: "none" }} aria-labelledby="newFolderModal" aria-hidden="false">
                 <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
 
-                    <div class="modal-content slide-f1 ">
-                        <div class="modal-body flex-column">
-                            <h5 class="modal-title d-block text-uppercase text-white text-center">New Folder</h5>
-                            <div class="form-group d-block text-center">
-                                <label for="folder-name" class="text-white mb-4">Give your folder a name</label>
-                                <input type="text" class="form-control" name="" id="folder-name" aria-describedby="folder-name" placeholder="Folder Name" />
-                                <div class="d-block text-center btn-call-to-action mt-5">
-                                    <button class="btn btn-white" onClick={() => { setShowAddProject(false); setConfirmProjetOrganise(!confirmProjetOrganise) }}>confirm</button>
-                                    <button class="btn btn-white ml-3" onClick={() => { setShowAddProject(false) }}>Cancel</button>
+                    <div className="modal-content slide-f1 ">
+                        <div className="modal-body flex-column">
+                            <h5 className="modal-title d-block text-uppercase text-white text-center">New Folder</h5>
+                            <div className="form-group d-block text-center">
+                                <label for="folder-name" className="text-white mb-4">Give your folder a name</label>
+                                <input type="text" className="form-control" name="" id="folder-name" aria-describedby="folder-name" placeholder="Folder Name" />
+                                <div className="d-block text-center btn-call-to-action mt-5">
+                                    <button className="btn btn-white" onClick={() => { setShowAddProject(false); setConfirmProjetOrganise(!confirmProjetOrganise) }}>confirm</button>
+                                    <button className="btn btn-white ml-3" onClick={() => { setShowAddProject(false) }}>Cancel</button>
                                 </div>
                             </div>
                         </div>
@@ -979,7 +1501,7 @@ const Projects = () => {
             <div className={confirmProjetOrganise ? "modal fade new-folder show" : "modal fade delete-marker-modal "}
                 id="projectOrganise" tabIndex="1" role="dialog" data-backdrop="static" style={confirmProjetOrganise ? { display: "block" } : { display: "none" }}
                 aria-labelledby="newFolderModal" aria-hidden="false">
-                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
                     <div className="modal-content">
                         <div className="modal-header text-center d-block flex-column">
                             <h5 className="modal-title d-inline-block"></h5>
