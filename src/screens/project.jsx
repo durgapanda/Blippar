@@ -70,7 +70,7 @@ const Projects = () => {
     const [activeTilesGrid, setActiveTileGrid] = useState(false)
     const [slideName, setSlideName] = useState('slide-np1')
     const [message,setMessage] = useState(false)
-    const [messageDisplay,setMessageDisplay] = useState(false)
+    const [messageDisplay,setMessageDisplay] = useState(true)
 
     // const handleCancelEdit = () =
     //     setCancelEdit(false);
@@ -141,7 +141,7 @@ const Projects = () => {
     
           <!-- section-options starts --> */}
                 <div className="container-fluid">
-                    <div className="row bg-secondary d-flex d-lg-none d-sm-flex justify-content-between p-3 d-message">
+                    <div className={messageDisplay?"row bg-secondary d-flex d-lg-none d-sm-flex justify-content-between p-3 d-message":"d-none"}>
                         <p className="mb-0 col-11 text-left">To create or edit projects, please view on desktop.</p>
                         <div className="col-1 text-right" onClick={()=>setMessageDisplay(false)}><img src={crossImageModal}   alt=""/></div>
                     </div>
