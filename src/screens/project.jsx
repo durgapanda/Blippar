@@ -126,7 +126,7 @@ const Projects = () => {
                             </div>
                         </div>
                     </div>
-                    <button type="button" className="btn btn-secondary d-lg-block bg-dark btn-new-proj px-5 text-uppercase" data-toggle="modal" data-target="#newProjectModal" onclick="showNext('slide-np1')">Create A New
+                    <button type="button" className="btn btn-secondary d-lg-block bg-dark btn-new-proj px-5 text-uppercase" data-toggle="modal" data-target="#newProjectModal" onClick="showNext('slide-np1')">Create A New
                         Project</button>
                 </header>
 
@@ -1033,6 +1033,61 @@ const Projects = () => {
                             </div>
                         </div>
                     </div>
+                    <div className="row shadow-sm p-2 justify-content-between mb-3">
+                        <div className="left d-md-flex d-sm-block flex-lg-row flex-sm-column">
+                            <div className="card-image-container position-relative" onMouseEnter={() => setModalShow(!modalShow)} onMouseLeave={() => setModalShow(false)}>
+                                <img src={imageActive1} className="card-img-top project-image" alt="..." />
+                                <div className={modalShow ? "menu align-center flex-column btn-call-to-action" : "menu align-center flex-column btn-call-to-action d-none"}>
+                                    <button className="btn btn-white">Open Project</button>
+                                    <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectWOModal">View
+                                        Project</button>
+                                </div>
+                            </div>
+                            <div className="title-container text-left d-block ml-3 mt-n2">
+                                <p className="card-text">
+                                    <h3 className="card-title text-uppercase">Using the Gyro</h3>
+                                    Date Created: <span className="date">12th April 2022</span> <br />
+                                    Created by: <span className="created">Blippar</span>
+                                </p>
+                                <p className="status"> <span className="status-legend published mr-2"></span><span
+                                    className="status-text">Published</span></p>
+                            </div>
+                        </div>
+                        <div className="right d-md-flex d-sm-block flex-lg-row flex-sm-column">
+                            <div className="views-container d-flex flex-column justify-content-between mr-3">
+                                <div className="d-block text-right mt-4">
+                                    <div className="title d-flex justify-content-between">
+                                        <div className="dotImageNew">
+                                            <img src={trendImage} alt="" />
+                                            <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+
+
+                                            {/* <img src={dot1} className="ml-3 dropdown-toggle cup" alt=""
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" /> */}
+                                            <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
+                                                <button className="dropdown-item" href="#">Open project</button>
+                                                <button className="dropdown-item" data-toggle="modal" data-target="#previewProjectModal">Preview
+                                                    project</button>
+                                                <button className="dropdown-item" href="#">Duplicate project</button>
+                                                <button className="dropdown-item" href="#">Delete project</button>
+                                                <button className="dropdown-item" href="#">Version history</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div className="views align-self-center p-1 pr-3 mb-2">
+                                    Views: <span>1</span>
+                                </div>
+                            </div>
+                            <div className="scan-code">
+                                <img src={scanImage} alt="" className="img-responsive" />
+                                <p className="text-uppercase mt-1">Scan To See</p>
+                            </div>
+                        </div>
+                    </div>
 
 
 
@@ -1149,15 +1204,17 @@ const Projects = () => {
             {/* <!-- section tiles end -->*/}
 
             {/*<!-- footer starts --> */}
-            <footer className="bg-dark">
+
+
+             <footer className="bg-dark">
                 <div className="container-fluid">
                     <div className="row d-flex justify-content-between">
                         <div className="col-sm-9 pt-md-5 pt-sm-2 left">
-                            <ul className="mt-5">
-                                <li>All Rights Reserved 2022 © Blippar Group Limited</li>
-                                <li><a href="#">Privacy</a></li>
-                                <li><a href="#">Terms</a></li>
-                            </ul>
+                            <div className="mt-5 footerNew">
+                                <span>All Rights Reserved 2022 © Blippar Group Limited</span>
+                                <span><a href="#">Privacy</a></span>
+                                <span><a href="#">Terms</a></span>
+                            </div>
                         </div>
                         <div className="col-sm-3 text-right pt-1 mt-sm-2 mt-md-5 pr-5 right">
                             <a href="/head"><img src={image4} alt="Icon To Top" className="icon-to-top" /></a>
@@ -1165,17 +1222,18 @@ const Projects = () => {
                     </div>
                 </div>
             </footer>
+            
             {/* <footer className="bg-dark">
                 <div className="container-fluid">
                     <div className="row d-flex justify-content-between">
                         <div className="col-md-9 pt-md-5 pt-sm-2 left">
                             <ul className="mt-5 footerNew">
-                                <li>All Rights Reserved 2022 © Blippar Group Limited</li>
+                                <span><li>All Rights Reserved 2022 © Blippar Group Limited</li></span>
                                 <li><a href="#">Privacy</a></li>
                                 <li><a href="#">Terms</a></li>
                             </ul>
                         </div>
-                        <div className="col-md-3 text-right pt-1 mt-sm-2 mt-md-5 pr-5 right">
+                        <div className="col-sm-3 text-right pt-1 mt-sm-2 mt-md-5 pr-5 right">
                             <a href="/head"><img src={image4} alt="Icon To Top" className="icon-to-top" /></a>
                         </div>
                     </div>
