@@ -37,6 +37,7 @@ import placeholderNewOne from '../assets/images/placeholder1.png'
 import secondFolderImage1 from '../assets/images/folder-tn2.png'
 import secondFolderImage2 from '../assets/images/folder-tn1.png'
 import secondFolderImage3 from '../assets/images/folder-tn3.png'
+import crossImageModal from '../assets/images/close.png'
 
 
 import { useState } from "react";
@@ -65,6 +66,7 @@ const Projects = () => {
     const [cancelButton, setCancelButton] = useState(true)
     const [cancelButtonOrganize, setCancelButtonOrganize] = useState(false)
     const [showView, setShowView] = useState(false)
+    const [modalShowNeww, setModalShowNeww] = useState(false)
     const [activeTilesGrid, setActiveTileGrid] = useState(false)
     const [slideName, setSlideName] = useState('slide-np1')
     // const handleCancelEdit = () => {
@@ -179,10 +181,10 @@ const Projects = () => {
     
           <!-- section-options starts --> */}
                 <div className="container-fluid">
-                    {/* <div className="row bg-secondary d-flex d-lg-none d-sm-flex justify-content-between p-3 d-message">
-                        <p classNmae="mb-0 col-11 text-left">To create or edit projects, please view on desktop.</p>
-                        <div className="col-1 text-right" onclick="hideMessage()"><img src="images/close.png" alt="" /></div>
-                    </div> */}
+                    <div className="row bg-secondary d-flex d-lg-none d-sm-flex justify-content-between p-3 d-message">
+                        <p className="mb-0 col-11 text-left">To create or edit projects, please view on desktop.</p>
+                        <div className="col-1 text-right" onClick="hideMessage()"><img src={crossImageModal} alt=""/></div>
+                    </div>
                     <section className="justify-content-between row section-options mb-3">
                         <div className="subnav col text-left">
                             <span className="subtitle">Your projects</span>
@@ -271,11 +273,11 @@ const Projects = () => {
                                         <img src={scanImage} alt="" className="img-responsive" />
                                         <p>Scan To See</p>
                                     </div>
-                                    
+
                                 </div>
                                 <div className="view-ar d-none btn-call-to-action">
-                                        <button className="btn btn-secondary">View in AR</button>
-                                    </div>
+                                    <button className="btn btn-secondary">View in AR</button>
+                                </div>
                                 <div className="card-body">
                                     <div className="title d-flex justify-content-between">
                                         <h3 className="card-title text-uppercase">Using the Gyro</h3>
@@ -359,7 +361,7 @@ const Projects = () => {
                         <div className="col">
                             <div className="card text-left gutters">
                                 <div className="card-image-container p-2" onMouseEnter={() => { setshowModalImage(!showModalImage) }} onMouseLeave={() => setshowModalImage(false)}>
-                                    <img src={image2} className="card-img-top project-image" alt="..." />
+                                    <img src={image1} className="card-img-top project-image" alt="..." />
                                     <div className={showModalImage ? "menu align-center flex-column btn-call-to-action" : "menu align-center flex-column btn-call-to-action d-none"}>
                                         <button className="btn btn-white">Open Project</button>
                                         <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectModal">View
@@ -372,7 +374,7 @@ const Projects = () => {
                                 </div>
                                 <div className="card-body">
                                     <div className="title d-flex justify-content-between">
-                                        <h3 className="card-title text-uppercase">Project Starter 3</h3>
+                                        <h3 className="card-title text-uppercase">Demo 1</h3>
                                         <div>
                                             <img src={trendImage} alt="" />
                                             <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
@@ -392,8 +394,8 @@ const Projects = () => {
                                         Created by: <span className="created">Blippar</span>
                                     </p>
                                     <div className="title d-flex justify-content-between">
-                                        <p className="status"> <span className="status-legend not-published mr-2"></span><span className="status-text">Not
-                                            Published</span></p>
+                                        <p className="status"> <span className="status-legend published mr-2"></span><span
+                                            className="status-text">Published</span></p>
                                         <div className="views align-self-center p-1 pr-3">
                                             Views: <span>1</span>
                                         </div>
@@ -1035,9 +1037,9 @@ const Projects = () => {
                     </div>
                     <div className="row shadow-sm p-2 justify-content-between mb-3">
                         <div className="left d-md-flex d-sm-block flex-lg-row flex-sm-column">
-                            <div className="card-image-container position-relative" onMouseEnter={() => setModalShow(!modalShow)} onMouseLeave={() => setModalShow(false)}>
+                            <div className="card-image-container position-relative" onMouseEnter={() => setModalShowNeww(!modalShowNeww)} onMouseLeave={() => setModalShowNeww(false)}>
                                 <img src={imageActive1} className="card-img-top project-image" alt="..." />
-                                <div className={modalShow ? "menu align-center flex-column btn-call-to-action" : "menu align-center flex-column btn-call-to-action d-none"}>
+                                <div className={modalShowNeww ? "menu align-center flex-column btn-call-to-action" : "menu align-center flex-column btn-call-to-action d-none"}>
                                     <button className="btn btn-white">Open Project</button>
                                     <button className="btn btn-white mt-4" data-toggle="modal" data-target="#viewProjectWOModal">View
                                         Project</button>
@@ -1206,7 +1208,7 @@ const Projects = () => {
             {/*<!-- footer starts --> */}
 
 
-             <footer className="bg-dark">
+            <footer className="bg-dark">
                 <div className="container-fluid">
                     <div className="row d-flex justify-content-between">
                         <div className="col-sm-9 pt-md-5 pt-sm-2 left">
@@ -1222,7 +1224,7 @@ const Projects = () => {
                     </div>
                 </div>
             </footer>
-            
+
             {/* <footer className="bg-dark">
                 <div className="container-fluid">
                     <div className="row d-flex justify-content-between">
