@@ -314,7 +314,7 @@ h5 {
     right: 50px;
     padding: 16px;
     bottom: 93px;
-}     
+}
 
 .logo-section {
     text-align: left;
@@ -1213,16 +1213,18 @@ footer {
         max-width: 100%;
     }
 
+
     .header {
-        /* background: url(../assets/images/header-bg-sm.png) top center no-repeat; */
+        background: url(../assets/images/header-bg-sm.png) top center no-repeat !important;
         /* background-size: cover; */
         display: block;
         position: relative;
-        top: 0;
-        padding: 10px;
-        margin-bottom: 20px;
-        height: 290px;
+        top: 4px;
+        padding: 11px;
+        margin-bottom: 15px;
+        height: 288px;
     }
+
 
     .profile-section .avatar {
         font-family: 'Brandon Grotesque Black', sans-serif;
@@ -1419,7 +1421,7 @@ footer {
         display: none;
     }
 
-  
+
 
 }
 
