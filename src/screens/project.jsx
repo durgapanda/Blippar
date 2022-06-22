@@ -146,7 +146,7 @@ const Projects = () => {
                         <div className="col-1 text-right" onClick={()=>setMessageDisplay(false)}><img src={crossImageModal}   alt=""/></div>
                     </div>
                     <section className="justify-content-between row section-options mb-3">
-                        <div className="subnav col text-left">
+                        <div className="subnav col-8 text-left">
                             <span className="subtitle">Your projects</span>
                             <div className="dropdown open d-inline">
                                 <button className="btn btn-secondary-o dropdown-toggle text-uppercase dropdown-sort ml-4 pl-4 py-2" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -605,8 +605,8 @@ const Projects = () => {
                                     <p className="card-text">
                                         Date Created: <span className="date">12th April 2022</span>
                                         Created by: <span className="created">Name</span>
-                                    </p><p className="proj-count-wrapper proj-count-wrapper"><span className="proj-count mt-3">3</span>
-                                        Projects</p>
+                                    </p>
+                                    <p className="proj-count-wrapper proj-count-wrapper"><span className="proj-count mt-3">3</span>Projects</p>
                                     <p></p>
                                 </div>
                             </div>
