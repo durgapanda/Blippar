@@ -1,5 +1,6 @@
-import "./projectlatest.css";
+// import "./projectlatest.css";
 //import "./font.css";
+import "./oldstyle.css"
 import logo from '../assets/images/logo.svg';
 import ddArrowDown from '../assets/images/icon-caret-down.svg';
 import menu from '../assets/images/icon-hamburger-menu.svg';
@@ -69,8 +70,8 @@ const Projects = () => {
     const [modalShowNeww, setModalShowNeww] = useState(false)
     const [activeTilesGrid, setActiveTileGrid] = useState(false)
     const [slideName, setSlideName] = useState('slide-np1')
-    const [message,setMessage] = useState(false)
-    const [messageDisplay,setMessageDisplay] = useState(true)
+    const [message, setMessage] = useState(false)
+    const [messageDisplay, setMessageDisplay] = useState(true)
 
     // const handleCancelEdit = () =
     //     setCancelEdit(false);
@@ -85,19 +86,16 @@ const Projects = () => {
         setSlideName("slide-np1")
     };
 
-// const messageDisplay = (event) => {
-//     setMessageDisplayo(false)
-// }
+    // const messageDisplay = (event) => {
+    //     setMessageDisplayo(false)
+    // }
 
     return (
 
         <div className="text-center">
             <div className="container-fluid">
                 {/* <!-- header starts --> */}
-
-
                 <header className="header row">
-
                     <div className="logo-section col-sm-12 col-md-4 my-4">
                         <p>
                             <a href="#" className="logo">
@@ -139,14 +137,20 @@ const Projects = () => {
 
                 {/* <!-- header ends -->
     
-          <!-- section-options starts --> */}
+          
+          {/* display message on tab & mobile starts */}
                 <div className="container-fluid">
-                    <div className={messageDisplay?"row bg-secondary d-flex d-lg-none d-sm-flex justify-content-between p-3 d-message":"d-none"}>
+                    <div className={messageDisplay ? "row bg-secondary d-flex d-lg-none d-sm-flex justify-content-between p-3 d-message" : "d-none"}>
                         <p className="mb-0 col-11 text-left">To create or edit projects, please view on desktop.</p>
-                        <div className="col-1 text-right" onClick={()=>setMessageDisplay(false)}><img src={crossImageModal}   alt=""/></div>
+                        <div className="col-1 text-right" onClick={() => setMessageDisplay(false)}><img src={crossImageModal} alt="" /></div>
                     </div>
+                </div>
+                {/* display message on tab & mobile ends */}
+
+                {/* section-options starts */}
+                <div className="container-fluid">
                     <section className="justify-content-between row section-options mb-3">
-                        <div className="subnav col-8 text-left">
+                        <div className="subnav title col-8 text-left">
                             <span className="subtitle">Your projects</span>
                             <div className="dropdown open d-inline">
                                 <button className="btn btn-secondary-o dropdown-toggle text-uppercase dropdown-sort ml-4 pl-4 py-2" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -163,7 +167,7 @@ const Projects = () => {
                         </div>
 
 
-                        <div className="subnav newfolder"  >
+                        <div className="subnav icons col text-right newfolder"  >
                             {
                                 activeTiles ? <img src={menuHumber} alt="Icon Menu" width="32px" height="27px"
                                     className={activeTiles ? "cupNew subnav-icon icon-grid " : "cup subnav-icon icon-grid"} onClick={() => setActiveTiles(!activeTiles)} /> :
@@ -172,17 +176,24 @@ const Projects = () => {
                                         className="cupNew subnav-icon icon-tiles" onClick={() => setActiveTiles(!activeTiles)}
 
                                     />}
-
-
                             <img src={folder} data-toggle="modal" onClick={() => setShowAddProject(true)}
                                 className="d-inline-block ml-3 cup newfolder-st " alt="Icon Folder"
                             />
                         </div>
                     </section>
-              
                 </div>
-                {/* <!-- section options end -->
-          <!-- section grid starts --> */}
+                {/* section options end */}
+                {/* <!-- breadcrumbs starts --> */}
+                <div className="container-fluid breadcrumbs d-none">
+                    <div className="row">
+                        <p>
+                            <a href="#" className="text-warning" onclick="showAllProjects()">All Projects</a> <span class="divider"> | </span>
+                            <a href="#" className="text-secondary">Folder Name</a>
+                        </p>
+                    </div>
+                </div>
+                {/* <!-- breadcrumbs ends--> */}
+                {/* <!-- section grid starts -->  */}
                 <div className={activeTiles ? "container-fluid section-grid d-none" : "container-fluid section-grid active"}>
                     <div className="row section-projects">
                         <div className="col" style={{ marginBottom: "25px" }}>
@@ -208,7 +219,7 @@ const Projects = () => {
                                 <div className="card-body">
                                     <div className="title d-flex justify-content-between">
                                         <h3 className="card-title text-uppercase">Using the Gyro</h3>
-                                        <div>
+                                        <div className="grid-icons">
                                             <img src={trendImage} alt="" />
                                             <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
 
@@ -221,8 +232,8 @@ const Projects = () => {
                                                 <button className="dropdown-item" href="#">Version history</button>
                                             </div>
                                         </div>
-
                                     </div>
+
                                     <p className="card-text">
                                         Date Created: <span className="date">12th April 2022</span> <br />
                                         Created by: <span className="created">Blippar</span>
@@ -237,7 +248,6 @@ const Projects = () => {
                                 </div>
                             </div>
                         </div>
-
 
                         <div className="col">
                             <div className="card text-left gutters">
@@ -256,7 +266,7 @@ const Projects = () => {
                                 <div className="card-body">
                                     <div className="title d-flex justify-content-between">
                                         <h3 className="card-title text-uppercase">Demo 1</h3>
-                                        <div>
+                                        <div className="d-sm-none">
                                             <img src={trendImage} alt="" />
                                             <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
                                             <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
@@ -268,8 +278,8 @@ const Projects = () => {
                                                 <button className="dropdown-item" href="#">Version history</button>
                                             </div>
                                         </div>
-
                                     </div>
+
                                     <p className="card-text">
                                         Date Created: <span className="date">12th April 2022</span> <br />
                                         Created by: <span className="created">Blippar</span>
@@ -332,11 +342,7 @@ const Projects = () => {
                         </div>
 
 
-
-
-
-
-
+                        {/* me */}
                         <div className="col " style={{ marginBottom: "25px" }}>
                             <div className="card text-left gutters">
                                 <div className="card-image-container p-2" onMouseEnter={() => { setshowModalImageAddNew(!showModalImageAddNew) }} onMouseLeave={() => setshowModalImageAddNew(false)}>
@@ -355,7 +361,7 @@ const Projects = () => {
                                 <div className="card-body">
                                     <div className="title d-flex justify-content-between">
                                         <h3 className="card-title text-uppercase">Project Starter 3</h3>
-                                        <div>
+                                        <div className="grid-icons">
                                             <img src={trendImage} alt="" />
                                             <img src={dot1} className="context-menu dropdown-toggle cup" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
                                             <div className="dropdown-menu dropdown-sort-options" aria-labelledby="triggerId">
@@ -1134,8 +1140,23 @@ const Projects = () => {
 
             {/*<!-- footer starts --> */}
 
-
-            <footer className="bg-dark">
+            <footer class="bg-dark">
+                <div className="container-fluid">
+                    <div className="row d-flex justify-content-between">
+                        <div className="col-sm-9 pt-md-5 pt-sm-2 left">
+                            <ul className="mt-5 footerNew" style={{ marginLeft: "-55.5%"}} >
+                                <li>All Rights Reserved 2022 © Blippar Group Limited</li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Terms</a></li>
+                            </ul>
+                        </div>
+                        <div className="col-sm-3 text-right pt-1 mt-sm-2 mt-md-5 pr-5 right">
+                            <a href="/head"><img src={image4} alt="Icon To Top" className="icon-to-top" /></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            {/* <footer className="bg-dark">
                 <div className="container-fluid">
                     <div className="row d-flex justify-content-between">
                         <div className="col-sm-9 pt-md-5 pt-sm-2 left">
@@ -1150,7 +1171,7 @@ const Projects = () => {
                         </div>
                     </div>
                 </div>
-            </footer>
+            </footer> */}
 
             {/* <footer className="bg-dark">
                 <div className="container-fluid">

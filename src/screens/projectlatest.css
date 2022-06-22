@@ -27,6 +27,7 @@ strong {
     font-family: 'Avenir Black', san-serif;
 }
 
+
 /* b, strong {
     font-weight: bolder;
     color: #212529;
@@ -1458,6 +1459,13 @@ footer {
         margin-bottom: 20px;
         background-size: cover;
         height: 213px;
+    }
+    .subnav.title {
+        flex: 0 0 100% !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        max-width: 100% !important;
+        padding: 0 !important;
     }
 }
 

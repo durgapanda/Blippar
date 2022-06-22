@@ -164,6 +164,12 @@ h5 {
     position: relative;
 }
 
+.logo-section {
+    text-align: left;
+    z-index: 99;
+    height: 200px;
+}
+
 .logo-section p {
     line-height: 1.0;
     margin-bottom: 5px;
@@ -322,10 +328,11 @@ h5 {
 }
 
 .menu-top {
-    position: absolute;
-    top: -170px;
-    left: 80px;
-    z-index: -1;
+    /* position: absolute;
+  top: -170px;
+  left: 80px;
+  z-index: -1; */
+    display: none;
 }
 
 .modal-content.slide-np3 {
@@ -389,6 +396,10 @@ h5 {
     font-size: 16px;
 }
 
+.modal {
+    background-color: rgba(0, 0, 0, 0.386);
+}
+
 .section-tiles .right .scan-code {
     cursor: pointer;
     background-color: #fff;
@@ -432,6 +443,17 @@ h5 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
+@media (max-width: 768px) {
+    .view-ar {
+        display: block !important;
+        position: absolute;
+        bottom: -20px;
+        right: 20px;
+        text-transform: uppercase;
+    }
+
+}
+
 .card-text {
     font-family: 'Avenir Light', sans-serif;
     font-size: 18px;
@@ -452,9 +474,15 @@ h5 {
     padding: 40px 0 !important;
 }
 
-.card-image-container:hover img {
+.section-folders .card-image-container:hover img {
     transform: scale(1.1, 1.1);
     transition: transform 0.5s;
+}
+
+.mt-3,
+.my-3 {
+    margin-top: 1rem !important;
+    margin-right: 5px;
 }
 
 .section-folders .card-image-container img:nth-child(1) {
@@ -481,6 +509,15 @@ h5 {
     z-index: 0;
 }
 
+.dotImageNew {
+    margin-left: 74px;
+}
+
+.h3,
+h3 {
+    font-size: 1.2rem;
+}
+
 .card-image-container .scan-code {
     position: absolute;
     right: 20px;
@@ -492,6 +529,16 @@ h5 {
     height: 147px;
     padding-top: 12px;
     border-radius: 5px;
+}
+
+.mt-5,
+.my-5 {
+    margin-top: 3rem !important;
+    /* margin-left: -33.5%!important; */
+}
+
+.projectNameNew {
+    margin-right: 70%;
 }
 
 .card-image-container .scan-code p {
@@ -752,8 +799,6 @@ footer ul li {
     font-size: 14px;
 }
 
-
-
 footer ul li a {
     color: white;
     font-size: 14px;
@@ -774,11 +819,14 @@ footer .icon-to-top {
 
 
 @media (min-width: 700px) {
+
     .col .card {
         margin-bottom: 30px;
     }
 
 }
+
+
 
 @media (min-width: 992px) {
 
@@ -892,7 +940,7 @@ footer .icon-to-top {
 /* Extra large devices (large desktops, 1200px and down) */
 @media (max-width: 992px) {
     .header {
-        background: url(../assets/images/header-bg.png) top center no-repeat;
+        background: url(../assets/images/header-bg-md.png) top center no-repeat;
         display: block;
         position: relative;
         top: 0;
@@ -1100,7 +1148,7 @@ footer .icon-to-top {
     .view-ar {
         display: block !important;
         position: absolute;
-        bottom: -20px;
+        bottom: 160px;
         right: 20px;
         text-transform: uppercase;
     }
@@ -1145,7 +1193,7 @@ footer .icon-to-top {
 /* Small devices (landscape phones, 576px and down) */
 @media (max-width: 576px) {
     .header {
-        background: url(../assets/images/header-bg.png) top center no-repeat;
+        background: url(../assets/images/header-bg-sm.png) top center no-repeat;
         /* background-size: cover; */
         display: block;
         position: relative;
