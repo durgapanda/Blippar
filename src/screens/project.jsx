@@ -196,7 +196,7 @@ const Projects = () => {
                 {/* <!-- section grid starts -->  */}
                 <div className={activeTiles ? "container-fluid section-grid d-none" : "container-fluid section-grid active"}>
                     <div className="row section-projects">
-                        <div className="col" style={{ marginBottom: "25px" }}>
+                        <div className="col" style={{ marginBottom: "0px" }}>
                             <div className="card text-left gutters">
                                 <div className="card-image-container p-2 position-relative" onMouseEnter={() => setShow(!show)} onMouseLeave={() => setShow(false)}>
                                     <img src={f1Image} className="card-img-top project-image" alt="..." />
@@ -343,7 +343,7 @@ const Projects = () => {
 
 
                         {/* me */}
-                        <div className="col " style={{ marginBottom: "25px" }}>
+                        <div className="col " style={{ marginBottom: "0px" }}>
                             <div className="card text-left gutters">
                                 <div className="card-image-container p-2" onMouseEnter={() => { setshowModalImageAddNew(!showModalImageAddNew) }} onMouseLeave={() => setshowModalImageAddNew(false)}>
                                     <img src={image2} className="card-img-top project-image" alt="..." />
@@ -589,7 +589,7 @@ const Projects = () => {
 
 
                     <div className="row section-folders">
-                        <div className="col" style={{ marginBottom: "25px" }}>
+                        <div className="col" style={{ marginBottom: "0px" }}>
                             <div className="card text-left gutters">
                                 <div className="card-image-container" onClick="showFolderDetails()">
                                     <img src={secondFolderImage1} alt="" className="img-fluid" />
@@ -1570,7 +1570,7 @@ const Projects = () => {
                             <span aria-hidden="true"><img src={crossIcon} alt="" /></span>
                         </button>
                         <div className="modal-body row">
-                            <div className="col text-center">
+                            <div className="col-6 text-center">
 
                                 <h5 className="modal-title">View Project</h5>
                                 <p className="modal-text">
@@ -1594,7 +1594,7 @@ const Projects = () => {
                                     <button className="btn btn-secondary">Download QR and marker</button>
                                 </div>
                             </div>
-                            <div className="col">
+                            <div className="col-6">
                                 <img style={{ marginRight: "74px" }} src={barcadeSideImage} alt="" />
                             </div>
                         </div>
@@ -1620,7 +1620,7 @@ const Projects = () => {
                             <span aria-hidden="true"><img src={crossIcon} alt="" /></span>
                         </button>
                         <div className="modal-body row">
-                            <div className="col text-center">
+                            <div className="col-12 text-center">
 
                                 <h5 className="modal-title">View Project</h5>
                                 <p className="modal-text">

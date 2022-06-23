@@ -339,6 +339,20 @@ h5 {
     /* height: 750px; */
     /* top: 150px; */
 }
+.modal-content {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1pxsolidrgba(0,0,0,.2);
+    border-radius: 0.3rem;
+    outline: 0;
+}
 
 .modal-md {
     max-width: 615px !important;
