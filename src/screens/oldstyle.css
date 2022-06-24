@@ -301,7 +301,9 @@ h5 {
     top: -3px;
     right: -15px;
 }
-
+.cup {
+    cursor: pointer !important;
+}
 
 .dropdown-menu,
 .menu-top {
@@ -1226,11 +1228,6 @@ footer .icon-to-top {
         margin: 0px !important;
     }
 
-    footer ul li {
-        display: block !important;
-        margin-bottom: 5px;
-    }
-
     .section-folders {
         display: none;
     }
@@ -1238,7 +1235,10 @@ footer .icon-to-top {
     .section-options {
         margin-top: 55px;
     }
-
+    footer ul li {
+        display: block !important;
+        margin-bottom: 5px;
+    }
 
 }
 

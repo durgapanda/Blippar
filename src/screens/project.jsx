@@ -73,7 +73,7 @@ const Projects = () => {
     const [message, setMessage] = useState(false)
     const [messageDisplay, setMessageDisplay] = useState(true)
     const [showAllProjects, setShowAllProjects] = useState(true)
-    const [showFolderDetails, setShowFolderDetails] = useState(true)
+    const [showFolderDetails, setShowFolderDetails] = useState(false)
 
     // const handleCancelEdit = () =
     //     setCancelEdit(false);
@@ -174,7 +174,7 @@ const Projects = () => {
                                 activeTiles ? <img src={menuHumber} alt="Icon Menu" width="32px" height="27px"
                                     className={activeTiles ? "cupNew subnav-icon icon-grid " : "cup subnav-icon icon-grid"} onClick={() => setActiveTiles(!activeTiles)} /> :
 
-                                    <img style={{ marginRight: "4px" }} src={menu} alt="Icon Menu" width="32px" height="24px"
+                                    <img style={{ marginRight: "4px",cursor:"pointer" }} src={menu} alt="Icon Menu" width="32px" height="24px"
                                         className="cupNew subnav-icon icon-tiles" onClick={() => setActiveTiles(!activeTiles)}
 
                                     />}
@@ -186,10 +186,10 @@ const Projects = () => {
                 </div>
                 {/* section options end */}
                 {/* <!-- breadcrumbs starts --> */}
-                <div className={showAllProjects ? "container-fluid breadcrumbs" : "container-fluid breadcrumbs d-none"}>
+                <div className={showAllProjects ? "container-fluid breadcrumbs d-none" : "container-fluid breadcrumbs "}>
                     <div className="row">
                         <p>
-                            <a href="#" className="text-warning" onClick={() => { setShowAllProjects(false) }}>All Projects</a> <span className="divider"> | </span>
+                            <a href="#" className="text-warning" onClick={() => { setShowAllProjects(!showAllProjects) ;setShowFolderDetails(false)}}>All Projects</a> <span className="divider"> | </span>
                             <a href="#" className="text-secondary">Folder Name</a>
                         </p>
                     </div>
@@ -197,7 +197,7 @@ const Projects = () => {
                 {/* <!-- breadcrumbs ends--> */}
                 {/* <!-- section grid starts -->  */}
                 <div className={activeTiles ? "container-fluid section-grid d-none" : "container-fluid section-grid active"}>
-                    <div className="row section-projects">
+                    <div className={showFolderDetails?"row section-projects d-none":"row section-projects "}>
                         <div className="col" style={{ marginBottom: "0px" }}>
                             <div className="card text-left gutters">
                                 <div className="card-image-container p-2 position-relative" onMouseEnter={() => setShow(!show)} onMouseLeave={() => setShow(false)}>
@@ -593,7 +593,7 @@ const Projects = () => {
                     <div className="row section-folders">
                         <div className="col" style={{ marginBottom: "0px" }}>
                             <div className="card text-left gutters">
-                                <div className="card-image-container" onClick={() => { setShowFolderDetails(false) }}>
+                                <div className="card-image-container" onClick={() => {setShowFolderDetails(true);setShowAllProjects(!showAllProjects) }}>
                                     <img src={secondFolderImage1} alt="" className="img-fluid" />
                                     <img src={secondFolderImage2} alt="" className="img-fluid" />
                                     <img src={secondFolderImage3} alt="" className="img-fluid" />
@@ -1265,6 +1265,22 @@ const Projects = () => {
                         </div>
                     </div>
                 </footer>
+                {/* <footer className="bg-dark">
+                    <div className="container-fluid">
+                        <div className="row d-flex justify-content-between">
+                            <div className="col-sm-9 pt-md-5 pt-sm-2 left">
+                                <ul className="mt-5 footerNew" style={{ marginLeft: "-55.5%" }} >
+                                    <li>All Rights Reserved 2022 © Blippar Group Limited</li>
+                                    <li><a href="#">Privacy</a></li>
+                                    <li><a href="#">Terms</a></li>
+                                </ul>
+                            </div>
+                            <div className="col-sm-3 text-right pt-1 mt-sm-2 mt-md-5 pr-5 right">
+                                <a href="/head"><img src={image4} alt="Icon To Top" className="icon-to-top" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </footer> */}
                 {/* <footer className="bg-dark">
                 <div className="container-fluid">
                     <div className="row d-flex justify-content-between">
