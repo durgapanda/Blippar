@@ -222,6 +222,10 @@ h5 {
     width: 13px;
 }
 
+.mt-n2,
+.my-n2 {
+    margin-top: 0.5rem !important;
+}
 
 .profile-section .avatar {
     font-family: 'Brandon Grotesque Black', sans-serif;
@@ -262,7 +266,11 @@ h5 {
     font-size: 26px;
     position: relative;
     top: -3px;
-    margin-left: -14px;
+    margin-left: -32px;
+}
+
+.newfolder {
+    padding-right: 0px;
 }
 
 .text-sort {
@@ -339,6 +347,7 @@ h5 {
     /* height: 750px; */
     /* top: 150px; */
 }
+
 .modal-content {
     position: relative;
     display: -ms-flexbox;
@@ -349,7 +358,7 @@ h5 {
     pointer-events: auto;
     background-color: #fff;
     background-clip: padding-box;
-    border: 1pxsolidrgba(0,0,0,.2);
+    border: 1pxsolidrgba(0, 0, 0, .2);
     border-radius: 0.3rem;
     outline: 0;
 }
@@ -373,10 +382,10 @@ h5 {
     top: 3px;
 }
 
-.section-grid,
+/* .section-grid,
 .section-tiles {
-    padding: 0 2em;
-}
+    padding: 0 0em;
+} */
 
 .section-grid .card-text,
 .section-grid .status-text,
@@ -796,7 +805,7 @@ h3.card-title {
 }
 
 .context-menu {
-    margin-left: 10px;
+    margin-left: 13px;
     padding: 10px;
     padding-right: 0;
 }
@@ -838,6 +847,10 @@ footer .icon-to-top {
         margin-bottom: 30px;
     }
 
+    /* .view-ar .btn {
+        font-size: 20px;
+        padding: 20px;
+    } */
 }
 
 
@@ -949,6 +962,7 @@ footer .icon-to-top {
     .slide-np2 .card {
         height: 540px;
     }
+
 }
 
 /* Extra large devices (large desktops, 1200px and down) */
@@ -1122,6 +1136,15 @@ footer .icon-to-top {
         margin-top: 20px;
     }
 
+    .views-container .btn {
+        font-size: 16px;
+        position: relative;
+    }
+
+    /* .view-ar .btn {
+        font-size: 20px;
+        padding: 20px;
+    } */
 
 }
 
@@ -1255,5 +1278,12 @@ footer .icon-to-top {
 @media (max-width: 500px) {
     .d-message {
         width: 100%;
+    }
+
+}
+
+@media  (min-width: 992px) and (max-width: 1920px) {
+    .btn-call-to-action .btn {
+        display: none;
     }
 }
