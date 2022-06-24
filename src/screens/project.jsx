@@ -216,7 +216,7 @@ const Projects = () => {
 
                                 </div>
                                 <div className="view-ar visible btn-call-to-action mt-1">
-                                    <button className="btn btn-secondary">View in AR</button>
+                                    <button className="btn btn-secondaryNew">View in AR</button>
                                 </div>
                                 <div className="card-body">
                                     <div className="title d-flex justify-content-between">

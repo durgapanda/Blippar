@@ -54,6 +54,14 @@ strong {
     background-color: #2E3240 !important;
 }
 
+.btn-secondaryNew-o {
+    border-radius: 20px;
+    background-color: transparent;
+    border: 1px solid #CCC;
+    text-align: left;
+    width: 200px;
+    color: #2E3240;
+}
 .btn-secondary-o {
     border-radius: 20px;
     background-color: transparent;
@@ -88,6 +96,9 @@ strong {
 }
 
 .btn-secondary {
+    background-color: #2E3240;
+}
+.btn-secondaryNew {
     background-color: #2E3240;
 }
 
@@ -711,6 +722,9 @@ h3.card-title {
     font-size: 16px;
 }
 
+.btn-call-to-action .btn-secondaryNew {
+    background-color: #2E3240;
+}
 .btn-call-to-action .btn-secondary {
     background-color: #2E3240;
 }
@@ -1193,6 +1207,7 @@ footer .icon-to-top {
     .view-ar .btn {
         font-size: 20px;
         padding: 20px;
+        color: white;
     }
 
     footer {
@@ -1283,7 +1298,7 @@ footer .icon-to-top {
 }
 
 @media  (min-width: 992px) and (max-width: 1920px) {
-    .btn-call-to-action .btn {
+    .btn-secondaryNew {
         display: none;
     }
 }
