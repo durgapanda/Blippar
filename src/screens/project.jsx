@@ -73,6 +73,8 @@ const Projects = () => {
     const [message, setMessage] = useState(false)
     const [messageDisplay, setMessageDisplay] = useState(true)
     const [showAllProjects, setShowAllProjects] = useState(true)
+
+    
     const [showFolderDetails, setShowFolderDetails] = useState(false)
 
     // const handleCancelEdit = () =
@@ -194,7 +196,7 @@ const Projects = () => {
                         </p>
                     </div>
                 </div>
-                {/* <!-- breadcrumbs ends--> */}
+                {/* <!-- breadcrumbs ends--> */}    
                 {/* <!-- section grid starts -->  */}
                 <div className={activeTiles ? "container-fluid section-grid d-none" : "container-fluid section-grid active"}>
                     <div className={showFolderDetails?"row section-projects d-none":"row section-projects "}>
@@ -623,7 +625,7 @@ const Projects = () => {
 
                         <div className="col">
                             <div className="card text-left gutters">
-                                <div className="card-image-container" onClick={() => showFolderDetails}>
+                                <div className="card-image-container" onClick={() => {setShowFolderDetails(true);setShowAllProjects(!showAllProjects) }}>
                                     <img src={secondFolderImage1} alt="" className="img-fluid" />
                                     <img src={secondFolderImage2} alt="" className="img-fluid" />
                                     <img src={secondFolderImage3} alt="" className="img-fluid" />
@@ -654,7 +656,7 @@ const Projects = () => {
 
                         <div className="col">
                             <div className="card text-left gutters">
-                                <div className="card-image-container" onClick="showFolderDetails()">
+                                <div className="card-image-container" onClick={() => {setShowFolderDetails(true);setShowAllProjects(!showAllProjects) }}>
                                     <img src={secondFolderImage1} alt="" className="img-fluid" />
                                     <img src={secondFolderImage2} alt="" className="img-fluid" />
                                     <img src={secondFolderImage3} alt="" className="img-fluid" />
@@ -683,7 +685,7 @@ const Projects = () => {
 
                         <div className="col" style={{ marginBottom: "0px" }}>
                             <div className="card text-left gutters">
-                                <div className="card-image-container" onClick="showFolderDetails()">
+                                <div className="card-image-container" onClick={() => {setShowFolderDetails(true);setShowAllProjects(!showAllProjects) }}>
                                     <img src={secondFolderImage1} alt="" className="img-fluid" />
                                     <img src={secondFolderImage2} alt="" className="img-fluid" />
                                     <img src={secondFolderImage3} alt="" className="img-fluid" />
@@ -711,7 +713,7 @@ const Projects = () => {
                         </div>
                         <div className="col">
                             <div className="card text-left gutters">
-                                <div className="card-image-container" onClick="showFolderDetails()">
+                                <div className="card-image-container" onClick={() => {setShowFolderDetails(true);setShowAllProjects(!showAllProjects) }}>
                                     <img src={secondFolderImage1} alt="" className="img-fluid" />
                                     <img src={secondFolderImage2} alt="" className="img-fluid" />
                                     <img src={secondFolderImage3} alt="" className="img-fluid" />
@@ -741,7 +743,7 @@ const Projects = () => {
 
                         <div className="col">
                             <div className="card text-left gutters">
-                                <div className="card-image-container" onClick="showFolderDetails()">
+                                <div className="card-image-container" onClick={() => {setShowFolderDetails(true);setShowAllProjects(!showAllProjects) }}>
                                     <img src={secondFolderImage1} alt="" className="img-fluid" />
                                     <img src={secondFolderImage2} alt="" className="img-fluid" />
                                     <img src={secondFolderImage3} alt="" className="img-fluid" />
@@ -770,7 +772,7 @@ const Projects = () => {
 
                         <div className="col" style={{ marginBottom: "0px" }}>
                             <div className="card text-left gutters">
-                                <div className="card-image-container" onClick="showFolderDetails()">
+                                <div className="card-image-container" onClick={() => {setShowFolderDetails(true);setShowAllProjects(!showAllProjects) }}>
                                     <img src={secondFolderImage1} alt="" className="img-fluid" />
                                     <img src={secondFolderImage2} alt="" className="img-fluid" />
                                     <img src={secondFolderImage3} alt="" className="img-fluid" />
@@ -798,7 +800,7 @@ const Projects = () => {
                         </div>
                         <div className="col">
                             <div className="card text-left gutters">
-                                <div className="card-image-container" onClick="showFolderDetails()">
+                                <div className="card-image-container" onClick={() => {setShowFolderDetails(true);setShowAllProjects(!showAllProjects) }}>
                                     <img src={secondFolderImage1} alt="" className="img-fluid" />
                                     <img src={secondFolderImage2} alt="" className="img-fluid" />
                                     <img src={secondFolderImage3} alt="" className="img-fluid" />
@@ -826,7 +828,7 @@ const Projects = () => {
                         </div>
                         <div className="col">
                             <div className="card text-left gutters">
-                                <div className="card-image-container" onClick="showFolderDetails()">
+                                <div className="card-image-container" onClick={() => {setShowFolderDetails(true);setShowAllProjects(!showAllProjects) }}>
                                     <img src={secondFolderImage1} alt="" className="img-fluid" />
                                     <img src={secondFolderImage2} alt="" className="img-fluid" />
                                     <img src={secondFolderImage3} alt="" className="img-fluid" />
@@ -854,7 +856,7 @@ const Projects = () => {
                         </div>
                         <div className="col">
                             <div className="card text-left gutters">
-                                <div className="card-image-container" onClick="showFolderDetails()">
+                                <div className="card-image-container" onClick={() => {setShowFolderDetails(true);setShowAllProjects(!showAllProjects) }}>
                                     <img src={secondFolderImage1} alt="" className="img-fluid" />
                                     <img src={secondFolderImage2} alt="" className="img-fluid" />
                                     <img src={secondFolderImage3} alt="" className="img-fluid" />
@@ -882,7 +884,7 @@ const Projects = () => {
                         </div>
                         <div className="col">
                             <div className="card text-left gutters">
-                                <div className="card-image-container" onClick="showFolderDetails()">
+                                <div className="card-image-container" onClick={() => {setShowFolderDetails(true);setShowAllProjects(!showAllProjects) }}>
                                     <img src={secondFolderImage1} alt="" className="img-fluid" />
                                     <img src={secondFolderImage2} alt="" className="img-fluid" />
                                     <img src={secondFolderImage3} alt="" className="img-fluid" />
@@ -1567,7 +1569,7 @@ const Projects = () => {
                 </div>
 
 
-                <div className={showAddProject ? "modal fade new-folder show" : "modal fade new-folder"} id="newFolderModal" tabindex="-1" data-backdrop="static" aria-labelledby="newFolderModal" style={showAddProject ? { display: "block" } : { display: "none" }}>
+                <div className={showAddProject ? "modal fade new-folder show" : "modal fade new-folder"} id="newFolderModal" tabindex="-1" data-backdrop="static" aria-labelledby="newFolderModal" style={showAddProject ? { display: "block",backgroundColor: "rgba(-252, -46, -229, 0.500)" } : { display: "none" }}>
                     <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
 
                         <div className="modal-content slide-f1 ">
@@ -1632,7 +1634,7 @@ const Projects = () => {
 
 
                 <div className={confirmProjetOrganise ? "modal fade new-folder show" : "modal fade delete-marker-modal "}
-                    id="projectOrganise" tabIndex="1" role="dialog" data-backdrop="static" style={confirmProjetOrganise ? { display: "block" } : { display: "none" }}
+                    id="projectOrganise" tabIndex="1" role="dialog" data-backdrop="static" style={confirmProjetOrganise ? { display: "block", backgroundColor:"rgba(100, 11, 50, 0.68)" } : { display: "none" }}
                     aria-labelledby="newFolderModal" aria-hidden="false">
                     <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
                         <div className="modal-content">
@@ -1640,7 +1642,7 @@ const Projects = () => {
                                 <h5 className="modal-title d-inline-block"></h5>
                                 <p className="modal-subtitle d-block">
                                 </p>
-                                <div className="modal-body flex-column">
+                                <div className="modal-body GoItModal  flex-column">
                                     <h5 className="modal-title d-block text-uppercase text-white text-center ">Organise your projects</h5>
                                     <div className="form-group d-block text-center">
                                         <p className="text-white">Simply drag and drop your projects into folders.</p>
