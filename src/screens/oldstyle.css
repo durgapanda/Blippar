@@ -280,6 +280,12 @@ h5 {
     top: -3px;
     margin-left: -30px;
 }
+.breadcrumbs {
+    padding-left: 32px;
+}
+.cna {
+    cursor: not-allowed;
+}
 
 .newfolder {
     padding-right: 0px;
@@ -526,7 +532,7 @@ h5 {
     /* width: 120px !important;
   height: 120px !important; */
     position: relative;
-    right: -30px;
+    right: -26px;
     z-index: 0;
 }
 
@@ -556,7 +562,7 @@ h5 {
     /* width: 120px;
   height: 120px; */
     position: relative;
-    left: -30px;
+    left: -27px;
     z-index: 0;
 }
 
