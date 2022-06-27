@@ -430,9 +430,9 @@ h5 {
     bottom: 10px;
     margin-bottom: 0;
 }
-
+/* me changed */
 .section-tiles {
-    padding: 0 2.7em;
+    padding: 0px 1.7em;
 }
 
 .section-tiles .card-image-container .btn-white {
@@ -525,7 +525,7 @@ h5 {
 .mt-3,
 .my-3 {
     margin-top: 1rem !important;
-    /* margin-right: 5px; */
+    margin-right: 5px;
 }
 
 .section-folders .card-image-container img:nth-child(1) {
@@ -840,6 +840,7 @@ h3.card-title {
 
 }
 
+
 .delete-marker-modal .modal-dialog {
     z-index: 9999999 !important;
 }
@@ -849,7 +850,7 @@ h3.card-title {
 }
 
 .context-menu {
-    margin-left: 13px;
+    margin-left: 14px;
     padding: 10px;
     padding-right: 0;
 }
