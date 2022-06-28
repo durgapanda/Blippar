@@ -187,6 +187,8 @@ h5 {
     color: white;
 }
 
+
+
 .logo-section a {
     display: inline-block;
 }
@@ -340,6 +342,11 @@ h5 {
 .menu-top .menu-item:hover {
     color: #FFAA00;
 }
+.markerNew:hover{
+    background-color: #FFAA00 !important;
+    border: none;
+}
+
 
 .menu-top .menu-item {
     list-style: none;
@@ -501,7 +508,10 @@ h5 {
     font-family: 'Avenir Light', sans-serif;
     font-size: 18px;
 }
-
+.new-project-modal .slide-np3 .btn, .new-project-modal .slide-np4 .btn, .modal-viewproj-wo .btn, .modal-viewproj .btn {
+    width: 340px !important;
+    height: 70px !important;
+}
 .col-lg-4 {
     padding-left: 10px;
     padding-right: 10px;

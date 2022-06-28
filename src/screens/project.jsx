@@ -1345,8 +1345,8 @@ const Projects = () => {
                 <footer className="bg-dark">
                     <div className="container-fluid">
                         <div className="row d-flex justify-content-between">
-                            <div className="col-sm-9 pt-md-5 pt-sm-2 left">
-                                <ul className="mt-5 footerNew" style={{ marginLeft: "-55.5%" }} >
+                            <div className="col-sm-9 pt-md-5 pt-sm-2 left ">
+                                <ul className="mt-5 footerNew footerNewOne" style={{ marginLeft: "-55.5%" }} >
                                     <li>All Rights Reserved 2022 © Blippar Group Limited</li>
                                     <li><a href="#">Privacy</a></li>
                                     <li><a href="#">Terms</a></li>
@@ -1808,8 +1808,8 @@ const Projects = () => {
                                             className="cup"><img src={dolarimage} alt="" /></span>
                                     </p>
 
-                                    <div className="d-block text-center btn-call-to-action mt-5 pt-3">
-                                        <button className="btn btn-secondary">Download QR and marker</button>
+                                    <div className="d-block text-center btn-call-to-action mt-5 pt-3 ">
+                                        <button className="btn btn-secondary markerNew" style={{width:"340px",height:"70px"}}>Download QR and marker</button>
                                     </div>
                                 </div>
                                 <div className="col-6">
