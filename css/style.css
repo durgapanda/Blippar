@@ -254,7 +254,7 @@ h5 {
 
 .section-options {
   margin-top: -55px;
-  padding: 0 2em;
+  padding: 0 15px;
 }
 
 .subtitle {
@@ -848,6 +848,13 @@ footer .icon-to-top {
   }
 }
 
+@media (min-width: 2500px) {
+  footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+}
 @media (max-width: 4800px) {
   .col {
     -ms-flex: 0 0 8.32%;
@@ -1254,7 +1261,7 @@ footer .icon-to-top {
 
   footer ul.mt-5 {
     margin: 0px !important;
-    padding-left: 2em !important;
+    padding-left: 1em !important;
   }
 
   footer ul li {
@@ -1298,18 +1305,6 @@ footer .icon-to-top {
     left: 50px !important;
   }
 
-  .container-fluid {
-    padding: 0 !important;
-  }
-  .col {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  .row {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-
   .section-grid,
   .section-tiles {
     padding: 0 15px !important;
@@ -1324,6 +1319,9 @@ footer .icon-to-top {
   .section-options {
     margin-top: -50px;
   }
+  .section-options {
+    padding: 0 20px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -1332,7 +1330,6 @@ footer .icon-to-top {
     display: flex;
     flex-direction: row;
     padding: 1em;
-    background-color: red;
   }
   .d-message p {
     font-size: 14px;
@@ -1353,5 +1350,19 @@ footer .icon-to-top {
   .view-ar .btn {
     font-size: 14px;
     padding: 10px 20px;
+  }
+}
+
+@media (max-width: 350px) {
+  .container-fluid {
+    padding: 0 !important;
+  }
+  .col {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }
