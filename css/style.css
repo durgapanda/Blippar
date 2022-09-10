@@ -254,7 +254,7 @@ h5 {
 
 .section-options {
   margin-top: -55px;
-  padding: 0 15px;
+  padding: 0 2em;
 }
 
 .subtitle {
@@ -1319,9 +1319,9 @@ footer .icon-to-top {
   .section-options {
     margin-top: -50px;
   }
-  .section-options {
+  /* .section-options {
     padding: 0 20px;
-  }
+  } */
 }
 
 @media (max-width: 500px) {
