@@ -3,8 +3,9 @@
 body {
   font-size: 16px;
   padding: 0;
-  font-family: 'Avenir Book', sans-serif;
-  color: #2E3240;
+  font-family: "Avenir Book", sans-serif;
+  color: #2e3240;
+  overflow-x: hidden;
 }
 
 /* base styles */
@@ -14,30 +15,30 @@ h3 {
 }
 
 a.text-warning:hover {
-  color: #FFAA00 !important;
+  color: #ffaa00 !important;
   text-decoration: underline;
 }
 
 strong {
-  font-family: 'Avenir Black', san-serif;
+  font-family: "Avenir Black", san-serif;
 }
 
 .bg-secondary {
-  background-color: #2E3240 !important;
+  background-color: #2e3240 !important;
   color: white;
 }
 
 .btn-white {
   background-color: #fff;
   border-radius: 50%;
-  color: #FFF
+  color: #fff;
 }
 
 .btn-white-o {
   background-color: transparent;
   border: 2px solid #fff;
   border-radius: 50px;
-  color: #FFF
+  color: #fff;
 }
 
 .text-uppercase {
@@ -45,22 +46,22 @@ strong {
 }
 
 .modal-title {
-  font-family: 'Brandon Grotesque Black', sans-serif;
+  font-family: "Brandon Grotesque Black", sans-serif;
   text-transform: uppercase;
-  color: #2E3240;
+  color: #2e3240;
 }
 
 .bg-dark {
-  background-color: #2E3240 !important;
+  background-color: #2e3240 !important;
 }
 
 .btn-secondary-o {
   border-radius: 20px;
   background-color: transparent;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   text-align: left;
   width: 200px;
-  color: #2E3240;
+  color: #2e3240;
 }
 
 .new-project-modal .btn {
@@ -88,18 +89,18 @@ strong {
 }
 
 .btn-secondary {
-  background-color: #2E3240;
+  background-color: #2e3240;
 }
 
 .new-project-modal .btn:hover,
 .modal-viewproj-wo .btn:hover,
 .modal-viewproj .btn:hover {
-  background-color: #FFAA00;
+  background-color: #ffaa00;
   border-color: transparent !important;
 }
 
 .text-warning {
-  color: #FFAA00 !important;
+  color: #ffaa00 !important;
 }
 
 .shadow-sm {
@@ -117,7 +118,7 @@ strong {
 h5 {
   font-weight: 800;
   font-size: 30px;
-  color: #2E3240;
+  color: #2e3240;
 }
 
 .align-center {
@@ -133,12 +134,12 @@ h5 {
   z-index: 9998;
   width: 100vw;
   height: 100vh;
-  background-color: #2E3240;
+  background-color: #2e3240;
   opacity: 0.75;
 }
 
 .modal-backdrop {
-  background-color: #2E3240;
+  background-color: #2e3240;
   opacity: 0.75 !important;
 }
 
@@ -171,7 +172,7 @@ h5 {
 }
 
 .logo-section p {
-  line-height: 1.0;
+  line-height: 1;
   margin-bottom: 5px;
   color: white;
 }
@@ -181,7 +182,7 @@ h5 {
 }
 
 .logo-section p.logo-desc {
-  font-family: 'Brandon Grotesque Black', sans-serif;
+  font-family: "Brandon Grotesque Black", sans-serif;
   text-transform: uppercase;
   font-size: 40px;
   position: relative;
@@ -189,7 +190,7 @@ h5 {
 }
 
 .logo-section .text-welcome {
-  font-family: 'Avenir Medium', san-serif;
+  font-family: "Avenir Medium", san-serif;
   font-size: 20px;
 }
 
@@ -205,11 +206,11 @@ h5 {
 .profile-section .btn.learn {
   width: 250px;
   display: inline-block;
-  font-family: 'Brandon Grotesque Black', sans-serif;
+  font-family: "Brandon Grotesque Black", sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   background-color: #fff;
-  color: #2E3240;
+  color: #2e3240;
   text-align: left;
   padding-left: 30px;
   position: relative;
@@ -222,9 +223,8 @@ h5 {
   width: 13px;
 }
 
-
 .profile-section .avatar {
-  font-family: 'Brandon Grotesque Black', sans-serif;
+  font-family: "Brandon Grotesque Black", sans-serif;
   background: url(../images/icon-profile-bg.svg) center center no-repeat !important;
   display: inline-block;
   font-size: 14px;
@@ -242,14 +242,14 @@ h5 {
 }
 
 .btn-new-proj {
-  font-family: 'Brandon Grotesque Black', sans-serif;
+  font-family: "Brandon Grotesque Black", sans-serif;
   position: absolute;
-  background-color: #2E3240 !important;
+  background-color: #2e3240 !important;
   border-radius: 36px;
   font-size: 22px;
-  right: 50px;
+  right: 1.4em;
   padding: 16px;
-  bottom: 93px;
+  top: 127px;
 }
 
 .section-options {
@@ -258,7 +258,7 @@ h5 {
 }
 
 .subtitle {
-  font-family: 'Avenir Heavy', san-serif;
+  font-family: "Avenir Heavy", san-serif;
   font-size: 26px;
   position: relative;
   top: -3px;
@@ -271,7 +271,7 @@ h5 {
 }
 
 .dropdown-sort {
-  font-family: 'Brandon Grotesque Black', sans-serif;
+  font-family: "Brandon Grotesque Black", sans-serif;
   position: relative;
   top: -5px;
   position: relative;
@@ -282,7 +282,6 @@ h5 {
   top: -3px;
   right: -15px;
 }
-
 
 .dropdown-menu,
 .menu-top {
@@ -302,15 +301,15 @@ h5 {
 
 .dropdown-menu .dropdown-item,
 .menu-top .menu-item {
-  font-family: 'Avenir Light', san-serif;
+  font-family: "Avenir Light", san-serif;
   font-size: 20px;
-  border-bottom: 1px dotted #D8D8D8;
+  border-bottom: 1px dotted #d8d8d8;
   padding: 1rem 0 !important;
 }
 
 .dropdown-menu .dropdown-item:hover,
 .menu-top .menu-item:hover {
-  color: #FFAA00;
+  color: #ffaa00;
 }
 
 .menu-top .menu-item {
@@ -319,7 +318,7 @@ h5 {
 
 .dropdown-menu .dropdown-item:last-child,
 .menu-top .menu-item:last-child {
-  border-bottom: none
+  border-bottom: none;
 }
 
 .dropdown-menu .dropdown-item:hover,
@@ -372,7 +371,7 @@ h5 {
 .section-tiles .views,
 .section-tiles .proj-count-wrapper,
 .title-container {
-  font-family: 'Avenir Book', san-serif;
+  font-family: "Avenir Book", san-serif;
   font-size: 16px;
 }
 
@@ -412,7 +411,7 @@ h5 {
 
 .section-tiles .right .scan-code p {
   text-transform: uppercase;
-  font-family: 'Avenir Medium', sans-serif;
+  font-family: "Avenir Medium", sans-serif;
   font-size: 11px;
   color: #777;
   margin-top: 5px;
@@ -421,28 +420,50 @@ h5 {
 
 .card-image-container {
   position: relative;
-  /* overflow: auto; */
   cursor: pointer;
   text-align: center;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
 }
-
+.modal-body .card-image-container {
+  overflow: visible;
+}
+.card-image-container video {
+  position: relative;
+  top: -30px;
+}
 .card-img,
 .card-img-bottom,
 .card-img-top {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .card {
   border-radius: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  /* border: 1px solid rgb(236, 236, 236); */
 }
 
-
-
 .card-text {
-  font-family: 'Avenir Light', sans-serif;
+  font-family: "Avenir Light", sans-serif;
   font-size: 18px;
+}
+.card .card-body {
+  position: relative;
+  /* top: -30px; */
+}
+
+.card .badge {
+  position: relative;
+  font-family: "Brandon Grotesque Black", sans-serif;
+  background-color: #eee;
+  padding: 10px 40px;
+  color: rgb(46, 50, 64);
+  border-radius: 40px;
+  top: -40px;
+  text-transform: uppercase;
 }
 
 .col-lg-4 {
@@ -451,17 +472,17 @@ h5 {
 }
 
 .section-folders .card-image-container {
-  background-color: #D8D8D8;
+  background-color: #d8d8d8;
   text-align: center;
 }
 
 .section-folders .card-image-container {
-  background-color: #D8D8D8;
+  background-color: #d8d8d8;
   padding: 40px 0 !important;
 }
 
 .section-folders .card-image-container:hover img {
-  transform: scale(1.1,1.1);
+  transform: scale(1.1, 1.1);
   transition: transform 0.5s;
 }
 
@@ -504,7 +525,7 @@ h5 {
 
 .card-image-container .scan-code p {
   text-transform: uppercase;
-  font-family: 'Avenir Medium', sans-serif;
+  font-family: "Avenir Medium", sans-serif;
   font-size: 11px;
   color: #777;
   margin-top: 5px;
@@ -522,12 +543,12 @@ h5 {
 }
 
 h3.card-title {
-  font-family: 'Brandon Grotesque Black', sans-serif;
-  color: #2E3240;
+  font-family: "Brandon Grotesque Black", sans-serif;
+  color: #2e3240;
 }
 
 .status-legend.published {
-  background-color: #9DE300;
+  background-color: #9de300;
 }
 
 .status-legend.not-published {
@@ -535,7 +556,7 @@ h3.card-title {
 }
 
 .views {
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   width: 150px;
   text-align: right;
   border-radius: 20px;
@@ -572,7 +593,6 @@ h3.card-title {
 
 .modal-content {
   height: 800px;
-  /* color: #777; */
   position: relative;
   border-radius: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
@@ -586,13 +606,12 @@ h3.card-title {
   z-index: 99999;
 }
 
-
 #previewProjectModal .modal-subtitle {
   font-size: 20px;
 }
 
 .expiry-time {
-  border: 1px solid #D8D8D8;
+  border: 1px solid #d8d8d8;
   border-radius: 6px;
   padding-top: 10px;
   padding-bottom: 0;
@@ -609,8 +628,8 @@ h3.card-title {
 
 .modal-body input {
   width: 650px;
-  background-color: #F9F9FA;
-  border: 1px solid #CCC;
+  background-color: #f9f9fa;
+  border: 1px solid #ccc;
   border-radius: 18px;
   padding: 2em;
 }
@@ -637,7 +656,7 @@ h3.card-title {
 }
 
 .btn-call-to-action .btn {
-  font-family: 'Brandon Grotesque Black', sans-serif;
+  font-family: "Brandon Grotesque Black", sans-serif;
   text-transform: uppercase !important;
   font-size: 20px;
   /* width: 220px; */
@@ -650,17 +669,17 @@ h3.card-title {
 }
 
 .btn-call-to-action .btn-secondary {
-  background-color: #2E3240;
+  background-color: #2e3240;
 }
 
 .btn-call-to-action .btn-white {
   background-color: white;
-  color: #2E3240;
+  color: #2e3240;
 }
 
 .btn-call-to-action .text-warning,
 .btn-call-to-action p {
-  font-family: 'Avenir Roman', san-serif;
+  font-family: "Avenir Roman", san-serif;
   font-size: 18px;
 }
 
@@ -701,27 +720,26 @@ h3.card-title {
   width: 12px;
   height: 12px;
   border-radius: 10px;
-  border: 1px solid #2E3240;
+  border: 1px solid #2e3240;
   list-style: none;
   display: inline-block;
   margin-right: 10px;
 }
 
 .carousel-dots li.active {
-  background-color: #2E3240;
+  background-color: #2e3240;
   border: 1px solid transparent;
-
 }
 
 .img-wrapper {
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   width: 100px;
   height: 100px;
   vertical-align: middle;
 }
 
 .confirm-tile:not(last-child) {
-  border-bottom: 1px dashed #ADACAC;
+  border-bottom: 1px dashed #adacac;
 }
 
 .confirm-tile:last-child {
@@ -731,9 +749,44 @@ h3.card-title {
 .preview-container {
   height: 400px;
   overflow-y: auto;
-
 }
 
+.col-6.col-right {
+  text-align: center;
+  margin-top: 60px;
+  flex: 0 0 45%;
+  height: 630px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  background: #ccc;
+  padding: 0;
+}
+.col-6 .preview-img-container {
+  position: absolute;
+  height: 500px;
+  width: 600px;
+  overflow: hidden;
+  opacity: 0.2;
+}
+.col-6 .preview-img-container img {
+  min-width: 510px;
+}
+.col-6 .preview-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 640px;
+  background-color: #ccc;
+}
+.col-6 .preview-img img {
+  position: relative;
+  width: 400px;
+  min-height: 600px;
+  height: auto;
+}
 .delete-marker-modal .modal-dialog {
   z-index: 9999999 !important;
 }
@@ -750,6 +803,7 @@ h3.card-title {
 
 footer {
   height: 150px;
+  padding-left: 2em;
 }
 
 footer ul li {
@@ -778,19 +832,13 @@ footer .icon-to-top {
 /* No media query for `xs` since this is the default in Bootstrap */
 /* Large devices (desktops, 992px and down) */
 
-
 @media (min-width: 700px) {
-
   .col .card {
     margin-bottom: 30px;
   }
-
 }
 
-
-
 @media (min-width: 992px) {
-
   .section-grid .row {
     justify-content: start;
   }
@@ -798,8 +846,6 @@ footer .icon-to-top {
   .views-container .view-ar {
     display: none;
   }
-
-
 }
 
 @media (max-width: 4800px) {
@@ -827,22 +873,64 @@ footer .icon-to-top {
 }
 
 @media (max-width: 3600px) {
+  .header {
+    height: 410px !important;
+  }
+  .btn-new-proj {
+    top: 265px;
+  }
   .col {
-    -ms-flex: 0 0 11.10%;
-    flex: 0 0 11.10%;
-    max-width: 11.10%;
+    -ms-flex: 0 0 11.1%;
+    flex: 0 0 11.1%;
+    max-width: 11.1%;
+  }
+}
+@media (max-width: 3450px) {
+  .header {
+    height: 390px !important;
+  }
+  .btn-new-proj {
+    top: 250px;
+  }
+}
+@media (max-width: 3300px) {
+  .header {
+    height: 340px !important;
+  }
+  .btn-new-proj {
+    top: 190px;
   }
 }
 
 @media (max-width: 3200px) {
+  .header {
+    height: 380px !important;
+  }
+  .btn-new-proj {
+    top: 230px;
+  }
   .col {
     -ms-flex: 0 0 12.5%;
     flex: 0 0 12.5%;
     max-width: 12.5%;
   }
 }
+@media (max-width: 2900px) {
+  .header {
+    height: 340px !important;
+  }
+  .btn-new-proj {
+    top: 200px;
+  }
+}
 
 @media (max-width: 2800px) {
+  .header {
+    height: 340px !important;
+  }
+  .btn-new-proj {
+    top: 180px;
+  }
   .col {
     -ms-flex: 0 0 14.27%;
     flex: 0 0 14.27%;
@@ -850,7 +938,24 @@ footer .icon-to-top {
   }
 }
 
+@media (max-width: 2500px) {
+  .btn-new-proj {
+    top: 170px;
+  }
+  .col {
+    -ms-flex: 0 0 16.65%;
+    flex: 0 0 16.65%;
+    max-width: 16.65%;
+  }
+}
+
 @media (max-width: 2400px) {
+  .header {
+    height: 320px !important;
+  }
+  .btn-new-proj {
+    top: 160px;
+  }
   .col {
     -ms-flex: 0 0 16.65%;
     flex: 0 0 16.65%;
@@ -859,6 +964,12 @@ footer .icon-to-top {
 }
 
 @media (max-width: 2200px) {
+  .header {
+    height: 290px !important;
+  }
+  .btn-new-proj {
+    top: 150px;
+  }
   .col {
     -ms-flex: 0 0 20%;
     flex: 0 0 20%;
@@ -866,7 +977,20 @@ footer .icon-to-top {
   }
 }
 
+@media (max-width: 2100px) {
+  .btn-new-proj {
+    top: 140px;
+  }
+  .col {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
 @media (max-width: 2000px) {
+  .btn-new-proj {
+    top: 130px;
+  }
   .col {
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
@@ -884,7 +1008,6 @@ footer .icon-to-top {
 
 /* Large devices (desktops, 1200px and down) */
 @media (max-width: 1200px) {
-
   .modal-xl {
     max-width: 1140px;
   }
@@ -946,7 +1069,7 @@ footer .icon-to-top {
   }
 
   footer {
-    height: auto
+    height: auto;
   }
 
   footer .left,
@@ -1043,7 +1166,7 @@ footer .icon-to-top {
   }
 
   .views span {
-    font-family: 'Avenir Black', sans-serif;
+    font-family: "Avenir Black", sans-serif;
     font-weight: 900;
   }
 
@@ -1068,8 +1191,6 @@ footer .icon-to-top {
   .section-options {
     margin-top: 20px;
   }
-
-
 }
 
 /* Medium devices (tablets, 768px and down) */
@@ -1133,6 +1254,7 @@ footer .icon-to-top {
 
   footer ul.mt-5 {
     margin: 0px !important;
+    padding-left: 2em !important;
   }
 
   footer ul li {
@@ -1147,8 +1269,6 @@ footer .icon-to-top {
   .section-options {
     margin-top: 55px;
   }
-
-
 }
 
 /* Small devices (landscape phones, 576px and down) */
@@ -1196,7 +1316,6 @@ footer .icon-to-top {
   .section-options {
     margin-top: -50px;
   }
-
 }
 
 @media (max-width: 500px) {
