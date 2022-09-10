@@ -259,7 +259,7 @@ h5 {
 
 .subtitle {
   font-family: "Avenir Heavy", san-serif;
-  font-size: 26px;
+  font-size: 20px;
   position: relative;
   top: -3px;
   margin-left: -14px;
@@ -293,7 +293,7 @@ h5 {
 .dropdown-menu,
 .menu-top {
   border-radius: 20px;
-  width: 320px;
+  /* width: 320px; */
   position: relative;
   margin-left: -50px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
@@ -1301,6 +1301,14 @@ footer .icon-to-top {
   .container-fluid {
     padding: 0 !important;
   }
+  .col {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 
   .section-grid,
   .section-tiles {
@@ -1321,5 +1329,29 @@ footer .icon-to-top {
 @media (max-width: 500px) {
   .d-message {
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    background-color: red;
+  }
+  .d-message p {
+    font-size: 14px;
+  }
+
+  .subtitle {
+    font-family: "Avenir Heavy", san-serif;
+    font-size: 20px;
+    position: relative;
+  }
+  .view-ar {
+    display: block !important;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    text-transform: uppercase;
+  }
+  .view-ar .btn {
+    font-size: 14px;
+    padding: 10px 20px;
   }
 }
