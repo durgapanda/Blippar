@@ -293,7 +293,7 @@ h5 {
 .dropdown-menu,
 .menu-top {
   border-radius: 20px;
-  /* width: 320px; */
+  width: 320px;
   position: relative;
   margin-left: -50px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
@@ -438,6 +438,7 @@ h5 {
 .card-img-top {
   width: 100%;
   height: auto;
+  max-width: 350px;
 }
 
 .card {
@@ -659,7 +660,7 @@ h3.card-title {
   font-family: "Brandon Grotesque Black", sans-serif;
   text-transform: uppercase !important;
   font-size: 20px;
-  /* width: 220px; */
+  width: 220px;
   padding: 10px 20px;
   border-radius: 40px;
 }
