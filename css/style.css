@@ -1199,6 +1199,15 @@ footer .icon-to-top {
   .section-options {
     margin-top: 20px;
   }
+  .section-tiles {
+    /* background-color: red; */
+  }
+  .section-tiles .left {
+    flex: 0.9;
+  }
+  .section-tiles .left .card-image-container {
+    width: 350px;
+  }
 }
 
 /* Medium devices (tablets, 768px and down) */
@@ -1282,6 +1291,9 @@ footer .icon-to-top {
 
   .section-options {
     margin-top: 55px;
+  }
+  .section-tiles {
+    /* background-color: blue; */
   }
 }
 
