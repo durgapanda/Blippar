@@ -122,9 +122,9 @@ h5 {
 }
 
 .align-center {
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .backdrop {
@@ -422,7 +422,7 @@ h5 {
   position: relative;
   cursor: pointer;
   text-align: center;
-  width: 100%;
+  width: 350px;
   height: 200px;
   overflow: hidden;
 }
@@ -593,7 +593,7 @@ h3.card-title {
 }
 
 .modal-content {
-  /* height: 800px; */
+  height: 800px;
   position: relative;
   border-radius: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
@@ -1245,7 +1245,9 @@ footer .icon-to-top {
   .card-img-top {
     max-width: auto;
   }
-
+  .card-image-container {
+    width: 100%;
+  }
   .subnav {
     position: relative;
     top: -30px;
