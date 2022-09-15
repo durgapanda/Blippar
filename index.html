@@ -1409,6 +1409,38 @@
 
   <!-- publish project modal ends -->
 
+  <!-- welcome video modal starts -->
+
+  <div class="modal fade" id="welcomeVideoModal" tabindex="-1" role="dialog" data-backdrop="static"
+    aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+
+      <div class="modal-content" style="height: auto; position: relative;">
+        <button type="button" class="new-project-modal-close close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"><img src="images/icon-close.svg" alt=""></span>
+        </button>
+        <div class="modal-body row position-relative p-0">
+          <div class="d-flex align-center play-container">
+            <div >
+              <img src="images/play-button.png" width="120" height="120" onclick="playWelcomeVideo()" style="cursor: pointer">
+            </div>
+            <p class="welcome-msg">Welcome to BlippBuilder</p>
+            <p class="sub-text">Let's get you started Steve</p>
+          </div>
+          <video width="100%" height="auto" id="welcomeVideo">
+            <source src="videos/Tracked.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <!-- modal dialog end -->
+
+    </div>
+  </div>
+
+  <!-- publish project modal ends -->
+
 
   <div class="backdrop d-none"></div>
 

@@ -122,9 +122,9 @@ h5 {
 }
 
 .align-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 
 .backdrop {
@@ -436,8 +436,8 @@ h5 {
 .card-img,
 .card-img-bottom,
 .card-img-top {
-  width: 100%;
-  height: auto;
+  /* width: 100%; */
+  /* height: auto; */
   /* max-width: 350px; */
 }
 
@@ -593,7 +593,7 @@ h3.card-title {
 }
 
 .modal-content {
-  height: 800px;
+  /* height: 800px; */
   position: relative;
   border-radius: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
@@ -861,6 +861,29 @@ footer .icon-to-top {
     -ms-flex: 0 0 8.32%;
     flex: 0 0 8.32%;
     max-width: 8.32%;
+  }
+
+  #welcomeVideoModal .modal-body .play-container {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -150px;
+    z-index: 999;
+  }
+  #welcomeVideoModal .modal-body .play-container .welcome-msg {
+    color: white;
+    text-transform: uppercase;
+    font-family: "Brandon Grotesque Black", sans-serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-top: 30px;
+  }
+  #welcomeVideoModal .modal-body .play-container .sub-text {
+    color: white;
   }
 }
 

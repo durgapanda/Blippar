@@ -1,120 +1,131 @@
 function showNext(slide) {
-    resetSlides();
-    setActiveSlide(slide)
+  resetSlides();
+  setActiveSlide(slide);
 }
 
 function setActiveSlide(slide) {
-    $("." + slide).removeClass("d-none").addClass("active");
-    if (slide == "slide-np2") {
-        $("video[autoplay]").each(function () {
-            this.play();
-        });
-        $("video[loop]").on('ended', function () {
-            this.load();
-            this.play();
-        });
-    }
+  $("." + slide)
+    .removeClass("d-none")
+    .addClass("active");
+  if (slide == "slide-np2") {
+    $("video[autoplay]").each(function () {
+      this.play();
+    });
+    $("video[loop]").on("ended", function () {
+      this.load();
+      this.play();
+    });
+  }
+}
+
+function playWelcomeVideo() {
+  $("#welcomeVideo").trigger("play");
 }
 
 function getActiveSlide() {
-    return $(".modal-content.active")
+  return $(".modal-content.active");
 }
 
 function resetSlides() {
-    let activeSlide = getActiveSlide()
-    activeSlide.removeClass("active").addClass("d-none");
+  let activeSlide = getActiveSlide();
+  activeSlide.removeClass("active").addClass("d-none");
 }
 
 function getFolderName() {
-    let folderName = $("#folder-name").val();
-    resetSlides();
+  let folderName = $("#folder-name").val();
+  resetSlides();
 }
 
 function showView(type) {
-    if (type == "tile") {
-        $(".icon-tiles").addClass("d-none")
-        $(".icon-grid").removeClass("d-none")
-        $(this).addClass("d-none")
-        $(".section-grid").removeClass("active").addClass("d-none")
-        $(".section-tiles").removeClass("d-none").addClass("active")
-    } else if (type == "grid") {
-        $(".icon-grid").addClass("d-none")
-        $(".icon-tiles").removeClass("d-none")
-        $(".section-tiles").removeClass("active").addClass("d-none")
-        $(".section-grid").removeClass("d-none").addClass("active")
-    }
+  if (type == "tile") {
+    $(".icon-tiles").addClass("d-none");
+    $(".icon-grid").removeClass("d-none");
+    $(this).addClass("d-none");
+    $(".section-grid").removeClass("active").addClass("d-none");
+    $(".section-tiles").removeClass("d-none").addClass("active");
+  } else if (type == "grid") {
+    $(".icon-grid").addClass("d-none");
+    $(".icon-tiles").removeClass("d-none");
+    $(".section-tiles").removeClass("active").addClass("d-none");
+    $(".section-grid").removeClass("d-none").addClass("active");
+  }
 }
 function showMenu(elm) {
-    resetMenu()
-    elm.nextElementSibling.classList.remove("d-none");;
+  resetMenu();
+  elm.nextElementSibling.classList.remove("d-none");
 }
 
 function resetMenu() {
-    $(".menu").addClass("d-none")
+  $(".menu").addClass("d-none");
 }
 function hideMessage() {
-    $(".d-message").addClass('d-none');
+  $(".d-message").addClass("d-none");
 }
 
 function showAllProjects() {
-    $(".section-projects").removeClass("d-none");
-    enableFolderIcon()
-    hideBreadcrumbs();
+  $(".section-projects").removeClass("d-none");
+  enableFolderIcon();
+  hideBreadcrumbs();
 }
 
 function hideProjects() {
-    $(".section-projects").addClass("d-none");
-    showBreadcrumbs();
+  $(".section-projects").addClass("d-none");
+  showBreadcrumbs();
 }
 function enableFolderIcon() {
-    $(".icon-folder-disabled").addClass("d-none")
-    $(".icon-folder").removeClass("d-none")
+  $(".icon-folder-disabled").addClass("d-none");
+  $(".icon-folder").removeClass("d-none");
 }
 function disableFolderIcon() {
-    $(".icon-folder-disabled").removeClass("d-none")
-    $(".icon-folder").addClass("d-none")
+  $(".icon-folder-disabled").removeClass("d-none");
+  $(".icon-folder").addClass("d-none");
 }
 function showBreadcrumbs() {
-    $(".breadcrumbs").removeClass("d-none")
+  $(".breadcrumbs").removeClass("d-none");
 }
 function hideBreadcrumbs() {
-    $(".breadcrumbs").addClass("d-none")
+  $(".breadcrumbs").addClass("d-none");
 }
 
 function showFolderDetails() {
-    hideProjects();
-    disableFolderIcon();
+  hideProjects();
+  disableFolderIcon();
 }
 
+function showWelcomeVideo() {
+  $("#welcomeVideoModal").modal("show");
+  //   $(".modal-backdrop").css({ "z-index": 1100 });
+  //   $("#welcomeVideoModal .close img").css({ "z-index": 1111 });
+}
 $(function () {
+  showWelcomeVideo();
 
-    $('#newProjectModal').on('hidden.bs.modal', function (event) {
-        showNext("slide-np1")
-    })
-    $('#newFolderModal').on('hidden.bs.modal', function (event) {
-        showNext("slide-f1")
-    })
-    $('#viewProjectModal, #viewProjectWOModal').on('show.bs.modal', function (event) {
-        resetMenu()
-    })
+  $("#newProjectModal").on("hidden.bs.modal", function (event) {
+    showNext("slide-np1");
+  });
+  $("#newFolderModal").on("hidden.bs.modal", function (event) {
+    showNext("slide-f1");
+  });
+  $("#viewProjectModal, #viewProjectWOModal").on(
+    "show.bs.modal",
+    function (event) {
+      resetMenu();
+    }
+  );
 
-    $('#deleteMarkerModal').on('hidden.bs.modal', function (event) {
-        $(".backdrop").addClass("d-none");
-    })
+  $("#deleteMarkerModal").on("hidden.bs.modal", function (event) {
+    $(".backdrop").addClass("d-none");
+  });
 
-    $(".marker-delete").on("click", () => {
-        $(".backdrop").removeClass("d-none");
-        $('#deleteMarkerModal').modal('show');
-    })
+  $(".marker-delete").on("click", () => {
+    $(".backdrop").removeClass("d-none");
+    $("#deleteMarkerModal").modal("show");
+  });
 
-    $(".card-img-top").mouseenter((e) => {
-        showMenu(e.target);
-    })
-    $(".card-image-container").mouseleave(() => {
-        resetMenu();
-    })
-
-
-})
-
-
+  $(".card-img-top").mouseenter((e) => {
+    showMenu(e.target);
+  });
+  $(".card-image-container").mouseleave(() => {
+    resetMenu();
+  });
+});
